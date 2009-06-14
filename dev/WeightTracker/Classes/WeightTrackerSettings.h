@@ -16,11 +16,13 @@
 	@private
 		BOOL appAlreadySetup;
 		sqlite3 *db;
+		
 }
 
 - (NSString *) dataFilePath;
 - (NSInteger) init;
 - (BOOL) isAppAlreadySetup;
 - (void) setupAppWithUserInfo:(id) userInfo;
+@property (readonly) NSString * username;
 
 @end

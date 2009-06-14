@@ -10,6 +10,8 @@
 
 
 @implementation MainApplicationController
+@synthesize username;
+@synthesize weightTrackerSettings;
 
 /*
 // The designated initializer. Override to perform setup that is required before the view is loaded.
@@ -45,18 +47,27 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning]; // Releases the view if it doesn't have a superview
     // Release anything that's not essential, such as cached data
+	
+	
 }
 
 
 - (void)dealloc {
     [super dealloc];
-}
+}	
 
 - (IBAction) sendInfoButtonPressed:(id)sender
 {
 	UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"sed" message:@"sending" delegate:nil cancelButtonTitle:@"send" otherButtonTitles:nil];
 	[alert show];
 	[alert release];
+}
+
+- (void) viewWillAppear:(BOOL) animated
+{
+	[super viewWillAppear:animated];
+	self.username.text = self.weightTrackerSettings.username;
+	
 }
 
 

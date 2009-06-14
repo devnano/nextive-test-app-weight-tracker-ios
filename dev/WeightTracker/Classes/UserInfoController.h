@@ -19,6 +19,8 @@
 @property(nonatomic,retain) IBOutlet UITextField * usernameTextField;
 @property(readonly) NSString * username;
 - (IBAction) saveButtonPressed:(id)sender;
+- (IBAction) textFieldDoneEditing:(id)sender;
+
 @property (retain, nonatomic) WeightTrackerSettings *weightTrackerSettings;
 
 

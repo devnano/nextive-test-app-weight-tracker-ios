@@ -34,6 +34,19 @@
 */
 
 
+- (void) initUserInfoController
+{
+	self.userInfoController =  [[UserInfoController alloc] initWithNibName:@"UserInfo" bundle: nil];
+	self.userInfoController.weightTrackerSettings = self.weightTrackerSettings;
+}
+
+- (void) initMainAppController
+{
+	self.mainApplicationController = [[MainApplicationController alloc] initWithNibName:@"MainApplication" bundle:nil];
+	self.mainApplicationController.weightTrackerSettings = self.weightTrackerSettings;
+}
+
+
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad {
 	//TODO: see memory managemnt	
@@ -41,17 +54,15 @@
 	[self.weightTrackerSettings init];
 	UIViewController *tmpController;
 	if(![self.weightTrackerSettings isAppAlreadySetup]){
-		//the user info view must by set
-		tmpController = [[UserInfoController alloc] initWithNibName:@"UserInfo" bundle: nil];
-		self.userInfoController = (UserInfoController *) tmpController;	
-		self.userInfoController.weightTrackerSettings = self.weightTrackerSettings;
+		[self initUserInfoController];
+		tmpController = self.userInfoController;
 	} else {
-		//the main app view must by set
-		tmpController = [[MainApplicationController alloc] initWithNibName:@"MainApplication" bundle:nil];
-		self.mainApplicationController = (MainApplicationController *) tmpController;
+		[self initMainAppController];
+		tmpController = self.mainApplicationController;
 	}
-
+	
 	[self.view insertSubview:tmpController.view atIndex:0];
+	[tmpController viewWillAppear:NO];
 	
 	[tmpController release];
 }
@@ -60,11 +71,11 @@
 {
 	UIViewController *tmpController = nil;
 	if(self.mainApplicationController == nil){				
-		tmpController = [[MainApplicationController alloc] initWithNibName:@"MainApplication" bundle:nil];
-		self.mainApplicationController = (MainApplicationController *) tmpController;		
+		[self initMainAppController];
+		tmpController = self.mainApplicationController;		
 	} else if(self.userInfoController == nil) {
-		tmpController = [[UserInfoController alloc] initWithNibName:@"UserInfo" bundle: nil];
-		self.userInfoController = (UserInfoController *) tmpController;
+		[self initUserInfoController];
+		tmpController = self.userInfoController;
 	}
 	if(tmpController != nil){
 		[tmpController release];

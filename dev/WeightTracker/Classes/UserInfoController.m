@@ -44,7 +44,10 @@
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
 */
-
+- (IBAction) textFieldDoneEditing:(id)sender
+{
+	[sender resignFirstResponder];
+}
 - (IBAction) saveButtonPressed:(id)sender
 {
 	UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"save" message:@"saving" delegate:nil cancelButtonTitle:@"save" otherButtonTitles:nil];

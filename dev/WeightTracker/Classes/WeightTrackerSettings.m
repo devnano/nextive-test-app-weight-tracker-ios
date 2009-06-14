@@ -10,8 +10,11 @@
 
 
 @implementation WeightTrackerSettings
+@dynamic username;
 
 //@synthesize appAlreadySetup;
+
+
 
 - (NSString *) dataFilePath
 {
@@ -67,6 +70,8 @@
 - (void) setupAppWithUserInfo:(id) userInfo
 {
 	
+	//taking advantege of dynamic nature of objective c
+	//the userInfo reference must have a meessage named "username"
 	NSString *username = (NSString *) [userInfo username];
 	char *errorMsg;
 	
@@ -82,6 +87,29 @@
 		sqlite3_free(errorMsg);				
 	} else {
 	}			
+	
+}
+
+- (NSString *) username
+{
+	NSString *query = @"SELECT USERNAME FROM SETTINGS WHERE ID=1;";
+	sqlite3_stmt *statement;
+	int status;
+	NSString *username = nil;
+	//char *errorMsg;
+	
+	status = sqlite3_prepare_v2(db, [query UTF8String] , -1, &statement, nil);
+	if(status == SQLITE_OK){		
+		if(sqlite3_step(statement) == SQLITE_ROW){
+			char *columnUsername = (char *)sqlite3_column_text(statement, 0);
+			username = [[NSString alloc] initWithUTF8String:columnUsername];
+		}			
+	} else {
+		//fail
+	}
+	
+	return username;
+	
 	
 }
 
