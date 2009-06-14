@@ -1,0 +1,2779 @@
+// !$*UTF8*$!
+{
+	1D3623240D0F684500981E51 /* WeightTrackerAppDelegate.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {924, 542}}";
+			sepNavSelRange = "{217, 0}";
+			sepNavVisRange = "{0, 517}";
+			sepNavWindowFrame = "{{45, 209}, {750, 558}}";
+		};
+	};
+	1D3623250D0F684500981E51 /* WeightTrackerAppDelegate.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {924, 542}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 668}";
+		};
+	};
+	1D6058900D05DD3D006BFB54 /* WeightTracker */ = {
+		activeExec = 0;
+		executables = (
+			3EA367A00FE3D0D6002A406C /* WeightTracker */,
+		);
+	};
+	29B97313FDCFA39411CA2CEA /* Project object */ = {
+		activeBuildConfigurationName = Debug;
+		activeExecutable = 3EA367A00FE3D0D6002A406C /* WeightTracker */;
+		activeTarget = 1D6058900D05DD3D006BFB54 /* WeightTracker */;
+		addToTargets = (
+			1D6058900D05DD3D006BFB54 /* WeightTracker */,
+		);
+		breakpoints = (
+			3E9515B20FE3E71600C0A7F8 /* WeightTrackerController.m:62 */,
+			3EBA4B8B0FE455B30056A086 /* WeightTrackerSettings.m:25 */,
+			3EBA4BAA0FE4560C0056A086 /* WeightTrackerSettings.m:18 */,
+			3EBA4BBC0FE458320056A086 /* WeightTrackerSettings.m:51 */,
+			3E1484810FE55BF20064950B /* WeightTrackerSettings.m:70 */,
+		);
+		codeSenseManager = 3EA367AD0FE3D0DA002A406C /* Code sense */;
+		executables = (
+			3EA367A00FE3D0D6002A406C /* WeightTracker */,
+		);
+		perUserDictionary = {
+			PBXConfiguration.PBXFileTableDataSource3.PBXBookmarksDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXBookmarksDataSource_NameID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					200,
+					200,
+					150.58349609375,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXBookmarksDataSource_LocationID,
+					PBXBookmarksDataSource_NameID,
+					PBXBookmarksDataSource_CommentsID,
+				);
+			};
+			PBXConfiguration.PBXFileTableDataSource3.PBXFileTableDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Filename_ColumnID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					20,
+					746,
+					20,
+					48,
+					43,
+					43,
+					20,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXFileDataSource_FiletypeID,
+					PBXFileDataSource_Filename_ColumnID,
+					PBXFileDataSource_Built_ColumnID,
+					PBXFileDataSource_ObjectSize_ColumnID,
+					PBXFileDataSource_Errors_ColumnID,
+					PBXFileDataSource_Warnings_ColumnID,
+					PBXFileDataSource_Target_ColumnID,
+				);
+			};
+			PBXPerProjectTemplateStateSaveDate = 266683971;
+			PBXWorkspaceStateSaveDate = 266683971;
+		};
+		perUserProjectItems = {
+			3E1483B50FE548270064950B /* PBXTextBookmark */ = 3E1483B50FE548270064950B /* PBXTextBookmark */;
+			3E1483B60FE548270064950B /* PBXTextBookmark */ = 3E1483B60FE548270064950B /* PBXTextBookmark */;
+			3E1483B70FE548270064950B /* PBXTextBookmark */ = 3E1483B70FE548270064950B /* PBXTextBookmark */;
+			3E1483B80FE548270064950B /* PBXTextBookmark */ = 3E1483B80FE548270064950B /* PBXTextBookmark */;
+			3E1483B90FE548270064950B /* PBXTextBookmark */ = 3E1483B90FE548270064950B /* PBXTextBookmark */;
+			3E1483BA0FE548270064950B /* PBXTextBookmark */ = 3E1483BA0FE548270064950B /* PBXTextBookmark */;
+			3E1483BB0FE548270064950B /* PBXTextBookmark */ = 3E1483BB0FE548270064950B /* PBXTextBookmark */;
+			3E1483BC0FE548270064950B /* PBXTextBookmark */ = 3E1483BC0FE548270064950B /* PBXTextBookmark */;
+			3E1483BD0FE548270064950B /* PBXTextBookmark */ = 3E1483BD0FE548270064950B /* PBXTextBookmark */;
+			3E1483BE0FE548270064950B /* PBXTextBookmark */ = 3E1483BE0FE548270064950B /* PBXTextBookmark */;
+			3E1483BF0FE548270064950B /* PBXTextBookmark */ = 3E1483BF0FE548270064950B /* PBXTextBookmark */;
+			3E1483C00FE548270064950B /* PBXTextBookmark */ = 3E1483C00FE548270064950B /* PBXTextBookmark */;
+			3E1483C10FE548270064950B /* PBXTextBookmark */ = 3E1483C10FE548270064950B /* PBXTextBookmark */;
+			3E1483C40FE548C70064950B /* PBXTextBookmark */ = 3E1483C40FE548C70064950B /* PBXTextBookmark */;
+			3E1483C50FE548C70064950B /* PBXTextBookmark */ = 3E1483C50FE548C70064950B /* PBXTextBookmark */;
+			3E1483C60FE548C70064950B /* PBXTextBookmark */ = 3E1483C60FE548C70064950B /* PBXTextBookmark */;
+			3E1483C70FE548C70064950B /* PBXTextBookmark */ = 3E1483C70FE548C70064950B /* PBXTextBookmark */;
+			3E1483C80FE548C70064950B /* PBXTextBookmark */ = 3E1483C80FE548C70064950B /* PBXTextBookmark */;
+			3E1483C90FE548E80064950B /* PBXTextBookmark */ = 3E1483C90FE548E80064950B /* PBXTextBookmark */;
+			3E1483CA0FE548E80064950B /* PBXTextBookmark */ = 3E1483CA0FE548E80064950B /* PBXTextBookmark */;
+			3E1483CB0FE548E80064950B /* PBXTextBookmark */ = 3E1483CB0FE548E80064950B /* PBXTextBookmark */;
+			3E1483CC0FE548E80064950B /* PBXTextBookmark */ = 3E1483CC0FE548E80064950B /* PBXTextBookmark */;
+			3E1483CD0FE548F10064950B /* PBXTextBookmark */ = 3E1483CD0FE548F10064950B /* PBXTextBookmark */;
+			3E1483E90FE54B430064950B /* PBXTextBookmark */ = 3E1483E90FE54B430064950B /* PBXTextBookmark */;
+			3E1483EA0FE54B430064950B /* PBXTextBookmark */ = 3E1483EA0FE54B430064950B /* PBXTextBookmark */;
+			3E1483EB0FE54B430064950B /* PBXTextBookmark */ = 3E1483EB0FE54B430064950B /* PBXTextBookmark */;
+			3E1483EC0FE54B430064950B /* PBXTextBookmark */ = 3E1483EC0FE54B430064950B /* PBXTextBookmark */;
+			3E1483ED0FE54B430064950B /* PBXTextBookmark */ = 3E1483ED0FE54B430064950B /* PBXTextBookmark */;
+			3E1483EE0FE54B430064950B /* PBXTextBookmark */ = 3E1483EE0FE54B430064950B /* PBXTextBookmark */;
+			3E1483EF0FE54B430064950B /* PBXTextBookmark */ = 3E1483EF0FE54B430064950B /* PBXTextBookmark */;
+			3E1483F00FE54B430064950B /* PBXTextBookmark */ = 3E1483F00FE54B430064950B /* PBXTextBookmark */;
+			3E1483F10FE54B430064950B /* PBXTextBookmark */ = 3E1483F10FE54B430064950B /* PBXTextBookmark */;
+			3E1483F20FE54B430064950B /* PBXTextBookmark */ = 3E1483F20FE54B430064950B /* PBXTextBookmark */;
+			3E1483F30FE54B430064950B /* PBXTextBookmark */ = 3E1483F30FE54B430064950B /* PBXTextBookmark */;
+			3E1483F40FE54B430064950B /* PBXTextBookmark */ = 3E1483F40FE54B430064950B /* PBXTextBookmark */;
+			3E1483F50FE54B430064950B /* PBXTextBookmark */ = 3E1483F50FE54B430064950B /* PBXTextBookmark */;
+			3E1483F60FE54B430064950B /* PBXTextBookmark */ = 3E1483F60FE54B430064950B /* PBXTextBookmark */;
+			3E1483F70FE54B430064950B /* PBXTextBookmark */ = 3E1483F70FE54B430064950B /* PBXTextBookmark */;
+			3E1483F80FE54B430064950B /* PBXTextBookmark */ = 3E1483F80FE54B430064950B /* PBXTextBookmark */;
+			3E14840C0FE54DBD0064950B /* PBXTextBookmark */ = 3E14840C0FE54DBD0064950B /* PBXTextBookmark */;
+			3E14840D0FE54DBD0064950B /* PBXTextBookmark */ = 3E14840D0FE54DBD0064950B /* PBXTextBookmark */;
+			3E14840E0FE54DBD0064950B /* PBXTextBookmark */ = 3E14840E0FE54DBD0064950B /* PBXTextBookmark */;
+			3E14840F0FE54DBD0064950B /* PBXTextBookmark */ = 3E14840F0FE54DBD0064950B /* PBXTextBookmark */;
+			3E1484100FE54DBD0064950B /* PBXTextBookmark */ = 3E1484100FE54DBD0064950B /* PBXTextBookmark */;
+			3E1484110FE54DBD0064950B /* PBXTextBookmark */ = 3E1484110FE54DBD0064950B /* PBXTextBookmark */;
+			3E1484120FE54DBD0064950B /* PBXTextBookmark */ = 3E1484120FE54DBD0064950B /* PBXTextBookmark */;
+			3E1484130FE54DBD0064950B /* PBXTextBookmark */ = 3E1484130FE54DBD0064950B /* PBXTextBookmark */;
+			3E1484140FE54DBD0064950B /* PBXTextBookmark */ = 3E1484140FE54DBD0064950B /* PBXTextBookmark */;
+			3E1484180FE558390064950B /* PBXTextBookmark */ = 3E1484180FE558390064950B /* PBXTextBookmark */;
+			3E14841B0FE558560064950B /* PBXTextBookmark */ = 3E14841B0FE558560064950B /* PBXTextBookmark */;
+			3E14841C0FE558560064950B /* PBXTextBookmark */ = 3E14841C0FE558560064950B /* PBXTextBookmark */;
+			3E14841D0FE558560064950B /* PBXTextBookmark */ = 3E14841D0FE558560064950B /* PBXTextBookmark */;
+			3E14841E0FE558560064950B /* PBXTextBookmark */ = 3E14841E0FE558560064950B /* PBXTextBookmark */;
+			3E14841F0FE558560064950B /* PBXTextBookmark */ = 3E14841F0FE558560064950B /* PBXTextBookmark */;
+			3E1484240FE5590A0064950B /* PBXTextBookmark */ = 3E1484240FE5590A0064950B /* PBXTextBookmark */;
+			3E1484250FE5590A0064950B /* PBXTextBookmark */ = 3E1484250FE5590A0064950B /* PBXTextBookmark */;
+			3E1484260FE5590A0064950B /* PBXTextBookmark */ = 3E1484260FE5590A0064950B /* PBXTextBookmark */;
+			3E1484270FE5590A0064950B /* PBXTextBookmark */ = 3E1484270FE5590A0064950B /* PBXTextBookmark */;
+			3E1484280FE5590A0064950B /* PBXTextBookmark */ = 3E1484280FE5590A0064950B /* PBXTextBookmark */;
+			3E1484290FE5590A0064950B /* PBXTextBookmark */ = 3E1484290FE5590A0064950B /* PBXTextBookmark */;
+			3E14842A0FE5590A0064950B /* PBXTextBookmark */ = 3E14842A0FE5590A0064950B /* PBXTextBookmark */;
+			3E14842B0FE5590A0064950B /* PBXTextBookmark */ = 3E14842B0FE5590A0064950B /* PBXTextBookmark */;
+			3E14842C0FE5590A0064950B /* PBXTextBookmark */ = 3E14842C0FE5590A0064950B /* PBXTextBookmark */;
+			3E14842D0FE5590A0064950B /* PBXTextBookmark */ = 3E14842D0FE5590A0064950B /* PBXTextBookmark */;
+			3E14842E0FE5590A0064950B /* PBXTextBookmark */ = 3E14842E0FE5590A0064950B /* PBXTextBookmark */;
+			3E14842F0FE5590A0064950B /* PBXTextBookmark */ = 3E14842F0FE5590A0064950B /* PBXTextBookmark */;
+			3E1484300FE5590A0064950B /* PBXTextBookmark */ = 3E1484300FE5590A0064950B /* PBXTextBookmark */;
+			3E1484310FE5590A0064950B /* PBXTextBookmark */ = 3E1484310FE5590A0064950B /* PBXTextBookmark */;
+			3E1484320FE5590A0064950B /* PBXTextBookmark */ = 3E1484320FE5590A0064950B /* PBXTextBookmark */;
+			3E1484330FE5590A0064950B /* PBXTextBookmark */ = 3E1484330FE5590A0064950B /* PBXTextBookmark */;
+			3E1484340FE5590A0064950B /* PBXTextBookmark */ = 3E1484340FE5590A0064950B /* PBXTextBookmark */;
+			3E1484350FE5590A0064950B /* PBXTextBookmark */ = 3E1484350FE5590A0064950B /* PBXTextBookmark */;
+			3E1484360FE5590A0064950B /* PBXTextBookmark */ = 3E1484360FE5590A0064950B /* PBXTextBookmark */;
+			3E1484370FE5590A0064950B /* PBXTextBookmark */ = 3E1484370FE5590A0064950B /* PBXTextBookmark */;
+			3E1484380FE5590A0064950B /* PBXTextBookmark */ = 3E1484380FE5590A0064950B /* PBXTextBookmark */;
+			3E1484390FE5590A0064950B /* PBXTextBookmark */ = 3E1484390FE5590A0064950B /* PBXTextBookmark */;
+			3E14843A0FE5590A0064950B /* PBXTextBookmark */ = 3E14843A0FE5590A0064950B /* PBXTextBookmark */;
+			3E14843E0FE559440064950B /* PBXTextBookmark */ = 3E14843E0FE559440064950B /* PBXTextBookmark */;
+			3E14843F0FE559440064950B /* PBXTextBookmark */ = 3E14843F0FE559440064950B /* PBXTextBookmark */;
+			3E1484400FE559440064950B /* PBXTextBookmark */ = 3E1484400FE559440064950B /* PBXTextBookmark */;
+			3E1484410FE559440064950B /* PBXTextBookmark */ = 3E1484410FE559440064950B /* PBXTextBookmark */;
+			3E1484420FE559440064950B /* PBXTextBookmark */ = 3E1484420FE559440064950B /* PBXTextBookmark */;
+			3E1484430FE559440064950B /* PBXTextBookmark */ = 3E1484430FE559440064950B /* PBXTextBookmark */;
+			3E1484440FE559440064950B /* PBXTextBookmark */ = 3E1484440FE559440064950B /* PBXTextBookmark */;
+			3E14844B0FE559A90064950B /* PBXTextBookmark */ = 3E14844B0FE559A90064950B /* PBXTextBookmark */;
+			3E1484530FE55A1A0064950B /* PBXTextBookmark */ = 3E1484530FE55A1A0064950B /* PBXTextBookmark */;
+			3E1484540FE55A1A0064950B /* PBXTextBookmark */ = 3E1484540FE55A1A0064950B /* PBXTextBookmark */;
+			3E1484550FE55A1A0064950B /* PBXTextBookmark */ = 3E1484550FE55A1A0064950B /* PBXTextBookmark */;
+			3E1484560FE55A1A0064950B /* PBXTextBookmark */ = 3E1484560FE55A1A0064950B /* PBXTextBookmark */;
+			3E1484570FE55A1A0064950B /* PBXTextBookmark */ = 3E1484570FE55A1A0064950B /* PBXTextBookmark */;
+			3E1484580FE55A1A0064950B /* PBXTextBookmark */ = 3E1484580FE55A1A0064950B /* PBXTextBookmark */;
+			3E1484590FE55A1A0064950B /* PBXTextBookmark */ = 3E1484590FE55A1A0064950B /* PBXTextBookmark */;
+			3E14845A0FE55A1A0064950B /* PBXTextBookmark */ = 3E14845A0FE55A1A0064950B /* PBXTextBookmark */;
+			3E14845B0FE55A1A0064950B /* PBXTextBookmark */ = 3E14845B0FE55A1A0064950B /* PBXTextBookmark */;
+			3E14845C0FE55A1A0064950B /* PBXTextBookmark */ = 3E14845C0FE55A1A0064950B /* PBXTextBookmark */;
+			3E14845D0FE55A1A0064950B /* PBXTextBookmark */ = 3E14845D0FE55A1A0064950B /* PBXTextBookmark */;
+			3E14845E0FE55A1A0064950B /* PBXTextBookmark */ = 3E14845E0FE55A1A0064950B /* PBXTextBookmark */;
+			3E14845F0FE55A1A0064950B /* PBXTextBookmark */ = 3E14845F0FE55A1A0064950B /* PBXTextBookmark */;
+			3E1484600FE55A1A0064950B /* PBXTextBookmark */ = 3E1484600FE55A1A0064950B /* PBXTextBookmark */;
+			3E1484610FE55A270064950B /* PBXBookmark */ = 3E1484610FE55A270064950B /* PBXBookmark */;
+			3E1484640FE55BA30064950B /* PBXTextBookmark */ = 3E1484640FE55BA30064950B /* PBXTextBookmark */;
+			3E1484650FE55BA30064950B /* PBXTextBookmark */ = 3E1484650FE55BA30064950B /* PBXTextBookmark */;
+			3E1484660FE55BA30064950B /* PBXTextBookmark */ = 3E1484660FE55BA30064950B /* PBXTextBookmark */;
+			3E1484670FE55BA30064950B /* PBXTextBookmark */ = 3E1484670FE55BA30064950B /* PBXTextBookmark */;
+			3E1484680FE55BA30064950B /* PBXTextBookmark */ = 3E1484680FE55BA30064950B /* PBXTextBookmark */;
+			3E1484690FE55BA30064950B /* PBXTextBookmark */ = 3E1484690FE55BA30064950B /* PBXTextBookmark */;
+			3E14846A0FE55BA30064950B /* PBXTextBookmark */ = 3E14846A0FE55BA30064950B /* PBXTextBookmark */;
+			3E14846B0FE55BA30064950B /* PBXTextBookmark */ = 3E14846B0FE55BA30064950B /* PBXTextBookmark */;
+			3E14846C0FE55BA30064950B /* PBXTextBookmark */ = 3E14846C0FE55BA30064950B /* PBXTextBookmark */;
+			3E14846D0FE55BA30064950B /* PBXTextBookmark */ = 3E14846D0FE55BA30064950B /* PBXTextBookmark */;
+			3E14846E0FE55BA30064950B /* PBXTextBookmark */ = 3E14846E0FE55BA30064950B /* PBXTextBookmark */;
+			3E14846F0FE55BA30064950B /* PBXTextBookmark */ = 3E14846F0FE55BA30064950B /* PBXTextBookmark */;
+			3E1484700FE55BA30064950B /* PBXTextBookmark */ = 3E1484700FE55BA30064950B /* PBXTextBookmark */;
+			3E1484710FE55BA30064950B /* PBXTextBookmark */ = 3E1484710FE55BA30064950B /* PBXTextBookmark */;
+			3E1484720FE55BA30064950B /* PBXTextBookmark */ = 3E1484720FE55BA30064950B /* PBXTextBookmark */;
+			3E1484730FE55BA30064950B /* PBXTextBookmark */ = 3E1484730FE55BA30064950B /* PBXTextBookmark */;
+			3E1484740FE55BA30064950B /* PBXTextBookmark */ = 3E1484740FE55BA30064950B /* PBXTextBookmark */;
+			3E1484750FE55BA30064950B /* PBXTextBookmark */ = 3E1484750FE55BA30064950B /* PBXTextBookmark */;
+			3E1484760FE55BA30064950B /* PBXTextBookmark */ = 3E1484760FE55BA30064950B /* PBXTextBookmark */;
+			3E1484790FE55BA30064950B /* PBXTextBookmark */ = 3E1484790FE55BA30064950B /* PBXTextBookmark */;
+			3E14847A0FE55BA50064950B /* PBXTextBookmark */ = 3E14847A0FE55BA50064950B /* PBXTextBookmark */;
+			3E14847B0FE55BA50064950B /* PBXTextBookmark */ = 3E14847B0FE55BA50064950B /* PBXTextBookmark */;
+			3E14847C0FE55BA50064950B /* PBXTextBookmark */ = 3E14847C0FE55BA50064950B /* PBXTextBookmark */;
+			3E14847D0FE55BA50064950B /* PBXTextBookmark */ = 3E14847D0FE55BA50064950B /* PBXTextBookmark */;
+			3E14848B0FE55C7A0064950B /* PBXTextBookmark */ = 3E14848B0FE55C7A0064950B /* PBXTextBookmark */;
+			3E14848C0FE55C7A0064950B /* PBXTextBookmark */ = 3E14848C0FE55C7A0064950B /* PBXTextBookmark */;
+			3E14848D0FE55C7A0064950B /* PBXTextBookmark */ = 3E14848D0FE55C7A0064950B /* PBXTextBookmark */;
+			3E14848E0FE55C7A0064950B /* PBXTextBookmark */ = 3E14848E0FE55C7A0064950B /* PBXTextBookmark */;
+			3E14848F0FE55C7A0064950B /* PBXTextBookmark */ = 3E14848F0FE55C7A0064950B /* PBXTextBookmark */;
+			3E1484900FE55C7A0064950B /* PBXTextBookmark */ = 3E1484900FE55C7A0064950B /* PBXTextBookmark */;
+			3E1484910FE55C7A0064950B /* PBXTextBookmark */ = 3E1484910FE55C7A0064950B /* PBXTextBookmark */;
+			3E1484920FE55C7A0064950B /* PBXTextBookmark */ = 3E1484920FE55C7A0064950B /* PBXTextBookmark */;
+			3E1484930FE55C7A0064950B /* PBXTextBookmark */ = 3E1484930FE55C7A0064950B /* PBXTextBookmark */;
+			3E1484940FE55C7A0064950B /* PBXTextBookmark */ = 3E1484940FE55C7A0064950B /* PBXTextBookmark */;
+			3E1484950FE55C7A0064950B /* PBXTextBookmark */ = 3E1484950FE55C7A0064950B /* PBXTextBookmark */;
+			3E1484960FE55C7A0064950B /* PBXTextBookmark */ = 3E1484960FE55C7A0064950B /* PBXTextBookmark */;
+			3E1484970FE55C7A0064950B /* PBXTextBookmark */ = 3E1484970FE55C7A0064950B /* PBXTextBookmark */;
+			3E1484980FE55C7A0064950B /* PBXTextBookmark */ = 3E1484980FE55C7A0064950B /* PBXTextBookmark */;
+			3E1484990FE55C7A0064950B /* PBXTextBookmark */ = 3E1484990FE55C7A0064950B /* PBXTextBookmark */;
+			3E1484A30FE55DA60064950B /* PBXTextBookmark */ = 3E1484A30FE55DA60064950B /* PBXTextBookmark */;
+			3E1484A40FE55DA60064950B /* PBXTextBookmark */ = 3E1484A40FE55DA60064950B /* PBXTextBookmark */;
+			3E1484AD0FE55E630064950B /* PBXTextBookmark */ = 3E1484AD0FE55E630064950B /* PBXTextBookmark */;
+			3E1484AE0FE55E630064950B /* PBXTextBookmark */ = 3E1484AE0FE55E630064950B /* PBXTextBookmark */;
+			3E1484B30FE576D90064950B /* PBXTextBookmark */ = 3E1484B30FE576D90064950B /* PBXTextBookmark */;
+			3E1484B40FE576D90064950B /* PBXTextBookmark */ = 3E1484B40FE576D90064950B /* PBXTextBookmark */;
+			3E1484B80FE577180064950B /* PBXTextBookmark */ = 3E1484B80FE577180064950B /* PBXTextBookmark */;
+			3E1484B90FE577180064950B /* PBXTextBookmark */ = 3E1484B90FE577180064950B /* PBXTextBookmark */;
+			3E2C8C750FE3E40B00ED03A4 = 3E2C8C750FE3E40B00ED03A4 /* PBXTextBookmark */;
+			3E2C8C760FE3E40B00ED03A4 = 3E2C8C760FE3E40B00ED03A4 /* PBXTextBookmark */;
+			3E2C8C770FE3E40B00ED03A4 = 3E2C8C770FE3E40B00ED03A4 /* PBXTextBookmark */;
+			3E2C8C780FE3E40B00ED03A4 = 3E2C8C780FE3E40B00ED03A4 /* PBXTextBookmark */;
+			3E2C8C7A0FE3E40B00ED03A4 = 3E2C8C7A0FE3E40B00ED03A4 /* PBXTextBookmark */;
+			3E95155F0FE3E65900C0A7F8 = 3E95155F0FE3E65900C0A7F8 /* PBXTextBookmark */;
+			3E9515620FE3E65900C0A7F8 = 3E9515620FE3E65900C0A7F8 /* PBXTextBookmark */;
+			3E9515D60FE3EDFC00C0A7F8 = 3E9515D60FE3EDFC00C0A7F8 /* PBXTextBookmark */;
+			3EBA4B210FE445610056A086 = 3EBA4B210FE445610056A086 /* PBXTextBookmark */;
+			3EBA4B400FE454B60056A086 = 3EBA4B400FE454B60056A086 /* PBXTextBookmark */;
+			3EBA4B410FE454B60056A086 = 3EBA4B410FE454B60056A086 /* PBXTextBookmark */;
+			3EBA4B420FE454B60056A086 = 3EBA4B420FE454B60056A086 /* PBXTextBookmark */;
+			3EBA4B430FE454B60056A086 = 3EBA4B430FE454B60056A086 /* PBXTextBookmark */;
+			3EBA4B440FE454B60056A086 = 3EBA4B440FE454B60056A086 /* PBXTextBookmark */;
+			3EBA4B450FE454B60056A086 = 3EBA4B450FE454B60056A086 /* PBXTextBookmark */;
+			3EBA4B460FE454B60056A086 = 3EBA4B460FE454B60056A086 /* PBXTextBookmark */;
+			3EBA4B470FE454B60056A086 = 3EBA4B470FE454B60056A086 /* PBXTextBookmark */;
+			3EBA4B480FE454B60056A086 = 3EBA4B480FE454B60056A086 /* PBXTextBookmark */;
+			3EBA4B490FE454B60056A086 = 3EBA4B490FE454B60056A086 /* PBXTextBookmark */;
+			3EBA4B4A0FE454B60056A086 = 3EBA4B4A0FE454B60056A086 /* PBXTextBookmark */;
+			3EBA4B4B0FE454B60056A086 = 3EBA4B4B0FE454B60056A086 /* PBXTextBookmark */;
+			3EBA4B4C0FE454B60056A086 = 3EBA4B4C0FE454B60056A086 /* PBXTextBookmark */;
+			3EBA4B4D0FE454B60056A086 = 3EBA4B4D0FE454B60056A086 /* PBXTextBookmark */;
+			3EBA4B4E0FE454B60056A086 = 3EBA4B4E0FE454B60056A086 /* PBXTextBookmark */;
+			3EBA4B4F0FE454B60056A086 = 3EBA4B4F0FE454B60056A086 /* PBXTextBookmark */;
+			3EBA4B500FE454B60056A086 = 3EBA4B500FE454B60056A086 /* PBXTextBookmark */;
+			3EBA4B510FE454B60056A086 = 3EBA4B510FE454B60056A086 /* PBXTextBookmark */;
+			3EBA4B520FE454B60056A086 = 3EBA4B520FE454B60056A086 /* PBXTextBookmark */;
+			3EBA4B530FE454B60056A086 = 3EBA4B530FE454B60056A086 /* PBXTextBookmark */;
+			3EBA4B540FE454B60056A086 = 3EBA4B540FE454B60056A086 /* PBXTextBookmark */;
+			3EBA4B550FE454B60056A086 = 3EBA4B550FE454B60056A086 /* PBXTextBookmark */;
+			3EBA4B560FE454B60056A086 = 3EBA4B560FE454B60056A086 /* PBXTextBookmark */;
+			3EBA4B570FE454B60056A086 = 3EBA4B570FE454B60056A086 /* PBXTextBookmark */;
+			3EBA4B580FE454B60056A086 = 3EBA4B580FE454B60056A086 /* PBXTextBookmark */;
+			3EBA4B590FE454B60056A086 = 3EBA4B590FE454B60056A086 /* PBXTextBookmark */;
+			3EBA4B5A0FE454B60056A086 = 3EBA4B5A0FE454B60056A086 /* PBXTextBookmark */;
+			3EBA4B5B0FE454B60056A086 = 3EBA4B5B0FE454B60056A086 /* PBXTextBookmark */;
+			3EBA4B5C0FE454B60056A086 = 3EBA4B5C0FE454B60056A086 /* PBXTextBookmark */;
+			3EBA4B5D0FE454B60056A086 = 3EBA4B5D0FE454B60056A086 /* PBXTextBookmark */;
+			3EBA4B5E0FE454B60056A086 = 3EBA4B5E0FE454B60056A086 /* PBXTextBookmark */;
+			3EBA4B5F0FE454B60056A086 = 3EBA4B5F0FE454B60056A086 /* PBXTextBookmark */;
+			3EBA4B600FE454B60056A086 = 3EBA4B600FE454B60056A086 /* PBXTextBookmark */;
+			3EBA4B610FE454B60056A086 = 3EBA4B610FE454B60056A086 /* PBXTextBookmark */;
+			3EBA4B9A0FE455FE0056A086 = 3EBA4B9A0FE455FE0056A086 /* PBXTextBookmark */;
+			3EBA4B9B0FE455FE0056A086 = 3EBA4B9B0FE455FE0056A086 /* PBXTextBookmark */;
+			3EBA4B9C0FE455FE0056A086 = 3EBA4B9C0FE455FE0056A086 /* PBXTextBookmark */;
+			3EBA4B9D0FE455FE0056A086 = 3EBA4B9D0FE455FE0056A086 /* PBXTextBookmark */;
+			3EBA4B9E0FE455FE0056A086 = 3EBA4B9E0FE455FE0056A086 /* PBXTextBookmark */;
+			3EBA4B9F0FE455FE0056A086 = 3EBA4B9F0FE455FE0056A086 /* PBXTextBookmark */;
+			3EBA4BA00FE455FE0056A086 = 3EBA4BA00FE455FE0056A086 /* PBXTextBookmark */;
+			3EBA4BA10FE455FE0056A086 = 3EBA4BA10FE455FE0056A086 /* PBXTextBookmark */;
+			3EBA4BA20FE455FE0056A086 = 3EBA4BA20FE455FE0056A086 /* PBXTextBookmark */;
+			3EBA4BA30FE455FE0056A086 = 3EBA4BA30FE455FE0056A086 /* PBXTextBookmark */;
+			3EBA4BA40FE455FE0056A086 = 3EBA4BA40FE455FE0056A086 /* PBXTextBookmark */;
+			3EBA4BA50FE455FE0056A086 = 3EBA4BA50FE455FE0056A086 /* PBXTextBookmark */;
+			3EBA4BB40FE456CD0056A086 = 3EBA4BB40FE456CD0056A086 /* PBXTextBookmark */;
+			3EBA4BB50FE456CD0056A086 = 3EBA4BB50FE456CD0056A086 /* PBXTextBookmark */;
+			3EBA4BC50FE458620056A086 = 3EBA4BC50FE458620056A086 /* PBXTextBookmark */;
+			3EBA4BCF0FE45A2F0056A086 = 3EBA4BCF0FE45A2F0056A086 /* PBXTextBookmark */;
+			3EBA4BD00FE45A2F0056A086 = 3EBA4BD00FE45A2F0056A086 /* PBXTextBookmark */;
+			3EBA4BD10FE45A2F0056A086 = 3EBA4BD10FE45A2F0056A086 /* PBXTextBookmark */;
+			3EBA4BD20FE45A2F0056A086 = 3EBA4BD20FE45A2F0056A086 /* PBXTextBookmark */;
+			3EBA4BD30FE45A2F0056A086 = 3EBA4BD30FE45A2F0056A086 /* PBXTextBookmark */;
+			3EBA4BD40FE45A2F0056A086 = 3EBA4BD40FE45A2F0056A086 /* PBXTextBookmark */;
+			3EBA4BD50FE45A2F0056A086 = 3EBA4BD50FE45A2F0056A086 /* PBXTextBookmark */;
+			3EBA4BDE0FE45AA60056A086 = 3EBA4BDE0FE45AA60056A086 /* PBXTextBookmark */;
+			3EBA4BDF0FE45AA60056A086 = 3EBA4BDF0FE45AA60056A086 /* PBXTextBookmark */;
+			3EBA4BE00FE45AA60056A086 = 3EBA4BE00FE45AA60056A086 /* PBXTextBookmark */;
+			3EBA4BE10FE45AA60056A086 = 3EBA4BE10FE45AA60056A086 /* PBXTextBookmark */;
+			3EBA4BE20FE45AA60056A086 = 3EBA4BE20FE45AA60056A086 /* PBXTextBookmark */;
+			3EBA4BE30FE45AA60056A086 = 3EBA4BE30FE45AA60056A086 /* PBXTextBookmark */;
+			3EBA4BE40FE45AA60056A086 = 3EBA4BE40FE45AA60056A086 /* PBXTextBookmark */;
+			3EBA4BE60FE45AC70056A086 = 3EBA4BE60FE45AC70056A086 /* PBXTextBookmark */;
+			3EBA4BE70FE45AC70056A086 = 3EBA4BE70FE45AC70056A086 /* PBXTextBookmark */;
+			3EBA4BE80FE45AC70056A086 = 3EBA4BE80FE45AC70056A086 /* PBXTextBookmark */;
+			3EBA4BE90FE45AC70056A086 = 3EBA4BE90FE45AC70056A086 /* PBXTextBookmark */;
+			3EBA4BEA0FE45AC70056A086 = 3EBA4BEA0FE45AC70056A086 /* PBXTextBookmark */;
+			3EBA4BEB0FE45AC70056A086 = 3EBA4BEB0FE45AC70056A086 /* PBXTextBookmark */;
+			3EBA4BEC0FE45AC70056A086 = 3EBA4BEC0FE45AC70056A086 /* PBXTextBookmark */;
+			3EBA4BED0FE45AC70056A086 = 3EBA4BED0FE45AC70056A086 /* PBXTextBookmark */;
+			3EBA4BEE0FE45AC70056A086 = 3EBA4BEE0FE45AC70056A086 /* PBXTextBookmark */;
+		};
+		sourceControlManager = 3EA367AC0FE3D0DA002A406C /* Source Control */;
+		userBuildSettings = {
+		};
+	};
+	29B97316FDCFA39411CA2CEA /* main.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {691, 430}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 370}";
+			sepNavWindowFrame = "{{136, 180}, {750, 558}}";
+		};
+	};
+	3E1483B50FE548270064950B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3EA367B90FE3D2AC002A406C /* MainApplicationController.h */;
+		name = "MainApplicationController.h: 4";
+		rLen = 0;
+		rLoc = 55;
+		rType = 0;
+		vrLen = 303;
+		vrLoc = 0;
+	};
+	3E1483B60FE548270064950B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3EBA4B310FE446640056A086 /* WeightTrackerSettings.h */;
+		name = "WeightTrackerSettings.h: 23";
+		rLen = 44;
+		rLoc = 437;
+		rType = 0;
+		vrLen = 455;
+		vrLoc = 0;
+	};
+	3E1483B70FE548270064950B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3EBA4B320FE446640056A086 /* WeightTrackerSettings.m */;
+		name = "WeightTrackerSettings.m: 34";
+		rLen = 0;
+		rLoc = 945;
+		rType = 0;
+		vrLen = 854;
+		vrLoc = 998;
+	};
+	3E1483B80FE548270064950B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3EBA4B320FE446640056A086 /* WeightTrackerSettings.m */;
+		name = "WeightTrackerSettings.m: 34";
+		rLen = 0;
+		rLoc = 945;
+		rType = 0;
+		vrLen = 998;
+		vrLoc = 0;
+	};
+	3E1483B90FE548270064950B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3EBA4B310FE446640056A086 /* WeightTrackerSettings.h */;
+		name = "WeightTrackerSettings.h: 22";
+		rLen = 0;
+		rLoc = 481;
+		rType = 0;
+		vrLen = 410;
+		vrLoc = 0;
+	};
+	3E1483BA0FE548270064950B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3EBA4B320FE446640056A086 /* WeightTrackerSettings.m */;
+		name = "WeightTrackerSettings.m: 34";
+		rLen = 0;
+		rLoc = 945;
+		rType = 0;
+		vrLen = 852;
+		vrLoc = 1000;
+	};
+	3E1483BB0FE548270064950B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3EBA4B310FE446640056A086 /* WeightTrackerSettings.h */;
+		name = "WeightTrackerSettings.h: 23";
+		rLen = 0;
+		rLoc = 481;
+		rType = 0;
+		vrLen = 455;
+		vrLoc = 0;
+	};
+	3E1483BC0FE548270064950B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3EA367B90FE3D2AC002A406C /* MainApplicationController.h */;
+		name = "MainApplicationController.h: 4";
+		rLen = 0;
+		rLoc = 55;
+		rType = 0;
+		vrLen = 303;
+		vrLoc = 0;
+	};
+	3E1483BD0FE548270064950B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3EBA4B320FE446640056A086 /* WeightTrackerSettings.m */;
+		name = "WeightTrackerSettings.m: 34";
+		rLen = 0;
+		rLoc = 945;
+		rType = 0;
+		vrLen = 854;
+		vrLoc = 998;
+	};
+	3E1483BE0FE548270064950B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3EBA4B310FE446640056A086 /* WeightTrackerSettings.h */;
+		name = "WeightTrackerSettings.h: 23";
+		rLen = 0;
+		rLoc = 481;
+		rType = 0;
+		vrLen = 455;
+		vrLoc = 0;
+	};
+	3E1483BF0FE548270064950B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3EBA4B320FE446640056A086 /* WeightTrackerSettings.m */;
+		name = "WeightTrackerSettings.m: 34";
+		rLen = 0;
+		rLoc = 945;
+		rType = 0;
+		vrLen = 854;
+		vrLoc = 998;
+	};
+	3E1483C00FE548270064950B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3EBA4B310FE446640056A086 /* WeightTrackerSettings.h */;
+		name = "WeightTrackerSettings.h: 23";
+		rLen = 44;
+		rLoc = 437;
+		rType = 0;
+		vrLen = 455;
+		vrLoc = 0;
+	};
+	3E1483C10FE548270064950B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3EBA4B320FE446640056A086 /* WeightTrackerSettings.m */;
+		name = "WeightTrackerSettings.m: 30";
+		rLen = 0;
+		rLoc = 829;
+		rType = 0;
+		vrLen = 1028;
+		vrLoc = 608;
+	};
+	3E1483C40FE548C70064950B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3EBA4B310FE446640056A086 /* WeightTrackerSettings.h */;
+		name = "WeightTrackerSettings.h: 18";
+		rLen = 0;
+		rLoc = 357;
+		rType = 0;
+		vrLen = 476;
+		vrLoc = 0;
+	};
+	3E1483C50FE548C70064950B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3EBA4B320FE446640056A086 /* WeightTrackerSettings.m */;
+		name = "WeightTrackerSettings.m: 80";
+		rLen = 0;
+		rLoc = 1498;
+		rType = 0;
+		vrLen = 1010;
+		vrLoc = 31;
+	};
+	3E1483C60FE548C70064950B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3EBA4B320FE446640056A086 /* WeightTrackerSettings.m */;
+		name = "WeightTrackerSettings.m: 80";
+		rLen = 0;
+		rLoc = 1498;
+		rType = 0;
+		vrLen = 1010;
+		vrLoc = 31;
+	};
+	3E1483C70FE548C70064950B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3EBA4B310FE446640056A086 /* WeightTrackerSettings.h */;
+		name = "WeightTrackerSettings.h: 18";
+		rLen = 0;
+		rLoc = 357;
+		rType = 0;
+		vrLen = 476;
+		vrLoc = 0;
+	};
+	3E1483C80FE548C70064950B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3EBA4B320FE446640056A086 /* WeightTrackerSettings.m */;
+		name = "WeightTrackerSettings.m: 13";
+		rLen = 0;
+		rLoc = 232;
+		rType = 0;
+		vrLen = 895;
+		vrLoc = 192;
+	};
+	3E1483C90FE548E80064950B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3EBA4B320FE446640056A086 /* WeightTrackerSettings.m */;
+		name = "WeightTrackerSettings.m: 13";
+		rLen = 0;
+		rLoc = 232;
+		rType = 0;
+		vrLen = 895;
+		vrLoc = 192;
+	};
+	3E1483CA0FE548E80064950B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3EBA4B310FE446640056A086 /* WeightTrackerSettings.h */;
+		name = "WeightTrackerSettings.h: 18";
+		rLen = 0;
+		rLoc = 357;
+		rType = 0;
+		vrLen = 476;
+		vrLoc = 0;
+	};
+	3E1483CB0FE548E80064950B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3EBA4B320FE446640056A086 /* WeightTrackerSettings.m */;
+		name = "WeightTrackerSettings.m: 13";
+		rLen = 0;
+		rLoc = 232;
+		rType = 0;
+		vrLen = 895;
+		vrLoc = 192;
+	};
+	3E1483CC0FE548E80064950B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3EBA4B310FE446640056A086 /* WeightTrackerSettings.h */;
+		name = "WeightTrackerSettings.h: 17";
+		rLen = 0;
+		rLoc = 317;
+		rType = 0;
+		vrLen = 486;
+		vrLoc = 0;
+	};
+	3E1483CD0FE548F10064950B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3EBA4B310FE446640056A086 /* WeightTrackerSettings.h */;
+		name = "WeightTrackerSettings.h: 18";
+		rLen = 0;
+		rLoc = 320;
+		rType = 0;
+		vrLen = 488;
+		vrLoc = 0;
+	};
+	3E1483E90FE54B430064950B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3EBA4B310FE446640056A086 /* WeightTrackerSettings.h */;
+		name = "WeightTrackerSettings.h: 18";
+		rLen = 0;
+		rLoc = 342;
+		rType = 0;
+		vrLen = 488;
+		vrLoc = 0;
+	};
+	3E1483EA0FE54B430064950B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3EA367B40FE3D266002A406C /* WeightTrackerController.m */;
+		name = "WeightTrackerController.m: 60";
+		rLen = 0;
+		rLoc = 1884;
+		rType = 0;
+		vrLen = 1038;
+		vrLoc = 0;
+	};
+	3E1483EB0FE54B430064950B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1D3623240D0F684500981E51 /* WeightTrackerAppDelegate.h */;
+		name = "WeightTrackerAppDelegate.h: 11";
+		rLen = 0;
+		rLoc = 217;
+		rType = 0;
+		vrLen = 517;
+		vrLoc = 0;
+	};
+	3E1483EC0FE54B430064950B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3EA367B70FE3D294002A406C /* UserInfoController.m */;
+		name = "UserInfoController.m: 50";
+		rLen = 0;
+		rLoc = 1478;
+		rType = 0;
+		vrLen = 938;
+		vrLoc = 641;
+	};
+	3E1483ED0FE54B430064950B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3EA367BA0FE3D2AC002A406C /* MainApplicationController.m */;
+		name = "MainApplicationController.m: 57";
+		rLen = 0;
+		rLoc = 1536;
+		rType = 0;
+		vrLen = 1013;
+		vrLoc = 0;
+	};
+	3E1483EE0FE54B430064950B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3EBA4B320FE446640056A086 /* WeightTrackerSettings.m */;
+		name = "WeightTrackerSettings.m: 75";
+		rLen = 0;
+		rLoc = 1682;
+		rType = 0;
+		vrLen = 816;
+		vrLoc = 1064;
+	};
+	3E1483EF0FE54B430064950B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3EBA4B310FE446640056A086 /* WeightTrackerSettings.h */;
+		name = "WeightTrackerSettings.h: 18";
+		rLen = 0;
+		rLoc = 342;
+		rType = 0;
+		vrLen = 488;
+		vrLoc = 0;
+	};
+	3E1483F00FE54B430064950B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3EBA4B320FE446640056A086 /* WeightTrackerSettings.m */;
+		name = "WeightTrackerSettings.m: 75";
+		rLen = 0;
+		rLoc = 1682;
+		rType = 0;
+		vrLen = 814;
+		vrLoc = 1066;
+	};
+	3E1483F10FE54B430064950B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3EA367B70FE3D294002A406C /* UserInfoController.m */;
+		name = "UserInfoController.m: 47";
+		rLen = 177;
+		rLoc = 1242;
+		rType = 0;
+		vrLen = 992;
+		vrLoc = 0;
+	};
+	3E1483F20FE54B430064950B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3EA367B40FE3D266002A406C /* WeightTrackerController.m */;
+		name = "WeightTrackerController.m: 60";
+		rLen = 0;
+		rLoc = 1884;
+		rType = 0;
+		vrLen = 1038;
+		vrLoc = 0;
+	};
+	3E1483F30FE54B430064950B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3EBA4B320FE446640056A086 /* WeightTrackerSettings.m */;
+		name = "WeightTrackerSettings.m: 75";
+		rLen = 0;
+		rLoc = 1682;
+		rType = 0;
+		vrLen = 816;
+		vrLoc = 1064;
+	};
+	3E1483F40FE54B430064950B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1D3623240D0F684500981E51 /* WeightTrackerAppDelegate.h */;
+		name = "WeightTrackerAppDelegate.h: 11";
+		rLen = 0;
+		rLoc = 217;
+		rType = 0;
+		vrLen = 517;
+		vrLoc = 0;
+	};
+	3E1483F50FE54B430064950B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3EA367BA0FE3D2AC002A406C /* MainApplicationController.m */;
+		name = "MainApplicationController.m: 57";
+		rLen = 0;
+		rLoc = 1536;
+		rType = 0;
+		vrLen = 1013;
+		vrLoc = 0;
+	};
+	3E1483F60FE54B430064950B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3EA367B70FE3D294002A406C /* UserInfoController.m */;
+		name = "UserInfoController.m: 50";
+		rLen = 0;
+		rLoc = 1478;
+		rType = 0;
+		vrLen = 938;
+		vrLoc = 641;
+	};
+	3E1483F70FE54B430064950B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3EA367BA0FE3D2AC002A406C /* MainApplicationController.m */;
+		name = "MainApplicationController.m: 57";
+		rLen = 0;
+		rLoc = 1536;
+		rType = 0;
+		vrLen = 1013;
+		vrLoc = 0;
+	};
+	3E1483F80FE54B430064950B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3EBA4B320FE446640056A086 /* WeightTrackerSettings.m */;
+		name = "WeightTrackerSettings.m: 76";
+		rLen = 0;
+		rLoc = 1784;
+		rType = 0;
+		vrLen = 855;
+		vrLoc = 1066;
+	};
+	3E14840C0FE54DBD0064950B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3EBA4B310FE446640056A086 /* WeightTrackerSettings.h */;
+		name = "WeightTrackerSettings.h: 23";
+		rLen = 27;
+		rLoc = 409;
+		rType = 0;
+		vrLen = 488;
+		vrLoc = 0;
+	};
+	3E14840D0FE54DBD0064950B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3EA367B70FE3D294002A406C /* UserInfoController.m */;
+		name = "UserInfoController.m: 50";
+		rLen = 0;
+		rLoc = 1478;
+		rType = 0;
+		vrLen = 1026;
+		vrLoc = 553;
+	};
+	3E14840E0FE54DBD0064950B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3EA367B40FE3D266002A406C /* WeightTrackerController.m */;
+		name = "WeightTrackerController.m: 60";
+		rLen = 0;
+		rLoc = 1884;
+		rType = 0;
+		vrLen = 1038;
+		vrLoc = 0;
+	};
+	3E14840F0FE54DBD0064950B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		comments = "error: request for member 'appAlreadySetup' in something not a structure or union";
+		fRef = 3EBA4B320FE446640056A086 /* WeightTrackerSettings.m */;
+		rLen = 1;
+		rLoc = 57;
+		rType = 1;
+	};
+	3E1484100FE54DBD0064950B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3EBA4B320FE446640056A086 /* WeightTrackerSettings.m */;
+		name = "WeightTrackerSettings.m: 78";
+		rLen = 0;
+		rLoc = 1893;
+		rType = 0;
+		vrLen = 875;
+		vrLoc = 193;
+	};
+	3E1484110FE54DBD0064950B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3EBA4B310FE446640056A086 /* WeightTrackerSettings.h */;
+		name = "WeightTrackerSettings.h: 23";
+		rLen = 27;
+		rLoc = 409;
+		rType = 0;
+		vrLen = 488;
+		vrLoc = 0;
+	};
+	3E1484120FE54DBD0064950B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3EA367B70FE3D294002A406C /* UserInfoController.m */;
+		name = "UserInfoController.m: 50";
+		rLen = 0;
+		rLoc = 1478;
+		rType = 0;
+		vrLen = 1026;
+		vrLoc = 553;
+	};
+	3E1484130FE54DBD0064950B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3EA367B40FE3D266002A406C /* WeightTrackerController.m */;
+		name = "WeightTrackerController.m: 60";
+		rLen = 0;
+		rLoc = 1884;
+		rType = 0;
+		vrLen = 1038;
+		vrLoc = 0;
+	};
+	3E1484140FE54DBD0064950B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3EBA4B320FE446640056A086 /* WeightTrackerSettings.m */;
+		name = "WeightTrackerSettings.m: 58";
+		rLen = 0;
+		rLoc = 1331;
+		rType = 0;
+		vrLen = 623;
+		vrLoc = 953;
+	};
+	3E1484180FE558390064950B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3EBA4B320FE446640056A086 /* WeightTrackerSettings.m */;
+		name = "WeightTrackerSettings.m: 58";
+		rLen = 0;
+		rLoc = 1390;
+		rType = 0;
+		vrLen = 694;
+		vrLoc = 1158;
+	};
+	3E14841B0FE558560064950B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3EBA4B320FE446640056A086 /* WeightTrackerSettings.m */;
+		name = "WeightTrackerSettings.m: 58";
+		rLen = 0;
+		rLoc = 1331;
+		rType = 0;
+		vrLen = 623;
+		vrLoc = 953;
+	};
+	3E14841C0FE558560064950B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3EA367B70FE3D294002A406C /* UserInfoController.m */;
+		name = "UserInfoController.m: 50";
+		rLen = 0;
+		rLoc = 1478;
+		rType = 0;
+		vrLen = 1026;
+		vrLoc = 553;
+	};
+	3E14841D0FE558560064950B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3EBA4B320FE446640056A086 /* WeightTrackerSettings.m */;
+		name = "WeightTrackerSettings.m: 58";
+		rLen = 0;
+		rLoc = 1331;
+		rType = 0;
+		vrLen = 623;
+		vrLoc = 953;
+	};
+	3E14841E0FE558560064950B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3EA367B70FE3D294002A406C /* UserInfoController.m */;
+		name = "UserInfoController.m: 50";
+		rLen = 0;
+		rLoc = 1478;
+		rType = 0;
+		vrLen = 1026;
+		vrLoc = 553;
+	};
+	3E14841F0FE558560064950B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3EA367B60FE3D294002A406C /* UserInfoController.h */;
+		name = "UserInfoController.h: 13";
+		rLen = 0;
+		rLoc = 345;
+		rType = 0;
+		vrLen = 315;
+		vrLoc = 0;
+	};
+	3E1484240FE5590A0064950B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3EA367B40FE3D266002A406C /* WeightTrackerController.m */;
+		name = "WeightTrackerController.m: 60";
+		rLen = 0;
+		rLoc = 1884;
+		rType = 0;
+		vrLen = 987;
+		vrLoc = 51;
+	};
+	3E1484250FE5590A0064950B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3EA367B30FE3D266002A406C /* WeightTrackerController.h */;
+		name = "WeightTrackerController.h: 10";
+		rLen = 0;
+		rLoc = 216;
+		rType = 0;
+		vrLen = 786;
+		vrLoc = 0;
+	};
+	3E1484260FE5590A0064950B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3EA367B90FE3D2AC002A406C /* MainApplicationController.h */;
+		name = "MainApplicationController.h: 4";
+		rLen = 0;
+		rLoc = 55;
+		rType = 0;
+		vrLen = 303;
+		vrLoc = 0;
+	};
+	3E1484270FE5590A0064950B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3EA367B70FE3D294002A406C /* UserInfoController.m */;
+		name = "UserInfoController.m: 13";
+		rLen = 0;
+		rLoc = 307;
+		rType = 0;
+		vrLen = 832;
+		vrLoc = 0;
+	};
+	3E1484280FE5590A0064950B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3EBA4B310FE446640056A086 /* WeightTrackerSettings.h */;
+		name = "WeightTrackerSettings.h: 23";
+		rLen = 27;
+		rLoc = 409;
+		rType = 0;
+		vrLen = 488;
+		vrLoc = 0;
+	};
+	3E1484290FE5590A0064950B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3EBA4B320FE446640056A086 /* WeightTrackerSettings.m */;
+		name = "WeightTrackerSettings.m: 14";
+		rLen = 0;
+		rLoc = 263;
+		rType = 0;
+		vrLen = 1029;
+		vrLoc = 0;
+	};
+	3E14842A0FE5590A0064950B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1D3623240D0F684500981E51 /* WeightTrackerAppDelegate.h */;
+		name = "WeightTrackerAppDelegate.h: 11";
+		rLen = 0;
+		rLoc = 217;
+		rType = 0;
+		vrLen = 517;
+		vrLoc = 0;
+	};
+	3E14842B0FE5590A0064950B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3EA367B60FE3D294002A406C /* UserInfoController.h */;
+		name = "UserInfoController.h: 18";
+		rLen = 0;
+		rLoc = 581;
+		rType = 0;
+		vrLen = 340;
+		vrLoc = 0;
+	};
+	3E14842C0FE5590A0064950B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3EA367B60FE3D294002A406C /* UserInfoController.h */;
+		name = "UserInfoController.h: 18";
+		rLen = 0;
+		rLoc = 581;
+		rType = 0;
+		vrLen = 340;
+		vrLoc = 0;
+	};
+	3E14842D0FE5590A0064950B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3EBA4B320FE446640056A086 /* WeightTrackerSettings.m */;
+		name = "WeightTrackerSettings.m: 14";
+		rLen = 0;
+		rLoc = 263;
+		rType = 0;
+		vrLen = 1029;
+		vrLoc = 0;
+	};
+	3E14842E0FE5590A0064950B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3EA367B70FE3D294002A406C /* UserInfoController.m */;
+		name = "UserInfoController.m: 13";
+		rLen = 0;
+		rLoc = 307;
+		rType = 0;
+		vrLen = 832;
+		vrLoc = 0;
+	};
+	3E14842F0FE5590A0064950B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3EA367B60FE3D294002A406C /* UserInfoController.h */;
+		name = "UserInfoController.h: 18";
+		rLen = 0;
+		rLoc = 581;
+		rType = 0;
+		vrLen = 340;
+		vrLoc = 0;
+	};
+	3E1484300FE5590A0064950B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3EA367B40FE3D266002A406C /* WeightTrackerController.m */;
+		name = "WeightTrackerController.m: 60";
+		rLen = 0;
+		rLoc = 1884;
+		rType = 0;
+		vrLen = 987;
+		vrLoc = 51;
+	};
+	3E1484310FE5590A0064950B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3EA367B30FE3D266002A406C /* WeightTrackerController.h */;
+		name = "WeightTrackerController.h: 10";
+		rLen = 0;
+		rLoc = 216;
+		rType = 0;
+		vrLen = 786;
+		vrLoc = 0;
+	};
+	3E1484320FE5590A0064950B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3EA367B90FE3D2AC002A406C /* MainApplicationController.h */;
+		name = "MainApplicationController.h: 4";
+		rLen = 0;
+		rLoc = 55;
+		rType = 0;
+		vrLen = 303;
+		vrLoc = 0;
+	};
+	3E1484330FE5590A0064950B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3EA367B70FE3D294002A406C /* UserInfoController.m */;
+		name = "UserInfoController.m: 13";
+		rLen = 0;
+		rLoc = 307;
+		rType = 0;
+		vrLen = 832;
+		vrLoc = 0;
+	};
+	3E1484340FE5590A0064950B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3EBA4B310FE446640056A086 /* WeightTrackerSettings.h */;
+		name = "WeightTrackerSettings.h: 23";
+		rLen = 27;
+		rLoc = 409;
+		rType = 0;
+		vrLen = 488;
+		vrLoc = 0;
+	};
+	3E1484350FE5590A0064950B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1D3623240D0F684500981E51 /* WeightTrackerAppDelegate.h */;
+		name = "WeightTrackerAppDelegate.h: 11";
+		rLen = 0;
+		rLoc = 217;
+		rType = 0;
+		vrLen = 517;
+		vrLoc = 0;
+	};
+	3E1484360FE5590A0064950B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3EA367B60FE3D294002A406C /* UserInfoController.h */;
+		name = "UserInfoController.h: 18";
+		rLen = 0;
+		rLoc = 581;
+		rType = 0;
+		vrLen = 340;
+		vrLoc = 0;
+	};
+	3E1484370FE5590A0064950B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3EBA4B310FE446640056A086 /* WeightTrackerSettings.h */;
+		name = "WeightTrackerSettings.h: 23";
+		rLen = 27;
+		rLoc = 409;
+		rType = 0;
+		vrLen = 488;
+		vrLoc = 0;
+	};
+	3E1484380FE5590A0064950B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3EBA4B320FE446640056A086 /* WeightTrackerSettings.m */;
+		name = "WeightTrackerSettings.m: 14";
+		rLen = 0;
+		rLoc = 263;
+		rType = 0;
+		vrLen = 1029;
+		vrLoc = 0;
+	};
+	3E1484390FE5590A0064950B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1D3623240D0F684500981E51 /* WeightTrackerAppDelegate.h */;
+		name = "WeightTrackerAppDelegate.h: 11";
+		rLen = 0;
+		rLoc = 217;
+		rType = 0;
+		vrLen = 517;
+		vrLoc = 0;
+	};
+	3E14843A0FE5590A0064950B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3EA367B60FE3D294002A406C /* UserInfoController.h */;
+		name = "UserInfoController.h: 17";
+		rLen = 0;
+		rLoc = 460;
+		rType = 0;
+		vrLen = 374;
+		vrLoc = 0;
+	};
+	3E14843E0FE559440064950B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1D3623240D0F684500981E51 /* WeightTrackerAppDelegate.h */;
+		name = "WeightTrackerAppDelegate.h: 11";
+		rLen = 0;
+		rLoc = 217;
+		rType = 0;
+		vrLen = 517;
+		vrLoc = 0;
+	};
+	3E14843F0FE559440064950B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3EA367B90FE3D2AC002A406C /* MainApplicationController.h */;
+		name = "MainApplicationController.h: 4";
+		rLen = 0;
+		rLoc = 55;
+		rType = 0;
+		vrLen = 303;
+		vrLoc = 0;
+	};
+	3E1484400FE559440064950B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3EA367B60FE3D294002A406C /* UserInfoController.h */;
+		name = "UserInfoController.h: 17";
+		rLen = 0;
+		rLoc = 460;
+		rType = 0;
+		vrLen = 374;
+		vrLoc = 0;
+	};
+	3E1484410FE559440064950B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3EA367B60FE3D294002A406C /* UserInfoController.h */;
+		name = "UserInfoController.h: 17";
+		rLen = 0;
+		rLoc = 460;
+		rType = 0;
+		vrLen = 374;
+		vrLoc = 0;
+	};
+	3E1484420FE559440064950B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1D3623240D0F684500981E51 /* WeightTrackerAppDelegate.h */;
+		name = "WeightTrackerAppDelegate.h: 11";
+		rLen = 0;
+		rLoc = 217;
+		rType = 0;
+		vrLen = 517;
+		vrLoc = 0;
+	};
+	3E1484430FE559440064950B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3EA367B90FE3D2AC002A406C /* MainApplicationController.h */;
+		name = "MainApplicationController.h: 4";
+		rLen = 0;
+		rLoc = 55;
+		rType = 0;
+		vrLen = 303;
+		vrLoc = 0;
+	};
+	3E1484440FE559440064950B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3EA367B60FE3D294002A406C /* UserInfoController.h */;
+		name = "UserInfoController.h: 13";
+		rLen = 0;
+		rLoc = 267;
+		rType = 0;
+		vrLen = 365;
+		vrLoc = 0;
+	};
+	3E14844B0FE559A90064950B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3EA367B60FE3D294002A406C /* UserInfoController.h */;
+		name = "UserInfoController.h: 17";
+		rLen = 0;
+		rLoc = 398;
+		rType = 0;
+		vrLen = 371;
+		vrLoc = 0;
+	};
+	3E1484530FE55A1A0064950B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1D3623240D0F684500981E51 /* WeightTrackerAppDelegate.h */;
+		name = "WeightTrackerAppDelegate.h: 11";
+		rLen = 0;
+		rLoc = 217;
+		rType = 0;
+		vrLen = 517;
+		vrLoc = 0;
+	};
+	3E1484540FE55A1A0064950B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3EBA4B320FE446640056A086 /* WeightTrackerSettings.m */;
+		name = "WeightTrackerSettings.m: 14";
+		rLen = 0;
+		rLoc = 263;
+		rType = 0;
+		vrLen = 1029;
+		vrLoc = 0;
+	};
+	3E1484550FE55A1A0064950B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3EBA4B310FE446640056A086 /* WeightTrackerSettings.h */;
+		name = "WeightTrackerSettings.h: 23";
+		rLen = 27;
+		rLoc = 409;
+		rType = 0;
+		vrLen = 488;
+		vrLoc = 0;
+	};
+	3E1484560FE55A1A0064950B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3EA367BA0FE3D2AC002A406C /* MainApplicationController.m */;
+		name = "MainApplicationController.m: 57";
+		rLen = 0;
+		rLoc = 1536;
+		rType = 0;
+		vrLen = 1013;
+		vrLoc = 0;
+	};
+	3E1484570FE55A1A0064950B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3EA367B60FE3D294002A406C /* UserInfoController.h */;
+		name = "UserInfoController.h: 17";
+		rLen = 0;
+		rLoc = 410;
+		rType = 0;
+		vrLen = 389;
+		vrLoc = 0;
+	};
+	3E1484580FE55A1A0064950B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3EA367B70FE3D294002A406C /* UserInfoController.m */;
+		name = "UserInfoController.m: 13";
+		rLen = 0;
+		rLoc = 307;
+		rType = 0;
+		vrLen = 1026;
+		vrLoc = 575;
+	};
+	3E1484590FE55A1A0064950B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3EA367B60FE3D294002A406C /* UserInfoController.h */;
+		name = "UserInfoController.h: 17";
+		rLen = 8;
+		rLoc = 378;
+		rType = 0;
+		vrLen = 371;
+		vrLoc = 0;
+	};
+	3E14845A0FE55A1A0064950B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1D3623240D0F684500981E51 /* WeightTrackerAppDelegate.h */;
+		name = "WeightTrackerAppDelegate.h: 11";
+		rLen = 0;
+		rLoc = 217;
+		rType = 0;
+		vrLen = 517;
+		vrLoc = 0;
+	};
+	3E14845B0FE55A1A0064950B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3EBA4B320FE446640056A086 /* WeightTrackerSettings.m */;
+		name = "WeightTrackerSettings.m: 14";
+		rLen = 0;
+		rLoc = 263;
+		rType = 0;
+		vrLen = 1029;
+		vrLoc = 0;
+	};
+	3E14845C0FE55A1A0064950B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3EBA4B310FE446640056A086 /* WeightTrackerSettings.h */;
+		name = "WeightTrackerSettings.h: 23";
+		rLen = 27;
+		rLoc = 409;
+		rType = 0;
+		vrLen = 488;
+		vrLoc = 0;
+	};
+	3E14845D0FE55A1A0064950B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3EA367BA0FE3D2AC002A406C /* MainApplicationController.m */;
+		name = "MainApplicationController.m: 57";
+		rLen = 0;
+		rLoc = 1536;
+		rType = 0;
+		vrLen = 1013;
+		vrLoc = 0;
+	};
+	3E14845E0FE55A1A0064950B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3EA367B70FE3D294002A406C /* UserInfoController.m */;
+		name = "UserInfoController.m: 13";
+		rLen = 0;
+		rLoc = 307;
+		rType = 0;
+		vrLen = 938;
+		vrLoc = 663;
+	};
+	3E14845F0FE55A1A0064950B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3EA367B60FE3D294002A406C /* UserInfoController.h */;
+		name = "UserInfoController.h: 17";
+		rLen = 0;
+		rLoc = 410;
+		rType = 0;
+		vrLen = 389;
+		vrLoc = 0;
+	};
+	3E1484600FE55A1A0064950B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3EA367B70FE3D294002A406C /* UserInfoController.m */;
+		name = "UserInfoController.m: 13";
+		rLen = 0;
+		rLoc = 252;
+		rType = 0;
+		vrLen = 929;
+		vrLoc = 0;
+	};
+	3E1484610FE55A270064950B /* PBXBookmark */ = {
+		isa = PBXBookmark;
+		fRef = 3EA367B60FE3D294002A406C /* UserInfoController.h */;
+	};
+	3E1484640FE55BA30064950B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3EA367B30FE3D266002A406C /* WeightTrackerController.h */;
+		name = "WeightTrackerController.h: 26";
+		rLen = 75;
+		rLoc = 669;
+		rType = 0;
+		vrLen = 786;
+		vrLoc = 0;
+	};
+	3E1484650FE55BA30064950B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3EA367B70FE3D294002A406C /* UserInfoController.m */;
+		name = "UserInfoController.m: 14";
+		rLen = 0;
+		rLoc = 288;
+		rType = 0;
+		vrLen = 901;
+		vrLoc = 3;
+	};
+	3E1484660FE55BA30064950B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3EA367B60FE3D294002A406C /* UserInfoController.h */;
+		name = "UserInfoController.h: 14";
+		rLen = 21;
+		rLoc = 323;
+		rType = 0;
+		vrLen = 554;
+		vrLoc = 0;
+	};
+	3E1484670FE55BA30064950B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3EA367B40FE3D266002A406C /* WeightTrackerController.m */;
+		name = "WeightTrackerController.m: 47";
+		rLen = 0;
+		rLoc = 1424;
+		rType = 0;
+		vrLen = 1491;
+		vrLoc = 890;
+	};
+	3E1484680FE55BA30064950B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3EA367B70FE3D294002A406C /* UserInfoController.m */;
+		name = "UserInfoController.m: 14";
+		rLen = 0;
+		rLoc = 307;
+		rType = 0;
+		vrLen = 869;
+		vrLoc = 0;
+	};
+	3E1484690FE55BA30064950B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3EA367B60FE3D294002A406C /* UserInfoController.h */;
+		name = "UserInfoController.h: 17";
+		rLen = 0;
+		rLoc = 410;
+		rType = 0;
+		vrLen = 431;
+		vrLoc = 0;
+	};
+	3E14846A0FE55BA30064950B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3EA367B70FE3D294002A406C /* UserInfoController.m */;
+		name = "UserInfoController.m: 65";
+		rLen = 0;
+		rLoc = 1741;
+		rType = 0;
+		vrLen = 869;
+		vrLoc = 0;
+	};
+	3E14846B0FE55BA30064950B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3EA367B60FE3D294002A406C /* UserInfoController.h */;
+		name = "UserInfoController.h: 17";
+		rLen = 0;
+		rLoc = 410;
+		rType = 0;
+		vrLen = 431;
+		vrLoc = 0;
+	};
+	3E14846C0FE55BA30064950B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3EA367B70FE3D294002A406C /* UserInfoController.m */;
+		name = "UserInfoController.m: 65";
+		rLen = 0;
+		rLoc = 1741;
+		rType = 0;
+		vrLen = 999;
+		vrLoc = 691;
+	};
+	3E14846D0FE55BA30064950B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3EA367B60FE3D294002A406C /* UserInfoController.h */;
+		name = "UserInfoController.h: 17";
+		rLen = 0;
+		rLoc = 410;
+		rType = 0;
+		vrLen = 431;
+		vrLoc = 0;
+	};
+	3E14846E0FE55BA30064950B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3EA367B30FE3D266002A406C /* WeightTrackerController.h */;
+		name = "WeightTrackerController.h: 21";
+		rLen = 45;
+		rLoc = 466;
+		rType = 0;
+		vrLen = 786;
+		vrLoc = 0;
+	};
+	3E14846F0FE55BA30064950B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3EA367B60FE3D294002A406C /* UserInfoController.h */;
+		name = "UserInfoController.h: 14";
+		rLen = 0;
+		rLoc = 345;
+		rType = 0;
+		vrLen = 478;
+		vrLoc = 0;
+	};
+	3E1484700FE55BA30064950B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3EA367B30FE3D266002A406C /* WeightTrackerController.h */;
+		name = "WeightTrackerController.h: 26";
+		rLen = 75;
+		rLoc = 669;
+		rType = 0;
+		vrLen = 786;
+		vrLoc = 0;
+	};
+	3E1484710FE55BA30064950B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3EA367B70FE3D294002A406C /* UserInfoController.m */;
+		name = "UserInfoController.m: 65";
+		rLen = 0;
+		rLoc = 1741;
+		rType = 0;
+		vrLen = 998;
+		vrLoc = 691;
+	};
+	3E1484720FE55BA30064950B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3EA367B60FE3D294002A406C /* UserInfoController.h */;
+		name = "UserInfoController.h: 21";
+		rLen = 0;
+		rLoc = 579;
+		rType = 0;
+		vrLen = 554;
+		vrLoc = 0;
+	};
+	3E1484730FE55BA30064950B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3EA367B70FE3D294002A406C /* UserInfoController.m */;
+		name = "UserInfoController.m: 14";
+		rLen = 0;
+		rLoc = 288;
+		rType = 0;
+		vrLen = 901;
+		vrLoc = 3;
+	};
+	3E1484740FE55BA30064950B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3EA367B40FE3D266002A406C /* WeightTrackerController.m */;
+		name = "WeightTrackerController.m: 47";
+		rLen = 0;
+		rLoc = 1424;
+		rType = 0;
+		vrLen = 1534;
+		vrLoc = 890;
+	};
+	3E1484750FE55BA30064950B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3EA367B60FE3D294002A406C /* UserInfoController.h */;
+		name = "UserInfoController.h: 14";
+		rLen = 21;
+		rLoc = 323;
+		rType = 0;
+		vrLen = 554;
+		vrLoc = 0;
+	};
+	3E1484760FE55BA30064950B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3EA367B40FE3D266002A406C /* WeightTrackerController.m */;
+		name = "WeightTrackerController.m: 47";
+		rLen = 0;
+		rLoc = 1490;
+		rType = 0;
+		vrLen = 1542;
+		vrLoc = 890;
+	};
+	3E1484790FE55BA30064950B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3EA367B60FE3D294002A406C /* UserInfoController.h */;
+		name = "UserInfoController.h: 19";
+		rLen = 0;
+		rLoc = 460;
+		rType = 0;
+		vrLen = 554;
+		vrLoc = 0;
+	};
+	3E14847A0FE55BA50064950B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3EBA4B320FE446640056A086 /* WeightTrackerSettings.m */;
+		name = "WeightTrackerSettings.m: 58";
+		rLen = 0;
+		rLoc = 1390;
+		rType = 0;
+		vrLen = 694;
+		vrLoc = 1158;
+	};
+	3E14847B0FE55BA50064950B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		comments = "error: syntax error before 'WeightTrackerSettings'";
+		fRef = 3EA367B60FE3D294002A406C /* UserInfoController.h */;
+		rLen = 1;
+		rLoc = 14;
+		rType = 1;
+	};
+	3E14847C0FE55BA50064950B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3EBA4B320FE446640056A086 /* WeightTrackerSettings.m */;
+		name = "WeightTrackerSettings.m: 58";
+		rLen = 0;
+		rLoc = 1390;
+		rType = 0;
+		vrLen = 694;
+		vrLoc = 1158;
+	};
+	3E14847D0FE55BA50064950B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3EA367B60FE3D294002A406C /* UserInfoController.h */;
+		name = "UserInfoController.h: 14";
+		rLen = 47;
+		rLoc = 299;
+		rType = 0;
+		vrLen = 554;
+		vrLoc = 0;
+	};
+	3E1484810FE55BF20064950B /* WeightTrackerSettings.m:70 */ = {
+		isa = PBXFileBreakpoint;
+		actions = (
+		);
+		breakpointStyle = 0;
+		continueAfterActions = 0;
+		countType = 0;
+		delayBeforeContinue = 0;
+		fileReference = 3EBA4B320FE446640056A086 /* WeightTrackerSettings.m */;
+		functionName = "-setupAppWithUserInfo:";
+		hitCount = 1;
+		ignoreCount = 0;
+		lineNumber = 70;
+		location = WeightTracker;
+		modificationTime = 266690157.869492;
+		state = 1;
+	};
+	3E14848B0FE55C7A0064950B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3EA367B30FE3D266002A406C /* WeightTrackerController.h */;
+		name = "WeightTrackerController.h: 10";
+		rLen = 33;
+		rLoc = 184;
+		rType = 0;
+		vrLen = 786;
+		vrLoc = 0;
+	};
+	3E14848C0FE55C7A0064950B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3EA367B60FE3D294002A406C /* UserInfoController.h */;
+		name = "UserInfoController.h: 10";
+		rLen = 0;
+		rLoc = 212;
+		rType = 0;
+		vrLen = 588;
+		vrLoc = 0;
+	};
+	3E14848D0FE55C7A0064950B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3EBA4B310FE446640056A086 /* WeightTrackerSettings.h */;
+		name = "WeightTrackerSettings.h: 23";
+		rLen = 27;
+		rLoc = 409;
+		rType = 0;
+		vrLen = 488;
+		vrLoc = 0;
+	};
+	3E14848E0FE55C7A0064950B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3EA367B40FE3D266002A406C /* WeightTrackerController.m */;
+		name = "WeightTrackerController.m: 47";
+		rLen = 0;
+		rLoc = 1490;
+		rType = 0;
+		vrLen = 1542;
+		vrLoc = 890;
+	};
+	3E14848F0FE55C7A0064950B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3EA367B70FE3D294002A406C /* UserInfoController.m */;
+		name = "UserInfoController.m: 53";
+		rLen = 0;
+		rLoc = 1476;
+		rType = 0;
+		vrLen = 1034;
+		vrLoc = 754;
+	};
+	3E1484900FE55C7A0064950B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3EBA4B320FE446640056A086 /* WeightTrackerSettings.m */;
+		name = "WeightTrackerSettings.m: 14";
+		rLen = 0;
+		rLoc = 263;
+		rType = 0;
+		vrLen = 1029;
+		vrLoc = 0;
+	};
+	3E1484910FE55C7A0064950B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3EA367B40FE3D266002A406C /* WeightTrackerController.m */;
+		name = "WeightTrackerController.m: 47";
+		rLen = 0;
+		rLoc = 1490;
+		rType = 0;
+		vrLen = 1542;
+		vrLoc = 890;
+	};
+	3E1484920FE55C7A0064950B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3EA367B30FE3D266002A406C /* WeightTrackerController.h */;
+		name = "WeightTrackerController.h: 10";
+		rLen = 33;
+		rLoc = 184;
+		rType = 0;
+		vrLen = 786;
+		vrLoc = 0;
+	};
+	3E1484930FE55C7A0064950B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3EA367B60FE3D294002A406C /* UserInfoController.h */;
+		name = "UserInfoController.h: 10";
+		rLen = 0;
+		rLoc = 212;
+		rType = 0;
+		vrLen = 588;
+		vrLoc = 0;
+	};
+	3E1484940FE55C7A0064950B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3EA367B70FE3D294002A406C /* UserInfoController.m */;
+		name = "UserInfoController.m: 53";
+		rLen = 0;
+		rLoc = 1449;
+		rType = 0;
+		vrLen = 1009;
+		vrLoc = 747;
+	};
+	3E1484950FE55C7A0064950B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3EBA4B310FE446640056A086 /* WeightTrackerSettings.h */;
+		name = "WeightTrackerSettings.h: 23";
+		rLen = 27;
+		rLoc = 409;
+		rType = 0;
+		vrLen = 488;
+		vrLoc = 0;
+	};
+	3E1484960FE55C7A0064950B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3EA367B40FE3D266002A406C /* WeightTrackerController.m */;
+		name = "WeightTrackerController.m: 47";
+		rLen = 0;
+		rLoc = 1490;
+		rType = 0;
+		vrLen = 1542;
+		vrLoc = 890;
+	};
+	3E1484970FE55C7A0064950B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3EA367B70FE3D294002A406C /* UserInfoController.m */;
+		name = "UserInfoController.m: 53";
+		rLen = 0;
+		rLoc = 1476;
+		rType = 0;
+		vrLen = 1034;
+		vrLoc = 754;
+	};
+	3E1484980FE55C7A0064950B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3EBA4B320FE446640056A086 /* WeightTrackerSettings.m */;
+		name = "WeightTrackerSettings.m: 65";
+		rLen = 0;
+		rLoc = 1449;
+		rType = 0;
+		vrLen = 939;
+		vrLoc = 1099;
+	};
+	3E1484990FE55C7A0064950B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3EA367B60FE3D294002A406C /* UserInfoController.h */;
+		name = "UserInfoController.h: 20";
+		rLen = 0;
+		rLoc = 460;
+		rType = 0;
+		vrLen = 588;
+		vrLoc = 0;
+	};
+	3E1484A30FE55DA60064950B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3EBA4B320FE446640056A086 /* WeightTrackerSettings.m */;
+		name = "WeightTrackerSettings.m: 64";
+		rLen = 0;
+		rLoc = 1447;
+		rType = 0;
+		vrLen = 933;
+		vrLoc = 1099;
+	};
+	3E1484A40FE55DA60064950B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3EA367B60FE3D294002A406C /* UserInfoController.h */;
+		name = "UserInfoController.h: 20";
+		rLen = 0;
+		rLoc = 460;
+		rType = 0;
+		vrLen = 588;
+		vrLoc = 0;
+	};
+	3E1484AD0FE55E630064950B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3EBA4B320FE446640056A086 /* WeightTrackerSettings.m */;
+		name = "WeightTrackerSettings.m: 77";
+		rLen = 0;
+		rLoc = 1732;
+		rType = 0;
+		vrLen = 960;
+		vrLoc = 1070;
+	};
+	3E1484AE0FE55E630064950B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3EA367B60FE3D294002A406C /* UserInfoController.h */;
+		name = "UserInfoController.h: 20";
+		rLen = 0;
+		rLoc = 460;
+		rType = 0;
+		vrLen = 588;
+		vrLoc = 0;
+	};
+	3E1484B30FE576D90064950B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3EBA4B320FE446640056A086 /* WeightTrackerSettings.m */;
+		name = "WeightTrackerSettings.m: 77";
+		rLen = 0;
+		rLoc = 1732;
+		rType = 0;
+		vrLen = 968;
+		vrLoc = 1070;
+	};
+	3E1484B40FE576D90064950B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3EA367B60FE3D294002A406C /* UserInfoController.h */;
+		name = "UserInfoController.h: 20";
+		rLen = 0;
+		rLoc = 460;
+		rType = 0;
+		vrLen = 588;
+		vrLoc = 0;
+	};
+	3E1484B80FE577180064950B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3EBA4B320FE446640056A086 /* WeightTrackerSettings.m */;
+		name = "WeightTrackerSettings.m: 60";
+		rLen = 1;
+		rLoc = 1409;
+		rType = 0;
+		vrLen = 976;
+		vrLoc = 1070;
+	};
+	3E1484B90FE577180064950B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3EA367B60FE3D294002A406C /* UserInfoController.h */;
+		name = "UserInfoController.h: 20";
+		rLen = 0;
+		rLoc = 460;
+		rType = 0;
+		vrLen = 588;
+		vrLoc = 0;
+	};
+	3E2C8C750FE3E40B00ED03A4 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3EA367B30FE3D266002A406C /* WeightTrackerController.h */;
+		name = "WeightTrackerController.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 400;
+		vrLoc = 0;
+	};
+	3E2C8C760FE3E40B00ED03A4 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3EA367B40FE3D266002A406C /* WeightTrackerController.m */;
+		name = "WeightTrackerController.m: 78";
+		rLen = 0;
+		rLoc = 3850;
+		rType = 0;
+		vrLen = 519;
+		vrLoc = 1902;
+	};
+	3E2C8C770FE3E40B00ED03A4 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3EA367B60FE3D294002A406C /* UserInfoController.h */;
+		name = "UserInfoController.h: 16";
+		rLen = 0;
+		rLoc = 581;
+		rType = 0;
+		vrLen = 285;
+		vrLoc = 0;
+	};
+	3E2C8C780FE3E40B00ED03A4 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3EA367B90FE3D2AC002A406C /* MainApplicationController.h */;
+		name = "MainApplicationController.h: 4";
+		rLen = 0;
+		rLoc = 55;
+		rType = 0;
+		vrLen = 303;
+		vrLoc = 0;
+	};
+	3E2C8C7A0FE3E40B00ED03A4 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3EA367B70FE3D294002A406C /* UserInfoController.m */;
+		name = "UserInfoController.m: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 541;
+		vrLoc = 3;
+	};
+	3E95155F0FE3E65900C0A7F8 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3EA367BA0FE3D2AC002A406C /* MainApplicationController.m */;
+		name = "MainApplicationController.m: 55";
+		rLen = 0;
+		rLoc = 1385;
+		rType = 0;
+		vrLen = 469;
+		vrLoc = 919;
+	};
+	3E9515620FE3E65900C0A7F8 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1D3623240D0F684500981E51 /* WeightTrackerAppDelegate.h */;
+		name = "WeightTrackerAppDelegate.h: 11";
+		rLen = 0;
+		rLoc = 217;
+		rType = 0;
+		vrLen = 511;
+		vrLoc = 0;
+	};
+	3E9515B20FE3E71600C0A7F8 /* WeightTrackerController.m:62 */ = {
+		isa = PBXFileBreakpoint;
+		actions = (
+		);
+		breakpointStyle = 0;
+		continueAfterActions = 0;
+		countType = 0;
+		delayBeforeContinue = 0;
+		fileReference = 3EA367B40FE3D266002A406C /* WeightTrackerController.m */;
+		functionName = "-switchViews:";
+		hitCount = 0;
+		ignoreCount = 0;
+		lineNumber = 62;
+		location = WeightTracker;
+		modificationTime = 266690149.465455;
+		state = 1;
+	};
+	3E9515D60FE3EDFC00C0A7F8 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3EA367B90FE3D2AC002A406C /* MainApplicationController.h */;
+		name = "MainApplicationController.h: 4";
+		rLen = 0;
+		rLoc = 55;
+		rType = 0;
+		vrLen = 303;
+		vrLoc = 0;
+	};
+	3EA367A00FE3D0D6002A406C /* WeightTracker */ = {
+		isa = PBXExecutable;
+		activeArgIndices = (
+		);
+		argumentStrings = (
+		);
+		autoAttachOnCrash = 1;
+		breakpointsEnabled = 1;
+		configStateDict = {
+		};
+		customDataFormattersEnabled = 1;
+		debuggerPlugin = GDBDebugging;
+		disassemblyDisplayState = 0;
+		dylibVariantSuffix = "";
+		enableDebugStr = 1;
+		environmentEntries = (
+		);
+		executableSystemSymbolLevel = 0;
+		executableUserSymbolLevel = 0;
+		libgmallocEnabled = 0;
+		name = WeightTracker;
+		savedGlobals = {
+		};
+		sourceDirectories = (
+		);
+		variableFormatDictionary = {
+		};
+	};
+	3EA367AC0FE3D0DA002A406C /* Source Control */ = {
+		isa = PBXSourceControlManager;
+		fallbackIsa = XCSourceControlManager;
+		isSCMEnabled = 0;
+		scmConfiguration = {
+		};
+	};
+	3EA367AD0FE3D0DA002A406C /* Code sense */ = {
+		isa = PBXCodeSenseManager;
+		indexTemplatePath = "";
+	};
+	3EA367B30FE3D266002A406C /* WeightTrackerController.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {924, 542}}";
+			sepNavSelRange = "{184, 33}";
+			sepNavVisRange = "{0, 786}";
+			sepNavWindowFrame = "{{634, -12}, {750, 558}}";
+		};
+	};
+	3EA367B40FE3D266002A406C /* WeightTrackerController.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {924, 1722}}";
+			sepNavSelRange = "{1490, 0}";
+			sepNavVisRange = "{890, 1542}";
+		};
+	};
+	3EA367B60FE3D294002A406C /* UserInfoController.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {691, 430}}";
+			sepNavSelRange = "{460, 0}";
+			sepNavVisRange = "{0, 588}";
+			sepNavWindowFrame = "{{15, 215}, {750, 558}}";
+		};
+	};
+	3EA367B70FE3D294002A406C /* UserInfoController.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {924, 1008}}";
+			sepNavSelRange = "{1476, 0}";
+			sepNavVisRange = "{754, 1034}";
+			sepNavWindowFrame = "{{15, 215}, {750, 558}}";
+		};
+	};
+	3EA367B90FE3D2AC002A406C /* MainApplicationController.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {924, 542}}";
+			sepNavSelRange = "{55, 0}";
+			sepNavVisRange = "{0, 303}";
+		};
+	};
+	3EA367BA0FE3D2AC002A406C /* MainApplicationController.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {924, 896}}";
+			sepNavSelRange = "{1536, 0}";
+			sepNavVisRange = "{0, 1013}";
+		};
+	};
+	3EBA4B210FE445610056A086 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3EA367B40FE3D266002A406C /* WeightTrackerController.m */;
+		name = "WeightTrackerController.m: 68";
+		rLen = 0;
+		rLoc = 2884;
+		rType = 0;
+		vrLen = 1154;
+		vrLoc = 0;
+	};
+	3EBA4B310FE446640056A086 /* WeightTrackerSettings.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {924, 542}}";
+			sepNavSelRange = "{409, 27}";
+			sepNavVisRange = "{0, 488}";
+			sepNavWindowFrame = "{{15, 215}, {750, 558}}";
+		};
+	};
+	3EBA4B320FE446640056A086 /* WeightTrackerSettings.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {924, 1246}}";
+			sepNavSelRange = "{1409, 1}";
+			sepNavVisRange = "{1070, 976}";
+			sepNavWindowFrame = "{{38, 194}, {750, 558}}";
+		};
+	};
+	3EBA4B400FE454B60056A086 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1D3623240D0F684500981E51 /* WeightTrackerAppDelegate.h */;
+		name = "WeightTrackerAppDelegate.h: 11";
+		rLen = 0;
+		rLoc = 217;
+		rType = 0;
+		vrLen = 517;
+		vrLoc = 0;
+	};
+	3EBA4B410FE454B60056A086 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3EBA4B310FE446640056A086 /* WeightTrackerSettings.h */;
+		name = "WeightTrackerSettings.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 249;
+		vrLoc = 0;
+	};
+	3EBA4B420FE454B60056A086 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3EBA4B320FE446640056A086 /* WeightTrackerSettings.m */;
+		name = "WeightTrackerSettings.m: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 238;
+		vrLoc = 0;
+	};
+	3EBA4B430FE454B60056A086 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3EBA4B310FE446640056A086 /* WeightTrackerSettings.h */;
+		name = "WeightTrackerSettings.h: 19";
+		rLen = 28;
+		rLoc = 360;
+		rType = 0;
+		vrLen = 360;
+		vrLoc = 0;
+	};
+	3EBA4B440FE454B60056A086 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3EBA4B320FE446640056A086 /* WeightTrackerSettings.m */;
+		name = "WeightTrackerSettings.m: 20";
+		rLen = 0;
+		rLoc = 264;
+		rType = 0;
+		vrLen = 497;
+		vrLoc = 0;
+	};
+	3EBA4B450FE454B60056A086 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3EBA4B310FE446640056A086 /* WeightTrackerSettings.h */;
+		name = "WeightTrackerSettings.h: 19";
+		rLen = 28;
+		rLoc = 360;
+		rType = 0;
+		vrLen = 360;
+		vrLoc = 0;
+	};
+	3EBA4B460FE454B60056A086 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3EBA4B320FE446640056A086 /* WeightTrackerSettings.m */;
+		name = "WeightTrackerSettings.m: 23";
+		rLen = 0;
+		rLoc = 264;
+		rType = 0;
+		vrLen = 510;
+		vrLoc = 0;
+	};
+	3EBA4B470FE454B60056A086 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1D3623240D0F684500981E51 /* WeightTrackerAppDelegate.h */;
+		name = "WeightTrackerAppDelegate.h: 11";
+		rLen = 0;
+		rLoc = 217;
+		rType = 0;
+		vrLen = 517;
+		vrLoc = 0;
+	};
+	3EBA4B480FE454B60056A086 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1D3623250D0F684500981E51 /* WeightTrackerAppDelegate.m */;
+		name = "WeightTrackerAppDelegate.m: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 668;
+		vrLoc = 0;
+	};
+	3EBA4B490FE454B60056A086 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3EA367B40FE3D266002A406C /* WeightTrackerController.m */;
+		name = "WeightTrackerController.m: 21";
+		rLen = 0;
+		rLoc = 662;
+		rType = 0;
+		vrLen = 1154;
+		vrLoc = 0;
+	};
+	3EBA4B4A0FE454B60056A086 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3EBA4B310FE446640056A086 /* WeightTrackerSettings.h */;
+		name = "WeightTrackerSettings.h: 21";
+		rLen = 0;
+		rLoc = 481;
+		rType = 0;
+		vrLen = 382;
+		vrLoc = 0;
+	};
+	3EBA4B4B0FE454B60056A086 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3EBA4B320FE446640056A086 /* WeightTrackerSettings.m */;
+		name = "WeightTrackerSettings.m: 39";
+		rLen = 0;
+		rLoc = 264;
+		rType = 0;
+		vrLen = 834;
+		vrLoc = 193;
+	};
+	3EBA4B4C0FE454B60056A086 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3EBA4B310FE446640056A086 /* WeightTrackerSettings.h */;
+		name = "WeightTrackerSettings.h: 22";
+		rLen = 0;
+		rLoc = 481;
+		rType = 0;
+		vrLen = 410;
+		vrLoc = 0;
+	};
+	3EBA4B4D0FE454B60056A086 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3EBA4B320FE446640056A086 /* WeightTrackerSettings.m */;
+		name = "WeightTrackerSettings.m: 47";
+		rLen = 0;
+		rLoc = 264;
+		rType = 0;
+		vrLen = 857;
+		vrLoc = 193;
+	};
+	3EBA4B4E0FE454B60056A086 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3EBA4B310FE446640056A086 /* WeightTrackerSettings.h */;
+		name = "WeightTrackerSettings.h: 22";
+		rLen = 0;
+		rLoc = 481;
+		rType = 0;
+		vrLen = 410;
+		vrLoc = 0;
+	};
+	3EBA4B4F0FE454B60056A086 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3EBA4B320FE446640056A086 /* WeightTrackerSettings.m */;
+		name = "WeightTrackerSettings.m: 73";
+		rLen = 0;
+		rLoc = 264;
+		rType = 0;
+		vrLen = 831;
+		vrLoc = 1021;
+	};
+	3EBA4B500FE454B60056A086 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3EA367B30FE3D266002A406C /* WeightTrackerController.h */;
+		name = "WeightTrackerController.h: 10";
+		rLen = 0;
+		rLoc = 217;
+		rType = 0;
+		vrLen = 634;
+		vrLoc = 0;
+	};
+	3EBA4B510FE454B60056A086 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3EBA4B310FE446640056A086 /* WeightTrackerSettings.h */;
+		name = "WeightTrackerSettings.h: 22";
+		rLen = 0;
+		rLoc = 481;
+		rType = 0;
+		vrLen = 410;
+		vrLoc = 0;
+	};
+	3EBA4B520FE454B60056A086 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3EBA4B320FE446640056A086 /* WeightTrackerSettings.m */;
+		name = "WeightTrackerSettings.m: 73";
+		rLen = 0;
+		rLoc = 264;
+		rType = 0;
+		vrLen = 984;
+		vrLoc = 0;
+	};
+	3EBA4B530FE454B60056A086 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1D3623240D0F684500981E51 /* WeightTrackerAppDelegate.h */;
+		name = "WeightTrackerAppDelegate.h: 11";
+		rLen = 0;
+		rLoc = 217;
+		rType = 0;
+		vrLen = 517;
+		vrLoc = 0;
+	};
+	3EBA4B540FE454B60056A086 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1D3623250D0F684500981E51 /* WeightTrackerAppDelegate.m */;
+		name = "WeightTrackerAppDelegate.m: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 668;
+		vrLoc = 0;
+	};
+	3EBA4B550FE454B60056A086 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1D3623240D0F684500981E51 /* WeightTrackerAppDelegate.h */;
+		name = "WeightTrackerAppDelegate.h: 11";
+		rLen = 0;
+		rLoc = 217;
+		rType = 0;
+		vrLen = 517;
+		vrLoc = 0;
+	};
+	3EBA4B560FE454B60056A086 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1D3623250D0F684500981E51 /* WeightTrackerAppDelegate.m */;
+		name = "WeightTrackerAppDelegate.m: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 668;
+		vrLoc = 0;
+	};
+	3EBA4B570FE454B60056A086 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3EA367B40FE3D266002A406C /* WeightTrackerController.m */;
+		name = "WeightTrackerController.m: 21";
+		rLen = 0;
+		rLoc = 662;
+		rType = 0;
+		vrLen = 1154;
+		vrLoc = 0;
+	};
+	3EBA4B580FE454B60056A086 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3EA367B30FE3D266002A406C /* WeightTrackerController.h */;
+		name = "WeightTrackerController.h: 27";
+		rLen = 0;
+		rLoc = 723;
+		rType = 0;
+		vrLen = 786;
+		vrLoc = 0;
+	};
+	3EBA4B590FE454B60056A086 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3EA367B40FE3D266002A406C /* WeightTrackerController.m */;
+		name = "WeightTrackerController.m: 41";
+		rLen = 0;
+		rLoc = 1778;
+		rType = 0;
+		vrLen = 1208;
+		vrLoc = 815;
+	};
+	3EBA4B5A0FE454B60056A086 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3EA367B30FE3D266002A406C /* WeightTrackerController.h */;
+		name = "WeightTrackerController.h: 21";
+		rLen = 21;
+		rLoc = 489;
+		rType = 0;
+		vrLen = 785;
+		vrLoc = 0;
+	};
+	3EBA4B5B0FE454B60056A086 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3EA367B40FE3D266002A406C /* WeightTrackerController.m */;
+		name = "WeightTrackerController.m: 41";
+		rLen = 0;
+		rLoc = 1778;
+		rType = 0;
+		vrLen = 1195;
+		vrLoc = 815;
+	};
+	3EBA4B5C0FE454B60056A086 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3EBA4B320FE446640056A086 /* WeightTrackerSettings.m */;
+		name = "WeightTrackerSettings.m: 10";
+		rLen = 0;
+		rLoc = 192;
+		rType = 0;
+		vrLen = 984;
+		vrLoc = 0;
+	};
+	3EBA4B5D0FE454B60056A086 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3EA367B40FE3D266002A406C /* WeightTrackerController.m */;
+		name = "WeightTrackerController.m: 41";
+		rLen = 0;
+		rLoc = 1778;
+		rType = 0;
+		vrLen = 1224;
+		vrLoc = 815;
+	};
+	3EBA4B5E0FE454B60056A086 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3EA367B30FE3D266002A406C /* WeightTrackerController.h */;
+		name = "WeightTrackerController.h: 21";
+		rLen = 21;
+		rLoc = 489;
+		rType = 0;
+		vrLen = 785;
+		vrLoc = 0;
+	};
+	3EBA4B5F0FE454B60056A086 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3EA367B40FE3D266002A406C /* WeightTrackerController.m */;
+		name = "WeightTrackerController.m: 42";
+		rLen = 0;
+		rLoc = 1778;
+		rType = 0;
+		vrLen = 1191;
+		vrLoc = 600;
+	};
+	3EBA4B600FE454B60056A086 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3EA367B30FE3D266002A406C /* WeightTrackerController.h */;
+		name = "WeightTrackerController.h: 21";
+		rLen = 21;
+		rLoc = 489;
+		rType = 0;
+		vrLen = 785;
+		vrLoc = 0;
+	};
+	3EBA4B610FE454B60056A086 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1D3623250D0F684500981E51 /* WeightTrackerAppDelegate.m */;
+		name = "WeightTrackerAppDelegate.m: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 668;
+		vrLoc = 0;
+	};
+	3EBA4B8B0FE455B30056A086 /* WeightTrackerSettings.m:25 */ = {
+		isa = PBXFileBreakpoint;
+		actions = (
+		);
+		breakpointStyle = 0;
+		continueAfterActions = 0;
+		countType = 0;
+		delayBeforeContinue = 0;
+		fileReference = 3EBA4B320FE446640056A086 /* WeightTrackerSettings.m */;
+		functionName = "-init";
+		hitCount = 0;
+		ignoreCount = 0;
+		lineNumber = 25;
+		location = WeightTracker;
+		modificationTime = 266690149.465496;
+		state = 2;
+	};
+	3EBA4B9A0FE455FE0056A086 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3EBA4B320FE446640056A086 /* WeightTrackerSettings.m */;
+		name = "WeightTrackerSettings.m: 10";
+		rLen = 0;
+		rLoc = 192;
+		rType = 0;
+		vrLen = 753;
+		vrLoc = 52;
+	};
+	3EBA4B9B0FE455FE0056A086 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3EBA4B310FE446640056A086 /* WeightTrackerSettings.h */;
+		name = "WeightTrackerSettings.h: 22";
+		rLen = 0;
+		rLoc = 481;
+		rType = 0;
+		vrLen = 410;
+		vrLoc = 0;
+	};
+	3EBA4B9C0FE455FE0056A086 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3EBA4B320FE446640056A086 /* WeightTrackerSettings.m */;
+		name = "WeightTrackerSettings.m: 10";
+		rLen = 0;
+		rLoc = 192;
+		rType = 0;
+		vrLen = 830;
+		vrLoc = 52;
+	};
+	3EBA4B9D0FE455FE0056A086 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3EBA4B310FE446640056A086 /* WeightTrackerSettings.h */;
+		name = "WeightTrackerSettings.h: 24";
+		rLen = 5;
+		rLoc = 483;
+		rType = 0;
+		vrLen = 410;
+		vrLoc = 0;
+	};
+	3EBA4B9E0FE455FE0056A086 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3EA367B30FE3D266002A406C /* WeightTrackerController.h */;
+		name = "WeightTrackerController.h: 27";
+		rLen = 36;
+		rLoc = 745;
+		rType = 0;
+		vrLen = 785;
+		vrLoc = 0;
+	};
+	3EBA4B9F0FE455FE0056A086 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3EBA4B310FE446640056A086 /* WeightTrackerSettings.h */;
+		name = "WeightTrackerSettings.h: 22";
+		rLen = 0;
+		rLoc = 481;
+		rType = 0;
+		vrLen = 410;
+		vrLoc = 0;
+	};
+	3EBA4BA00FE455FE0056A086 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1D3623240D0F684500981E51 /* WeightTrackerAppDelegate.h */;
+		name = "WeightTrackerAppDelegate.h: 11";
+		rLen = 0;
+		rLoc = 217;
+		rType = 0;
+		vrLen = 517;
+		vrLoc = 0;
+	};
+	3EBA4BA10FE455FE0056A086 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3EA367B30FE3D266002A406C /* WeightTrackerController.h */;
+		name = "WeightTrackerController.h: 27";
+		rLen = 36;
+		rLoc = 745;
+		rType = 0;
+		vrLen = 786;
+		vrLoc = 0;
+	};
+	3EBA4BA20FE455FE0056A086 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3EA367B40FE3D266002A406C /* WeightTrackerController.m */;
+		name = "WeightTrackerController.m: 42";
+		rLen = 0;
+		rLoc = 1778;
+		rType = 0;
+		vrLen = 1114;
+		vrLoc = 677;
+	};
+	3EBA4BA30FE455FE0056A086 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3EA367B30FE3D266002A406C /* WeightTrackerController.h */;
+		name = "WeightTrackerController.h: 27";
+		rLen = 36;
+		rLoc = 745;
+		rType = 0;
+		vrLen = 786;
+		vrLoc = 0;
+	};
+	3EBA4BA40FE455FE0056A086 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1D3623240D0F684500981E51 /* WeightTrackerAppDelegate.h */;
+		name = "WeightTrackerAppDelegate.h: 11";
+		rLen = 0;
+		rLoc = 217;
+		rType = 0;
+		vrLen = 517;
+		vrLoc = 0;
+	};
+	3EBA4BA50FE455FE0056A086 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3EBA4B310FE446640056A086 /* WeightTrackerSettings.h */;
+		name = "WeightTrackerSettings.h: 22";
+		rLen = 0;
+		rLoc = 481;
+		rType = 0;
+		vrLen = 410;
+		vrLoc = 0;
+	};
+	3EBA4BAA0FE4560C0056A086 /* WeightTrackerSettings.m:18 */ = {
+		isa = PBXFileBreakpoint;
+		actions = (
+		);
+		breakpointStyle = 0;
+		continueAfterActions = 0;
+		countType = 0;
+		delayBeforeContinue = 0;
+		fileReference = 3EBA4B320FE446640056A086 /* WeightTrackerSettings.m */;
+		functionName = "-dataFilePath";
+		hitCount = 0;
+		ignoreCount = 0;
+		lineNumber = 18;
+		location = WeightTracker;
+		modificationTime = 266690149.465628;
+		state = 2;
+	};
+	3EBA4BB40FE456CD0056A086 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3EBA4B320FE446640056A086 /* WeightTrackerSettings.m */;
+		name = "WeightTrackerSettings.m: 34";
+		rLen = 0;
+		rLoc = 945;
+		rType = 0;
+		vrLen = 863;
+		vrLoc = 154;
+	};
+	3EBA4BB50FE456CD0056A086 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3EA367B30FE3D266002A406C /* WeightTrackerController.h */;
+		name = "WeightTrackerController.h: 27";
+		rLen = 36;
+		rLoc = 745;
+		rType = 0;
+		vrLen = 786;
+		vrLoc = 0;
+	};
+	3EBA4BBC0FE458320056A086 /* WeightTrackerSettings.m:51 */ = {
+		isa = PBXFileBreakpoint;
+		actions = (
+		);
+		breakpointStyle = 0;
+		continueAfterActions = 0;
+		countType = 0;
+		delayBeforeContinue = 0;
+		fileReference = 3EBA4B320FE446640056A086 /* WeightTrackerSettings.m */;
+		functionName = "-isAppAlreadySetup";
+		hitCount = 0;
+		ignoreCount = 0;
+		lineNumber = 51;
+		location = WeightTracker;
+		modificationTime = 266690149.46567;
+		state = 2;
+	};
+	3EBA4BC50FE458620056A086 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3EA367B40FE3D266002A406C /* WeightTrackerController.m */;
+		name = "WeightTrackerController.m: 50";
+		rLen = 0;
+		rLoc = 1778;
+		rType = 0;
+		vrLen = 1257;
+		vrLoc = 552;
+	};
+	3EBA4BCF0FE45A2F0056A086 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1D3623250D0F684500981E51 /* WeightTrackerAppDelegate.m */;
+		name = "WeightTrackerAppDelegate.m: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 668;
+		vrLoc = 0;
+	};
+	3EBA4BD00FE45A2F0056A086 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1D3623240D0F684500981E51 /* WeightTrackerAppDelegate.h */;
+		name = "WeightTrackerAppDelegate.h: 11";
+		rLen = 0;
+		rLoc = 217;
+		rType = 0;
+		vrLen = 517;
+		vrLoc = 0;
+	};
+	3EBA4BD10FE45A2F0056A086 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3EBA4B320FE446640056A086 /* WeightTrackerSettings.m */;
+		name = "WeightTrackerSettings.m: 34";
+		rLen = 0;
+		rLoc = 945;
+		rType = 0;
+		vrLen = 850;
+		vrLoc = 996;
+	};
+	3EBA4BD20FE45A2F0056A086 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3EBA4B310FE446640056A086 /* WeightTrackerSettings.h */;
+		name = "WeightTrackerSettings.h: 22";
+		rLen = 0;
+		rLoc = 481;
+		rType = 0;
+		vrLen = 410;
+		vrLoc = 0;
+	};
+	3EBA4BD30FE45A2F0056A086 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3EBA4B320FE446640056A086 /* WeightTrackerSettings.m */;
+		name = "WeightTrackerSettings.m: 34";
+		rLen = 0;
+		rLoc = 945;
+		rType = 0;
+		vrLen = 850;
+		vrLoc = 996;
+	};
+	3EBA4BD40FE45A2F0056A086 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1D3623250D0F684500981E51 /* WeightTrackerAppDelegate.m */;
+		name = "WeightTrackerAppDelegate.m: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 668;
+		vrLoc = 0;
+	};
+	3EBA4BD50FE45A2F0056A086 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1D3623240D0F684500981E51 /* WeightTrackerAppDelegate.h */;
+		name = "WeightTrackerAppDelegate.h: 11";
+		rLen = 0;
+		rLoc = 217;
+		rType = 0;
+		vrLen = 517;
+		vrLoc = 0;
+	};
+	3EBA4BDE0FE45AA60056A086 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3EA367BA0FE3D2AC002A406C /* MainApplicationController.m */;
+		name = "MainApplicationController.m: 57";
+		rLen = 0;
+		rLoc = 1536;
+		rType = 0;
+		vrLen = 1030;
+		vrLoc = 567;
+	};
+	3EBA4BDF0FE45AA60056A086 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3EA367B60FE3D294002A406C /* UserInfoController.h */;
+		name = "UserInfoController.h: 4";
+		rLen = 0;
+		rLoc = 48;
+		rType = 0;
+		vrLen = 285;
+		vrLoc = 0;
+	};
+	3EBA4BE00FE45AA60056A086 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3EA367B40FE3D266002A406C /* WeightTrackerController.m */;
+		name = "WeightTrackerController.m: 60";
+		rLen = 0;
+		rLoc = 1884;
+		rType = 0;
+		vrLen = 1038;
+		vrLoc = 0;
+	};
+	3EBA4BE10FE45AA60056A086 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3EA367B40FE3D266002A406C /* WeightTrackerController.m */;
+		name = "WeightTrackerController.m: 60";
+		rLen = 0;
+		rLoc = 1884;
+		rType = 0;
+		vrLen = 1038;
+		vrLoc = 0;
+	};
+	3EBA4BE20FE45AA60056A086 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3EA367BA0FE3D2AC002A406C /* MainApplicationController.m */;
+		name = "MainApplicationController.m: 57";
+		rLen = 0;
+		rLoc = 1536;
+		rType = 0;
+		vrLen = 1030;
+		vrLoc = 567;
+	};
+	3EBA4BE30FE45AA60056A086 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3EA367B60FE3D294002A406C /* UserInfoController.h */;
+		name = "UserInfoController.h: 4";
+		rLen = 0;
+		rLoc = 48;
+		rType = 0;
+		vrLen = 285;
+		vrLoc = 0;
+	};
+	3EBA4BE40FE45AA60056A086 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3EA367B40FE3D266002A406C /* WeightTrackerController.m */;
+		name = "WeightTrackerController.m: 60";
+		rLen = 0;
+		rLoc = 1884;
+		rType = 0;
+		vrLen = 1038;
+		vrLoc = 0;
+	};
+	3EBA4BE60FE45AC70056A086 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3EA367B30FE3D266002A406C /* WeightTrackerController.h */;
+		name = "WeightTrackerController.h: 10";
+		rLen = 0;
+		rLoc = 216;
+		rType = 0;
+		vrLen = 786;
+		vrLoc = 0;
+	};
+	3EBA4BE70FE45AC70056A086 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3EA367B70FE3D294002A406C /* UserInfoController.m */;
+		name = "UserInfoController.m: 47";
+		rLen = 177;
+		rLoc = 1242;
+		rType = 0;
+		vrLen = 1026;
+		vrLoc = 546;
+	};
+	3EBA4BE80FE45AC70056A086 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3EBA4B310FE446640056A086 /* WeightTrackerSettings.h */;
+		name = "WeightTrackerSettings.h: 22";
+		rLen = 0;
+		rLoc = 481;
+		rType = 0;
+		vrLen = 410;
+		vrLoc = 0;
+	};
+	3EBA4BE90FE45AC70056A086 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3EBA4B320FE446640056A086 /* WeightTrackerSettings.m */;
+		name = "WeightTrackerSettings.m: 34";
+		rLen = 0;
+		rLoc = 945;
+		rType = 0;
+		vrLen = 854;
+		vrLoc = 993;
+	};
+	3EBA4BEA0FE45AC70056A086 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3EA367B30FE3D266002A406C /* WeightTrackerController.h */;
+		name = "WeightTrackerController.h: 10";
+		rLen = 0;
+		rLoc = 216;
+		rType = 0;
+		vrLen = 786;
+		vrLoc = 0;
+	};
+	3EBA4BEB0FE45AC70056A086 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3EA367B70FE3D294002A406C /* UserInfoController.m */;
+		name = "UserInfoController.m: 47";
+		rLen = 177;
+		rLoc = 1242;
+		rType = 0;
+		vrLen = 1026;
+		vrLoc = 546;
+	};
+	3EBA4BEC0FE45AC70056A086 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3EBA4B320FE446640056A086 /* WeightTrackerSettings.m */;
+		name = "WeightTrackerSettings.m: 34";
+		rLen = 0;
+		rLoc = 945;
+		rType = 0;
+		vrLen = 854;
+		vrLoc = 993;
+	};
+	3EBA4BED0FE45AC70056A086 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3EBA4B310FE446640056A086 /* WeightTrackerSettings.h */;
+		name = "WeightTrackerSettings.h: 22";
+		rLen = 0;
+		rLoc = 481;
+		rType = 0;
+		vrLen = 410;
+		vrLoc = 0;
+	};
+	3EBA4BEE0FE45AC70056A086 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3EBA4B320FE446640056A086 /* WeightTrackerSettings.m */;
+		name = "WeightTrackerSettings.m: 34";
+		rLen = 0;
+		rLoc = 945;
+		rType = 0;
+		vrLen = 998;
+		vrLoc = 0;
+	};
+}
