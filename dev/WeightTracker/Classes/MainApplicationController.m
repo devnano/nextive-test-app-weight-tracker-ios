@@ -7,6 +7,9 @@
 //
 
 #import "MainApplicationController.h"
+#import "Utils.h"
+
+@class Utils;
 
 
 @implementation MainApplicationController
@@ -61,11 +64,13 @@
 	UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"sed" message:@"sending" delegate:nil cancelButtonTitle:@"send" otherButtonTitles:nil];
 	[alert show];
 	[alert release];
+	//TODO make the parameters flexible enough to take them from the datasource
+	[Utils sendMailTo:@"albolocura@gmail.com" withSubject:@"My Weight History" withBody:@"Weight History..."];
 }
 
-- (void) viewWillAppear:(BOOL) animated
+- (void) viewDidAppear:(BOOL) animated
 {
-	[super viewWillAppear:animated];
+	[super viewDidAppear:animated];
 	self.username.text = self.weightTrackerSettings.username;
 	
 }

@@ -62,7 +62,7 @@
 	}
 	
 	[self.view insertSubview:tmpController.view atIndex:0];
-	[tmpController viewWillAppear:NO];
+	[tmpController viewDidAppear:NO];
 	
 	[tmpController release];
 }
