@@ -37,7 +37,7 @@
 - (void) initUserInfoController
 {
 	self.userInfoController =  [[UserInfoController alloc] initWithNibName:@"UserInfo" bundle: nil];
-	self.userInfoController.weightTrackerSettings = self.weightTrackerSettings;
+	self.userInfoController.weightTrackerController = self;	
 }
 
 - (void) initMainAppController
@@ -68,19 +68,12 @@
 }
 
 - (IBAction) switchViews:(id)sender
-{
-	UIViewController *tmpController = nil;
+{	
 	if(self.mainApplicationController == nil){				
-		[self initMainAppController];
-		tmpController = self.mainApplicationController;		
+		[self initMainAppController];				
 	} else if(self.userInfoController == nil) {
-		[self initUserInfoController];
-		tmpController = self.userInfoController;
-	}
-	if(tmpController != nil){
-		[tmpController release];
-	}
-	
+		[self initUserInfoController];		
+	}	
 	UIViewController *toShow;
 	UIViewController *toHide;
 	UIViewAnimationTransition transitionType;

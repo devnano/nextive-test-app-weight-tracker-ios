@@ -11,9 +11,8 @@
 
 @implementation UserInfoController
 @synthesize usernameTextField;
-@synthesize weightTrackerSettings;
 @dynamic username;
-
+@synthesize weightTrackerController;
 /*
 // The designated initializer. Override to perform setup that is required before the view is loaded.
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
@@ -50,10 +49,12 @@
 }
 - (IBAction) saveButtonPressed:(id)sender
 {
-	UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"save" message:@"saving" delegate:nil cancelButtonTitle:@"save" otherButtonTitles:nil];
-	[alert show];
-	[alert release];
-	[self.weightTrackerSettings setupAppWithUserInfo:self];
+//	UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"save" message:@"saving" delegate:nil cancelButtonTitle:@"save" otherButtonTitles:nil];
+//	[alert show];
+//	[alert release];
+	[self.weightTrackerController.weightTrackerSettings setupAppWithUserInfo:self];
+	[self.usernameTextField resignFirstResponder];
+	[self.weightTrackerController switchViews:self];
 }
 
 - (void)didReceiveMemoryWarning {

@@ -8,12 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import "WeightTrackerSettings.h"
+#import "WeightTrackerController.h"
+
+@class WeightTrackerController;
 
 
 @interface UserInfoController : UIViewController {
-	UITextField *usernameTextField;
-	WeightTrackerSettings *weightTrackerSettings;
-
+	UITextField *usernameTextField;	
+	WeightTrackerController *weightTrackerController;
 }
 
 @property(nonatomic,retain) IBOutlet UITextField * usernameTextField;
@@ -21,7 +23,8 @@
 - (IBAction) saveButtonPressed:(id)sender;
 - (IBAction) textFieldDoneEditing:(id)sender;
 
-@property (retain, nonatomic) WeightTrackerSettings *weightTrackerSettings;
+
+@property(retain, nonatomic) WeightTrackerController *weightTrackerController;
 
 
 

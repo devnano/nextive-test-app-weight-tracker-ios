@@ -9,7 +9,7 @@
 #import "MainApplicationController.h"
 #import "Utils.h"
 
-@class Utils;
+//@class Utils;
 
 
 @implementation MainApplicationController
@@ -61,11 +61,11 @@
 
 - (IBAction) sendInfoButtonPressed:(id)sender
 {
-	UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"sed" message:@"sending" delegate:nil cancelButtonTitle:@"send" otherButtonTitles:nil];
-	[alert show];
-	[alert release];
+	//UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"sed" message:@"sending" delegate:nil cancelButtonTitle:@"send" otherButtonTitles:nil];
+	//[alert show];
+	//[alert release];
 	//TODO make the parameters flexible enough to take them from the datasource
-	[Utils sendMailTo:@"albolocura@gmail.com" withSubject:@"My Weight History" withBody:@"Weight History..."];
+	[Utils sendMailTo:@"albolocura@gmail.com" withSubject:@"My Weight History" withBody:[NSString stringWithFormat:@"%@ Weight History...", self.username.text]];
 }
 
 - (void) viewDidAppear:(BOOL) animated
