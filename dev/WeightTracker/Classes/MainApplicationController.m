@@ -14,7 +14,7 @@
 
 @implementation MainApplicationController
 @synthesize username;
-@synthesize weightTrackerSettings;
+@synthesize weightTrackerController;
 
 /*
 // The designated initializer. Override to perform setup that is required before the view is loaded.
@@ -71,7 +71,7 @@
 - (void) viewDidAppear:(BOOL) animated
 {
 	[super viewDidAppear:animated];
-	self.username.text = self.weightTrackerSettings.username;
+	self.username.text = self.weightTrackerController.weightTrackerSettings.username;
 	
 }
 

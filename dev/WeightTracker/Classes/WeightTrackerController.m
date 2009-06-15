@@ -9,7 +9,7 @@
 #import "WeightTrackerController.h"
 #import "UserInfoController.h"
 #import "MainApplicationController.h"
-#import "WeightTrackerSettings.h"
+#import "WeightTrackerSettingsFactory.h"
 
 
 @implementation WeightTrackerController
@@ -43,15 +43,16 @@
 - (void) initMainAppController
 {
 	self.mainApplicationController = [[MainApplicationController alloc] initWithNibName:@"MainApplication" bundle:nil];
-	self.mainApplicationController.weightTrackerSettings = self.weightTrackerSettings;
+	self.mainApplicationController.weightTrackerController = self;
 }
 
 
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad {
 	//TODO: see memory managemnt	
-	self.weightTrackerSettings = [WeightTrackerSettings alloc];
-	[self.weightTrackerSettings init];
+	self.weightTrackerSettings = [WeightTrackerSettingsFactory createWeightTrackerSettings];
+	//self.weightTrackerSettings = [WeightTrackerSettings alloc];
+	//[self.weightTrackerSettings init];
 	UIViewController *tmpController;
 	if(![self.weightTrackerSettings isAppAlreadySetup]){
 		[self initUserInfoController];

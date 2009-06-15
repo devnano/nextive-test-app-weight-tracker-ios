@@ -7,17 +7,17 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "WeightTrackerSettings.h"
+#import "WeightTrackerController.h"
 
 
 @interface MainApplicationController : UIViewController {
 	UILabel *username;
-	WeightTrackerSettings *weightTrackerSettings;
+	WeightTrackerController *weightTrackerController;
 }
 
 
 @property(retain, nonatomic) IBOutlet UILabel *username;
-@property (retain, nonatomic) WeightTrackerSettings *weightTrackerSettings;
+@property (retain, nonatomic) WeightTrackerController *weightTrackerController;
 - (IBAction) sendInfoButtonPressed:(id)sender;
 
 @end

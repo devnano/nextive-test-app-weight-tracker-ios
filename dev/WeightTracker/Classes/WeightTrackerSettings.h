@@ -11,8 +11,14 @@
 
 #define FILE_NAME @"data.sqlite3"
 
+@protocol WeightTrackerSettingsSupport
+	- (BOOL) isAppAlreadySetup;	
+	- (void) setupAppWithUserInfo:(id) userInfo;
+	@property (retain,nonatomic) NSString * username;
+@end
 
-@interface WeightTrackerSettings : NSObject {
+
+@interface WeightTrackerSettings : NSObject <WeightTrackerSettingsSupport> {
 	@private
 		BOOL appAlreadySetup;
 		sqlite3 *db;
@@ -21,8 +27,4 @@
 
 - (NSString *) dataFilePath;
 - (NSInteger) init;
-- (BOOL) isAppAlreadySetup;
-- (void) setupAppWithUserInfo:(id) userInfo;
-@property (readonly) NSString * username;
-
 @end

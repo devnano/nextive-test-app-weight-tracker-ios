@@ -23,6 +23,6 @@
 
 @property (retain, nonatomic) UserInfoController *userInfoController;
 @property (retain, nonatomic) MainApplicationController *mainApplicationController;
-@property (retain, nonatomic) WeightTrackerSettings *weightTrackerSettings;
+@property (retain, nonatomic) id<WeightTrackerSettingsSupport> weightTrackerSettings;
 -(IBAction) switchViews:(id)sender;
 @end
