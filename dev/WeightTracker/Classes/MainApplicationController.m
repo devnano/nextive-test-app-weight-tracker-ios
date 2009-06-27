@@ -1,10 +1,3 @@
-//
-//  MainApplicationController.m
-//  WeightTracker
-//
-//  Created by Mariano Heredia on 6/13/09.
-//  Copyright 2009 __MyCompanyName__. All rights reserved.
-//
 
 #import "MainApplicationController.h"
 #import "Utils.h"
@@ -65,7 +58,7 @@
 	//[alert show];
 	//[alert release];
 	//TODO make the parameters flexible enough to take them from the datasource
-	[Utils sendMailTo:@"albolocura@gmail.com" withSubject:@"My Weight History" withBody:[NSString stringWithFormat:@"%@ Weight History...", self.username.text]];
+	[Utils sendMailTo:[weightTrackerController.weightTrackerSettings userMailAddress] withSubject:@"My Weight History" withBody:[NSString stringWithFormat:@"%@ Weight History...", self.username.text]];
 }
 
 - (void) viewDidAppear:(BOOL) animated

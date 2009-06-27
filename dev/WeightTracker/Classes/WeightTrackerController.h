@@ -1,10 +1,4 @@
-//
-//  WeightTrackerController.h
-//  WeightTracker
-//
-//  Created by Mariano Heredia on 6/13/09.
-//  Copyright 2009 __MyCompanyName__. All rights reserved.
-//
+
 
 #import <UIKit/UIKit.h>
 #import "WeightTrackerSettings.h"
@@ -25,4 +19,5 @@
 @property (retain, nonatomic) MainApplicationController *mainApplicationController;
 @property (retain, nonatomic) id<WeightTrackerSettingsSupport> weightTrackerSettings;
 -(IBAction) switchViews:(id)sender;
+-(void) genericSwitchViews:(UIViewController *)oneView otherView:(UIViewController *)otherView;
 @end

@@ -21,6 +21,7 @@
 		3EA367BB0FE3D2AC002A406C /* MainApplicationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EA367BA0FE3D2AC002A406C /* MainApplicationController.m */; };
 		3EA367BD0FE3D2FC002A406C /* UserInfo.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3EA367BC0FE3D2FC002A406C /* UserInfo.xib */; };
 		3EA367BF0FE3D30D002A406C /* MainApplication.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3EA367BE0FE3D30D002A406C /* MainApplication.xib */; };
+		3EAAC6AE0FF4578A00454354 /* UserMailPickerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3EAAC6AD0FF4578A00454354 /* UserMailPickerView.xib */; };
 		3EAF86C90FE69F2D00F29CFF /* NSData-SQLitePersistence.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EAF86AA0FE69F2D00F29CFF /* NSData-SQLitePersistence.m */; };
 		3EAF86CA0FE69F2D00F29CFF /* NSDate-SQLitePersistence.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EAF86AC0FE69F2D00F29CFF /* NSDate-SQLitePersistence.m */; };
 		3EAF86CB0FE69F2D00F29CFF /* NSMutableArray-MultipleSort.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EAF86AE0FE69F2D00F29CFF /* NSMutableArray-MultipleSort.m */; };
@@ -37,6 +38,8 @@
 		3EAF86D60FE69F2D00F29CFF /* SQLitePersistentObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EAF86C40FE69F2D00F29CFF /* SQLitePersistentObject.m */; };
 		3EAF86D70FE69F2D00F29CFF /* UIColor-SQLitePersistentObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EAF86C60FE69F2D00F29CFF /* UIColor-SQLitePersistentObject.m */; };
 		3EAF86D80FE69F2D00F29CFF /* UIImage-SQLitePersistence.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EAF86C80FE69F2D00F29CFF /* UIImage-SQLitePersistence.m */; };
+		3EB57B720FF6A05600508C17 /* UserMailPickerContoller.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EB57B710FF6A05600508C17 /* UserMailPickerContoller.m */; };
+		3EB57B760FF6A06F00508C17 /* SystemSettingsAccess.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EB57B740FF6A06F00508C17 /* SystemSettingsAccess.m */; };
 		3EBA4B300FE446290056A086 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EBA4B2F0FE446290056A086 /* libsqlite3.dylib */; };
 		3EBA4B330FE446640056A086 /* WeightTrackerSettings.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EBA4B320FE446640056A086 /* WeightTrackerSettings.m */; };
 /* End PBXBuildFile section */
@@ -65,6 +68,7 @@
 		3EA367BA0FE3D2AC002A406C /* MainApplicationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MainApplicationController.m; path = Classes/MainApplicationController.m; sourceTree = "<group>"; };
 		3EA367BC0FE3D2FC002A406C /* UserInfo.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserInfo.xib; sourceTree = "<group>"; };
 		3EA367BE0FE3D30D002A406C /* MainApplication.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainApplication.xib; sourceTree = "<group>"; };
+		3EAAC6AD0FF4578A00454354 /* UserMailPickerView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserMailPickerView.xib; sourceTree = "<group>"; };
 		3EAF86A90FE69F2D00F29CFF /* NSData-SQLitePersistence.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData-SQLitePersistence.h"; sourceTree = "<group>"; };
 		3EAF86AA0FE69F2D00F29CFF /* NSData-SQLitePersistence.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData-SQLitePersistence.m"; sourceTree = "<group>"; };
 		3EAF86AB0FE69F2D00F29CFF /* NSDate-SQLitePersistence.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate-SQLitePersistence.h"; sourceTree = "<group>"; };
@@ -97,6 +101,11 @@
 		3EAF86C60FE69F2D00F29CFF /* UIColor-SQLitePersistentObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor-SQLitePersistentObject.m"; sourceTree = "<group>"; };
 		3EAF86C70FE69F2D00F29CFF /* UIImage-SQLitePersistence.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage-SQLitePersistence.h"; sourceTree = "<group>"; };
 		3EAF86C80FE69F2D00F29CFF /* UIImage-SQLitePersistence.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage-SQLitePersistence.m"; sourceTree = "<group>"; };
+		3EB57B700FF6A05600508C17 /* UserMailPickerContoller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UserMailPickerContoller.h; path = Classes/UserMailPickerContoller.h; sourceTree = "<group>"; };
+		3EB57B710FF6A05600508C17 /* UserMailPickerContoller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UserMailPickerContoller.m; path = Classes/UserMailPickerContoller.m; sourceTree = "<group>"; };
+		3EB57B730FF6A06F00508C17 /* SystemSettingsAccess.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SystemSettingsAccess.h; path = Classes/SystemSettingsAccess.h; sourceTree = "<group>"; };
+		3EB57B740FF6A06F00508C17 /* SystemSettingsAccess.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SystemSettingsAccess.m; path = Classes/SystemSettingsAccess.m; sourceTree = "<group>"; };
+		3EB57B750FF6A06F00508C17 /* WeightTrackerSettingsSupport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WeightTrackerSettingsSupport.h; path = Classes/WeightTrackerSettingsSupport.h; sourceTree = "<group>"; };
 		3EBA4B2F0FE446290056A086 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = ../../../../../../Users/nano/dev/WeightTracker/libsqlite3.dylib; sourceTree = SDKROOT; };
 		3EBA4B310FE446640056A086 /* WeightTrackerSettings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WeightTrackerSettings.h; path = Classes/WeightTrackerSettings.h; sourceTree = "<group>"; };
 		3EBA4B320FE446640056A086 /* WeightTrackerSettings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WeightTrackerSettings.m; path = Classes/WeightTrackerSettings.m; sourceTree = "<group>"; };
@@ -154,6 +163,7 @@
 				8D1107310486CEB800E47090 /* Info.plist */,
 				3EA367BC0FE3D2FC002A406C /* UserInfo.xib */,
 				3EA367BE0FE3D30D002A406C /* MainApplication.xib */,
+				3EAAC6AD0FF4578A00454354 /* UserMailPickerView.xib */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -243,6 +253,9 @@
 		3EBA4B910FE455E00056A086 /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				3EB57B730FF6A06F00508C17 /* SystemSettingsAccess.h */,
+				3EB57B740FF6A06F00508C17 /* SystemSettingsAccess.m */,
+				3EB57B750FF6A06F00508C17 /* WeightTrackerSettingsSupport.h */,
 				3E9B7F8E0FE6E2E400028666 /* WeightTrackerSettingsFactory.h */,
 				3E9B7F8F0FE6E2E400028666 /* WeightTrackerSettingsFactory.m */,
 				3E9B7F000FE6DB7800028666 /* SqlitePersistentObjects */,
@@ -255,6 +268,8 @@
 		3EBA4BDB0FE45A8E0056A086 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				3EB57B700FF6A05600508C17 /* UserMailPickerContoller.h */,
+				3EB57B710FF6A05600508C17 /* UserMailPickerContoller.m */,
 				3EA367B30FE3D266002A406C /* WeightTrackerController.h */,
 				3EA367B40FE3D266002A406C /* WeightTrackerController.m */,
 				3EA367B60FE3D294002A406C /* UserInfoController.h */,
@@ -310,6 +325,7 @@
 				28AD733F0D9D9553002E5188 /* MainWindow.xib in Resources */,
 				3EA367BD0FE3D2FC002A406C /* UserInfo.xib in Resources */,
 				3EA367BF0FE3D30D002A406C /* MainApplication.xib in Resources */,
+				3EAAC6AE0FF4578A00454354 /* UserMailPickerView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -345,6 +361,8 @@
 				3EAF86D80FE69F2D00F29CFF /* UIImage-SQLitePersistence.m in Sources */,
 				3E9B7F920FE6E2E400028666 /* WeightTrackerSettingsFactory.m in Sources */,
 				3E9B7F930FE6E2E400028666 /* WeightTrackerSettingsSPO.m in Sources */,
+				3EB57B720FF6A05600508C17 /* UserMailPickerContoller.m in Sources */,
+				3EB57B760FF6A06F00508C17 /* SystemSettingsAccess.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -395,7 +413,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				PREBINDING = NO;
-				SDKROOT = iphoneos2.2.1;
+				SDKROOT = iphoneos2.0;
 			};
 			name = Debug;
 		};
@@ -408,7 +426,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				PREBINDING = NO;
-				SDKROOT = iphoneos2.2.1;
+				SDKROOT = iphoneos2.0;
 			};
 			name = Release;
 		};

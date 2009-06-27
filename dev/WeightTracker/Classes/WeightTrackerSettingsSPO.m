@@ -1,10 +1,3 @@
-//
-//  WeightTrackerSettingsSPO.m
-//  WeightTracker
-//
-//  Created by Mariano Heredia on 6/15/09.
-//  Copyright 2009 __MyCompanyName__. All rights reserved.
-//
 
 #import "WeightTrackerSettingsSPO.h"
 
@@ -14,9 +7,10 @@
 
 @implementation WeightTrackerSettingsSPO
 	DECLARE_PROPERTIES(
-				   DECLARE_PROPERTY(@"username", @"@\"NSString\"")
+				   DECLARE_PROPERTY(@"username", @"@\"NSString\""),
+				DECLARE_PROPERTY(@"userMailAddress", @"@\"NSString\"")	   
 	)
-@synthesize username;
+@synthesize username, userMailAddress;
 
 
 - (BOOL) isAppAlreadySetup
@@ -25,6 +19,14 @@
 }
 - (void) setupAppWithUserInfo:(id) userInfo{
 	self.username = [userInfo username];
+	self.userMailAddress = [userInfo userMailAddress];
 	[self save];
 }
+
+- (void) loadAppUserInfo:(id) userInfo{
+	[userInfo setUsername:self.username];
+	[userInfo setUserMailAddress:self.userMailAddress];
+}
+
+
 @end

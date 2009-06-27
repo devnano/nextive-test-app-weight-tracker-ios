@@ -1,18 +1,13 @@
-//
-//  UserInfoController.m
-//  WeightTracker
-//
-//  Created by Mariano Heredia on 6/13/09.
-//  Copyright 2009 __MyCompanyName__. All rights reserved.
-//
+
 
 #import "UserInfoController.h"
-
+#import "SystemSettingsAccess.h"
 
 @implementation UserInfoController
-@synthesize usernameTextField;
-@dynamic username;
+@synthesize usernameTextField, userMailLabel;
+@dynamic username, weightTrackerSettings, userMailAddress;
 @synthesize weightTrackerController;
+@synthesize userMailPickerController;
 /*
 // The designated initializer. Override to perform setup that is required before the view is loaded.
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
@@ -29,12 +24,29 @@
 }
 */
 
-/*
+
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad {
+	//initialize ui with current data
     [super viewDidLoad];
+	if([self.weightTrackerSettings isAppAlreadySetup]){
+		[self.weightTrackerSettings loadAppUserInfo:self];
+	} else {
+		loadSystemSettingsDefaults(self);
+	}
+	//NSString *username = [self.weightTrackerSettings username];
+	//if(username == nil){
+	//	username = [SystemSettingsAccess deviceUsername];	
+	//}
+	//self.usernameTextField.text = username;
+	//self.userMailLabel.text = [SystemSettingsAccess defaultMailAddress];
+	//[username release];
 }
-*/
+	
+- (id<WeightTrackerSettingsSupport> ) weightTrackerSettings{
+	return self.weightTrackerController.weightTrackerSettings;
+}
+
 
 /*
 // Override to allow orientations other than the default portrait orientation.
@@ -47,14 +59,14 @@
 {
 	[sender resignFirstResponder];
 }
-- (IBAction) saveButtonPressed:(id)sender
+- (void) save
 {
 //	UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"save" message:@"saving" delegate:nil cancelButtonTitle:@"save" otherButtonTitles:nil];
 //	[alert show];
 //	[alert release];
-	[self.weightTrackerController.weightTrackerSettings setupAppWithUserInfo:self];
+	[self.weightTrackerSettings setupAppWithUserInfo:self];
 	[self.usernameTextField resignFirstResponder];
-	[self.weightTrackerController switchViews:self];
+	//[self.weightTrackerController switchViews:self];	
 }
 
 - (void)didReceiveMemoryWarning {
@@ -70,6 +82,41 @@
 - (NSString *) username{
 	return [self.usernameTextField text];
 }
+
+-(void) setUsername:(NSString *) username{
+	self.usernameTextField.text = username;
+}
+- (NSString *) userMailAddress{
+	return [self.userMailLabel text];
+}
+
+- (void) setUserMailAddress:(NSString *) mailAddress{
+	self.userMailLabel.text = mailAddress;
+}
+
+- (void) initMailPickerView{
+	self.userMailPickerController = [[UserMailPickerContoller alloc] initWithNibName:@"UserMailPickerView" bundle:nil];
+	self.userMailPickerController.caller = self;
+}
+
+- (void) showMailPickerView{
+	if (self.userMailPickerController == nil){
+		[self initMailPickerView];
+	}
+	
+	[weightTrackerController genericSwitchViews:self otherView:self.userMailPickerController];
+}
+
+- (void) hideMailPickerView{
+	[weightTrackerController genericSwitchViews:self otherView:self.userMailPickerController];
+}
+
+
+
+- (IBAction) changeMail:(id)sender{
+	[self showMailPickerView];
+}
+
 
 
 @end

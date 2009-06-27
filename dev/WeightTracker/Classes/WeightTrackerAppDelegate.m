@@ -1,11 +1,3 @@
-//
-//  WeightTrackerAppDelegate.m
-//  WeightTracker
-//
-//  Created by Mariano Heredia on 6/13/09.
-//  Copyright __MyCompanyName__ 2009. All rights reserved.
-//
-
 #import "WeightTrackerAppDelegate.h"
 #import "WeightTrackerController.h"
 

@@ -1,10 +1,3 @@
-//
-//  WeightTrackerController.m
-//  WeightTracker
-//
-//  Created by Mariano Heredia on 6/13/09.
-//  Copyright 2009 __MyCompanyName__. All rights reserved.
-//
 
 #import "WeightTrackerController.h"
 #import "UserInfoController.h"
@@ -68,6 +61,38 @@
 	[tmpController release];
 }
 
+
+-(void) genericSwitchViews:(UIViewController *)oneView otherView:(UIViewController *)otherView{
+	UIViewController *toShow;
+	UIViewController *toHide;
+	UIViewAnimationTransition transitionType;
+	
+	if(oneView.view.superview == nil){
+		toShow = oneView;
+		toHide = otherView;
+		transitionType = UIViewAnimationTransitionFlipFromRight;
+	} else {
+		toShow = otherView;
+		toHide = oneView;
+		transitionType = UIViewAnimationTransitionFlipFromLeft;
+	}
+	
+	
+	[UIView beginAnimations:@"View Flip" context:nil];
+	[UIView setAnimationDuration:1];
+	[UIView setAnimationCurve : UIViewAnimationCurveEaseInOut];
+	
+	[UIView setAnimationTransition : transitionType  forView: self.view cache:YES];
+	[toShow viewWillAppear:YES];
+	[toHide viewWillDisappear:YES];
+	[toHide.view removeFromSuperview];
+	[self.view insertSubview:toShow.view atIndex:0];
+	[toHide viewDidDisappear:YES];
+	[toShow viewDidAppear:YES];
+	
+	[UIView commitAnimations];		
+}
+
 - (IBAction) switchViews:(id)sender
 {	
 	if(self.mainApplicationController == nil){				
@@ -75,7 +100,11 @@
 	} else if(self.userInfoController == nil) {
 		[self initUserInfoController];		
 	}	
-	UIViewController *toShow;
+	if(self.userInfoController.view.superview != nil){
+		[self.userInfoController save];
+	}
+	[self genericSwitchViews:self.userInfoController otherView:self.mainApplicationController];
+	/*UIViewController *toShow;
 	UIViewController *toHide;
 	UIViewAnimationTransition transitionType;
 	
@@ -102,7 +131,7 @@
 	[toHide viewDidDisappear:YES];
 	[toShow viewDidAppear:YES];
 	
-	[UIView commitAnimations];
+	[UIView commitAnimations];*/
 }
 
 
