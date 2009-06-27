@@ -103,12 +103,14 @@
 	if (self.userMailPickerController == nil){
 		[self initMailPickerView];
 	}
-	
-	[weightTrackerController genericSwitchViews:self otherView:self.userMailPickerController];
+	[self.weightTrackerController presentModalViewController:userMailPickerController animated:YES]; 
+	//[weightTrackerController genericSwitchViews:self otherView:self.userMailPickerController];
 }
 
 - (void) hideMailPickerView{
-	[weightTrackerController genericSwitchViews:self otherView:self.userMailPickerController];
+	[self.weightTrackerController dismissModalViewControllerAnimated:YES]; 
+//	[self presentModalViewController:picker animated:YES]; 
+	//[weightTrackerController genericSwitchViews:self otherView:self.userMailPickerController];
 }
 
 
