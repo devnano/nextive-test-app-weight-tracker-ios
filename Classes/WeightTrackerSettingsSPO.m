@@ -1,0 +1,38 @@
+
+#import "WeightTrackerSettingsSPO.h"
+
+
+
+
+
+@implementation WeightTrackerSettingsSPO
+	DECLARE_PROPERTIES(
+				   DECLARE_PROPERTY(@"username", @"@\"NSString\""),
+				DECLARE_PROPERTY(@"userMailAddress", @"@\"NSString\"")	   
+	)
+@synthesize username, userMailAddress;
+
+
+- (BOOL) isAppAlreadySetup
+{
+	return self.username != nil;
+}
+- (void) setupAppWithUserInfo:(id) userInfo{
+	//relying in dynamic binding for data retriving
+	//through message send to userInfo id reference
+	//Note that a protocol could be adopted if third parties
+	//could make use of this as an API, we are "trusing"
+	//in our design and know for sure that the methods will be defined
+	//at runtime
+	self.username = [userInfo username];
+	self.userMailAddress = [userInfo userMailAddress];
+	[self save];
+}
+
+- (void) loadAppUserInfo:(id) userInfo{
+	[userInfo setUsername:self.username];
+	[userInfo setUserMailAddress:self.userMailAddress];
+}
+
+
+@end

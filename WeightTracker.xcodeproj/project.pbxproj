@@ -1,0 +1,428 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 45;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1D3623260D0F684500981E51 /* WeightTrackerAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3623250D0F684500981E51 /* WeightTrackerAppDelegate.m */; };
+		1D60589B0D05DD56006BFB54 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; };
+		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
+		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
+		288765FD0DF74451002DB57D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765FC0DF74451002DB57D /* CoreGraphics.framework */; };
+		28AD733F0D9D9553002E5188 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28AD733E0D9D9553002E5188 /* MainWindow.xib */; };
+		3EA650730FF7F91500FC45D0 /* WeightTrackerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EA650710FF7F91500FC45D0 /* WeightTrackerController.m */; };
+		3EA650740FF7F91500FC45D0 /* WeightTrackerController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3EA650720FF7F91500FC45D0 /* WeightTrackerController.xib */; };
+		3EA651020FF80AD000FC45D0 /* WeightTrackerSettingsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EA651000FF80AD000FC45D0 /* WeightTrackerSettingsController.m */; };
+		3EA651030FF80AD000FC45D0 /* WeightTrackerSettingsController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3EA651010FF80AD000FC45D0 /* WeightTrackerSettingsController.xib */; };
+		3EA651E50FF8122E00FC45D0 /* SystemSettingsAccess.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EA651DD0FF8122E00FC45D0 /* SystemSettingsAccess.m */; };
+		3EA651E60FF8122E00FC45D0 /* WeightTrackerSettings.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EA651DF0FF8122E00FC45D0 /* WeightTrackerSettings.m */; };
+		3EA651E70FF8122E00FC45D0 /* WeightTrackerSettingsFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EA651E10FF8122E00FC45D0 /* WeightTrackerSettingsFactory.m */; };
+		3EA651E80FF8122E00FC45D0 /* WeightTrackerSettingsSPO.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EA651E30FF8122E00FC45D0 /* WeightTrackerSettingsSPO.m */; };
+		3EA652280FF8128800FC45D0 /* NSData-SQLitePersistence.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EA652090FF8128800FC45D0 /* NSData-SQLitePersistence.m */; };
+		3EA652290FF8128800FC45D0 /* NSDate-SQLitePersistence.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EA6520B0FF8128800FC45D0 /* NSDate-SQLitePersistence.m */; };
+		3EA6522A0FF8128800FC45D0 /* NSMutableArray-MultipleSort.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EA6520D0FF8128800FC45D0 /* NSMutableArray-MultipleSort.m */; };
+		3EA6522B0FF8128800FC45D0 /* NSMutableData-SQLitePersistence.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EA6520F0FF8128800FC45D0 /* NSMutableData-SQLitePersistence.m */; };
+		3EA6522C0FF8128800FC45D0 /* NSNumber-SQLitePersistence.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EA652110FF8128800FC45D0 /* NSNumber-SQLitePersistence.m */; };
+		3EA6522D0FF8128800FC45D0 /* NSObject-ClassName.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EA652130FF8128800FC45D0 /* NSObject-ClassName.m */; };
+		3EA6522E0FF8128800FC45D0 /* NSObject-MissingKV.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EA652150FF8128800FC45D0 /* NSObject-MissingKV.m */; };
+		3EA6522F0FF8128800FC45D0 /* NSObject-SQLitePersistence.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EA652170FF8128800FC45D0 /* NSObject-SQLitePersistence.m */; };
+		3EA652300FF8128800FC45D0 /* NSString-NumberStuff.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EA652190FF8128800FC45D0 /* NSString-NumberStuff.m */; };
+		3EA652310FF8128800FC45D0 /* NSString-SQLiteColumnName.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EA6521B0FF8128800FC45D0 /* NSString-SQLiteColumnName.m */; };
+		3EA652320FF8128800FC45D0 /* NSString-SQLitePersistence.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EA6521D0FF8128800FC45D0 /* NSString-SQLitePersistence.m */; };
+		3EA652330FF8128800FC45D0 /* NSString-UppercaseFirst.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EA6521F0FF8128800FC45D0 /* NSString-UppercaseFirst.m */; };
+		3EA652340FF8128800FC45D0 /* SQLiteInstanceManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EA652210FF8128800FC45D0 /* SQLiteInstanceManager.m */; };
+		3EA652350FF8128800FC45D0 /* SQLitePersistentObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EA652230FF8128800FC45D0 /* SQLitePersistentObject.m */; };
+		3EA652360FF8128800FC45D0 /* UIColor-SQLitePersistentObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EA652250FF8128800FC45D0 /* UIColor-SQLitePersistentObject.m */; };
+		3EA652370FF8128800FC45D0 /* UIImage-SQLitePersistence.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EA652270FF8128800FC45D0 /* UIImage-SQLitePersistence.m */; };
+		3EA652470FF814D800FC45D0 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EA652460FF814D800FC45D0 /* libsqlite3.dylib */; };
+		3EADDF830FF842CB003C1795 /* EditableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EADDF820FF842CB003C1795 /* EditableCell.m */; };
+		3EADDF850FF842F2003C1795 /* EditableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3EADDF840FF842F2003C1795 /* EditableCell.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		1D30AB110D05D00D00671497 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		1D3623240D0F684500981E51 /* WeightTrackerAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeightTrackerAppDelegate.h; sourceTree = "<group>"; };
+		1D3623250D0F684500981E51 /* WeightTrackerAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeightTrackerAppDelegate.m; sourceTree = "<group>"; };
+		1D6058910D05DD3D006BFB54 /* WeightTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeightTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1DF5F4DF0D08C38300B7A737 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		288765FC0DF74451002DB57D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		28AD733E0D9D9553002E5188 /* MainWindow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainWindow.xib; sourceTree = "<group>"; };
+		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		32CA4F630368D1EE00C91783 /* WeightTracker_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeightTracker_Prefix.pch; sourceTree = "<group>"; };
+		3EA650700FF7F91500FC45D0 /* WeightTrackerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeightTrackerController.h; sourceTree = "<group>"; };
+		3EA650710FF7F91500FC45D0 /* WeightTrackerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeightTrackerController.m; sourceTree = "<group>"; };
+		3EA650720FF7F91500FC45D0 /* WeightTrackerController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = WeightTrackerController.xib; path = Classes/WeightTrackerController.xib; sourceTree = "<group>"; };
+		3EA650FF0FF80AD000FC45D0 /* WeightTrackerSettingsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeightTrackerSettingsController.h; sourceTree = "<group>"; };
+		3EA651000FF80AD000FC45D0 /* WeightTrackerSettingsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeightTrackerSettingsController.m; sourceTree = "<group>"; };
+		3EA651010FF80AD000FC45D0 /* WeightTrackerSettingsController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = WeightTrackerSettingsController.xib; path = Classes/WeightTrackerSettingsController.xib; sourceTree = "<group>"; };
+		3EA651DC0FF8122E00FC45D0 /* SystemSettingsAccess.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SystemSettingsAccess.h; sourceTree = "<group>"; };
+		3EA651DD0FF8122E00FC45D0 /* SystemSettingsAccess.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SystemSettingsAccess.m; sourceTree = "<group>"; };
+		3EA651DE0FF8122E00FC45D0 /* WeightTrackerSettings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeightTrackerSettings.h; sourceTree = "<group>"; };
+		3EA651DF0FF8122E00FC45D0 /* WeightTrackerSettings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeightTrackerSettings.m; sourceTree = "<group>"; };
+		3EA651E00FF8122E00FC45D0 /* WeightTrackerSettingsFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeightTrackerSettingsFactory.h; sourceTree = "<group>"; };
+		3EA651E10FF8122E00FC45D0 /* WeightTrackerSettingsFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeightTrackerSettingsFactory.m; sourceTree = "<group>"; };
+		3EA651E20FF8122E00FC45D0 /* WeightTrackerSettingsSPO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeightTrackerSettingsSPO.h; sourceTree = "<group>"; };
+		3EA651E30FF8122E00FC45D0 /* WeightTrackerSettingsSPO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeightTrackerSettingsSPO.m; sourceTree = "<group>"; };
+		3EA651E40FF8122E00FC45D0 /* WeightTrackerSettingsSupport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeightTrackerSettingsSupport.h; sourceTree = "<group>"; };
+		3EA652080FF8128800FC45D0 /* NSData-SQLitePersistence.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData-SQLitePersistence.h"; sourceTree = "<group>"; };
+		3EA652090FF8128800FC45D0 /* NSData-SQLitePersistence.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData-SQLitePersistence.m"; sourceTree = "<group>"; };
+		3EA6520A0FF8128800FC45D0 /* NSDate-SQLitePersistence.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate-SQLitePersistence.h"; sourceTree = "<group>"; };
+		3EA6520B0FF8128800FC45D0 /* NSDate-SQLitePersistence.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate-SQLitePersistence.m"; sourceTree = "<group>"; };
+		3EA6520C0FF8128800FC45D0 /* NSMutableArray-MultipleSort.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray-MultipleSort.h"; sourceTree = "<group>"; };
+		3EA6520D0FF8128800FC45D0 /* NSMutableArray-MultipleSort.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray-MultipleSort.m"; sourceTree = "<group>"; };
+		3EA6520E0FF8128800FC45D0 /* NSMutableData-SQLitePersistence.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableData-SQLitePersistence.h"; sourceTree = "<group>"; };
+		3EA6520F0FF8128800FC45D0 /* NSMutableData-SQLitePersistence.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableData-SQLitePersistence.m"; sourceTree = "<group>"; };
+		3EA652100FF8128800FC45D0 /* NSNumber-SQLitePersistence.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSNumber-SQLitePersistence.h"; sourceTree = "<group>"; };
+		3EA652110FF8128800FC45D0 /* NSNumber-SQLitePersistence.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSNumber-SQLitePersistence.m"; sourceTree = "<group>"; };
+		3EA652120FF8128800FC45D0 /* NSObject-ClassName.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject-ClassName.h"; sourceTree = "<group>"; };
+		3EA652130FF8128800FC45D0 /* NSObject-ClassName.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject-ClassName.m"; sourceTree = "<group>"; };
+		3EA652140FF8128800FC45D0 /* NSObject-MissingKV.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject-MissingKV.h"; sourceTree = "<group>"; };
+		3EA652150FF8128800FC45D0 /* NSObject-MissingKV.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject-MissingKV.m"; sourceTree = "<group>"; };
+		3EA652160FF8128800FC45D0 /* NSObject-SQLitePersistence.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject-SQLitePersistence.h"; sourceTree = "<group>"; };
+		3EA652170FF8128800FC45D0 /* NSObject-SQLitePersistence.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject-SQLitePersistence.m"; sourceTree = "<group>"; };
+		3EA652180FF8128800FC45D0 /* NSString-NumberStuff.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString-NumberStuff.h"; sourceTree = "<group>"; };
+		3EA652190FF8128800FC45D0 /* NSString-NumberStuff.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString-NumberStuff.m"; sourceTree = "<group>"; };
+		3EA6521A0FF8128800FC45D0 /* NSString-SQLiteColumnName.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString-SQLiteColumnName.h"; sourceTree = "<group>"; };
+		3EA6521B0FF8128800FC45D0 /* NSString-SQLiteColumnName.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString-SQLiteColumnName.m"; sourceTree = "<group>"; };
+		3EA6521C0FF8128800FC45D0 /* NSString-SQLitePersistence.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString-SQLitePersistence.h"; sourceTree = "<group>"; };
+		3EA6521D0FF8128800FC45D0 /* NSString-SQLitePersistence.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString-SQLitePersistence.m"; sourceTree = "<group>"; };
+		3EA6521E0FF8128800FC45D0 /* NSString-UppercaseFirst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString-UppercaseFirst.h"; sourceTree = "<group>"; };
+		3EA6521F0FF8128800FC45D0 /* NSString-UppercaseFirst.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString-UppercaseFirst.m"; sourceTree = "<group>"; };
+		3EA652200FF8128800FC45D0 /* SQLiteInstanceManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SQLiteInstanceManager.h; sourceTree = "<group>"; };
+		3EA652210FF8128800FC45D0 /* SQLiteInstanceManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SQLiteInstanceManager.m; sourceTree = "<group>"; };
+		3EA652220FF8128800FC45D0 /* SQLitePersistentObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SQLitePersistentObject.h; sourceTree = "<group>"; };
+		3EA652230FF8128800FC45D0 /* SQLitePersistentObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SQLitePersistentObject.m; sourceTree = "<group>"; };
+		3EA652240FF8128800FC45D0 /* UIColor-SQLitePersistentObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor-SQLitePersistentObject.h"; sourceTree = "<group>"; };
+		3EA652250FF8128800FC45D0 /* UIColor-SQLitePersistentObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor-SQLitePersistentObject.m"; sourceTree = "<group>"; };
+		3EA652260FF8128800FC45D0 /* UIImage-SQLitePersistence.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage-SQLitePersistence.h"; sourceTree = "<group>"; };
+		3EA652270FF8128800FC45D0 /* UIImage-SQLitePersistence.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage-SQLitePersistence.m"; sourceTree = "<group>"; };
+		3EA652460FF814D800FC45D0 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libsqlite3.dylib; sourceTree = "<group>"; };
+		3EADDF810FF842CB003C1795 /* EditableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditableCell.h; sourceTree = "<group>"; };
+		3EADDF820FF842CB003C1795 /* EditableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditableCell.m; sourceTree = "<group>"; };
+		3EADDF840FF842F2003C1795 /* EditableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EditableCell.xib; sourceTree = "<group>"; };
+		8D1107310486CEB800E47090 /* WeightTracker-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "WeightTracker-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1D60588F0D05DD3D006BFB54 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */,
+				1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */,
+				288765FD0DF74451002DB57D /* CoreGraphics.framework in Frameworks */,
+				3EA652470FF814D800FC45D0 /* libsqlite3.dylib in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		080E96DDFE201D6D7F000001 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				3EADDF770FF841B3003C1795 /* UI */,
+				3EA652380FF8129B00FC45D0 /* data */,
+				3EA652070FF8128800FC45D0 /* SqlitePersistenceObjects */,
+				1D3623240D0F684500981E51 /* WeightTrackerAppDelegate.h */,
+				1D3623250D0F684500981E51 /* WeightTrackerAppDelegate.m */,
+				3EA650700FF7F91500FC45D0 /* WeightTrackerController.h */,
+				3EA650710FF7F91500FC45D0 /* WeightTrackerController.m */,
+				3EA650FF0FF80AD000FC45D0 /* WeightTrackerSettingsController.h */,
+				3EA651000FF80AD000FC45D0 /* WeightTrackerSettingsController.m */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		19C28FACFE9D520D11CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1D6058910D05DD3D006BFB54 /* WeightTracker.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		29B97314FDCFA39411CA2CEA /* CustomTemplate */ = {
+			isa = PBXGroup;
+			children = (
+				080E96DDFE201D6D7F000001 /* Classes */,
+				29B97315FDCFA39411CA2CEA /* Other Sources */,
+				29B97317FDCFA39411CA2CEA /* Resources */,
+				29B97323FDCFA39411CA2CEA /* Frameworks */,
+				19C28FACFE9D520D11CA2CBB /* Products */,
+			);
+			name = CustomTemplate;
+			sourceTree = "<group>";
+		};
+		29B97315FDCFA39411CA2CEA /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				32CA4F630368D1EE00C91783 /* WeightTracker_Prefix.pch */,
+				29B97316FDCFA39411CA2CEA /* main.m */,
+			);
+			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+		29B97317FDCFA39411CA2CEA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				3EA651010FF80AD000FC45D0 /* WeightTrackerSettingsController.xib */,
+				3EA650720FF7F91500FC45D0 /* WeightTrackerController.xib */,
+				28AD733E0D9D9553002E5188 /* MainWindow.xib */,
+				8D1107310486CEB800E47090 /* WeightTracker-Info.plist */,
+				3EADDF840FF842F2003C1795 /* EditableCell.xib */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3EA652460FF814D800FC45D0 /* libsqlite3.dylib */,
+				1DF5F4DF0D08C38300B7A737 /* UIKit.framework */,
+				1D30AB110D05D00D00671497 /* Foundation.framework */,
+				288765FC0DF74451002DB57D /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3EA652070FF8128800FC45D0 /* SqlitePersistenceObjects */ = {
+			isa = PBXGroup;
+			children = (
+				3EA652080FF8128800FC45D0 /* NSData-SQLitePersistence.h */,
+				3EA652090FF8128800FC45D0 /* NSData-SQLitePersistence.m */,
+				3EA6520A0FF8128800FC45D0 /* NSDate-SQLitePersistence.h */,
+				3EA6520B0FF8128800FC45D0 /* NSDate-SQLitePersistence.m */,
+				3EA6520C0FF8128800FC45D0 /* NSMutableArray-MultipleSort.h */,
+				3EA6520D0FF8128800FC45D0 /* NSMutableArray-MultipleSort.m */,
+				3EA6520E0FF8128800FC45D0 /* NSMutableData-SQLitePersistence.h */,
+				3EA6520F0FF8128800FC45D0 /* NSMutableData-SQLitePersistence.m */,
+				3EA652100FF8128800FC45D0 /* NSNumber-SQLitePersistence.h */,
+				3EA652110FF8128800FC45D0 /* NSNumber-SQLitePersistence.m */,
+				3EA652120FF8128800FC45D0 /* NSObject-ClassName.h */,
+				3EA652130FF8128800FC45D0 /* NSObject-ClassName.m */,
+				3EA652140FF8128800FC45D0 /* NSObject-MissingKV.h */,
+				3EA652150FF8128800FC45D0 /* NSObject-MissingKV.m */,
+				3EA652160FF8128800FC45D0 /* NSObject-SQLitePersistence.h */,
+				3EA652170FF8128800FC45D0 /* NSObject-SQLitePersistence.m */,
+				3EA652180FF8128800FC45D0 /* NSString-NumberStuff.h */,
+				3EA652190FF8128800FC45D0 /* NSString-NumberStuff.m */,
+				3EA6521A0FF8128800FC45D0 /* NSString-SQLiteColumnName.h */,
+				3EA6521B0FF8128800FC45D0 /* NSString-SQLiteColumnName.m */,
+				3EA6521C0FF8128800FC45D0 /* NSString-SQLitePersistence.h */,
+				3EA6521D0FF8128800FC45D0 /* NSString-SQLitePersistence.m */,
+				3EA6521E0FF8128800FC45D0 /* NSString-UppercaseFirst.h */,
+				3EA6521F0FF8128800FC45D0 /* NSString-UppercaseFirst.m */,
+				3EA652200FF8128800FC45D0 /* SQLiteInstanceManager.h */,
+				3EA652210FF8128800FC45D0 /* SQLiteInstanceManager.m */,
+				3EA652220FF8128800FC45D0 /* SQLitePersistentObject.h */,
+				3EA652230FF8128800FC45D0 /* SQLitePersistentObject.m */,
+				3EA652240FF8128800FC45D0 /* UIColor-SQLitePersistentObject.h */,
+				3EA652250FF8128800FC45D0 /* UIColor-SQLitePersistentObject.m */,
+				3EA652260FF8128800FC45D0 /* UIImage-SQLitePersistence.h */,
+				3EA652270FF8128800FC45D0 /* UIImage-SQLitePersistence.m */,
+			);
+			path = SqlitePersistenceObjects;
+			sourceTree = "<group>";
+		};
+		3EA652380FF8129B00FC45D0 /* data */ = {
+			isa = PBXGroup;
+			children = (
+				3EA651DC0FF8122E00FC45D0 /* SystemSettingsAccess.h */,
+				3EA651DD0FF8122E00FC45D0 /* SystemSettingsAccess.m */,
+				3EA651DE0FF8122E00FC45D0 /* WeightTrackerSettings.h */,
+				3EA651DF0FF8122E00FC45D0 /* WeightTrackerSettings.m */,
+				3EA651E00FF8122E00FC45D0 /* WeightTrackerSettingsFactory.h */,
+				3EA651E10FF8122E00FC45D0 /* WeightTrackerSettingsFactory.m */,
+				3EA651E20FF8122E00FC45D0 /* WeightTrackerSettingsSPO.h */,
+				3EA651E30FF8122E00FC45D0 /* WeightTrackerSettingsSPO.m */,
+				3EA651E40FF8122E00FC45D0 /* WeightTrackerSettingsSupport.h */,
+			);
+			name = data;
+			sourceTree = "<group>";
+		};
+		3EADDF770FF841B3003C1795 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				3EADDF810FF842CB003C1795 /* EditableCell.h */,
+				3EADDF820FF842CB003C1795 /* EditableCell.m */,
+			);
+			name = UI;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1D6058900D05DD3D006BFB54 /* WeightTracker */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "WeightTracker" */;
+			buildPhases = (
+				1D60588D0D05DD3D006BFB54 /* Resources */,
+				1D60588E0D05DD3D006BFB54 /* Sources */,
+				1D60588F0D05DD3D006BFB54 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = WeightTracker;
+			productName = WeightTracker;
+			productReference = 1D6058910D05DD3D006BFB54 /* WeightTracker.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		29B97313FDCFA39411CA2CEA /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "WeightTracker" */;
+			compatibilityVersion = "Xcode 3.1";
+			hasScannedForEncodings = 1;
+			mainGroup = 29B97314FDCFA39411CA2CEA /* CustomTemplate */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1D6058900D05DD3D006BFB54 /* WeightTracker */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1D60588D0D05DD3D006BFB54 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				28AD733F0D9D9553002E5188 /* MainWindow.xib in Resources */,
+				3EA650740FF7F91500FC45D0 /* WeightTrackerController.xib in Resources */,
+				3EA651030FF80AD000FC45D0 /* WeightTrackerSettingsController.xib in Resources */,
+				3EADDF850FF842F2003C1795 /* EditableCell.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1D60588E0D05DD3D006BFB54 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D60589B0D05DD56006BFB54 /* main.m in Sources */,
+				1D3623260D0F684500981E51 /* WeightTrackerAppDelegate.m in Sources */,
+				3EA650730FF7F91500FC45D0 /* WeightTrackerController.m in Sources */,
+				3EA651020FF80AD000FC45D0 /* WeightTrackerSettingsController.m in Sources */,
+				3EA651E50FF8122E00FC45D0 /* SystemSettingsAccess.m in Sources */,
+				3EA651E60FF8122E00FC45D0 /* WeightTrackerSettings.m in Sources */,
+				3EA651E70FF8122E00FC45D0 /* WeightTrackerSettingsFactory.m in Sources */,
+				3EA651E80FF8122E00FC45D0 /* WeightTrackerSettingsSPO.m in Sources */,
+				3EA652280FF8128800FC45D0 /* NSData-SQLitePersistence.m in Sources */,
+				3EA652290FF8128800FC45D0 /* NSDate-SQLitePersistence.m in Sources */,
+				3EA6522A0FF8128800FC45D0 /* NSMutableArray-MultipleSort.m in Sources */,
+				3EA6522B0FF8128800FC45D0 /* NSMutableData-SQLitePersistence.m in Sources */,
+				3EA6522C0FF8128800FC45D0 /* NSNumber-SQLitePersistence.m in Sources */,
+				3EA6522D0FF8128800FC45D0 /* NSObject-ClassName.m in Sources */,
+				3EA6522E0FF8128800FC45D0 /* NSObject-MissingKV.m in Sources */,
+				3EA6522F0FF8128800FC45D0 /* NSObject-SQLitePersistence.m in Sources */,
+				3EA652300FF8128800FC45D0 /* NSString-NumberStuff.m in Sources */,
+				3EA652310FF8128800FC45D0 /* NSString-SQLiteColumnName.m in Sources */,
+				3EA652320FF8128800FC45D0 /* NSString-SQLitePersistence.m in Sources */,
+				3EA652330FF8128800FC45D0 /* NSString-UppercaseFirst.m in Sources */,
+				3EA652340FF8128800FC45D0 /* SQLiteInstanceManager.m in Sources */,
+				3EA652350FF8128800FC45D0 /* SQLitePersistentObject.m in Sources */,
+				3EA652360FF8128800FC45D0 /* UIColor-SQLitePersistentObject.m in Sources */,
+				3EA652370FF8128800FC45D0 /* UIImage-SQLitePersistence.m in Sources */,
+				3EADDF830FF842CB003C1795 /* EditableCell.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		1D6058940D05DD3E006BFB54 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = WeightTracker_Prefix.pch;
+				INFOPLIST_FILE = "WeightTracker-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
+				PRODUCT_NAME = WeightTracker;
+			};
+			name = Debug;
+		};
+		1D6058950D05DD3E006BFB54 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = WeightTracker_Prefix.pch;
+				INFOPLIST_FILE = "WeightTracker-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
+				PRODUCT_NAME = WeightTracker;
+			};
+			name = Release;
+		};
+		C01FCF4F08A954540054247B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "Don't Code Sign";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				PREBINDING = NO;
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
+				SDKROOT = iphoneos2.0;
+			};
+			name = Debug;
+		};
+		C01FCF5008A954540054247B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				PREBINDING = NO;
+				SDKROOT = iphoneos3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "WeightTracker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1D6058940D05DD3E006BFB54 /* Debug */,
+				1D6058950D05DD3E006BFB54 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C01FCF4E08A954540054247B /* Build configuration list for PBXProject "WeightTracker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C01FCF4F08A954540054247B /* Debug */,
+				C01FCF5008A954540054247B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 29B97313FDCFA39411CA2CEA /* Project object */;
+}
