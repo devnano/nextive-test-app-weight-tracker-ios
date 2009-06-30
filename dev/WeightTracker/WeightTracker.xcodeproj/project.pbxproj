@@ -16,11 +16,15 @@
 		3E30B5770FE599D100288CDD /* Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E30B5760FE599D100288CDD /* Utils.m */; };
 		3E9B7F920FE6E2E400028666 /* WeightTrackerSettingsFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E9B7F8F0FE6E2E400028666 /* WeightTrackerSettingsFactory.m */; };
 		3E9B7F930FE6E2E400028666 /* WeightTrackerSettingsSPO.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E9B7F910FE6E2E400028666 /* WeightTrackerSettingsSPO.m */; };
+		3EA23CDE0FF6E94400ABC403 /* DefaultRecipientMailOptionsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EA23CDC0FF6E94400ABC403 /* DefaultRecipientMailOptionsController.m */; };
+		3EA23CDF0FF6E94400ABC403 /* DefaultRecipientMailOptions.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3EA23CDD0FF6E94400ABC403 /* DefaultRecipientMailOptions.xib */; };
 		3EA367B50FE3D266002A406C /* WeightTrackerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EA367B40FE3D266002A406C /* WeightTrackerController.m */; };
 		3EA367B80FE3D294002A406C /* UserInfoController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EA367B70FE3D294002A406C /* UserInfoController.m */; };
 		3EA367BB0FE3D2AC002A406C /* MainApplicationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EA367BA0FE3D2AC002A406C /* MainApplicationController.m */; };
 		3EA367BD0FE3D2FC002A406C /* UserInfo.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3EA367BC0FE3D2FC002A406C /* UserInfo.xib */; };
 		3EA367BF0FE3D30D002A406C /* MainApplication.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3EA367BE0FE3D30D002A406C /* MainApplication.xib */; };
+		3EA64F5D0FF7A40F00FC45D0 /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EA64F5C0FF7A40F00FC45D0 /* AddressBook.framework */; };
+		3EA64F5F0FF7A40F00FC45D0 /* AddressBookUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EA64F5E0FF7A40F00FC45D0 /* AddressBookUI.framework */; };
 		3EAAC6AE0FF4578A00454354 /* UserMailPickerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3EAAC6AD0FF4578A00454354 /* UserMailPickerView.xib */; };
 		3EAF86C90FE69F2D00F29CFF /* NSData-SQLitePersistence.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EAF86AA0FE69F2D00F29CFF /* NSData-SQLitePersistence.m */; };
 		3EAF86CA0FE69F2D00F29CFF /* NSDate-SQLitePersistence.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EAF86AC0FE69F2D00F29CFF /* NSDate-SQLitePersistence.m */; };
@@ -60,6 +64,9 @@
 		3E9B7F8F0FE6E2E400028666 /* WeightTrackerSettingsFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WeightTrackerSettingsFactory.m; path = Classes/WeightTrackerSettingsFactory.m; sourceTree = "<group>"; };
 		3E9B7F900FE6E2E400028666 /* WeightTrackerSettingsSPO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WeightTrackerSettingsSPO.h; path = Classes/WeightTrackerSettingsSPO.h; sourceTree = "<group>"; };
 		3E9B7F910FE6E2E400028666 /* WeightTrackerSettingsSPO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WeightTrackerSettingsSPO.m; path = Classes/WeightTrackerSettingsSPO.m; sourceTree = "<group>"; };
+		3EA23CDB0FF6E94400ABC403 /* DefaultRecipientMailOptionsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DefaultRecipientMailOptionsController.h; sourceTree = "<group>"; };
+		3EA23CDC0FF6E94400ABC403 /* DefaultRecipientMailOptionsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DefaultRecipientMailOptionsController.m; sourceTree = "<group>"; };
+		3EA23CDD0FF6E94400ABC403 /* DefaultRecipientMailOptions.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DefaultRecipientMailOptions.xib; sourceTree = "<group>"; };
 		3EA367B30FE3D266002A406C /* WeightTrackerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WeightTrackerController.h; path = Classes/WeightTrackerController.h; sourceTree = "<group>"; };
 		3EA367B40FE3D266002A406C /* WeightTrackerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WeightTrackerController.m; path = Classes/WeightTrackerController.m; sourceTree = "<group>"; };
 		3EA367B60FE3D294002A406C /* UserInfoController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UserInfoController.h; path = Classes/UserInfoController.h; sourceTree = "<group>"; };
@@ -68,6 +75,8 @@
 		3EA367BA0FE3D2AC002A406C /* MainApplicationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MainApplicationController.m; path = Classes/MainApplicationController.m; sourceTree = "<group>"; };
 		3EA367BC0FE3D2FC002A406C /* UserInfo.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserInfo.xib; sourceTree = "<group>"; };
 		3EA367BE0FE3D30D002A406C /* MainApplication.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainApplication.xib; sourceTree = "<group>"; };
+		3EA64F5C0FF7A40F00FC45D0 /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
+		3EA64F5E0FF7A40F00FC45D0 /* AddressBookUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBookUI.framework; path = System/Library/Frameworks/AddressBookUI.framework; sourceTree = SDKROOT; };
 		3EAAC6AD0FF4578A00454354 /* UserMailPickerView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserMailPickerView.xib; sourceTree = "<group>"; };
 		3EAF86A90FE69F2D00F29CFF /* NSData-SQLitePersistence.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData-SQLitePersistence.h"; sourceTree = "<group>"; };
 		3EAF86AA0FE69F2D00F29CFF /* NSData-SQLitePersistence.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData-SQLitePersistence.m"; sourceTree = "<group>"; };
@@ -121,6 +130,8 @@
 				1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */,
 				288765FD0DF74451002DB57D /* CoreGraphics.framework in Frameworks */,
 				3EBA4B300FE446290056A086 /* libsqlite3.dylib in Frameworks */,
+				3EA64F5D0FF7A40F00FC45D0 /* AddressBook.framework in Frameworks */,
+				3EA64F5F0FF7A40F00FC45D0 /* AddressBookUI.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -143,6 +154,8 @@
 				29B97317FDCFA39411CA2CEA /* Resources */,
 				29B97323FDCFA39411CA2CEA /* Frameworks */,
 				19C28FACFE9D520D11CA2CBB /* Products */,
+				3EA64F5C0FF7A40F00FC45D0 /* AddressBook.framework */,
+				3EA64F5E0FF7A40F00FC45D0 /* AddressBookUI.framework */,
 			);
 			name = CustomTemplate;
 			sourceTree = "<group>";
@@ -159,6 +172,7 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				3EA23CDD0FF6E94400ABC403 /* DefaultRecipientMailOptions.xib */,
 				28AD733E0D9D9553002E5188 /* MainWindow.xib */,
 				8D1107310486CEB800E47090 /* Info.plist */,
 				3EA367BC0FE3D2FC002A406C /* UserInfo.xib */,
@@ -276,6 +290,8 @@
 				3EA367B70FE3D294002A406C /* UserInfoController.m */,
 				3EA367B90FE3D2AC002A406C /* MainApplicationController.h */,
 				3EA367BA0FE3D2AC002A406C /* MainApplicationController.m */,
+				3EA23CDB0FF6E94400ABC403 /* DefaultRecipientMailOptionsController.h */,
+				3EA23CDC0FF6E94400ABC403 /* DefaultRecipientMailOptionsController.m */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -326,6 +342,7 @@
 				3EA367BD0FE3D2FC002A406C /* UserInfo.xib in Resources */,
 				3EA367BF0FE3D30D002A406C /* MainApplication.xib in Resources */,
 				3EAAC6AE0FF4578A00454354 /* UserMailPickerView.xib in Resources */,
+				3EA23CDF0FF6E94400ABC403 /* DefaultRecipientMailOptions.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -363,6 +380,7 @@
 				3E9B7F930FE6E2E400028666 /* WeightTrackerSettingsSPO.m in Sources */,
 				3EB57B720FF6A05600508C17 /* UserMailPickerContoller.m in Sources */,
 				3EB57B760FF6A06F00508C17 /* SystemSettingsAccess.m in Sources */,
+				3EA23CDE0FF6E94400ABC403 /* DefaultRecipientMailOptionsController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

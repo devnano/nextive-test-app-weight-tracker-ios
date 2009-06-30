@@ -8,6 +8,7 @@
 @dynamic username, weightTrackerSettings, userMailAddress;
 @synthesize weightTrackerController;
 @synthesize userMailPickerController;
+@synthesize defaultRecipientMailOptionsController;
 /*
 // The designated initializer. Override to perform setup that is required before the view is loaded.
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
@@ -113,11 +114,28 @@
 	//[weightTrackerController genericSwitchViews:self otherView:self.userMailPickerController];
 }
 
-
-
 - (IBAction) changeMail:(id)sender{
 	[self showMailPickerView];
 }
+-(void)initDefaultRecipientMailOptionsController{
+	self.defaultRecipientMailOptionsController = [[DefaultRecipientMailOptionsController alloc] initWithNibName:@"DefaultRecipientMailOptions" bundle:nil];
+	
+}
+
+- (void)showDefaultRecipientMailOptionController{
+	if (self.defaultRecipientMailOptionsController == nil){
+		[self initDefaultRecipientMailOptionsController];
+	}
+	[self.weightTrackerController presentModalViewController:defaultRecipientMailOptionsController animated:YES]; 
+	
+}
+
+- (IBAction) changeDefaultRecipientMail:(id)sender{
+	[self showDefaultRecipientMailOptionController];
+}
+
+
+
 
 
 

@@ -42,7 +42,6 @@
 
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad {
-	//TODO: see memory managemnt	
 	self.weightTrackerSettings = [WeightTrackerSettingsFactory createWeightTrackerSettings];
 	//self.weightTrackerSettings = [WeightTrackerSettings alloc];
 	//[self.weightTrackerSettings init];
