@@ -15,6 +15,10 @@
 		28AD733F0D9D9553002E5188 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28AD733E0D9D9553002E5188 /* MainWindow.xib */; };
 		3EA081530FF97F6400CD6B01 /* UserMailPickerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3EA081520FF97F6400CD6B01 /* UserMailPickerView.xib */; };
 		3EA250190FF97A020058955D /* UserMailPickerContoller.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EA250180FF97A020058955D /* UserMailPickerContoller.m */; };
+		3EA387CE0FFA3BD700402B75 /* DefaultRecipientMailOptionsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EA387CD0FFA3BD700402B75 /* DefaultRecipientMailOptionsController.m */; };
+		3EA387D00FFA3BFA00402B75 /* DefaultRecipientMailOptions.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3EA387CF0FFA3BFA00402B75 /* DefaultRecipientMailOptions.xib */; };
+		3EA387E50FFA3D6B00402B75 /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EA387E40FFA3D6B00402B75 /* AddressBook.framework */; };
+		3EA387E70FFA3D6B00402B75 /* AddressBookUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EA387E60FFA3D6B00402B75 /* AddressBookUI.framework */; };
 		3EA486FE0FF9614B00ED5594 /* SingleValueWithSubviewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EA486FD0FF9614B00ED5594 /* SingleValueWithSubviewCell.m */; };
 		3EA487000FF9615B00ED5594 /* SingleValueWithSubview.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3EA486FF0FF9615B00ED5594 /* SingleValueWithSubview.xib */; };
 		3EA4870D0FF9636900ED5594 /* UIUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EA4870C0FF9636900ED5594 /* UIUtils.m */; };
@@ -60,6 +64,11 @@
 		3EA081520FF97F6400CD6B01 /* UserMailPickerView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserMailPickerView.xib; sourceTree = "<group>"; };
 		3EA250170FF97A020058955D /* UserMailPickerContoller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserMailPickerContoller.h; sourceTree = "<group>"; };
 		3EA250180FF97A020058955D /* UserMailPickerContoller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserMailPickerContoller.m; sourceTree = "<group>"; };
+		3EA387CC0FFA3BD700402B75 /* DefaultRecipientMailOptionsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DefaultRecipientMailOptionsController.h; sourceTree = "<group>"; };
+		3EA387CD0FFA3BD700402B75 /* DefaultRecipientMailOptionsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DefaultRecipientMailOptionsController.m; sourceTree = "<group>"; };
+		3EA387CF0FFA3BFA00402B75 /* DefaultRecipientMailOptions.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DefaultRecipientMailOptions.xib; sourceTree = "<group>"; };
+		3EA387E40FFA3D6B00402B75 /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
+		3EA387E60FFA3D6B00402B75 /* AddressBookUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBookUI.framework; path = System/Library/Frameworks/AddressBookUI.framework; sourceTree = SDKROOT; };
 		3EA486FC0FF9614B00ED5594 /* SingleValueWithSubviewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SingleValueWithSubviewCell.h; sourceTree = "<group>"; };
 		3EA486FD0FF9614B00ED5594 /* SingleValueWithSubviewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SingleValueWithSubviewCell.m; sourceTree = "<group>"; };
 		3EA486FF0FF9615B00ED5594 /* SingleValueWithSubview.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SingleValueWithSubview.xib; sourceTree = "<group>"; };
@@ -128,6 +137,8 @@
 				1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */,
 				288765FD0DF74451002DB57D /* CoreGraphics.framework in Frameworks */,
 				3EA652470FF814D800FC45D0 /* libsqlite3.dylib in Frameworks */,
+				3EA387E50FFA3D6B00402B75 /* AddressBook.framework in Frameworks */,
+				3EA387E70FFA3D6B00402B75 /* AddressBookUI.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -163,6 +174,8 @@
 				29B97317FDCFA39411CA2CEA /* Resources */,
 				29B97323FDCFA39411CA2CEA /* Frameworks */,
 				19C28FACFE9D520D11CA2CBB /* Products */,
+				3EA387E40FFA3D6B00402B75 /* AddressBook.framework */,
+				3EA387E60FFA3D6B00402B75 /* AddressBookUI.framework */,
 			);
 			name = CustomTemplate;
 			sourceTree = "<group>";
@@ -179,6 +192,7 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				3EA387CF0FFA3BFA00402B75 /* DefaultRecipientMailOptions.xib */,
 				3EA081520FF97F6400CD6B01 /* UserMailPickerView.xib */,
 				3EA651010FF80AD000FC45D0 /* WeightTrackerSettingsController.xib */,
 				3EA650720FF7F91500FC45D0 /* WeightTrackerController.xib */,
@@ -204,6 +218,8 @@
 		3EA486790FF95B9800ED5594 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				3EA387CC0FFA3BD700402B75 /* DefaultRecipientMailOptionsController.h */,
+				3EA387CD0FFA3BD700402B75 /* DefaultRecipientMailOptionsController.m */,
 				3EA250170FF97A020058955D /* UserMailPickerContoller.h */,
 				3EA250180FF97A020058955D /* UserMailPickerContoller.m */,
 				3EA650700FF7F91500FC45D0 /* WeightTrackerController.h */,
@@ -330,6 +346,7 @@
 				3EADDF850FF842F2003C1795 /* EditableCell.xib in Resources */,
 				3EA487000FF9615B00ED5594 /* SingleValueWithSubview.xib in Resources */,
 				3EA081530FF97F6400CD6B01 /* UserMailPickerView.xib in Resources */,
+				3EA387D00FFA3BFA00402B75 /* DefaultRecipientMailOptions.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -368,6 +385,7 @@
 				3EA486FE0FF9614B00ED5594 /* SingleValueWithSubviewCell.m in Sources */,
 				3EA4870D0FF9636900ED5594 /* UIUtils.m in Sources */,
 				3EA250190FF97A020058955D /* UserMailPickerContoller.m in Sources */,
+				3EA387CE0FFA3BD700402B75 /* DefaultRecipientMailOptionsController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

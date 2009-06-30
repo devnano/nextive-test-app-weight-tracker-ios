@@ -14,7 +14,8 @@
 
 @implementation WeightTrackerSettingsController
 @dynamic weightTrackerSettings, username, userMailAddress, recipientMailAddress;
-@synthesize usernameCell, userMailAddressCell, userMailPickerController, recipientMailAddressCell;
+@synthesize usernameCell, userMailAddressCell, userMailPickerController,
+			recipientMailAddressCell, defaultRecipientMailOptionsController;
 
 /*
  // The designated initializer.  Override if you create the controller programmatically and want to perform customization that is not appropriate for viewDidLoad.
@@ -201,6 +202,22 @@
 }
 
 
+- (void) initRecipientMailOptionsView{
+	self.defaultRecipientMailOptionsController = [[DefaultRecipientMailOptionsController alloc] initWithNibName:@"DefaultRecipientMailOptions" bundle:nil];
+//	self.userMailPickerController.caller = self;
+}
+
+- (void) showRecipientMailOptionsView{
+	//lazy loading userMailPickerController child controller...
+	if (self.defaultRecipientMailOptionsController == nil){
+		[self initRecipientMailOptionsView];
+	}
+	//[self.weightTrackerController presentModalViewController:userMailPickerController animated:YES]; 
+	//[weightTrackerController genericSwitchViews:self otherView:self.userMailPickerController];
+	[[self weightTrackerAppDelegate].navSettings pushViewController:self.defaultRecipientMailOptionsController animated:YES];	
+}
+
+
 
 - (void) save
 {
@@ -265,6 +282,9 @@
 	switch ([indexPath row]){
 		case 1:
 			[self showMailPickerView];
+			break;
+		case 2:
+			[self showRecipientMailOptionsView];
 			break;
 	}
 	

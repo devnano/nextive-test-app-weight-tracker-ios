@@ -11,6 +11,7 @@
 #import "EditableCell.h"
 #import "SingleValueWithSubviewCell.h"
 #import "UserMailPickerContoller.h"
+#import "DefaultRecipientMailOptionsController.h"
 
 
 @interface WeightTrackerSettingsController : UITableViewController<UITableViewDelegate, UITableViewDataSource> {
@@ -20,6 +21,7 @@
 	SingleValueWithSubviewCell *userMailAddressCell;
 	SingleValueWithSubviewCell *recipientMailAddressCell;
 	UserMailPickerContoller *userMailPickerController;
+	DefaultRecipientMailOptionsController *defaultRecipientMailOptionsController;
 
 }
 
@@ -29,6 +31,7 @@
 @property(nonatomic, retain) SingleValueWithSubviewCell *userMailAddressCell;
 @property(nonatomic, retain) SingleValueWithSubviewCell *recipientMailAddressCell;
 @property(nonatomic, retain) UserMailPickerContoller *userMailPickerController;
+@property(nonatomic, retain) DefaultRecipientMailOptionsController *defaultRecipientMailOptionsController;
 @property(nonatomic, copy) NSString * username;
 @property(nonatomic, copy) NSString *userMailAddress;
 @property(nonatomic, copy) NSString *recipientMailAddress;
