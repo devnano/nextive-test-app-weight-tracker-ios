@@ -15,16 +15,18 @@
 																	 UITableViewDelegate, UITableViewDataSource>{
 	UITableViewCell *myMailCell;
 	UITableViewCell *chooseFromContactCell;
-	UITableViewCell *newContactCell;																	 
+	UITableViewCell *newContactCell;	
+	id caller;
 
 }
 
 @property (nonatomic, retain) UITableViewCell *myMailCell;
 @property (nonatomic, retain) UITableViewCell *chooseFromContactCell;
 @property (nonatomic, retain) UITableViewCell *newContactCell;
+@property (nonatomic, retain) id caller;
 
 
 - (IBAction)showPicker:(id)sender;
 - (IBAction)showCreateNewContact:(id)sender;
-
+- (void) mailChosen:(NSString *) mailAddress;
 @end

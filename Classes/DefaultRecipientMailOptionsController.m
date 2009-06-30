@@ -11,7 +11,7 @@
 
 
 @implementation DefaultRecipientMailOptionsController
-@synthesize myMailCell, chooseFromContactCell, newContactCell;
+@synthesize myMailCell, chooseFromContactCell, newContactCell, caller;
 
 /*
  // The designated initializer.  Override if you create the controller programmatically and want to perform customization that is not appropriate for viewDidLoad.
@@ -38,6 +38,13 @@
 }
 */
 
+- (void) mailChosen:(NSString *) mailAddress{
+	WeightTrackerAppDelegate *delegate =(WeightTrackerAppDelegate *) [[UIApplication sharedApplication] delegate];
+	//[self.caller setRecipientMailAddress : mailAddress];
+	[delegate.navSettings popViewControllerAnimated:YES];
+	
+}
+
 - (IBAction)showCreateNewContact:(id)sender{
 	ABNewPersonViewController *newPerson = [[ABNewPersonViewController alloc] init];
 	newPerson.newPersonViewDelegate = self;
@@ -47,9 +54,26 @@
 	[newPerson release];
 }
 
-- (void)newPersonViewController:(ABNewPersonViewController *)newPersonViewController didCompleteWithNewPerson:(ABRecordRef)person{
-	WeightTrackerAppDelegate *delegate =(WeightTrackerAppDelegate *) [[UIApplication sharedApplication] delegate];
-	[delegate.navSettings popViewControllerAnimated:YES];
+- (void) mailSelectedFromPerson:(ABRecordRef) person{
+	CFTypeRef multi = ABRecordCopyValue(person, kABPersonEmailProperty);
+
+	NSString *mail=@""; 
+	if(ABMultiValueGetCount(multi) > 0){
+		//	NSString is “toll-free bridged” with its Core Foundation counterpart, CFString (see CFStringRef)
+		mail = (NSString *) ABMultiValueCopyValueAtIndex(multi, 0);
+	}
+ 
+	[self mailChosen:mail];
+	
+} 
+
+#pragma mark -
+#pragma mark ABNewPersonViewControllerDelegate method
+
+
+
+- (void)newPersonViewController:(ABNewPersonViewController *)newPersonViewController didCompleteWithNewPerson:(ABRecordRef)person{	
+	[self mailSelectedFromPerson:person];	
 }
 
 
@@ -68,14 +92,7 @@
 - (BOOL)peoplePickerNavigationController: 
 (ABPeoplePickerNavigationController *)peoplePicker 
       shouldContinueAfterSelectingPerson:(ABRecordRef)person { 
-    NSString* name = (NSString *)ABRecordCopyValue(person, 
-												   kABPersonFirstNameProperty); 
-//    self.firstName.text = name; 
-    [name release]; 
-	name = (NSString *)ABRecordCopyValue(person, kABPersonLastNameProperty); 
-  //  self.lastName.text = name; 
-    [name release]; 
-    [self dismissModalViewControllerAnimated:YES]; 
+	[self mailSelectedFromPerson:person];
     return NO; 
 }
 
@@ -110,9 +127,7 @@
 }
 
 
-- (void)dealloc {
-    [super dealloc];
-}
+
 
 -(void) initMyMailCell{
 	self.myMailCell = [[[UITableViewCell alloc] initWithFrame:CGRectZero] autorelease];
@@ -126,6 +141,14 @@
 -(void) initNewContactCell{
 	self.newContactCell = [[[UITableViewCell alloc] initWithFrame:CGRectZero] autorelease];
 	self.newContactCell.text = @"Create new contact";
+}
+
+- (void)dealloc {
+	[caller release];
+	[myMailCell release];
+	[chooseFromContactCell release];
+	[newContactCell release];
+    [super dealloc];
 }
 
 
