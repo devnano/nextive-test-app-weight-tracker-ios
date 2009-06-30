@@ -7,8 +7,9 @@
 
 @interface WeightTrackerSettingsSPO : SQLitePersistentObject<WeightTrackerSettingsSupport> {
 	@private
-	NSString * username;
+	NSString *username;
 	NSString *userMailAddress;
+	NSString *recipientMailAddress;
 }
 
 @end

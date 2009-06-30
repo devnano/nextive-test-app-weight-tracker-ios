@@ -18,6 +18,7 @@
 	//id<WeightTrackerSettingsSupport> weightTrackerSettings;
 	EditableCell *usernameCell;
 	SingleValueWithSubviewCell *userMailAddressCell;
+	SingleValueWithSubviewCell *recipientMailAddressCell;
 	UserMailPickerContoller *userMailPickerController;
 
 }
@@ -26,9 +27,11 @@
 @property(readonly, nonatomic) id<WeightTrackerSettingsSupport> weightTrackerSettings;
 @property(nonatomic, retain) EditableCell *usernameCell;
 @property(nonatomic, retain) SingleValueWithSubviewCell *userMailAddressCell;
+@property(nonatomic, retain) SingleValueWithSubviewCell *recipientMailAddressCell;
 @property(nonatomic, retain) UserMailPickerContoller *userMailPickerController;
 @property(nonatomic, copy) NSString * username;
 @property(nonatomic, copy) NSString *userMailAddress;
+@property(nonatomic, copy) NSString *recipientMailAddress;
 
 -(void) save;
 

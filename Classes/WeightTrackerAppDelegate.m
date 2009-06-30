@@ -18,7 +18,7 @@
 - (void)applicationDidFinishLaunching:(UIApplication *)application {    
 
     // Override point for customization after application launch
-	self.weightTrackerSettings = [WeightTrackerSettingsFactory createWeightTrackerSettings];
+	self.weightTrackerSettings = [WeightTrackerSettingsFactory getWeightTrackerSettings];
 	
 	[window addSubview: navController.view];
 	if(![self.weightTrackerSettings isAppAlreadySetup]){

@@ -8,6 +8,6 @@
 
 }
 
-+ (id<WeightTrackerSettingsSupport>) createWeightTrackerSettings;
++ (id<WeightTrackerSettingsSupport>) getWeightTrackerSettings;
 
 @end

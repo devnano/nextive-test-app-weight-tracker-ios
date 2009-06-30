@@ -9,11 +9,12 @@
 #import "WeightTrackerSettingsController.h"
 #import "EditableCell.h"
 #import "WeightTrackerAppDelegate.h"
+#import "WeightTrackerSettingsFactory.h"
 #import "UIUtils.h"
 
 @implementation WeightTrackerSettingsController
-@dynamic weightTrackerSettings, username, userMailAddress;
-@synthesize usernameCell, userMailAddressCell, userMailPickerController;
+@dynamic weightTrackerSettings, username, userMailAddress, recipientMailAddress;
+@synthesize usernameCell, userMailAddressCell, userMailPickerController, recipientMailAddressCell;
 
 /*
  // The designated initializer.  Override if you create the controller programmatically and want to perform customization that is not appropriate for viewDidLoad.
@@ -30,7 +31,7 @@
 }
 
 - (id<WeightTrackerSettingsSupport>) weightTrackerSettings{	
-	return [self weightTrackerAppDelegate].weightTrackerSettings;
+	return [WeightTrackerSettingsFactory getWeightTrackerSettings];
 }
 
 
@@ -43,6 +44,7 @@
 	} else {
 		loadSystemSettingsDefaults(self);
 	}
+		
 	//title for this controller, useful when the navigation bar title
 	self.title = @"Settings";
     
@@ -50,6 +52,8 @@
 
 - (void) viewWillAppear :(BOOL) animated{
 	[super viewWillAppear:animated];
+	
+	
 //	[self.weightTrackerSettings loadAppUserInfo:self];	
 }
 - (void) viewWillDisappear :(BOOL) animated{
@@ -111,13 +115,7 @@
 	return self->userMailPickerContoller;
 }*/
 
-
-
-
-- (NSString *) username{
-//	return [self.usernameTextField text];
-	return self.usernameCell.value.text;
-}
+//***********username field
 
 - (void) initUsernameCell{
 	EditableCell *cell = (EditableCell *) [UIUtils loadUIViewFromNib:@"EditableCell" withOwner:self];
@@ -127,6 +125,13 @@
 	//[cell release];
 }
 
+- (NSString *) username{
+//	return [self.usernameTextField text];
+	return self.usernameCell.value.text;
+}
+
+
+//this setter method must be called before any call to the getter
 -(void) setUsername:(NSString *) username{
 //	self.usernameTextField.text = username;
 	if(self.usernameCell == nil){
@@ -135,9 +140,11 @@
 	self.usernameCell.value.text = username;
 }
 
+//************** user mail address
+
 - (void) initUserMailAddressCell{
 	SingleValueWithSubviewCell *cell = (SingleValueWithSubviewCell *) [UIUtils loadUIViewFromNib:@"SingleValueWithSubview" withOwner:self];
-	cell.label.text = @"User Mail:";
+	cell.label.text = @"User mail:";
 	//cell.value.text = self.username;;
 	self.userMailAddressCell = cell;	
 	//[cell release];
@@ -148,13 +155,49 @@
 }
 
 
-
+//this setter method must be called before any call to the getter
 - (void) setUserMailAddress:(NSString *) mailAddress{
 //	self.userMailLabel.text = mailAddress;
 	if(self.userMailAddressCell == nil){
 		[self initUserMailAddressCell];
 	}
 	self.userMailAddressCell.value.text = mailAddress;
+}
+
+- (void) initMailPickerView{
+	self.userMailPickerController = [[UserMailPickerContoller alloc] initWithNibName:@"UserMailPickerView" bundle:nil];
+	self.userMailPickerController.caller = self;
+}
+
+- (void) showMailPickerView{
+	//lazy loading userMailPickerController child controller...
+	if (self.userMailPickerController == nil){
+		[self initMailPickerView];
+	}
+	//[self.weightTrackerController presentModalViewController:userMailPickerController animated:YES]; 
+	//[weightTrackerController genericSwitchViews:self otherView:self.userMailPickerController];
+	[[self weightTrackerAppDelegate].navSettings pushViewController:self.userMailPickerController animated:YES];	
+}
+
+//***************** recipient mail address
+
+- (void) initRecipientMailAddressCell{
+	SingleValueWithSubviewCell *cell = (SingleValueWithSubviewCell *) [UIUtils loadUIViewFromNib:@"SingleValueWithSubview" withOwner:self];
+	cell.label.text = @"Recipient mail:";
+	//cell.value.text = self.username;;
+	self.recipientMailAddressCell = cell;	
+	//[cell release];
+}
+
+- (NSString *) recipientMailAddress{
+	return self.recipientMailAddressCell.value.text;
+}
+//this setter method must be called before any call to the getter
+- (void) setRecipientMailAddress:(NSString *) mailAddress{
+	if(self.recipientMailAddressCell == nil){
+		[self initRecipientMailAddressCell];
+	}
+	self.recipientMailAddressCell.value.text = mailAddress;
 }
 
 
@@ -189,6 +232,9 @@
 			cell = self.userMailAddressCell;
 			//cell = self.
 			break;
+		case 2:
+			cell = self.recipientMailAddressCell;
+			break;
 		default:
 			break;
 	}
@@ -197,7 +243,7 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-	return 2;	
+	return 3;	
 }
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
 {	
@@ -207,20 +253,7 @@
 - (NSString *)tableView:(UITableView *)tableView titleForFooterInSection:(NSInteger)section{
 	return @"Footer";
 }
-- (void) initMailPickerView{
-	self.userMailPickerController = [[UserMailPickerContoller alloc] initWithNibName:@"UserMailPickerView" bundle:nil];
-	self.userMailPickerController.caller = self;
-}
 
-- (void) showMailPickerView{
-	//lazy loading child controller...
-	if (self.userMailPickerController == nil){
-		[self initMailPickerView];
-	}
-	//[self.weightTrackerController presentModalViewController:userMailPickerController animated:YES]; 
-	//[weightTrackerController genericSwitchViews:self otherView:self.userMailPickerController];
-	[[self weightTrackerAppDelegate].navSettings pushViewController:self.userMailPickerController animated:YES];	
-}
 
 #pragma mark -
 #pragma mark UITableViewDelegate methods
