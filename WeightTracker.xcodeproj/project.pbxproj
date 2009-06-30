@@ -13,6 +13,11 @@
 		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
 		288765FD0DF74451002DB57D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765FC0DF74451002DB57D /* CoreGraphics.framework */; };
 		28AD733F0D9D9553002E5188 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28AD733E0D9D9553002E5188 /* MainWindow.xib */; };
+		3EA081530FF97F6400CD6B01 /* UserMailPickerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3EA081520FF97F6400CD6B01 /* UserMailPickerView.xib */; };
+		3EA250190FF97A020058955D /* UserMailPickerContoller.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EA250180FF97A020058955D /* UserMailPickerContoller.m */; };
+		3EA486FE0FF9614B00ED5594 /* SingleValueWithSubviewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EA486FD0FF9614B00ED5594 /* SingleValueWithSubviewCell.m */; };
+		3EA487000FF9615B00ED5594 /* SingleValueWithSubview.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3EA486FF0FF9615B00ED5594 /* SingleValueWithSubview.xib */; };
+		3EA4870D0FF9636900ED5594 /* UIUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EA4870C0FF9636900ED5594 /* UIUtils.m */; };
 		3EA650730FF7F91500FC45D0 /* WeightTrackerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EA650710FF7F91500FC45D0 /* WeightTrackerController.m */; };
 		3EA650740FF7F91500FC45D0 /* WeightTrackerController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3EA650720FF7F91500FC45D0 /* WeightTrackerController.xib */; };
 		3EA651020FF80AD000FC45D0 /* WeightTrackerSettingsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EA651000FF80AD000FC45D0 /* WeightTrackerSettingsController.m */; };
@@ -52,6 +57,14 @@
 		28AD733E0D9D9553002E5188 /* MainWindow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainWindow.xib; sourceTree = "<group>"; };
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		32CA4F630368D1EE00C91783 /* WeightTracker_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeightTracker_Prefix.pch; sourceTree = "<group>"; };
+		3EA081520FF97F6400CD6B01 /* UserMailPickerView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserMailPickerView.xib; sourceTree = "<group>"; };
+		3EA250170FF97A020058955D /* UserMailPickerContoller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserMailPickerContoller.h; sourceTree = "<group>"; };
+		3EA250180FF97A020058955D /* UserMailPickerContoller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserMailPickerContoller.m; sourceTree = "<group>"; };
+		3EA486FC0FF9614B00ED5594 /* SingleValueWithSubviewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SingleValueWithSubviewCell.h; sourceTree = "<group>"; };
+		3EA486FD0FF9614B00ED5594 /* SingleValueWithSubviewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SingleValueWithSubviewCell.m; sourceTree = "<group>"; };
+		3EA486FF0FF9615B00ED5594 /* SingleValueWithSubview.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SingleValueWithSubview.xib; sourceTree = "<group>"; };
+		3EA4870C0FF9636900ED5594 /* UIUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIUtils.m; sourceTree = "<group>"; };
+		3EA487110FF9646000ED5594 /* UIUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIUtils.h; sourceTree = "<group>"; };
 		3EA650700FF7F91500FC45D0 /* WeightTrackerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeightTrackerController.h; sourceTree = "<group>"; };
 		3EA650710FF7F91500FC45D0 /* WeightTrackerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeightTrackerController.m; sourceTree = "<group>"; };
 		3EA650720FF7F91500FC45D0 /* WeightTrackerController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = WeightTrackerController.xib; path = Classes/WeightTrackerController.xib; sourceTree = "<group>"; };
@@ -166,11 +179,13 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				3EA081520FF97F6400CD6B01 /* UserMailPickerView.xib */,
 				3EA651010FF80AD000FC45D0 /* WeightTrackerSettingsController.xib */,
 				3EA650720FF7F91500FC45D0 /* WeightTrackerController.xib */,
 				28AD733E0D9D9553002E5188 /* MainWindow.xib */,
 				8D1107310486CEB800E47090 /* WeightTracker-Info.plist */,
 				3EADDF840FF842F2003C1795 /* EditableCell.xib */,
+				3EA486FF0FF9615B00ED5594 /* SingleValueWithSubview.xib */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -189,6 +204,8 @@
 		3EA486790FF95B9800ED5594 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				3EA250170FF97A020058955D /* UserMailPickerContoller.h */,
+				3EA250180FF97A020058955D /* UserMailPickerContoller.m */,
 				3EA650700FF7F91500FC45D0 /* WeightTrackerController.h */,
 				3EA650710FF7F91500FC45D0 /* WeightTrackerController.m */,
 				3EA650FF0FF80AD000FC45D0 /* WeightTrackerSettingsController.h */,
@@ -257,6 +274,10 @@
 			children = (
 				3EADDF810FF842CB003C1795 /* EditableCell.h */,
 				3EADDF820FF842CB003C1795 /* EditableCell.m */,
+				3EA486FC0FF9614B00ED5594 /* SingleValueWithSubviewCell.h */,
+				3EA486FD0FF9614B00ED5594 /* SingleValueWithSubviewCell.m */,
+				3EA4870C0FF9636900ED5594 /* UIUtils.m */,
+				3EA487110FF9646000ED5594 /* UIUtils.h */,
 			);
 			name = UI;
 			sourceTree = "<group>";
@@ -307,6 +328,8 @@
 				3EA650740FF7F91500FC45D0 /* WeightTrackerController.xib in Resources */,
 				3EA651030FF80AD000FC45D0 /* WeightTrackerSettingsController.xib in Resources */,
 				3EADDF850FF842F2003C1795 /* EditableCell.xib in Resources */,
+				3EA487000FF9615B00ED5594 /* SingleValueWithSubview.xib in Resources */,
+				3EA081530FF97F6400CD6B01 /* UserMailPickerView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -342,6 +365,9 @@
 				3EA652360FF8128800FC45D0 /* UIColor-SQLitePersistentObject.m in Sources */,
 				3EA652370FF8128800FC45D0 /* UIImage-SQLitePersistence.m in Sources */,
 				3EADDF830FF842CB003C1795 /* EditableCell.m in Sources */,
+				3EA486FE0FF9614B00ED5594 /* SingleValueWithSubviewCell.m in Sources */,
+				3EA4870D0FF9636900ED5594 /* UIUtils.m in Sources */,
+				3EA250190FF97A020058955D /* UserMailPickerContoller.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
