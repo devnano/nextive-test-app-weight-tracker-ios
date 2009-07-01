@@ -125,7 +125,7 @@
 
 - (void) initUsernameCell{
 	EditableCell *cell = (EditableCell *) [UIUtils loadUIViewFromNib:@"EditableCell" withOwner:self];
-	cell.label.text = @"Username:";
+	cell.label.text = @"Username";
 	//cell.value.text = self.username;;
 	self.usernameCell = cell;	
 	//[cell release];
@@ -150,7 +150,7 @@
 
 - (void) initUserMailAddressCell{
 	SingleValueWithSubviewCell *cell = (SingleValueWithSubviewCell *) [UIUtils loadUIViewFromNib:@"SingleValueWithSubview" withOwner:self];
-	cell.label.text = @"User mail:";
+	cell.label.text = @"User mail";
 	//cell.value.text = self.username;;
 	self.userMailAddressCell = cell;	
 	//[cell release];
@@ -189,7 +189,7 @@
 
 - (void) initRecipientMailAddressCell{
 	SingleValueWithSubviewCell *cell = (SingleValueWithSubviewCell *) [UIUtils loadUIViewFromNib:@"SingleValueWithSubview" withOwner:self];
-	cell.label.text = @"Recipient mail:";
+	cell.label.text = @"Recipient mail";
 	//cell.value.text = self.username;;
 	self.recipientMailAddressCell = cell;	
 	//[cell release];

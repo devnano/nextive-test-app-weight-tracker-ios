@@ -8,6 +8,7 @@
 
 #import "DefaultRecipientMailOptionsController.h"
 #import "WeightTrackerAppDelegate.h"
+#import "SystemSettingsAccess.h"
 
 
 @implementation DefaultRecipientMailOptionsController
@@ -45,13 +46,29 @@
 }
 
 - (void) hideModalViewController{	
-	[self dismissModalViewControllerAnimated:YES]; 	
+	[self dismissModalViewControllerAnimated:NO]; 	
+	WeightTrackerAppDelegate *delegate =(WeightTrackerAppDelegate *) [[UIApplication sharedApplication] delegate];
+	
+	//[delegate.navSettings popViewControllerAnimated:YES];
+	[delegate.navSettings popViewControllerAnimated:YES];
 }
-- (void) popNavigationModalViewController{
+- (void) popNavigationViewController{
 	WeightTrackerAppDelegate *delegate =(WeightTrackerAppDelegate *) [[UIApplication sharedApplication] delegate];
 	
 	[delegate.navSettings popViewControllerAnimated:YES];
 	
+}
+
+- (void) popNavigationToCallerViewController{
+	WeightTrackerAppDelegate *delegate =(WeightTrackerAppDelegate *) [[UIApplication sharedApplication] delegate];
+	[delegate.navSettings popToViewController:self.caller animated:YES];
+	//[delegate.navSettings popViewControllerAnimated:YES];
+	
+}
+
+
+- (void) userMailPicked{	
+	[self mailChosen: [SystemSettingsAccess defaultMailAddress] withFinalAction:@selector(popNavigationViewController)];
 }
 
 - (IBAction)showCreateNewContact:(id)sender{
@@ -82,7 +99,12 @@
 
 
 - (void)newPersonViewController:(ABNewPersonViewController *)newPersonViewController didCompleteWithNewPerson:(ABRecordRef)person{	
-	[self mailSelectedFromPerson:person withFinalAction:@selector(popNavigationModalViewController)];	
+	if(person == NULL){
+		//returning to the caller
+		[self popNavigationViewController];	
+		return;
+	}
+	[self mailSelectedFromPerson:person withFinalAction:@selector(popNavigationToCallerViewController)];	
 }
 
 
@@ -137,19 +159,23 @@
 
 
 
+-(UITableViewCell *) initButtonCell:(NSString *) caption{
+	UITableViewCell *cell= [[[UITableViewCell alloc] initWithFrame:CGRectZero] autorelease];
+	//note that this is deprecated for 3.0
+	cell.text =caption;
+	[cell setSelectionStyle:UITableViewCellSelectionStyleNone];
+	return cell;
+}
 
 -(void) initMyMailCell{
-	self.myMailCell = [[[UITableViewCell alloc] initWithFrame:CGRectZero] autorelease];
-	self.myMailCell.text = @"Use My Mail";
+	self.myMailCell = [self initButtonCell:@"Use my mail"];
 }
 
 -(void) initChooseFromContactCell{
-	self.chooseFromContactCell = [[[UITableViewCell alloc] initWithFrame:CGRectZero] autorelease];
-	self.chooseFromContactCell.text = @"Choose from contacts";
+	self.chooseFromContactCell = [self initButtonCell:@"Choose from contacts"];
 }
 -(void) initNewContactCell{
-	self.newContactCell = [[[UITableViewCell alloc] initWithFrame:CGRectZero] autorelease];
-	self.newContactCell.text = @"Create new contact";
+	self.newContactCell = [self initButtonCell:@"Create new contact"];
 }
 
 - (void)dealloc {
@@ -220,6 +246,7 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
 	switch ([indexPath row]){
 		case 0:
+			[self userMailPicked];
 			break;
 		case 1:
 			//[self showMailPickerView];

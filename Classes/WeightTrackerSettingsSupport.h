@@ -21,7 +21,7 @@
 	- (void) setupAppWithUserInfo:(id<WeightTrackerSettingsSupport>) userInfo;
 	- (void) loadAppUserInfo:(id<WeightTrackerSettingsSupport>)userInfo;
 	//workaround to avoid warnings when releasing id<WeightTrackerSettingsSupport> objects
-	- (void) release;
+	//- (void) release;
 
 @end
 

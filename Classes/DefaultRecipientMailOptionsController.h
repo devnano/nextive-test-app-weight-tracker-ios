@@ -17,14 +17,14 @@
 	UITableViewCell *myMailCell;
 	UITableViewCell *chooseFromContactCell;
 	UITableViewCell *newContactCell;	
-	id<WeightTrackerSettingsSupport> caller;
+	UIViewController<WeightTrackerSettingsSupport> *caller;
 
 }
 
 @property (nonatomic, retain) UITableViewCell *myMailCell;
 @property (nonatomic, retain) UITableViewCell *chooseFromContactCell;
 @property (nonatomic, retain) UITableViewCell *newContactCell;
-@property (nonatomic, retain) id<WeightTrackerSettingsSupport> caller;
+@property (nonatomic, retain) UIViewController<WeightTrackerSettingsSupport> *caller;
 
 
 - (IBAction)showPicker:(id)sender;
