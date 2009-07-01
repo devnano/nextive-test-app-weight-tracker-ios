@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import <AddressBook/AddressBook.h> 
 #import <AddressBookUI/AddressBookUI.h> 
+#import "WeightTrackerSettingsSupport.h"
 
 
 @interface DefaultRecipientMailOptionsController : UIViewController <ABPeoplePickerNavigationControllerDelegate, ABNewPersonViewControllerDelegate,
@@ -16,17 +17,17 @@
 	UITableViewCell *myMailCell;
 	UITableViewCell *chooseFromContactCell;
 	UITableViewCell *newContactCell;	
-	id caller;
+	id<WeightTrackerSettingsSupport> caller;
 
 }
 
 @property (nonatomic, retain) UITableViewCell *myMailCell;
 @property (nonatomic, retain) UITableViewCell *chooseFromContactCell;
 @property (nonatomic, retain) UITableViewCell *newContactCell;
-@property (nonatomic, retain) id caller;
+@property (nonatomic, retain) id<WeightTrackerSettingsSupport> caller;
 
 
 - (IBAction)showPicker:(id)sender;
 - (IBAction)showCreateNewContact:(id)sender;
-- (void) mailChosen:(NSString *) mailAddress;
+//- (void) mailChosen:(NSString *) mailAddress;
 @end

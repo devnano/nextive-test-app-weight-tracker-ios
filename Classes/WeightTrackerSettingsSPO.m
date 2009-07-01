@@ -19,7 +19,7 @@
 {
 	return self.username != nil;
 }
-- (void) setupAppWithUserInfo:(id) userInfo{
+- (void) setupAppWithUserInfo:(id<WeightTrackerSettingsSupport>) userInfo{
 	//relying in dynamic binding for data retriving
 	//through message send to userInfo id reference
 	//Note that a protocol could be adopted if third parties
@@ -32,7 +32,7 @@
 	[self save];
 }
 
-- (void) loadAppUserInfo:(id) userInfo{
+- (void) loadAppUserInfo:(id<WeightTrackerSettingsSupport>) userInfo{
 	[userInfo setUsername:self.username];
 	[userInfo setUserMailAddress:self.userMailAddress];
 	[userInfo setRecipientMailAddress:self.recipientMailAddress];

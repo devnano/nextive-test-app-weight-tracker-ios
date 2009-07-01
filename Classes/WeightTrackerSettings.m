@@ -61,7 +61,7 @@
 	
 }
 
-- (void) setupAppWithUserInfo:(id) userInfo
+- (void) setupAppWithUserInfo:(id<WeightTrackerSettingsSupport>) userInfo
 {
 	
 	//taking advantege of dynamic nature of objective c

@@ -38,9 +38,18 @@
 }
 */
 
-- (void) mailChosen:(NSString *) mailAddress{
+- (void) mailChosen:(NSString *) mailAddress withFinalAction:(SEL) action{	
+	self.caller.recipientMailAddress = mailAddress;	
+	//passing the message to finally hide the helper view
+	[self performSelector:action];	
+}
+
+- (void) hideModalViewController{	
+	[self dismissModalViewControllerAnimated:YES]; 	
+}
+- (void) popNavigationModalViewController{
 	WeightTrackerAppDelegate *delegate =(WeightTrackerAppDelegate *) [[UIApplication sharedApplication] delegate];
-	//[self.caller setRecipientMailAddress : mailAddress];
+	
 	[delegate.navSettings popViewControllerAnimated:YES];
 	
 }
@@ -54,7 +63,7 @@
 	[newPerson release];
 }
 
-- (void) mailSelectedFromPerson:(ABRecordRef) person{
+- (void) mailSelectedFromPerson:(ABRecordRef) person withFinalAction:(SEL) action{
 	CFTypeRef multi = ABRecordCopyValue(person, kABPersonEmailProperty);
 
 	NSString *mail=@""; 
@@ -63,7 +72,7 @@
 		mail = (NSString *) ABMultiValueCopyValueAtIndex(multi, 0);
 	}
  
-	[self mailChosen:mail];
+	[self mailChosen:mail withFinalAction:action];
 	
 } 
 
@@ -73,7 +82,7 @@
 
 
 - (void)newPersonViewController:(ABNewPersonViewController *)newPersonViewController didCompleteWithNewPerson:(ABRecordRef)person{	
-	[self mailSelectedFromPerson:person];	
+	[self mailSelectedFromPerson:person withFinalAction:@selector(popNavigationModalViewController)];	
 }
 
 
@@ -92,7 +101,7 @@
 - (BOOL)peoplePickerNavigationController: 
 (ABPeoplePickerNavigationController *)peoplePicker 
       shouldContinueAfterSelectingPerson:(ABRecordRef)person { 
-	[self mailSelectedFromPerson:person];
+	[self mailSelectedFromPerson:person withFinalAction: @selector(hideModalViewController)];
     return NO; 
 }
 

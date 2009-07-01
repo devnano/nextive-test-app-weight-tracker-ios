@@ -12,12 +12,7 @@
 - (IBAction) mailChosen{
 	NSInteger row = [self.mailPicker selectedRowInComponent:0];
 	NSString *mailSelected = [self.availableMailAccounts objectAtIndex:row];
-	if( ![self.caller respondsToSelector: @selector(setUserMailAddress:)] ){
-		NSException *exception = [NSException exceptionWithName:@"Selector not found" 
-														 reason:@"caller ViewController does not implement setUserMailAddres: method"  userInfo:nil]; 
-		@throw exception;
-	}
-	[self.caller setUserMailAddress : mailSelected];
+	self.caller.userMailAddress = mailSelected;
 	//[self.caller hideMailPickerView];
 	
 	[mailSelected release];

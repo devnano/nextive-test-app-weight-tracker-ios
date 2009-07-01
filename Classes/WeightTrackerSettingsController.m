@@ -32,6 +32,7 @@
 }
 
 - (id<WeightTrackerSettingsSupport>) weightTrackerSettings{	
+	//accessing shared instance of the app settings
 	return [WeightTrackerSettingsFactory getWeightTrackerSettings];
 }
 
@@ -86,6 +87,10 @@
 
 - (void)dealloc {
 	//[weightTrackerSettings release];
+	[userMailAddressCell dealloc];
+	[userMailPickerController dealloc];
+	[recipientMailAddressCell dealloc];
+	[defaultRecipientMailOptionsController dealloc];
 	[usernameCell release];
     [super dealloc];
 }
@@ -204,7 +209,7 @@
 
 - (void) initRecipientMailOptionsView{
 	self.defaultRecipientMailOptionsController = [[DefaultRecipientMailOptionsController alloc] initWithNibName:@"DefaultRecipientMailOptions" bundle:nil];
-//	self.userMailPickerController.caller = self;
+	self.defaultRecipientMailOptionsController.caller = self;
 }
 
 - (void) showRecipientMailOptionsView{
