@@ -161,8 +161,9 @@
 
 -(UITableViewCell *) initButtonCell:(NSString *) caption{
 	UITableViewCell *cell= [[[UITableViewCell alloc] initWithFrame:CGRectZero] autorelease];
-	//note that this is deprecated for 3.0
-	cell.text =caption;
+	
+	//recommended way for 3.0
+	cell.textLabel.text = caption;
 	[cell setSelectionStyle:UITableViewCellSelectionStyleNone];
 	return cell;
 }

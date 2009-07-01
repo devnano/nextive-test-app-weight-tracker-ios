@@ -9,11 +9,20 @@
 
 #import "SystemSettingsAccess.h"
 
+
+typedef enum {
+	NotDefined = -1,
+    Pounds = 0,
+	Kilograms = 1,
+	      
+} WeightUnitsOfMeasure;
+
 @protocol WeightTrackerSettingsSupport
 @required
 	@property (nonatomic, copy) NSString *username;
 	@property (nonatomic, copy) NSString *userMailAddress;	
 	@property (nonatomic, copy) NSString *recipientMailAddress;
+	@property (nonatomic) WeightUnitsOfMeasure weightUnitOfMeasure;
 @optional
 	//as the above properties gives complete information, the below
 	//accesory methods are tagged as optional
@@ -32,5 +41,6 @@ static void loadSystemSettingsDefaults(id<WeightTrackerSettingsSupport> userInfo
 	//when the app si not already set, it must be empty until the user chose a valid mail from
 	//contancts
 	userInfo.recipientMailAddress=@"";
+	userInfo.weightUnitOfMeasure = NotDefined;	
 }
 

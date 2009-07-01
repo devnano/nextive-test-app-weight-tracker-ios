@@ -12,6 +12,7 @@
 #import "SingleValueWithSubviewCell.h"
 #import "UserMailPickerContoller.h"
 #import "DefaultRecipientMailOptionsController.h"
+#import "SegmentedFieldCell.h"
 
 
 @interface WeightTrackerSettingsController : UITableViewController<UITableViewDelegate, UITableViewDataSource,
@@ -21,8 +22,10 @@
 	EditableCell *usernameCell;
 	SingleValueWithSubviewCell *userMailAddressCell;
 	SingleValueWithSubviewCell *recipientMailAddressCell;
+	SegmentedFieldCell *weightUnitOfMeasureCell;
 	UserMailPickerContoller *userMailPickerController;
 	DefaultRecipientMailOptionsController *defaultRecipientMailOptionsController;
+	
 
 }
 
@@ -31,6 +34,7 @@
 @property(nonatomic, retain) EditableCell *usernameCell;
 @property(nonatomic, retain) SingleValueWithSubviewCell *userMailAddressCell;
 @property(nonatomic, retain) SingleValueWithSubviewCell *recipientMailAddressCell;
+@property(nonatomic, retain) SegmentedFieldCell *weightUnitOfMeasureCell;
 @property(nonatomic, retain) UserMailPickerContoller *userMailPickerController;
 @property(nonatomic, retain) DefaultRecipientMailOptionsController *defaultRecipientMailOptionsController;
 

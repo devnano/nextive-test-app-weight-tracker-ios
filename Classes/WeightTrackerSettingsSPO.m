@@ -9,10 +9,12 @@
 	DECLARE_PROPERTIES(
 				   DECLARE_PROPERTY(@"username", @"@\"NSString\""),
 				DECLARE_PROPERTY(@"userMailAddress", @"@\"NSString\""),
-				DECLARE_PROPERTY(@"recipientMailAddress", @"@\"NSString\"")	
+				DECLARE_PROPERTY(@"recipientMailAddress", @"@\"NSString\""),
+				DECLARE_PROPERTY(@"weightUnitOfMeasure", @"@\"NSInteger\"")
+				
 	)
 
-@synthesize username, userMailAddress, recipientMailAddress;
+@synthesize username, userMailAddress, recipientMailAddress, weightUnitOfMeasure;
 
 
 - (BOOL) isAppAlreadySetup
@@ -29,13 +31,15 @@
 	self.username = [userInfo username];
 	self.userMailAddress = [userInfo userMailAddress];
 	self.recipientMailAddress = [userInfo recipientMailAddress];
+	self.weightUnitOfMeasure = [userInfo weightUnitOfMeasure];
 	[self save];
 }
 
 - (void) loadAppUserInfo:(id<WeightTrackerSettingsSupport>) userInfo{
-	[userInfo setUsername:self.username];
-	[userInfo setUserMailAddress:self.userMailAddress];
-	[userInfo setRecipientMailAddress:self.recipientMailAddress];
+	userInfo.username = self.username;
+	userInfo.userMailAddress = self.userMailAddress;
+	userInfo.recipientMailAddress = self.recipientMailAddress;
+	userInfo.weightUnitOfMeasure = self.weightUnitOfMeasure;
 }
 
 

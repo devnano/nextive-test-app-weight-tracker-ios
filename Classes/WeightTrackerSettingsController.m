@@ -13,9 +13,10 @@
 #import "UIUtils.h"
 
 @implementation WeightTrackerSettingsController
-@dynamic weightTrackerSettings, username, userMailAddress, recipientMailAddress;
+@dynamic weightTrackerSettings, username, userMailAddress, recipientMailAddress,weightUnitOfMeasure;
 @synthesize usernameCell, userMailAddressCell, userMailPickerController,
-			recipientMailAddressCell, defaultRecipientMailOptionsController;
+			recipientMailAddressCell, defaultRecipientMailOptionsController, weightUnitOfMeasureCell;
+
 
 /*
  // The designated initializer.  Override if you create the controller programmatically and want to perform customization that is not appropriate for viewDidLoad.
@@ -90,6 +91,7 @@
 	[userMailAddressCell dealloc];
 	[userMailPickerController dealloc];
 	[recipientMailAddressCell dealloc];
+	[weightUnitOfMeasureCell dealloc];
 	[defaultRecipientMailOptionsController dealloc];
 	[usernameCell release];
     [super dealloc];
@@ -222,6 +224,28 @@
 	[[self weightTrackerAppDelegate].navSettings pushViewController:self.defaultRecipientMailOptionsController animated:YES];	
 }
 
+//****************unit of measure
+
+- (void) initWeightUnitOfMeasureCell{
+	SegmentedFieldCell *cell = (SegmentedFieldCell *) [UIUtils loadUIViewFromNib:@"SegmentedFieldCell" withOwner:self];
+	cell.label.text = @"Units";
+	[cell.segmentedControl setTitle:@"Pounds" forSegmentAtIndex:0];
+	[cell.segmentedControl setTitle:@"Kilograms" forSegmentAtIndex:1];
+	self.weightUnitOfMeasureCell = cell; 
+	
+}
+
+- (void) setWeightUnitOfMeasure:(WeightUnitsOfMeasure) units{
+	if(self.weightUnitOfMeasureCell == nil){
+		[self initWeightUnitOfMeasureCell];
+	}
+	self.weightUnitOfMeasureCell.segmentedControl.selectedSegmentIndex = units;
+}
+
+- (WeightUnitsOfMeasure) weightUnitOfMeasure{
+	return self.weightUnitOfMeasureCell.segmentedControl.selectedSegmentIndex;
+}
+
 
 
 - (void) save
@@ -257,6 +281,9 @@
 		case 2:
 			cell = self.recipientMailAddressCell;
 			break;
+		case 3:
+			cell = self.weightUnitOfMeasureCell;
+			break;
 		default:
 			break;
 	}
@@ -265,7 +292,7 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-	return 3;	
+	return 4;	
 }
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
 {	
@@ -273,7 +300,7 @@
 }
 
 - (NSString *)tableView:(UITableView *)tableView titleForFooterInSection:(NSInteger)section{
-	return @"Footer";
+	return @"Settings can be changed at anytime.";
 }
 
 
@@ -290,7 +317,7 @@
 			break;
 		case 2:
 			[self showRecipientMailOptionsView];
-			break;
+			break;		
 	}
 	
 }

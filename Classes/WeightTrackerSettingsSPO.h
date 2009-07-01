@@ -10,6 +10,7 @@
 	NSString *username;
 	NSString *userMailAddress;
 	NSString *recipientMailAddress;
+	NSInteger weightUnitOfMeasure;
 }
 
 @end

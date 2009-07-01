@@ -8,7 +8,7 @@
 //shared instance
 static WeightTrackerSettingsSPO * settings;
 
-+ ( id<WeightTrackerSettingsSupport>) getWeightTrackerSettings
++ ( NSObject<WeightTrackerSettingsSupport> *) getWeightTrackerSettings
 {
 	//WeightTrackerSettings * settings = [WeightTrackerSettings alloc];
 	//[settings init];
@@ -17,7 +17,8 @@ static WeightTrackerSettingsSPO * settings;
 	
 		if(settings == nil){
 			//settings are not created yet...
-			settings = [[[WeightTrackerSettingsSPO alloc] init] autorelease];
+			//settings = [[[WeightTrackerSettingsSPO alloc] init] autorelease];
+			settings = [[WeightTrackerSettingsSPO alloc] init];
 		}
 	}
 	

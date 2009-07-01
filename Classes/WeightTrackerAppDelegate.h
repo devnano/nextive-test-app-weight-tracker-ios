@@ -13,13 +13,13 @@
     UIWindow *window;
 	UINavigationController *navController;
 	UINavigationController *navSettings;
-	WeightTrackerSettings *weightTrackerSettings;
+	NSObject<WeightTrackerSettingsSupport> *weightTrackerSettings;
 }
 
 @property (nonatomic, retain) IBOutlet UIWindow *window;
 @property (nonatomic, retain) IBOutlet UINavigationController *navController;
 @property (nonatomic, retain) IBOutlet UINavigationController *navSettings;
-@property (retain, nonatomic) id<WeightTrackerSettingsSupport> weightTrackerSettings;
+@property (retain, nonatomic) NSObject<WeightTrackerSettingsSupport> *weightTrackerSettings;
 - (IBAction) showAppSettings;
 - (IBAction) hideAppSettings;
 

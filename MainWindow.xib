@@ -8,7 +8,6 @@
 		<string key="IBDocument.HIToolboxVersion">353.00</string>
 		<object class="NSMutableArray" key="IBDocument.EditedObjectIDs">
 			<bool key="EncodedWithXMLCoder">YES</bool>
-			<integer value="18"/>
 		</object>
 		<object class="NSArray" key="IBDocument.PluginDependencies">
 			<bool key="EncodedWithXMLCoder">YES</bool>
@@ -61,7 +60,7 @@
 						<object class="IBUINavigationItem" key="IBUINavigationItem" id="963282205">
 							<string key="IBUITitle"/>
 							<object class="IBUIBarButtonItem" key="IBUIRightBarButtonItem" id="249260288">
-								<string key="IBUITitle">settings</string>
+								<string key="IBUITitle">Settings</string>
 								<int key="IBUIStyle">1</int>
 							</object>
 						</object>
@@ -83,10 +82,9 @@
 					<bool key="EncodedWithXMLCoder">YES</bool>
 					<object class="IBUIViewController" id="484034780">
 						<object class="IBUITableView" key="IBUIView" id="899949679">
-							<reference key="NSNextResponder"/>
+							<nil key="NSNextResponder"/>
 							<int key="NSvFlags">274</int>
 							<string key="NSFrameSize">{320, 416}</string>
-							<reference key="NSSuperview"/>
 							<bool key="IBUIOpaque">NO</bool>
 							<bool key="IBUIClipsSubviews">YES</bool>
 							<bool key="IBUIClearsContextBeforeDrawing">NO</bool>
@@ -100,10 +98,9 @@
 							<float key="IBUISectionFooterHeight">1.000000e+01</float>
 						</object>
 						<object class="IBUINavigationItem" key="IBUINavigationItem" id="776301163">
-							<reference key="IBUINavigationBar"/>
 							<string key="IBUITitle"/>
 							<object class="IBUIBarButtonItem" key="IBUIRightBarButtonItem" id="829993920">
-								<string key="IBUITitle">app</string>
+								<string key="IBUITitle">Main</string>
 								<int key="IBUIStyle">1</int>
 							</object>
 						</object>
@@ -330,14 +327,14 @@
 					<bool key="EncodedWithXMLCoder">YES</bool>
 					<string>UIApplication</string>
 					<string>UIResponder</string>
-					<string>{{270, 208}, {320, 480}}</string>
+					<string>{{171, 208}, {320, 480}}</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>WeightTrackerController</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
-					<string>{{469, 159}, {320, 480}}</string>
+					<string>{{171, 159}, {320, 480}}</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>WeightTrackerSettingsController</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>

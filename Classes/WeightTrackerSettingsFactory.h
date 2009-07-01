@@ -8,6 +8,6 @@
 
 }
 
-+ (id<WeightTrackerSettingsSupport>) getWeightTrackerSettings;
++ ( NSObject<WeightTrackerSettingsSupport> *) getWeightTrackerSettings;
 
 @end
