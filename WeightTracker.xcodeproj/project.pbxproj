@@ -14,6 +14,8 @@
 		288765FD0DF74451002DB57D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765FC0DF74451002DB57D /* CoreGraphics.framework */; };
 		28AD733F0D9D9553002E5188 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28AD733E0D9D9553002E5188 /* MainWindow.xib */; };
 		3E9342640FFD50E30087CF6B /* WeightLogSPO.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E9342630FFD50E30087CF6B /* WeightLogSPO.m */; };
+		3E9344660FFD75A80087CF6B /* WeightLogDatePickerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E9344640FFD75A80087CF6B /* WeightLogDatePickerController.m */; };
+		3E9344690FFD75DD0087CF6B /* WeightLogDatePickerController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3E9344680FFD75DD0087CF6B /* WeightLogDatePickerController.xib */; };
 		3EA081530FF97F6400CD6B01 /* UserMailPickerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3EA081520FF97F6400CD6B01 /* UserMailPickerView.xib */; };
 		3EA250190FF97A020058955D /* UserMailPickerContoller.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EA250180FF97A020058955D /* UserMailPickerContoller.m */; };
 		3EA387CE0FFA3BD700402B75 /* DefaultRecipientMailOptionsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EA387CD0FFA3BD700402B75 /* DefaultRecipientMailOptionsController.m */; };
@@ -61,6 +63,9 @@
 		3E9342620FFD50E30087CF6B /* WeightLogSPO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeightLogSPO.h; sourceTree = "<group>"; };
 		3E9342630FFD50E30087CF6B /* WeightLogSPO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeightLogSPO.m; sourceTree = "<group>"; };
 		3E9342670FFD51960087CF6B /* WeightLogSupport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeightLogSupport.h; sourceTree = "<group>"; };
+		3E9344630FFD75A80087CF6B /* WeightLogDatePickerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeightLogDatePickerController.h; sourceTree = "<group>"; };
+		3E9344640FFD75A80087CF6B /* WeightLogDatePickerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeightLogDatePickerController.m; sourceTree = "<group>"; };
+		3E9344680FFD75DD0087CF6B /* WeightLogDatePickerController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WeightLogDatePickerController.xib; sourceTree = "<group>"; };
 		3EA081520FF97F6400CD6B01 /* UserMailPickerView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserMailPickerView.xib; sourceTree = "<group>"; };
 		3EA250170FF97A020058955D /* UserMailPickerContoller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserMailPickerContoller.h; sourceTree = "<group>"; };
 		3EA250180FF97A020058955D /* UserMailPickerContoller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserMailPickerContoller.m; sourceTree = "<group>"; };
@@ -187,6 +192,7 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				3E9344680FFD75DD0087CF6B /* WeightLogDatePickerController.xib */,
 				3EA7B6690FFCDA8200D68E75 /* NewWeightController.xib */,
 				3EA387CF0FFA3BFA00402B75 /* DefaultRecipientMailOptions.xib */,
 				3EA081520FF97F6400CD6B01 /* UserMailPickerView.xib */,
@@ -294,6 +300,8 @@
 				3EA650710FF7F91500FC45D0 /* WeightTrackerController.m */,
 				3EA7B6640FFCDA5300D68E75 /* NewWeightController.h */,
 				3EA7B6650FFCDA5300D68E75 /* NewWeightController.m */,
+				3E9344630FFD75A80087CF6B /* WeightLogDatePickerController.h */,
+				3E9344640FFD75A80087CF6B /* WeightLogDatePickerController.m */,
 			);
 			name = WeightTracker;
 			sourceTree = "<group>";
@@ -353,6 +361,7 @@
 				3EA081530FF97F6400CD6B01 /* UserMailPickerView.xib in Resources */,
 				3EA387D00FFA3BFA00402B75 /* DefaultRecipientMailOptions.xib in Resources */,
 				3EA7B66A0FFCDA8200D68E75 /* NewWeightController.xib in Resources */,
+				3E9344690FFD75DD0087CF6B /* WeightLogDatePickerController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -392,6 +401,7 @@
 				3EA387CE0FFA3BD700402B75 /* DefaultRecipientMailOptionsController.m in Sources */,
 				3EA7B6670FFCDA5300D68E75 /* NewWeightController.m in Sources */,
 				3E9342640FFD50E30087CF6B /* WeightLogSPO.m in Sources */,
+				3E9344660FFD75A80087CF6B /* WeightLogDatePickerController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
