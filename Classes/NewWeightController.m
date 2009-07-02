@@ -13,7 +13,7 @@
 
 
 @implementation NewWeightController
-@synthesize weightCell, dateCell;
+@synthesize weightCell, dateCell, datePickerController;
 @dynamic weight, date;
 
 
@@ -82,15 +82,15 @@
 }
 
 -(void) updateDateLabel{
-	NSString *weightString = [self->weightLog.weight floatValue] == 0.0 ? @"-" :
-							[NSString stringWithFormat:@"%@",self->weightLog.weight ];
-	self.weightCell.detailTextLabel.text = weightString;	
-}
--(void) updateWeightLabel{
 	NSDateFormatter *formater =[[NSDateFormatter alloc] init];
 	[formater setDateFormat:@"yyyy-MM-dd"];
 	self.dateCell.detailTextLabel.text =  [formater stringFromDate:self->weightLog.date];
-	[formater release];
+	[formater release];		
+}
+-(void) updateWeightLabel{	
+	NSString *weightString = [self->weightLog.weight floatValue] == 0.0 ? @"-" :
+	[NSString stringWithFormat:@"%@",self->weightLog.weight ];
+	self.weightCell.detailTextLabel.text = weightString;	
 }
 
 - (void) initWeightLog{
@@ -174,13 +174,14 @@
 
 #pragma mark UITableViewDelegate related methods
 
-/*-(void)showNewWeightController{
-	if(self.newWeightController == nil){
-		self.newWeightController=[[NewWeightController alloc] initWithNibName:@"NewWeightController" bundle:nil];
+-(void)showDatePickerController{
+	if(self.datePickerController == nil){
+		self.datePickerController=[[WeightLogDatePickerController alloc] initWithNibName:@"WeightLogDatePickerController" bundle:nil];
+		self.datePickerController.weightLog = self;
 	}
-	[[self weightTrackerAppDelegate].navController pushViewController:self.newWeightController animated:YES];
+	[[self weightTrackerAppDelegate].navController pushViewController:self.datePickerController animated:YES];
 	
-}*/
+}
 
 
 #pragma mark -
@@ -193,7 +194,7 @@
 	switch ([indexPath row]){
 		case 0:
 			//date picker
-			//[self showNewWeightController];
+			[self showDatePickerController];
 			break;
 		case 1:
 			//weight picker

@@ -8,17 +8,21 @@
 
 #import <UIKit/UIKit.h>
 #import "WeightLogSupport.h"
+#import "WeightLogDatePickerController.h"
 
 
 @interface NewWeightController : UITableViewController<UITableViewDelegate, UITableViewDataSource,WeightLogSupport> {
-	UITableViewCell *weightCell;
-	UITableViewCell *dateCell;
+	
 	@private
 		NSObject<WeightLogSupport> *weightLog;
+		UITableViewCell *weightCell;
+		UITableViewCell *dateCell;
+		WeightLogDatePickerController *datePickerController;
 }
 
 @property(nonatomic, retain) UITableViewCell *weightCell;
 @property(nonatomic, retain) UITableViewCell *dateCell;
+@property(nonatomic, retain) WeightLogDatePickerController *datePickerController;
 
 
 @end
