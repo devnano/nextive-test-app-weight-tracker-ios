@@ -7,11 +7,13 @@
  *
  */
 
-
+#import <UIKit/UIKit.h>
 @interface UIUtils : NSObject {
 	
 }
 + (id) loadUIViewFromNib:(NSString *)nibName withOwner:(id) owner;
++ (UITableViewCell *) createCellStyleValue1:(NSString *) label;
+	
 
 
 @end

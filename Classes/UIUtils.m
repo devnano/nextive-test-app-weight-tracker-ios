@@ -21,5 +21,16 @@
 #endif
 	return view;		
 	}
++ (UITableViewCell *) createCellStyleValue1:(NSString *) label{
+
+	UITableViewCell *cell= [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:nil] autorelease];
+
+	//recommended way for 3.0
+	cell.textLabel.text = label;
+
+	[cell setAccessoryType:UITableViewCellAccessoryDisclosureIndicator];
+
+	return cell;
+}
 
 @end

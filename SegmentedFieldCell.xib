@@ -81,6 +81,7 @@
 											<object class="NSNull" id="4"/>
 											<reference ref="4"/>
 										</object>
+										<bool key="IBMomentary">YES</bool>
 									</object>
 									<object class="IBUILabel" id="468589420">
 										<reference key="NSNextResponder" ref="913076052"/>

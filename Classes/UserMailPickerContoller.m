@@ -48,7 +48,7 @@
 	//BOOL responds =[self respondsToSelector:@selector(mailChosen)]; 
 	//NSLog(@"%@", responds);
 	UIBarButtonItem *saveButton = [[UIBarButtonItem alloc]
-								   initWithTitle:@"done" 
+								   initWithTitle:@"Save" 
 								   style:UIBarButtonItemStyleDone
 								   target:self
 								   action:@selector(mailChosen)];
