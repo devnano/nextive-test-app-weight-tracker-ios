@@ -1,31 +1,42 @@
 //
-//  RootViewController.m
+//  NewWeightController.m
 //  WeightTracker
 //
-//  Created by Mariano Heredia on 6/28/09.
+//  Created by Mariano Heredia on 7/2/09.
 //  Copyright 2009 __MyCompanyName__. All rights reserved.
 //
 
-#import "WeightTrackerController.h"
+#import "NewWeightController.h"
 #import "UIUtils.h"
-#import "WeightTrackerAppDelegate.h"
 
 
-@implementation WeightTrackerController
-@synthesize newWeightCell, weightHistoryCell, shareWeightInfoCell, newWeightController;
+@implementation NewWeightController
+@synthesize weightCell, dateCell;
 
-
-- (WeightTrackerAppDelegate *) weightTrackerAppDelegate{
-	return (WeightTrackerAppDelegate *) [[UIApplication sharedApplication] delegate];
+/*
+ // The designated initializer.  Override if you create the controller programmatically and want to perform customization that is not appropriate for viewDidLoad.
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
+    if (self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil]) {
+        // Custom initialization
+    }
+    return self;
 }
+*/
 
-
+/*
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad {
     [super viewDidLoad];
-	self.title = @"Weight Tracker";
 }
+*/
 
+/*
+// Override to allow orientations other than the default portrait orientation.
+- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
+    // Return YES for supported orientations
+    return (interfaceOrientation == UIInterfaceOrientationPortrait);
+}
+*/
 
 - (void)didReceiveMemoryWarning {
 	// Releases the view if it doesn't have a superview.
@@ -41,23 +52,20 @@
 
 
 - (void)dealloc {
+	[weightCell release];
+	[dateCell release];
     [super dealloc];
-	[self.newWeightCell release];
-	[self.weightHistoryCell release];
-	[self.newWeightController release];
-	[self.shareWeightInfoCell release];
 }
 
-- (void)initNewWeightCell{
-	self.newWeightCell  = [UIUtils createCellStyleValue1:@"New Weight"];	
+
+- (void)initWeightCell{
+	self.weightCell  = [UIUtils createCellStyleValue1:@"Weight"];	
 }
 
-- (void)initWeigthHistoryCell{
-	self.weightHistoryCell  = [UIUtils createCellStyleValue1:@"View/Edit History"];
+- (void)initDateCell{
+	self.dateCell  = [UIUtils createCellStyleValue1:@"Date"];	
 }
-- (void)initShareWeightInfoCell{
-	self.shareWeightInfoCell  = [UIUtils createCellStyleValue1:@"Share Weight Info"];
-}
+
 
 #pragma mark -
 #pragma mark UITableViewDataSource methods
@@ -68,25 +76,20 @@
 	UITableViewCell *cell;
 	switch ([indexPath row]) {
 		case 0:	
-			if(self.newWeightCell == nil){
-				[self initNewWeightCell];				
+			if(self.dateCell == nil){
+				[self initDateCell];
+			}
+			cell = self.dateCell;			
+			break;
+			
+		case 1:
+			if(self.weightCell == nil){
+				[self initWeightCell];				
 				
 			}
-			cell = self.newWeightCell;; 			
+			cell = self.weightCell;; 			
 			break;
-		case 1:
-			if(self.weightHistoryCell == nil){
-				[self initWeigthHistoryCell];
-			}
-			cell = self.weightHistoryCell;			
-			break;
-		case 2:
-			cell = self.shareWeightInfoCell;
-			if(self.shareWeightInfoCell == nil){
-				[self initShareWeightInfoCell];
-			}
-			cell = self.shareWeightInfoCell;
-			break;		
+					
 		default:
 			break;
 	}
@@ -95,11 +98,11 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-	return 3;	
+	return 2;	
 }
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
 {	
-	return @"Weight Tracking";
+	return @"New Weight Log";
 }
 
 - (NSString *)tableView:(UITableView *)tableView titleForFooterInSection:(NSInteger)section{
@@ -109,13 +112,13 @@
 
 #pragma mark UITableViewDelegate related methods
 
--(void)showNewWeightController{
+/*-(void)showNewWeightController{
 	if(self.newWeightController == nil){
 		self.newWeightController=[[NewWeightController alloc] initWithNibName:@"NewWeightController" bundle:nil];
 	}
 	[[self weightTrackerAppDelegate].navController pushViewController:self.newWeightController animated:YES];
 	
-}
+}*/
 
 
 #pragma mark -
@@ -127,20 +130,19 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
 	switch ([indexPath row]){
 		case 0:
-			[self showNewWeightController];
+			//date picker
+			//[self showNewWeightController];
 			break;
 		case 1:
+			//weight picker
 			//the picker view will appear to select one of the available mail addresses
 			//[self showMailPickerView];
 			break;
-		case 2:
-			//the multiple alternatives to select de recipient mail addres will be shown
-			//in the correspondent view
-			//[self showRecipientMailOptionsView];
-			break;		
+	
 	}
 	
 }
+
 
 
 @end
