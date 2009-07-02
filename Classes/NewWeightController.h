@@ -19,7 +19,6 @@
 
 @property(nonatomic, retain) UITableViewCell *weightCell;
 @property(nonatomic, retain) UITableViewCell *dateCell;
-//@property(nonatomic, retain) NSObject<WeightLogSupport> *weightLog;
 
 
 @end
