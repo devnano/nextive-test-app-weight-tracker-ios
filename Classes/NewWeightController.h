@@ -7,15 +7,19 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "WeightLogSupport.h"
 
 
-@interface NewWeightController : UITableViewController<UITableViewDelegate, UITableViewDataSource> {
+@interface NewWeightController : UITableViewController<UITableViewDelegate, UITableViewDataSource,WeightLogSupport> {
 	UITableViewCell *weightCell;
 	UITableViewCell *dateCell;
-
+	@private
+		NSObject<WeightLogSupport> *weightLog;
 }
 
 @property(nonatomic, retain) UITableViewCell *weightCell;
 @property(nonatomic, retain) UITableViewCell *dateCell;
+//@property(nonatomic, retain) NSObject<WeightLogSupport> *weightLog;
+
 
 @end

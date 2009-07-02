@@ -8,7 +8,7 @@
 
 #import "WeightTrackerSettingsController.h"
 #import "WeightTrackerAppDelegate.h"
-#import "WeightTrackerSettingsFactory.h"
+#import "WeightTrackerFactory.h"
 #import "UIUtils.h"
 
 @implementation WeightTrackerSettingsController
@@ -24,7 +24,7 @@
 
 - (id<WeightTrackerSettingsSupport>) weightTrackerSettings{	
 	//accessing shared instance of the app settings
-	return [WeightTrackerSettingsFactory getWeightTrackerSettings];
+	return [WeightTrackerFactory getWeightTrackerSettings];
 }
 
 - (void)viewDidLoad {

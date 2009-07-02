@@ -8,10 +8,14 @@
 
 #import "NewWeightController.h"
 #import "UIUtils.h"
+#import "WeightTrackerFactory.h"
+#import "WeightTrackerAppDelegate.h"
 
 
 @implementation NewWeightController
 @synthesize weightCell, dateCell;
+@dynamic weight, date;
+
 
 /*
  // The designated initializer.  Override if you create the controller programmatically and want to perform customization that is not appropriate for viewDidLoad.
@@ -23,12 +27,31 @@
 }
 */
 
-/*
+- (WeightTrackerAppDelegate *) weightTrackerAppDelegate{
+	return (WeightTrackerAppDelegate *) [[UIApplication sharedApplication] delegate];
+}
+
+- (void)save{
+	//saving the weight log
+	[self->weightLog save];
+	//getting back to the parent view
+	[[self weightTrackerAppDelegate].navController popViewControllerAnimated:YES];
+}
+
+
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad {
     [super viewDidLoad];
+	UIBarButtonItem *saveButton = [[UIBarButtonItem alloc]
+								   initWithTitle:@"Save" 
+								   style:UIBarButtonItemStyleDone
+								   target:self
+								   action:@selector(save)];
+	self.navigationItem.rightBarButtonItem = saveButton;	
+	[saveButton release];
+	self.title = @"New Weight Log";
 }
-*/
+
 
 /*
 // Override to allow orientations other than the default portrait orientation.
@@ -54,18 +77,56 @@
 - (void)dealloc {
 	[weightCell release];
 	[dateCell release];
+	[self->weightLog release];
     [super dealloc];
 }
 
-
-- (void)initWeightCell{
-	self.weightCell  = [UIUtils createCellStyleValue1:@"Weight"];	
+-(void) updateDateLabel{
+	NSString *weightString = [self->weightLog.weight floatValue] == 0.0 ? @"-" :
+							[NSString stringWithFormat:@"%@",self->weightLog.weight ];
+	self.weightCell.detailTextLabel.text = weightString;	
+}
+-(void) updateWeightLabel{
+	NSDateFormatter *formater =[[NSDateFormatter alloc] init];
+	[formater setDateFormat:@"yyyy-MM-dd"];
+	self.dateCell.detailTextLabel.text =  [formater stringFromDate:self->weightLog.date];
 }
 
-- (void)initDateCell{
-	self.dateCell  = [UIUtils createCellStyleValue1:@"Date"];	
+- (void) initWeightLog{
+	self->weightLog = [WeightTrackerFactory createWeightLog];
+	[self->weightLog retain];
+	[self updateDateLabel];
+	[self updateWeightLabel];
 }
 
+- (void)initWeightCell{	
+	self.weightCell  = [UIUtils createCellStyleValue1:@"Weight"];
+	//when this cell is initialized, then initialized cell labels
+	[self initWeightLog];	
+}
+
+- (void)initDateCell{	
+	self.dateCell  = [UIUtils createCellStyleValue1:@"Date"];		
+}
+
+#pragma mark WeightLogSupport delegate methods
+
+- (NSNumber *) weight{
+	return self->weightLog.weight;
+}
+- (void) setWeight:(NSNumber *)weight{
+	self->weightLog.weight = weight;
+	[self updateWeightLabel];
+}
+
+- (NSDate *) date{
+	return self->weightLog.date;
+}
+
+- (void) setDate:(NSDate *)date{
+	self->weightLog.date = date;
+	[self updateDateLabel];
+}
 
 #pragma mark -
 #pragma mark UITableViewDataSource methods

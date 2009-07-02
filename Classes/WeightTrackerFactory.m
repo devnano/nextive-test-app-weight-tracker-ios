@@ -1,10 +1,11 @@
 
 
-#import "WeightTrackerSettingsFactory.h"
+#import "WeightTrackerFactory.h"
 #import "WeightTrackerSettingsSPO.h"
+#import "WeightLogSPO.h"
 
 
-@implementation WeightTrackerSettingsFactory
+@implementation WeightTrackerFactory
 //shared instance
 static WeightTrackerSettingsSPO * settings;
 
@@ -23,6 +24,10 @@ static WeightTrackerSettingsSPO * settings;
 	}
 	
 	return settings;
+}
+
++ (NSObject<WeightLogSupport> *) createWeightLog{
+	return [[WeightLogSPO alloc] init];
 }
 
 @end

@@ -7,7 +7,7 @@
 //
 
 #import "WeightTrackerAppDelegate.h"
-#import "WeightTrackerSettingsFactory.h"
+#import "WeightTrackerFactory.h"
 #import "WeightTrackerSettingsController.h"
 
 @implementation WeightTrackerAppDelegate
@@ -18,7 +18,7 @@
 - (void)applicationDidFinishLaunching:(UIApplication *)application {    
 
     // Override point for customization after application launch
-	self.weightTrackerSettings = [WeightTrackerSettingsFactory getWeightTrackerSettings];
+	self.weightTrackerSettings = [WeightTrackerFactory getWeightTrackerSettings];
 	
 	[window addSubview: navController.view];
 	if(![self.weightTrackerSettings isAppAlreadySetup]){

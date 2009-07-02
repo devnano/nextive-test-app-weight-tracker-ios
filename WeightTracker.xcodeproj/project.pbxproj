@@ -13,6 +13,7 @@
 		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
 		288765FD0DF74451002DB57D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765FC0DF74451002DB57D /* CoreGraphics.framework */; };
 		28AD733F0D9D9553002E5188 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28AD733E0D9D9553002E5188 /* MainWindow.xib */; };
+		3E9342640FFD50E30087CF6B /* WeightLogSPO.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E9342630FFD50E30087CF6B /* WeightLogSPO.m */; };
 		3EA081530FF97F6400CD6B01 /* UserMailPickerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3EA081520FF97F6400CD6B01 /* UserMailPickerView.xib */; };
 		3EA250190FF97A020058955D /* UserMailPickerContoller.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EA250180FF97A020058955D /* UserMailPickerContoller.m */; };
 		3EA387CE0FFA3BD700402B75 /* DefaultRecipientMailOptionsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EA387CD0FFA3BD700402B75 /* DefaultRecipientMailOptionsController.m */; };
@@ -24,7 +25,7 @@
 		3EA651020FF80AD000FC45D0 /* WeightTrackerSettingsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EA651000FF80AD000FC45D0 /* WeightTrackerSettingsController.m */; };
 		3EA651E50FF8122E00FC45D0 /* SystemSettingsAccess.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EA651DD0FF8122E00FC45D0 /* SystemSettingsAccess.m */; };
 		3EA651E60FF8122E00FC45D0 /* WeightTrackerSettings.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EA651DF0FF8122E00FC45D0 /* WeightTrackerSettings.m */; };
-		3EA651E70FF8122E00FC45D0 /* WeightTrackerSettingsFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EA651E10FF8122E00FC45D0 /* WeightTrackerSettingsFactory.m */; };
+		3EA651E70FF8122E00FC45D0 /* WeightTrackerFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EA651E10FF8122E00FC45D0 /* WeightTrackerFactory.m */; };
 		3EA651E80FF8122E00FC45D0 /* WeightTrackerSettingsSPO.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EA651E30FF8122E00FC45D0 /* WeightTrackerSettingsSPO.m */; };
 		3EA652280FF8128800FC45D0 /* NSData-SQLitePersistence.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EA652090FF8128800FC45D0 /* NSData-SQLitePersistence.m */; };
 		3EA652290FF8128800FC45D0 /* NSDate-SQLitePersistence.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EA6520B0FF8128800FC45D0 /* NSDate-SQLitePersistence.m */; };
@@ -57,6 +58,9 @@
 		28AD733E0D9D9553002E5188 /* MainWindow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainWindow.xib; sourceTree = "<group>"; };
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		32CA4F630368D1EE00C91783 /* WeightTracker_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeightTracker_Prefix.pch; sourceTree = "<group>"; };
+		3E9342620FFD50E30087CF6B /* WeightLogSPO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeightLogSPO.h; sourceTree = "<group>"; };
+		3E9342630FFD50E30087CF6B /* WeightLogSPO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeightLogSPO.m; sourceTree = "<group>"; };
+		3E9342670FFD51960087CF6B /* WeightLogSupport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeightLogSupport.h; sourceTree = "<group>"; };
 		3EA081520FF97F6400CD6B01 /* UserMailPickerView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserMailPickerView.xib; sourceTree = "<group>"; };
 		3EA250170FF97A020058955D /* UserMailPickerContoller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserMailPickerContoller.h; sourceTree = "<group>"; };
 		3EA250180FF97A020058955D /* UserMailPickerContoller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserMailPickerContoller.m; sourceTree = "<group>"; };
@@ -75,8 +79,8 @@
 		3EA651DD0FF8122E00FC45D0 /* SystemSettingsAccess.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SystemSettingsAccess.m; sourceTree = "<group>"; };
 		3EA651DE0FF8122E00FC45D0 /* WeightTrackerSettings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeightTrackerSettings.h; sourceTree = "<group>"; };
 		3EA651DF0FF8122E00FC45D0 /* WeightTrackerSettings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeightTrackerSettings.m; sourceTree = "<group>"; };
-		3EA651E00FF8122E00FC45D0 /* WeightTrackerSettingsFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeightTrackerSettingsFactory.h; sourceTree = "<group>"; };
-		3EA651E10FF8122E00FC45D0 /* WeightTrackerSettingsFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeightTrackerSettingsFactory.m; sourceTree = "<group>"; };
+		3EA651E00FF8122E00FC45D0 /* WeightTrackerFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeightTrackerFactory.h; sourceTree = "<group>"; };
+		3EA651E10FF8122E00FC45D0 /* WeightTrackerFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeightTrackerFactory.m; sourceTree = "<group>"; };
 		3EA651E20FF8122E00FC45D0 /* WeightTrackerSettingsSPO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeightTrackerSettingsSPO.h; sourceTree = "<group>"; };
 		3EA651E30FF8122E00FC45D0 /* WeightTrackerSettingsSPO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeightTrackerSettingsSPO.m; sourceTree = "<group>"; };
 		3EA651E40FF8122E00FC45D0 /* WeightTrackerSettingsSupport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeightTrackerSettingsSupport.h; sourceTree = "<group>"; };
@@ -258,11 +262,14 @@
 				3EA651DD0FF8122E00FC45D0 /* SystemSettingsAccess.m */,
 				3EA651DE0FF8122E00FC45D0 /* WeightTrackerSettings.h */,
 				3EA651DF0FF8122E00FC45D0 /* WeightTrackerSettings.m */,
-				3EA651E00FF8122E00FC45D0 /* WeightTrackerSettingsFactory.h */,
-				3EA651E10FF8122E00FC45D0 /* WeightTrackerSettingsFactory.m */,
+				3EA651E00FF8122E00FC45D0 /* WeightTrackerFactory.h */,
+				3EA651E10FF8122E00FC45D0 /* WeightTrackerFactory.m */,
 				3EA651E20FF8122E00FC45D0 /* WeightTrackerSettingsSPO.h */,
 				3EA651E30FF8122E00FC45D0 /* WeightTrackerSettingsSPO.m */,
 				3EA651E40FF8122E00FC45D0 /* WeightTrackerSettingsSupport.h */,
+				3E9342620FFD50E30087CF6B /* WeightLogSPO.h */,
+				3E9342630FFD50E30087CF6B /* WeightLogSPO.m */,
+				3E9342670FFD51960087CF6B /* WeightLogSupport.h */,
 			);
 			name = data;
 			sourceTree = "<group>";
@@ -362,7 +369,7 @@
 				3EA651020FF80AD000FC45D0 /* WeightTrackerSettingsController.m in Sources */,
 				3EA651E50FF8122E00FC45D0 /* SystemSettingsAccess.m in Sources */,
 				3EA651E60FF8122E00FC45D0 /* WeightTrackerSettings.m in Sources */,
-				3EA651E70FF8122E00FC45D0 /* WeightTrackerSettingsFactory.m in Sources */,
+				3EA651E70FF8122E00FC45D0 /* WeightTrackerFactory.m in Sources */,
 				3EA651E80FF8122E00FC45D0 /* WeightTrackerSettingsSPO.m in Sources */,
 				3EA652280FF8128800FC45D0 /* NSData-SQLitePersistence.m in Sources */,
 				3EA652290FF8128800FC45D0 /* NSDate-SQLitePersistence.m in Sources */,
@@ -384,6 +391,7 @@
 				3EA250190FF97A020058955D /* UserMailPickerContoller.m in Sources */,
 				3EA387CE0FFA3BD700402B75 /* DefaultRecipientMailOptionsController.m in Sources */,
 				3EA7B6670FFCDA5300D68E75 /* NewWeightController.m in Sources */,
+				3E9342640FFD50E30087CF6B /* WeightLogSPO.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
