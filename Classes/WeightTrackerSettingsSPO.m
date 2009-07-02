@@ -21,13 +21,7 @@
 {
 	return self.username != nil;
 }
-- (void) setupAppWithUserInfo:(id<WeightTrackerSettingsSupport>) userInfo{
-	//relying in dynamic binding for data retriving
-	//through message send to userInfo id reference
-	//Note that a protocol could be adopted if third parties
-	//could make use of this as an API, we are "trusing"
-	//in our design and know for sure that the methods will be defined
-	//at runtime
+- (void) setupAppWithUserInfo:(id<WeightTrackerSettingsSupport>) userInfo{	
 	self.username = [userInfo username];
 	self.userMailAddress = [userInfo userMailAddress];
 	self.recipientMailAddress = [userInfo recipientMailAddress];
