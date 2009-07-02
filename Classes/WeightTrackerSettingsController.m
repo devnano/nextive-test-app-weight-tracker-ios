@@ -211,10 +211,30 @@
 //****************unit of measure
 
 - (void) initWeightUnitOfMeasureCell{
-	SegmentedFieldCell *cell = (SegmentedFieldCell *) [UIUtils loadUIViewFromNib:@"SegmentedFieldCell" withOwner:self];
-	cell.label.text = @"Units";
-	[cell.segmentedControl setTitle:@"Pounds" forSegmentAtIndex:0];
-	[cell.segmentedControl setTitle:@"Kilograms" forSegmentAtIndex:1];
+	UITableViewCell *cell= [[[UITableViewCell alloc] initWithFrame:CGRectZero] autorelease];
+	cell.selectionStyle = UITableViewCellSelectionStyleNone;
+	
+	
+	
+	// Main text label
+	cell.textLabel.text = @"Units";
+	// Initializing accessoryView for username (A Text Field)	
+	CGRect textRect = CGRectMake(0, 0, 180, 20);
+	NSArray *items = [[NSArray alloc] initWithObjects:@"Pounds", @"Kilograms", nil];
+	UISegmentedControl *units = [[UISegmentedControl alloc] initWithItems:items];
+	
+	//UISegmentedControl *units = [[UISegmentedControl alloc] initWithFrame:textRect];
+	units.frame = textRect;
+	
+	units.segmentedControlStyle = UISegmentedControlStyleBar;
+	
+	//setting the text fiedl as de the accessory view for this cell
+	cell.accessoryView=units;
+	
+	
+	cell.textLabel.text = @"Units";
+	[units release];
+	
 	self.weightUnitOfMeasureCell = cell; 
 	
 }
@@ -223,11 +243,15 @@
 	if(self.weightUnitOfMeasureCell == nil){
 		[self initWeightUnitOfMeasureCell];
 	}
-	self.weightUnitOfMeasureCell.segmentedControl.selectedSegmentIndex = units;
+	//note: taking advantage of dynamic binding, and sending
+	//a message to the well known segmentedcontrol view
+	[self.weightUnitOfMeasureCell.accessoryView setSelectedSegmentIndex : units];
 }
 
 - (WeightUnitsOfMeasure) weightUnitOfMeasure{
-	return self.weightUnitOfMeasureCell.segmentedControl.selectedSegmentIndex;
+	//note: taking advantage of dynamic binding, and sending
+	//a message to the well known segmentedcontrol view
+	return (WeightUnitsOfMeasure) [self.weightUnitOfMeasureCell.accessoryView selectedSegmentIndex];
 }
 
 
