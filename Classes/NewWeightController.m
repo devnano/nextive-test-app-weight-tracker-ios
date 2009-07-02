@@ -90,6 +90,7 @@
 	NSDateFormatter *formater =[[NSDateFormatter alloc] init];
 	[formater setDateFormat:@"yyyy-MM-dd"];
 	self.dateCell.detailTextLabel.text =  [formater stringFromDate:self->weightLog.date];
+	[formater release];
 }
 
 - (void) initWeightLog{
