@@ -9,8 +9,17 @@
 #import <UIKit/UIKit.h>
 
 
-@interface WeightTrackerController : UIViewController {
+@interface WeightTrackerController : UITableViewController<UITableViewDelegate, UITableViewDataSource> {
+@private
+	//id<WeightTrackerSettingsSupport> weightTrackerSettings;
+	UITableViewCell *newWeightCell;
+	UITableViewCell *weightHistoryCell;
+	UITableViewCell *shareWeightInfoCell;
 
 }
+
+@property(nonatomic, retain) UITableViewCell *newWeightCell;
+@property(nonatomic, retain) UITableViewCell *weightHistoryCell;
+@property(nonatomic, retain) UITableViewCell *shareWeightInfoCell;
 
 @end

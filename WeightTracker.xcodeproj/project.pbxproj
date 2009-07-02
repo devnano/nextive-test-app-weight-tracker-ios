@@ -21,9 +21,7 @@
 		3EA387E70FFA3D6B00402B75 /* AddressBookUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EA387E60FFA3D6B00402B75 /* AddressBookUI.framework */; };
 		3EA4870D0FF9636900ED5594 /* UIUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EA4870C0FF9636900ED5594 /* UIUtils.m */; };
 		3EA650730FF7F91500FC45D0 /* WeightTrackerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EA650710FF7F91500FC45D0 /* WeightTrackerController.m */; };
-		3EA650740FF7F91500FC45D0 /* WeightTrackerController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3EA650720FF7F91500FC45D0 /* WeightTrackerController.xib */; };
 		3EA651020FF80AD000FC45D0 /* WeightTrackerSettingsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EA651000FF80AD000FC45D0 /* WeightTrackerSettingsController.m */; };
-		3EA651030FF80AD000FC45D0 /* WeightTrackerSettingsController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3EA651010FF80AD000FC45D0 /* WeightTrackerSettingsController.xib */; };
 		3EA651E50FF8122E00FC45D0 /* SystemSettingsAccess.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EA651DD0FF8122E00FC45D0 /* SystemSettingsAccess.m */; };
 		3EA651E60FF8122E00FC45D0 /* WeightTrackerSettings.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EA651DF0FF8122E00FC45D0 /* WeightTrackerSettings.m */; };
 		3EA651E70FF8122E00FC45D0 /* WeightTrackerSettingsFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EA651E10FF8122E00FC45D0 /* WeightTrackerSettingsFactory.m */; };
@@ -69,10 +67,8 @@
 		3EA487110FF9646000ED5594 /* UIUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIUtils.h; sourceTree = "<group>"; };
 		3EA650700FF7F91500FC45D0 /* WeightTrackerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeightTrackerController.h; sourceTree = "<group>"; };
 		3EA650710FF7F91500FC45D0 /* WeightTrackerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeightTrackerController.m; sourceTree = "<group>"; };
-		3EA650720FF7F91500FC45D0 /* WeightTrackerController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = WeightTrackerController.xib; path = Classes/WeightTrackerController.xib; sourceTree = "<group>"; };
 		3EA650FF0FF80AD000FC45D0 /* WeightTrackerSettingsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeightTrackerSettingsController.h; sourceTree = "<group>"; };
 		3EA651000FF80AD000FC45D0 /* WeightTrackerSettingsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeightTrackerSettingsController.m; sourceTree = "<group>"; };
-		3EA651010FF80AD000FC45D0 /* WeightTrackerSettingsController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = WeightTrackerSettingsController.xib; path = Classes/WeightTrackerSettingsController.xib; sourceTree = "<group>"; };
 		3EA651DC0FF8122E00FC45D0 /* SystemSettingsAccess.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SystemSettingsAccess.h; sourceTree = "<group>"; };
 		3EA651DD0FF8122E00FC45D0 /* SystemSettingsAccess.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SystemSettingsAccess.m; sourceTree = "<group>"; };
 		3EA651DE0FF8122E00FC45D0 /* WeightTrackerSettings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeightTrackerSettings.h; sourceTree = "<group>"; };
@@ -184,8 +180,6 @@
 			children = (
 				3EA387CF0FFA3BFA00402B75 /* DefaultRecipientMailOptions.xib */,
 				3EA081520FF97F6400CD6B01 /* UserMailPickerView.xib */,
-				3EA651010FF80AD000FC45D0 /* WeightTrackerSettingsController.xib */,
-				3EA650720FF7F91500FC45D0 /* WeightTrackerController.xib */,
 				28AD733E0D9D9553002E5188 /* MainWindow.xib */,
 				8D1107310486CEB800E47090 /* WeightTracker-Info.plist */,
 			);
@@ -325,8 +319,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				28AD733F0D9D9553002E5188 /* MainWindow.xib in Resources */,
-				3EA650740FF7F91500FC45D0 /* WeightTrackerController.xib in Resources */,
-				3EA651030FF80AD000FC45D0 /* WeightTrackerSettingsController.xib in Resources */,
 				3EA081530FF97F6400CD6B01 /* UserMailPickerView.xib in Resources */,
 				3EA387D00FFA3BFA00402B75 /* DefaultRecipientMailOptions.xib in Resources */,
 			);
