@@ -27,7 +27,7 @@ static WeightTrackerSettingsSPO * settings;
 }
 
 + (NSObject<WeightLogSupport> *) createWeightLog{
-	return [[WeightLogSPO alloc] init];
+	return [[WeightLogSPO alloc] initDefaultValues];
 }
 
 @end

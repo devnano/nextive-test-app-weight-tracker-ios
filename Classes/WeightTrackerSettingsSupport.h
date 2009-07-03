@@ -8,14 +8,10 @@
  */
 
 #import "SystemSettingsAccess.h"
+#import "ScaleSupport.h"
 
 
-typedef enum {
-	NotDefined = -1,
-    Pounds = 0,
-	Kilograms = 1,
-	      
-} WeightUnitsOfMeasure;
+
 
 @protocol WeightTrackerSettingsSupport
 @required

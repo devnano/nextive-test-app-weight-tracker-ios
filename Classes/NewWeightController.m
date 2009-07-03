@@ -10,10 +10,13 @@
 #import "UIUtils.h"
 #import "WeightTrackerFactory.h"
 #import "WeightTrackerAppDelegate.h"
+//note that this should be located in a factory, in order to let the scale be changed more easily
+#import "PickerScaleController.h"
+
 
 
 @implementation NewWeightController
-@synthesize weightCell, dateCell, datePickerController;
+@synthesize weightCell, dateCell, datePickerController, scale;
 @dynamic weight, date;
 
 
@@ -27,8 +30,14 @@
 }
 */
 
+
+
 - (WeightTrackerAppDelegate *) weightTrackerAppDelegate{
 	return (WeightTrackerAppDelegate *) [[UIApplication sharedApplication] delegate];
+}
+
+-(NSObject<WeightTrackerSettingsSupport> *) settings{
+	return [[self weightTrackerAppDelegate] weightTrackerSettings];
 }
 
 - (void)save{
@@ -85,11 +94,20 @@
 	NSDateFormatter *formater =[[NSDateFormatter alloc] init];
 	[formater setDateFormat:@"yyyy-MM-dd"];
 	self.dateCell.detailTextLabel.text =  [formater stringFromDate:self->weightLog.date];
+	self.datePickerController.datePickerView.date = self->weightLog.date;
 	[formater release];		
 }
 -(void) updateWeightLabel{	
-	NSString *weightString = [self->weightLog.weight floatValue] == 0.0 ? @"-" :
-	[NSString stringWithFormat:@"%@",self->weightLog.weight ];
+	NSString *weightString;
+	float weight = [[self weightInUnits:[self settings].weightUnitOfMeasure]floatValue];
+	if(weight == 0.0){
+		weightString = @"-" ;
+	}else{
+		NSString *format = [NSString stringWithFormat:@"%%.%df", kAppDecimalPlaces];
+		weightString = [NSString stringWithFormat:format, weight];
+	}
+	
+	
 	self.weightCell.detailTextLabel.text = weightString;	
 }
 
@@ -116,8 +134,11 @@
 	return self->weightLog.weight;
 }
 - (void) setWeight:(NSNumber *)weight{
-	self->weightLog.weight = weight;
+	[self->weightLog setWeight:weight withUnits:[self settings].weightUnitOfMeasure];
 	[self updateWeightLabel];
+}
+-(NSNumber *) weightInUnits:(WeightUnitsOfMeasure) units{
+	return [self->weightLog weightInUnits:units];
 }
 
 - (NSDate *) date{
@@ -182,6 +203,23 @@
 	[[self weightTrackerAppDelegate].navController pushViewController:self.datePickerController animated:YES];
 	
 }
+//TODO: MOVE THIS FACTORY METHODS TO THE APP FACTORY
++(NSObject<ScaleSupport> *) createScaleWithUnitsOfMeasure:(WeightUnitsOfMeasure)units withDecimalPlaces:(DecimalPlaces)places withValue:(NSNumber *)theValue{
+	return [[PickerScaleController alloc] initWithUnitsOfMeasure:units withDecimalPlaces:places withValue:theValue];
+}
+
+
+-(void) showScale{
+	if(self.scale == nil){
+		NSObject<WeightTrackerSettingsSupport> *settings = [self weightTrackerAppDelegate].weightTrackerSettings;
+		//HARDCODING DECIMAL PLACES, IS NOT CLEAR IF IS A REQUIREMENT BUT WILL BE EASILY PLUGGED IF NEEDED
+		self.scale = [NewWeightController createScaleWithUnitsOfMeasure:settings.weightUnitOfMeasure withDecimalPlaces:kAppDecimalPlaces withValue:[self->weightLog weightInUnits:[self settings].weightUnitOfMeasure]];
+		self.scale.owner = self;
+	}
+	//Trusting in scale UIViewController hierachy belonging....
+	[[self weightTrackerAppDelegate].navController pushViewController:self.scale animated:YES];
+}
+
 
 
 #pragma mark -
@@ -191,7 +229,8 @@
 
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-	switch ([indexPath row]){
+	NSInteger row = [indexPath row];
+	switch (row){
 		case 0:
 			//date picker
 			[self showDatePickerController];
@@ -199,7 +238,7 @@
 		case 1:
 			//weight picker
 			//the picker view will appear to select one of the available mail addresses
-			//[self showMailPickerView];
+			[self showScale];
 			break;
 	
 	}

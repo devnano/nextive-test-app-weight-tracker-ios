@@ -7,17 +7,29 @@
  *
  */
 
+#import "WeightUtils.h"
+
+
+
+
 
 @protocol WeightLogSupport
 	@required
+		//gives the weight in kilograms
 		@property (nonatomic, retain) NSNumber *weight;
 		@property (nonatomic, retain) NSDate *date;
 	@optional
+		
 		+(NSArray *) getAllLogs;
 		+(NSObject<WeightLogSupport> *) getLastLog;
 		-(void) save;
 		//gives default values for weight and date
-		-(id) init;
+		-(id) initDefaultValues;
+		-(NSNumber *) weightInUnits:(WeightUnitsOfMeasure) units;
+		-(void) setWeight:(NSNumber *) weight withUnits:(WeightUnitsOfMeasure) units;
+
+		
+
 
 
 @end
