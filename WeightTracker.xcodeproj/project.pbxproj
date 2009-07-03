@@ -304,15 +304,13 @@
 		3EA7B6630FFCD9F800D68E75 /* WeightTracker */ = {
 			isa = PBXGroup;
 			children = (
+				3EAEB8200FFE68EB004DF352 /* Scale */,
 				3EA650700FF7F91500FC45D0 /* WeightTrackerController.h */,
 				3EA650710FF7F91500FC45D0 /* WeightTrackerController.m */,
 				3EA7B6640FFCDA5300D68E75 /* NewWeightController.h */,
 				3EA7B6650FFCDA5300D68E75 /* NewWeightController.m */,
 				3E9344630FFD75A80087CF6B /* WeightLogDatePickerController.h */,
 				3E9344640FFD75A80087CF6B /* WeightLogDatePickerController.m */,
-				3E9344AE0FFD80990087CF6B /* ScaleSupport.h */,
-				3E9344BA0FFD8BB60087CF6B /* PickerScaleController.h */,
-				3E9344BB0FFD8BB60087CF6B /* PickerScaleController.m */,
 				3EAEB7760FFE47A3004DF352 /* WeightUtils.h */,
 			);
 			name = WeightTracker;
@@ -325,6 +323,16 @@
 				3EA487110FF9646000ED5594 /* UIUtils.h */,
 			);
 			name = UI;
+			sourceTree = "<group>";
+		};
+		3EAEB8200FFE68EB004DF352 /* Scale */ = {
+			isa = PBXGroup;
+			children = (
+				3E9344AE0FFD80990087CF6B /* ScaleSupport.h */,
+				3E9344BA0FFD8BB60087CF6B /* PickerScaleController.h */,
+				3E9344BB0FFD8BB60087CF6B /* PickerScaleController.m */,
+			);
+			name = Scale;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

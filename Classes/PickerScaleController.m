@@ -75,6 +75,7 @@
 	NSString *decimals = [components objectAtIndex:1];
 	
 	for(int i =0; i<self.decimalPlaces; i++ ){
+		//parssing each unichar of the remaining component
 		unichar *decimal = malloc(sizeof(unichar));
 		decimal[0] = [decimals characterAtIndex:i];
 		
