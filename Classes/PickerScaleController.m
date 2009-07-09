@@ -35,7 +35,9 @@
 	self.navigationItem.rightBarButtonItem = saveButton;	
 	[saveButton release];
 	self.title = @"Scale";
+	
 	[super viewDidLoad];
+	
 }
 
 
@@ -51,12 +53,23 @@
 */
 
 -(id) initWithUnitsOfMeasure:(WeightUnitsOfMeasure)units withDecimalPlaces:(DecimalPlaces)places withValue:(NSNumber *)theValue{
-	self = [super initWithNibName:@"PickerScaleController" bundle:nil];
+	self = [super initWithNibName:@"PickerScaleController" bundle:nil];	
+	
 	self.unitsOfMeasure = units;
 	self.decimalPlaces = places;
+	
 	//posposing the value setting til the viewDidAppear callback
 	//self.value = theValue;
 	return self;
+	
+}
+-(void) viewWillAppear:(BOOL)animated{
+//	for(int i=NoDecimalPlaces; i<=self.decimalPlaces; i++){
+		//sets the main units being entered by the user in the first componenet of the picker (i.e. kg, lb)
+		[self.valuePicker addLabel:stringForDecimalPlaceAndUnits(self.unitsOfMeasure, NoDecimalPlaces) forComponent:0 forLongestString:nil];
+	//}
+
+	
 	
 }
 -(void)viewDidAppear:(BOOL)animated{
@@ -157,6 +170,8 @@
 - (NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component{
 	return [NSString stringWithFormat:@"%d", row];
 }
+
+- (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component{}
 
 
 @end

@@ -62,6 +62,10 @@
 }
 
 
+
+
+
+
 /*
 // Override to allow orientations other than the default portrait orientation.
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
@@ -91,6 +95,7 @@
 }
 
 -(void) updateDateLabel{
+	//pre: self.dateCell has already been initialized
 	NSDateFormatter *formater =[[NSDateFormatter alloc] init];
 	[formater setDateFormat:@"yyyy-MM-dd"];
 	self.dateCell.detailTextLabel.text =  [formater stringFromDate:self->weightLog.date];
@@ -98,30 +103,39 @@
 	[formater release];		
 }
 -(void) updateWeightLabel{	
-	NSString *weightString;
+	/*NSString *weightString;
 	float weight = [[self weightInUnits:[self settings].weightUnitOfMeasure]floatValue];
 	if(weight == 0.0){
 		weightString = @"-" ;
 	}else{
 		NSString *format = [NSString stringWithFormat:@"%%.%df", kAppDecimalPlaces];
 		weightString = [NSString stringWithFormat:format, weight];
-	}
+	}*/
+	//pre: self.weightCell has already been initialized
 	
-	
-	self.weightCell.detailTextLabel.text = weightString;	
+	self.weightCell.detailTextLabel.text = [self weightStringInUnits: [self settings].weightUnitOfMeasure  withDecimalPlaces :kAppDecimalPlaces];	
 }
 
 - (void) initWeightLog{
+	if(self->weightLog != nil){
+		[self->weightLog release];
+	}
 	self->weightLog = [WeightTrackerFactory createWeightLog];
 	[self->weightLog retain];
 	[self updateDateLabel];
 	[self updateWeightLabel];
 }
 
+- (void)updateWithLastLog {    
+	if(self.dateCell && self.weightCell){
+		[self initWeightLog];
+	}
+}
+
 - (void)initWeightCell{	
 	self.weightCell  = [UIUtils createCellStyleValue1:@"Weight"];
 	//when this cell is initialized, then initialized cell labels
-	[self initWeightLog];	
+	[self initWeightLog];
 }
 
 - (void)initDateCell{	
@@ -140,6 +154,12 @@
 -(NSNumber *) weightInUnits:(WeightUnitsOfMeasure) units{
 	return [self->weightLog weightInUnits:units];
 }
+
+-(NSString *) weightStringInUnits:(WeightUnitsOfMeasure) units withDecimalPlaces:(DecimalPlaces) decimalPlaces{
+	return [self->weightLog weightStringInUnits:units withDecimalPlaces: decimalPlaces];
+	
+}
+
 
 - (NSDate *) date{
 	return self->weightLog.date;

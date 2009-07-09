@@ -26,6 +26,7 @@
 @property(nonatomic, retain) UITableViewCell *dateCell;
 @property(nonatomic, retain) WeightLogDatePickerController *datePickerController;
 @property(nonatomic, retain) NSObject<ScaleSupport> *scale;
+- (void)updateWithLastLog;
 
 
 @end

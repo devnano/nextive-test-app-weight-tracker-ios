@@ -17,9 +17,18 @@ DECLARE_PROPERTIES(
 				   
 				   )
 @synthesize weight, date;
+@dynamic weightLogId;
+
+-(void) setWeightLogId:(NSInteger) theId{
+	//as spo autogenerates pks, do nothing here in this implementation	
+}
+
+-(NSInteger) weightLogId{
+	return self.pk;
+}
 
 
-+(NSArray *) getAllLogs{
++(NSArray *) allLogs{
 	return [WeightLogSPO allObjects];
 }
 +(NSObject<WeightLogSupport> *) getLastLog{
@@ -41,6 +50,10 @@ DECLARE_PROPERTIES(
 }
 -(void) save{
 	[super save];
+}
+
++(void) removeWeightLogWithId:(NSInteger) weightLogId{
+	[WeightLogSPO deleteObject:weightLogId cascade:NO];
 }
 
 - (void)dealloc {
@@ -71,6 +84,17 @@ DECLARE_PROPERTIES(
 			self.weight = pundsToKilograms(value);
 			break;
 	}
+}
+
+-(NSString *) weightStringInUnits:(WeightUnitsOfMeasure) units withDecimalPlaces:(DecimalPlaces) decimalPlaces{
+	NSString *weightString;
+	float localizedWeight = [[self weightInUnits:units]floatValue];
+	
+	NSString *format = [NSString stringWithFormat:@"%%.%df", decimalPlaces];
+	weightString = [NSString stringWithFormat:format, localizedWeight];
+	
+	return weightString;
+	
 }
 
 

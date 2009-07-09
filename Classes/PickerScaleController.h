@@ -9,10 +9,11 @@
 #import <UIKit/UIKit.h>
 #import "ScaleSupport.h"
 #import "WeightLogSupport.h"
+#import "LabeledPickerView.h"
 
 
 @interface PickerScaleController : UIViewController<ScaleSupport, UIPickerViewDelegate, UIPickerViewDataSource> {
-	UIPickerView *valuePicker;
+	LabeledPickerView *valuePicker;
 	DecimalPlaces decimalPlaces;
 	WeightUnitsOfMeasure unitsOfMeasure;
 	NSObject<WeightLogSupport> *owner;
@@ -20,7 +21,7 @@
 }
 
 
-@property (nonatomic, retain) IBOutlet UIPickerView *valuePicker;
+@property (nonatomic, retain) IBOutlet LabeledPickerView *valuePicker;
 
 
 

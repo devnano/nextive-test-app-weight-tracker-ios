@@ -19,13 +19,15 @@
 		@property (nonatomic, retain) NSNumber *weight;
 		@property (nonatomic, retain) NSDate *date;
 	@optional
-		
-		+(NSArray *) getAllLogs;
+		@property (nonatomic) NSInteger weightLogId;
+		+(NSArray *) allLogs;
 		+(NSObject<WeightLogSupport> *) getLastLog;
+		+(void) removeWeightLogWithId:(NSInteger) weightLogId;
 		-(void) save;
 		//gives default values for weight and date
 		-(id) initDefaultValues;
 		-(NSNumber *) weightInUnits:(WeightUnitsOfMeasure) units;
+		-(NSString *) weightStringInUnits:(WeightUnitsOfMeasure) units  withDecimalPlaces:(DecimalPlaces) decimalPlaces;
 		-(void) setWeight:(NSNumber *) weight withUnits:(WeightUnitsOfMeasure) units;
 
 		

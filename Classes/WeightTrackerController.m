@@ -12,7 +12,7 @@
 
 
 @implementation WeightTrackerController
-@synthesize newWeightCell, weightHistoryCell, shareWeightInfoCell, newWeightController;
+@synthesize newWeightCell, weightHistoryCell, shareWeightInfoCell, newWeightController, weightHistoryController;
 
 
 - (WeightTrackerAppDelegate *) weightTrackerAppDelegate{
@@ -46,6 +46,7 @@
 	[self.weightHistoryCell release];
 	[self.newWeightController release];
 	[self.shareWeightInfoCell release];
+	[self.weightHistoryController release];
 }
 
 - (void)initNewWeightCell{
@@ -113,8 +114,16 @@
 	if(self.newWeightController == nil){
 		self.newWeightController=[[NewWeightController alloc] initWithNibName:@"NewWeightController" bundle:nil];
 	}
+	[self.newWeightController updateWithLastLog];
 	[[self weightTrackerAppDelegate].navController pushViewController:self.newWeightController animated:YES];
 	
+}
+
+-(void)showWeightHistoryController{
+	if(self.weightHistoryController == nil){
+		self.weightHistoryController = [[WeightHistoryController alloc] init];
+	}
+	[[self weightTrackerAppDelegate].navController pushViewController:self.weightHistoryController animated:YES];
 }
 
 
@@ -129,9 +138,8 @@
 		case 0:
 			[self showNewWeightController];
 			break;
-		case 1:
-			//the picker view will appear to select one of the available mail addresses
-			//[self showMailPickerView];
+		case 1:			
+			[self showWeightHistoryController];
 			break;
 		case 2:
 			//the multiple alternatives to select de recipient mail addres will be shown

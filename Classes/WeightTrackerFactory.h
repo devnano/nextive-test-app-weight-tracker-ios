@@ -10,5 +10,6 @@
 
 + ( NSObject<WeightTrackerSettingsSupport> *) getWeightTrackerSettings;
 + (NSObject<WeightLogSupport> *) createWeightLog;
++ (Class<WeightLogSupport>) weightLogClass;
 
 @end

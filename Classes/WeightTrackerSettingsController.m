@@ -40,10 +40,19 @@
 	self.title = @"Settings";
     
 }
+- (BOOL) buttonSaveShouldBeAnabled{
+		return self.username != nil && self.username.length != 0
+				&& self.userMailAddress != nil && self.userMailAddress.length != 0
+				&& self.recipientMailAddress != nil && self.recipientMailAddress.length != 0
+				&& self.weightUnitOfMeasure != NotDefined ;
+}
+- (void) updateSaveButtonStatus{
+	self.navigationItem.rightBarButtonItem.enabled = [self buttonSaveShouldBeAnabled];
+}
 
 - (void) viewWillAppear :(BOOL) animated{
 	[super viewWillAppear:animated];
-	
+	[self updateSaveButtonStatus];	
 	
 //	[self.weightTrackerSettings loadAppUserInfo:self];	
 }
@@ -116,6 +125,7 @@
 	text.autocapitalizationType = UITextAutocapitalizationTypeWords;
 	//registering the notification for the resign first responder to the text field
 	[text addTarget:self action:@selector(hideUsernameKeyboard) forControlEvents:UIControlEventEditingDidEndOnExit];
+	[text addTarget:self action:@selector(updateSaveButtonStatus) forControlEvents:UIControlEventEditingChanged];
 	
 	//setting the text fiedl as de the accessory view for this cell
 	usernameCell.accessoryView=text;
@@ -227,6 +237,7 @@
 	units.frame = textRect;
 	
 	units.segmentedControlStyle = UISegmentedControlStyleBar;
+	[units addTarget:self action:@selector(updateSaveButtonStatus) forControlEvents:UIControlEventValueChanged];
 	
 	//setting the text fiedl as de the accessory view for this cell
 	cell.accessoryView=units;
@@ -293,11 +304,11 @@
 }
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
 {	
-	return @"Settings";
+	return @"Weight Tracker Settings";
 }
 
 - (NSString *)tableView:(UITableView *)tableView titleForFooterInSection:(NSInteger)section{
-	return @"Settings can be changed at anytime.";
+	return @"All fields must be set. Settings can be changed at anytime.";
 }
 
 
