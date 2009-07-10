@@ -11,6 +11,7 @@
 #import "WeightHistoryController.h"
 #import <MessageUI/MessageUI.h>
 #import <MessageUI/MFMailComposeViewController.h>
+#import "WeightTrackerViewController.h"
 
 
 @interface WeightTrackerController : UITableViewController<UITableViewDelegate, UITableViewDataSource, MFMailComposeViewControllerDelegate> {

@@ -10,6 +10,7 @@
 #import "WeightLogSupport.h"
 #import "WeightLogDatePickerController.h"
 #import "ScaleSupport.h"
+#import "WeightTrackerViewController.h"
 
 
 @interface NewWeightController : UITableViewController<UITableViewDelegate, UITableViewDataSource,WeightLogSupport> {

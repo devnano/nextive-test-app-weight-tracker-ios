@@ -10,6 +10,7 @@
 #import "ScaleSupport.h"
 #import "WeightLogSupport.h"
 #import "LabeledPickerView.h"
+#import "WeightTrackerViewController.h"
 
 
 @interface PickerScaleController : UIViewController<ScaleSupport, UIPickerViewDelegate, UIPickerViewDataSource> {

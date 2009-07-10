@@ -7,31 +7,21 @@
 //
 
 #import "WeightTrackerSettingsController.h"
-#import "WeightTrackerAppDelegate.h"
 #import "WeightTrackerFactory.h"
 #import "UIUtils.h"
 
 @implementation WeightTrackerSettingsController
-@dynamic weightTrackerSettings, username, userMailAddress, recipientMailAddress,weightUnitOfMeasure;
+@dynamic username, userMailAddress, recipientMailAddress,weightUnitOfMeasure;
 @synthesize usernameCell, userMailAddressCell, userMailPickerController,
 			recipientMailAddressCell, defaultRecipientMailOptionsController, weightUnitOfMeasureCell;
 
 
-//usefull method to access the appdelegate 
-- (WeightTrackerAppDelegate *) weightTrackerAppDelegate{
-	return (WeightTrackerAppDelegate *) [[UIApplication sharedApplication] delegate];
-}
-
-- (id<WeightTrackerSettingsSupport>) weightTrackerSettings{	
-	//accessing shared instance of the app settings
-	return [WeightTrackerFactory getWeightTrackerSettings];
-}
 
 - (void)viewDidLoad {
 	[super viewDidLoad];
 	//initialize ui with current data
-	if([self.weightTrackerSettings isAppAlreadySetup]){
-		[self.weightTrackerSettings loadAppUserInfo:self];
+	if([self.settings isAppAlreadySetup]){
+		[self.settings loadAppUserInfo:self];
 	} else {
 		loadSystemSettingsDefaults(self);
 	}
@@ -54,7 +44,7 @@
 	[super viewWillAppear:animated];
 	[self updateSaveButtonStatus];	
 	
-//	[self.weightTrackerSettings loadAppUserInfo:self];	
+//	[self.settings loadAppUserInfo:self];	
 }
 - (void) viewWillDisappear :(BOOL) animated{
 	[super viewWillDisappear:animated];
@@ -269,7 +259,7 @@
 
 - (void) save
 {	
-	[self.weightTrackerSettings setupAppWithUserInfo:self];
+	[self.settings setupAppWithUserInfo:self];
 }
 
 #pragma mark -

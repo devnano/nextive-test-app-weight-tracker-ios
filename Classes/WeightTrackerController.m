@@ -8,21 +8,14 @@
 
 #import "WeightTrackerController.h"
 #import "UIUtils.h"
-#import "WeightTrackerAppDelegate.h"
+
+
 
 
 
 @implementation WeightTrackerController
 @synthesize newWeightCell, weightHistoryCell, shareWeightInfoCell, newWeightController, weightHistoryController;
 
-//TODO move both methods below to a category
-- (WeightTrackerAppDelegate *) weightTrackerAppDelegate{
-	return (WeightTrackerAppDelegate *) [[UIApplication sharedApplication] delegate];
-}
-
--(NSObject<WeightTrackerSettingsSupport> *) settings{
-	return [[self weightTrackerAppDelegate] weightTrackerSettings];
-}
 
 
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.

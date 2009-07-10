@@ -8,20 +8,10 @@
 
 #import "WeightHistoryController.h"
 #import "WeightLogSupport.h"
-#import "WeightTrackerAppDelegate.h"
-#import "WeightTrackerSettings.h"
 
 
 @implementation WeightHistoryController
 @synthesize weightHistory;
-
-- (WeightTrackerAppDelegate *) weightTrackerAppDelegate{
-	return (WeightTrackerAppDelegate *) [[UIApplication sharedApplication] delegate];
-}
-
--(NSObject<WeightTrackerSettingsSupport> *) settings{
-	return [[self weightTrackerAppDelegate] weightTrackerSettings];
-}
 
 -(id) init{	
 	self = [super initWithNibName:@"WeightHistoryController" bundle:nil];	

@@ -7,25 +7,10 @@
 //
 
 #import "WeightLogDatePickerController.h"
-#import "WeightTrackerAppDelegate.h"
-
 
 @implementation WeightLogDatePickerController
 @synthesize datePickerView, weightLog;
 
-/*
- // The designated initializer.  Override if you create the controller programmatically and want to perform customization that is not appropriate for viewDidLoad.
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
-    if (self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil]) {
-        // Custom initialization
-    }
-    return self;
-}
-*/
-
-- (WeightTrackerAppDelegate *) weightTrackerAppDelegate{
-	return (WeightTrackerAppDelegate *) [[UIApplication sharedApplication] delegate];
-}
 
 - (void) save{
 	self.weightLog.date = [self.datePickerView date];

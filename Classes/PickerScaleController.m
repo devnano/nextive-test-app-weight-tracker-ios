@@ -7,16 +7,12 @@
 //
 
 #import "PickerScaleController.h"
-#import "WeightTrackerAppDelegate.h"
+
 
 
 @implementation PickerScaleController
 @synthesize valuePicker, decimalPlaces, unitsOfMeasure, owner;
 @dynamic value;
-
-- (WeightTrackerAppDelegate *) weightTrackerAppDelegate{
-	return (WeightTrackerAppDelegate *) [[UIApplication sharedApplication] delegate];
-}
 
 - (void) save{
 	owner.weight =self.value;

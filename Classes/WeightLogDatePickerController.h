@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "WeightLogSupport.h"
+#import "WeightTrackerViewController.h"
 
 
 @interface WeightLogDatePickerController : UIViewController {

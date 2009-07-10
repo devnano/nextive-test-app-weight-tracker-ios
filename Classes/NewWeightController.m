@@ -9,9 +9,9 @@
 #import "NewWeightController.h"
 #import "UIUtils.h"
 #import "WeightTrackerFactory.h"
-#import "WeightTrackerAppDelegate.h"
 //note that this should be located in a factory, in order to let the scale be changed more easily
 #import "PickerScaleController.h"
+
 
 
 
@@ -19,26 +19,6 @@
 @synthesize weightCell, dateCell, datePickerController, scale;
 @dynamic weight, date;
 
-
-/*
- // The designated initializer.  Override if you create the controller programmatically and want to perform customization that is not appropriate for viewDidLoad.
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
-    if (self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil]) {
-        // Custom initialization
-    }
-    return self;
-}
-*/
-
-
-
-- (WeightTrackerAppDelegate *) weightTrackerAppDelegate{
-	return (WeightTrackerAppDelegate *) [[UIApplication sharedApplication] delegate];
-}
-
--(NSObject<WeightTrackerSettingsSupport> *) settings{
-	return [[self weightTrackerAppDelegate] weightTrackerSettings];
-}
 
 - (void)save{
 	//saving the weight log

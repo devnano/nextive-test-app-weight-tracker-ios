@@ -10,11 +10,11 @@
 #import "WeightTrackerSettings.h"
 #import "UserMailPickerContoller.h"
 #import "DefaultRecipientMailOptionsController.h"
+#import "WeightTrackerViewController.h"
 
 @interface WeightTrackerSettingsController : UITableViewController<UITableViewDelegate, UITableViewDataSource,
 														           WeightTrackerSettingsSupport, UITextFieldDelegate> {
 	@private
-	//id<WeightTrackerSettingsSupport> weightTrackerSettings;
 	UITableViewCell *usernameCell;
 	UITableViewCell *userMailAddressCell;
 	UITableViewCell *recipientMailAddressCell;
@@ -24,7 +24,6 @@
 }
 
 
-@property(readonly, nonatomic) id<WeightTrackerSettingsSupport> weightTrackerSettings;
 @property(nonatomic, retain) UITableViewCell *usernameCell;
 @property(nonatomic, retain) UITableViewCell *userMailAddressCell;
 @property(nonatomic, retain) UITableViewCell *recipientMailAddressCell;
