@@ -54,6 +54,7 @@
 		3EA7B6670FFCDA5300D68E75 /* NewWeightController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EA7B6650FFCDA5300D68E75 /* NewWeightController.m */; };
 		3EA7B66A0FFCDA8200D68E75 /* NewWeightController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3EA7B6690FFCDA8200D68E75 /* NewWeightController.xib */; };
 		3EAEB8250FFE8F93004DF352 /* LabeledPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EAEB8240FFE8F93004DF352 /* LabeledPickerView.m */; };
+		3EB61B83100796DB008C6EF5 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EB61B82100796DB008C6EF5 /* MessageUI.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -143,6 +144,7 @@
 		3EAEB7760FFE47A3004DF352 /* WeightUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeightUtils.h; sourceTree = "<group>"; };
 		3EAEB8230FFE8F93004DF352 /* LabeledPickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LabeledPickerView.h; sourceTree = "<group>"; };
 		3EAEB8240FFE8F93004DF352 /* LabeledPickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LabeledPickerView.m; sourceTree = "<group>"; };
+		3EB61B82100796DB008C6EF5 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		8D1107310486CEB800E47090 /* WeightTracker-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "WeightTracker-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -157,6 +159,7 @@
 				3EA652470FF814D800FC45D0 /* libsqlite3.dylib in Frameworks */,
 				3EA387E50FFA3D6B00402B75 /* AddressBook.framework in Frameworks */,
 				3EA387E70FFA3D6B00402B75 /* AddressBookUI.framework in Frameworks */,
+				3EB61B83100796DB008C6EF5 /* MessageUI.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -195,6 +198,7 @@
 				19C28FACFE9D520D11CA2CBB /* Products */,
 				3EA387E40FFA3D6B00402B75 /* AddressBook.framework */,
 				3EA387E60FFA3D6B00402B75 /* AddressBookUI.framework */,
+				3EB61B82100796DB008C6EF5 /* MessageUI.framework */,
 			);
 			name = CustomTemplate;
 			sourceTree = "<group>";
@@ -475,6 +479,7 @@
 					"\"$(SRCROOT)\"",
 				);
 				PRODUCT_NAME = WeightTracker;
+				SDKROOT = iphoneos3.0;
 			};
 			name = Debug;
 		};

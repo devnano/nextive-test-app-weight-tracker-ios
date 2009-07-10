@@ -28,6 +28,8 @@
 		-(id) initDefaultValues;
 		-(NSNumber *) weightInUnits:(WeightUnitsOfMeasure) units;
 		-(NSString *) weightStringInUnits:(WeightUnitsOfMeasure) units  withDecimalPlaces:(DecimalPlaces) decimalPlaces;
+		-(NSString *) dateStringWithFormat:(NSString *) format;
+
 		-(void) setWeight:(NSNumber *) weight withUnits:(WeightUnitsOfMeasure) units;
 
 		

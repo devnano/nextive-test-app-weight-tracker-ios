@@ -9,9 +9,11 @@
 #import <UIKit/UIKit.h>
 #import "NewWeightController.h"
 #import "WeightHistoryController.h"
+#import <MessageUI/MessageUI.h>
+#import <MessageUI/MFMailComposeViewController.h>
 
 
-@interface WeightTrackerController : UITableViewController<UITableViewDelegate, UITableViewDataSource> {
+@interface WeightTrackerController : UITableViewController<UITableViewDelegate, UITableViewDataSource, MFMailComposeViewControllerDelegate> {
 @private
 	//id<WeightTrackerSettingsSupport> weightTrackerSettings;
 	UITableViewCell *newWeightCell;

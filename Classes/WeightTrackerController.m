@@ -11,12 +11,17 @@
 #import "WeightTrackerAppDelegate.h"
 
 
+
 @implementation WeightTrackerController
 @synthesize newWeightCell, weightHistoryCell, shareWeightInfoCell, newWeightController, weightHistoryController;
 
-
+//TODO move both methods below to a category
 - (WeightTrackerAppDelegate *) weightTrackerAppDelegate{
 	return (WeightTrackerAppDelegate *) [[UIApplication sharedApplication] delegate];
+}
+
+-(NSObject<WeightTrackerSettingsSupport> *) settings{
+	return [[self weightTrackerAppDelegate] weightTrackerSettings];
 }
 
 
@@ -128,6 +133,98 @@
 
 
 #pragma mark -
+#pragma mark Compose Mail
+
+// Displays an email composition interface inside the application. Populates all the Mail fields. 
+-(void)showComposerSheet 
+{
+	MFMailComposeViewController *picker = [[MFMailComposeViewController alloc] init];
+	picker.mailComposeDelegate = self;
+	
+	[picker setSubject:@"My Weight History"];
+	
+	
+	// Set up recipients
+	//NSArray *toRecipients = [self settings].userMailAddress; 
+	NSArray *toRecipients = [NSArray arrayWithObject:[self settings].recipientMailAddress]; 
+	//NSArray *toRecipients = toRecipients;
+	
+	
+	[picker setToRecipients:toRecipients];
+	//[picker setCcRecipients:ccRecipients];	
+	//[picker setBccRecipients:bccRecipients];
+	if(self.weightHistoryController == nil){
+		self.weightHistoryController = [[WeightHistoryController alloc] init];
+	}
+	
+	
+	[self.weightHistoryController.weightHistory refresh];
+	
+	NSArray *weightLogs = [self.weightHistoryController.weightHistory weightLogs];
+	NSMutableString *entriesCsv = [NSMutableString stringWithString:@"date, weight\n"];
+	
+	NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask , YES);
+	NSString *documentsDirectory = [paths objectAtIndex:0];
+	NSString *documentName = [documentsDirectory stringByAppendingPathComponent:@"weight.csv"];
+	
+	for(int i=0; i<[weightLogs count]; i++){
+		id<WeightLogSupport> log = [weightLogs objectAtIndex:i];		
+		[entriesCsv appendFormat:@"%@, %@\n", [log  dateStringWithFormat:@"yyyy-MM-dd"], [log weightStringInUnits:[self settings].weightUnitOfMeasure withDecimalPlaces:kAppDecimalPlaces]];
+	}
+	NSError *error = [[NSError alloc] init];
+	if(![entriesCsv writeToFile:documentName atomically:NO encoding:NSASCIIStringEncoding error:&error]) {
+		[error release];
+	}
+	
+	
+	//fopen(documentName, "rw");
+	// Attach an image to the email
+	//NSString *path = [[NSBundle mainBundle] pathForResource:@"rainy" ofType:@"png"];
+	//[entriesCsv cString];
+	//TODO: see if can make the NSData directly from string
+	//[NSData dataWithBytes:[entriesCsv cStringUsingEncoding:NSASCIIStringEncoding] length:[entriesCsv count];
+	
+	
+	
+    NSData *myData = [NSData dataWithContentsOfFile:documentName];
+	[picker addAttachmentData:myData mimeType:@"text/plain" fileName:@"weightHistory"];
+	
+	// Fill out the email body text
+	NSString *emailBody = [NSString stringWithFormat:@"I'm sending you an up to date weight history.\n%@", entriesCsv];
+	[picker setMessageBody:emailBody isHTML:NO];
+	
+	[self presentModalViewController:picker animated:YES];
+    [picker release];
+}
+
+// Dismisses the email composition interface when users tap Cancel or Send. Proceeds to update the message field with the result of the operation.
+- (void)mailComposeController:(MFMailComposeViewController*)controller didFinishWithResult:(MFMailComposeResult)result error:(NSError*)error 
+{	
+	//message.hidden = NO;
+	// Notifies users about errors associated with the interface
+	switch (result)
+	{
+		case MFMailComposeResultCancelled:
+			//message.text = @"Result: canceled";
+			break;
+		case MFMailComposeResultSaved:
+			//message.text = @"Result: saved";
+			break;
+		case MFMailComposeResultSent:
+			//message.text = @"Result: sent";
+			break;
+		case MFMailComposeResultFailed:
+			//message.text = @"Result: failed";
+			break;
+		default:
+			//message.text = @"Result: not sent";
+			break;
+	}
+	[self dismissModalViewControllerAnimated:YES];
+}
+
+
+#pragma mark -
 #pragma mark UITableViewDelegate methods
 
 
@@ -142,9 +239,13 @@
 			[self showWeightHistoryController];
 			break;
 		case 2:
-			//the multiple alternatives to select de recipient mail addres will be shown
-			//in the correspondent view
-			//[self showRecipientMailOptionsView];
+		
+				// We must always check whether the current device is configured for sending emails
+				if ([MFMailComposeViewController canSendMail])
+				{
+					[self showComposerSheet];
+				}
+					
 			break;		
 	}
 	

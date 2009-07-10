@@ -95,12 +95,9 @@
 }
 
 -(void) updateDateLabel{
-	//pre: self.dateCell has already been initialized
-	NSDateFormatter *formater =[[NSDateFormatter alloc] init];
-	[formater setDateFormat:@"yyyy-MM-dd"];
-	self.dateCell.detailTextLabel.text =  [formater stringFromDate:self->weightLog.date];
-	self.datePickerController.datePickerView.date = self->weightLog.date;
-	[formater release];		
+	//pre: self.dateCell has already been initialized	
+	self.dateCell.detailTextLabel.text =  [self->weightLog dateStringWithFormat:@"yyyy-MM-dd"];
+	self.datePickerController.datePickerView.date = self->weightLog.date;		
 }
 -(void) updateWeightLabel{	
 	/*NSString *weightString;

@@ -21,6 +21,7 @@
 //-(void) refresh;
 -(NSUInteger) count;
 -(void) remove:(NSInteger) i;
+-(void) refresh;
 
 
 

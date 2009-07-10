@@ -97,6 +97,16 @@ DECLARE_PROPERTIES(
 	
 }
 
+-(NSString *) dateStringWithFormat:(NSString *) format{
+	//pre: self.dateCell has already been initialized
+	NSDateFormatter *formater =[[NSDateFormatter alloc] init];
+	[formater setDateFormat:format];
+	NSString *dateString =  [formater stringFromDate:self.date];
+	
+	[formater release];	
+	return dateString;
+}
+
 
 
 @end
