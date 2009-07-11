@@ -6,8 +6,10 @@
 
 
 @implementation WeightTrackerFactory
+
 //shared instance
 static WeightTrackerSettingsSPO * settings;
+
 
 + ( NSObject<WeightTrackerSettingsSupport> *) getWeightTrackerSettings
 {

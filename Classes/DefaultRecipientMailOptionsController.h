@@ -29,5 +29,5 @@
 
 - (IBAction)showPicker:(id)sender;
 - (IBAction)showCreateNewContact:(id)sender;
-//- (void) mailChosen:(NSString *) mailAddress;
+
 @end

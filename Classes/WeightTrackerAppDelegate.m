@@ -2,29 +2,35 @@
 //  WeightTrackerAppDelegate.m
 //  WeightTracker
 //
-//  Created by Mariano Heredia on 6/28/09.
-//  Copyright __MyCompanyName__ 2009. All rights reserved.
-//
 
 #import "WeightTrackerAppDelegate.h"
 #import "WeightTrackerFactory.h"
 #import "WeightTrackerSettingsController.h"
 
+@interface WeightTrackerAppDelegate ()
+
+-(void) showAppSettings:(BOOL) animated;
+
+@end
+
+
 @implementation WeightTrackerAppDelegate
 
 @synthesize window, navController, navSettings, weightTrackerSettings;
 
+#pragma mark -
+#pragma mark Overriden parent callbacks
+
 
 - (void)applicationDidFinishLaunching:(UIApplication *)application {    
-
     // Override point for customization after application launch
 	self.weightTrackerSettings = [WeightTrackerFactory getWeightTrackerSettings];
 	
 	[window addSubview: navController.view];
 	if(![self.weightTrackerSettings isAppAlreadySetup]){
-		//if the must not be an animated transition,
-		//the showAppSettings must be parametrized with de animation boolean flag
-		[self showAppSettings];
+		//No need to do an animated transition, the settings view should
+		//be the first one to be shown
+		[self showAppSettings : NO];
 	}
 	
     [window makeKeyAndVisible];
@@ -38,9 +44,11 @@
     [super dealloc];
 }
 
+#pragma mark -
+#pragma mark WeightTrackerAppDelegate methods
 
 - (IBAction) showAppSettings{
-	[navController presentModalViewController:navSettings animated:YES];
+	[self showAppSettings : YES];
 }
 
 - (IBAction) hideAppSettings{
@@ -48,6 +56,19 @@
 	[settingsController save];
 	
 	[navController dismissModalViewControllerAnimated:YES];	
+}
+
+
+-(void) showAppSettings:(BOOL) animated{
+	//initialize ui with current data (if already setup)
+	//or system data otherwise	
+	WeightTrackerSettingsController *settingsController = (WeightTrackerSettingsController *) [navSettings topViewController];
+	if([self.weightTrackerSettings isAppAlreadySetup]){
+		[self.weightTrackerSettings loadAppUserInfo:settingsController];
+	} else {
+		loadSystemSettingsDefaults(settingsController);
+	}
+	[navController presentModalViewController:navSettings animated:animated];
 }
 
 

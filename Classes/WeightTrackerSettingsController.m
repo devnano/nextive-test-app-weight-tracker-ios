@@ -10,61 +10,58 @@
 #import "WeightTrackerFactory.h"
 #import "UIUtils.h"
 
+@interface WeightTrackerSettingsController ()
+- (void) updateSaveButtonStatus;
+- (BOOL) buttonSaveShouldBeEnabled;
+- (void) initUsernameCell;
+- (void) initUserMailAddressCell;
+- (void) initMailPickerView;
+- (void) showMailPickerView;
+- (void) initRecipientMailAddressCell;
+- (void) initRecipientMailOptionsView;
+- (void) showRecipientMailOptionsView;
+- (void) initWeightUnitOfMeasureCell;
+- (void) save;
+@end
+
 @implementation WeightTrackerSettingsController
 @dynamic username, userMailAddress, recipientMailAddress,weightUnitOfMeasure;
 @synthesize usernameCell, userMailAddressCell, userMailPickerController,
 			recipientMailAddressCell, defaultRecipientMailOptionsController, weightUnitOfMeasureCell;
 
 
+- (void) save
+{	
+	//reflects the settings set in this view controller
+	//into the app settings
+	[self.settings setupAppWithUserInfo:self];
+}
+
+#pragma mark -
+#pragma mark Overriden parent callbacks
 
 - (void)viewDidLoad {
 	[super viewDidLoad];
-	//initialize ui with current data
-	if([self.settings isAppAlreadySetup]){
-		[self.settings loadAppUserInfo:self];
-	} else {
-		loadSystemSettingsDefaults(self);
-	}
+	
 		
 	//title for this controller, useful when the navigation bar title
-	self.title = @"Settings";
-    
-}
-- (BOOL) buttonSaveShouldBeAnabled{
-		return self.username != nil && self.username.length != 0
-				&& self.userMailAddress != nil && self.userMailAddress.length != 0
-				&& self.recipientMailAddress != nil && self.recipientMailAddress.length != 0
-				&& self.weightUnitOfMeasure != NotDefined ;
-}
-- (void) updateSaveButtonStatus{
-	self.navigationItem.rightBarButtonItem.enabled = [self buttonSaveShouldBeAnabled];
+	self.title = @"Settings";    
 }
 
 - (void) viewWillAppear :(BOOL) animated{
 	[super viewWillAppear:animated];
-	[self updateSaveButtonStatus];	
-	
-//	[self.settings loadAppUserInfo:self];	
+	[self updateSaveButtonStatus];		
+	//	[self.settings loadAppUserInfo:self];	
 }
 - (void) viewWillDisappear :(BOOL) animated{
-	[super viewWillDisappear:animated];
-	
+	[super viewWillDisappear:animated];	
 	[self.usernameCell.accessoryView resignFirstResponder];
 }
 
 
-/*
-// Override to allow orientations other than the default portrait orientation.
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
-    // Return YES for supported orientations
-    return (interfaceOrientation == UIInterfaceOrientationPortrait);
-}
-*/
-
 - (void)didReceiveMemoryWarning {
 	// Releases the view if it doesn't have a superview.
-    [super didReceiveMemoryWarning];
-	
+    [super didReceiveMemoryWarning];	
 	// Release any cached data, images, etc that aren't in use.
 }
 
@@ -85,12 +82,25 @@
     [super dealloc];
 }
 
+#pragma mark -
+#pragma mark Widgets related methods
 
-//***********username field
--(void) hideUsernameKeyboard{
-	[self.usernameCell.accessoryView resignFirstResponder];
+
+- (void) updateSaveButtonStatus{
+	self.navigationItem.rightBarButtonItem.enabled = [self buttonSaveShouldBeEnabled];
 }
 
+- (BOOL) buttonSaveShouldBeEnabled{
+	//all fields are requierd, so check if all are set then
+	//save button should be enabled
+	return self.username != nil && self.username.length != 0
+	&& self.userMailAddress != nil && self.userMailAddress.length != 0
+	&& self.recipientMailAddress != nil && self.recipientMailAddress.length != 0
+	&& self.weightUnitOfMeasure != NotDefined ;
+}
+
+
+//***********username field
 - (void) initUsernameCell{
 	UITableViewCell *cell= [[[UITableViewCell alloc] initWithFrame:CGRectZero] autorelease];
 	cell.selectionStyle = UITableViewCellSelectionStyleNone;
@@ -122,42 +132,15 @@
 	[text release];
 }
 
-- (NSString *) username{	
-	//note: taking advantage of dynamic binding, and sending
-	//a message to the well known textfield view
-	return [self.usernameCell.accessoryView text];
+-(void) hideUsernameKeyboard{
+	[self.usernameCell.accessoryView resignFirstResponder];
 }
 
-
-//this setter method must be called before any call to the getter
--(void) setUsername:(NSString *) username{
-//	self.usernameTextField.text = username;
-	if(self.usernameCell == nil){
-		[self initUsernameCell];
-	}
-	//note: taking advantage of dynamic binding, and sending
-	//a message to the well known textfield view
-	[self.usernameCell.accessoryView setText :  username];
-}
 
 //************** user mail address
 
 - (void) initUserMailAddressCell{
 	self.userMailAddressCell = [UIUtils createCellStyleValue1:@"User mail"];
-}
-- (NSString *) userMailAddress{
-//	return [self.userMailLabel text];
-	return self.userMailAddressCell.detailTextLabel.text;
-}
-
-
-//this setter method must be called before any call to the getter
-- (void) setUserMailAddress:(NSString *) mailAddress{
-//	self.userMailLabel.text = mailAddress;
-	if(self.userMailAddressCell == nil){
-		[self initUserMailAddressCell];
-	}
-	self.userMailAddressCell.detailTextLabel.text = mailAddress;
 }
 
 - (void) initMailPickerView{
@@ -181,18 +164,6 @@
 	self.recipientMailAddressCell = [UIUtils createCellStyleValue1:@"Recipient mail"];		
 }
 
-- (NSString *) recipientMailAddress{
-	return self.recipientMailAddressCell.detailTextLabel.text;
-}
-//this setter method must be called before any call to the getter
-- (void) setRecipientMailAddress:(NSString *) mailAddress{
-	if(self.recipientMailAddressCell == nil){
-		[self initRecipientMailAddressCell];
-	}
-	self.recipientMailAddressCell.detailTextLabel.text = mailAddress;
-}
-
-
 - (void) initRecipientMailOptionsView{
 	self.defaultRecipientMailOptionsController = [[DefaultRecipientMailOptionsController alloc] initWithNibName:@"DefaultRecipientMailOptions" bundle:nil];
 	self.defaultRecipientMailOptionsController.caller = self;
@@ -209,7 +180,6 @@
 }
 
 //****************unit of measure
-
 - (void) initWeightUnitOfMeasureCell{
 	UITableViewCell *cell= [[[UITableViewCell alloc] initWithFrame:CGRectZero] autorelease];
 	cell.selectionStyle = UITableViewCellSelectionStyleNone;
@@ -240,6 +210,53 @@
 	
 }
 
+#pragma mark -
+#pragma mark WeightTrackerSettingsSupport methods
+- (NSString *) username{	
+	//note: taking advantage of dynamic binding, and sending
+	//a message to the well known textfield view
+	return [self.usernameCell.accessoryView text];
+}
+
+
+//this setter method must be called before any call to the getter
+-(void) setUsername:(NSString *) username{
+	//	self.usernameTextField.text = username;
+	if(self.usernameCell == nil){
+		[self initUsernameCell];
+	}
+	//note: taking advantage of dynamic binding, and sending
+	//a message to the well known textfield view
+	[self.usernameCell.accessoryView setText :  username];
+}
+
+
+- (NSString *) userMailAddress{
+	//	return [self.userMailLabel text];
+	return self.userMailAddressCell.detailTextLabel.text;
+}
+
+
+//this setter method must be called before any call to the getter
+- (void) setUserMailAddress:(NSString *) mailAddress{
+	//	self.userMailLabel.text = mailAddress;
+	if(self.userMailAddressCell == nil){
+		[self initUserMailAddressCell];
+	}
+	self.userMailAddressCell.detailTextLabel.text = mailAddress;
+}
+
+- (NSString *) recipientMailAddress{
+	return self.recipientMailAddressCell.detailTextLabel.text;
+}
+//this setter method must be called before any call to the getter
+- (void) setRecipientMailAddress:(NSString *) mailAddress{
+	if(self.recipientMailAddressCell == nil){
+		[self initRecipientMailAddressCell];
+	}
+	self.recipientMailAddressCell.detailTextLabel.text = mailAddress;
+}
+
 - (void) setWeightUnitOfMeasure:(WeightUnitsOfMeasure) units{
 	if(self.weightUnitOfMeasureCell == nil){
 		[self initWeightUnitOfMeasureCell];
@@ -253,13 +270,6 @@
 	//note: taking advantage of dynamic binding, and sending
 	//a message to the well known segmentedcontrol view
 	return (WeightUnitsOfMeasure) [self.weightUnitOfMeasureCell.accessoryView selectedSegmentIndex];
-}
-
-
-
-- (void) save
-{	
-	[self.settings setupAppWithUserInfo:self];
 }
 
 #pragma mark -
@@ -304,9 +314,6 @@
 
 #pragma mark -
 #pragma mark UITableViewDelegate methods
-
-
-
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
 	switch ([indexPath row]){

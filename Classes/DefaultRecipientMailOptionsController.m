@@ -9,110 +9,28 @@
 #import "DefaultRecipientMailOptionsController.h"
 #import "WeightTrackerAppDelegate.h"
 #import "SystemSettingsAccess.h"
+#import "WeightTrackerViewController.h"
+
+@interface DefaultRecipientMailOptionsController ()
+	- (void) mailChosen:(NSString *) mailAddress withFinalAction:(SEL) action;
+	- (void) mailSelectedFromPerson:(ABRecordRef) person withFinalAction:(SEL) action;
+	- (void) hideModalViewController;
+	- (void) popNavigationViewController;
+	- (void) popNavigationToCallerViewController;
+	- (void) userMailPicked;
+	-(UITableViewCell *) initButtonCell:(NSString *) caption;
+	-(void) initMyMailCell;
+	-(void) initChooseFromContactCell;
+	-(void) initNewContactCell;
+@end
 
 
 @implementation DefaultRecipientMailOptionsController
 @synthesize myMailCell, chooseFromContactCell, newContactCell, caller;
 
-- (void) mailChosen:(NSString *) mailAddress withFinalAction:(SEL) action{	
-	self.caller.recipientMailAddress = mailAddress;	
-	//passing the message to finally hide the helper view
-	[self performSelector:action];	
-}
-
-- (void) hideModalViewController{	
-	[self dismissModalViewControllerAnimated:NO]; 	
-	WeightTrackerAppDelegate *delegate =(WeightTrackerAppDelegate *) [[UIApplication sharedApplication] delegate];
-	
-	//[delegate.navSettings popViewControllerAnimated:YES];
-	[delegate.navSettings popViewControllerAnimated:YES];
-}
-- (void) popNavigationViewController{
-	WeightTrackerAppDelegate *delegate =(WeightTrackerAppDelegate *) [[UIApplication sharedApplication] delegate];
-	
-	[delegate.navSettings popViewControllerAnimated:YES];
-	
-}
-
-- (void) popNavigationToCallerViewController{
-	WeightTrackerAppDelegate *delegate =(WeightTrackerAppDelegate *) [[UIApplication sharedApplication] delegate];
-	[delegate.navSettings popToViewController:self.caller animated:YES];
-	//[delegate.navSettings popViewControllerAnimated:YES];
-	
-}
-
-
-- (void) userMailPicked{	
-	[self mailChosen: [SystemSettingsAccess defaultMailAddress] withFinalAction:@selector(popNavigationViewController)];
-}
-
-- (IBAction)showCreateNewContact:(id)sender{
-	ABNewPersonViewController *newPerson = [[ABNewPersonViewController alloc] init];
-	newPerson.newPersonViewDelegate = self;
-	WeightTrackerAppDelegate *delegate =(WeightTrackerAppDelegate *) [[UIApplication sharedApplication] delegate];
-	
-	[delegate.navSettings pushViewController:newPerson animated:YES];
-	[newPerson release];
-}
-
-- (void) mailSelectedFromPerson:(ABRecordRef) person withFinalAction:(SEL) action{
-	CFTypeRef multi = ABRecordCopyValue(person, kABPersonEmailProperty);
-
-	NSString *mail=@""; 
-	if(ABMultiValueGetCount(multi) > 0){
-		//	NSString is “toll-free bridged” with its Core Foundation counterpart, CFString (see CFStringRef)
-		mail = (NSString *) ABMultiValueCopyValueAtIndex(multi, 0);
-	}
- 
-	[self mailChosen:mail withFinalAction:action];
-	
-} 
 
 #pragma mark -
-#pragma mark ABNewPersonViewControllerDelegate method
-
-
-
-- (void)newPersonViewController:(ABNewPersonViewController *)newPersonViewController didCompleteWithNewPerson:(ABRecordRef)person{	
-	if(person == NULL){
-		//returning to the caller
-		[self popNavigationViewController];	
-		return;
-	}
-	[self mailSelectedFromPerson:person withFinalAction:@selector(popNavigationToCallerViewController)];	
-}
-
-
-- (IBAction)showPicker:(id)sender { 
-    ABPeoplePickerNavigationController *picker = 
-	[[ABPeoplePickerNavigationController alloc] init]; 
-    picker.peoplePickerDelegate = self; 
-    [self presentModalViewController:picker animated:YES]; 
-    [picker release]; 
-} 
-
-- (void)peoplePickerNavigationControllerDidCancel: 
-(ABPeoplePickerNavigationController *)peoplePicker { 
-    [self dismissModalViewControllerAnimated:YES]; 
-} 
-- (BOOL)peoplePickerNavigationController: 
-(ABPeoplePickerNavigationController *)peoplePicker 
-      shouldContinueAfterSelectingPerson:(ABRecordRef)person { 
-	[self mailSelectedFromPerson:person withFinalAction: @selector(hideModalViewController)];
-    return NO; 
-}
-
-- (BOOL)peoplePickerNavigationController: 
-(ABPeoplePickerNavigationController *)peoplePicker 
-      shouldContinueAfterSelectingPerson:(ABRecordRef)person 
-                                property:(ABPropertyID)property 
-                              identifier:(ABMultiValueIdentifier)identifier{ 
-    return NO; 
-} 
-
-
-
-
+#pragma mark Overriden parent callbacks
 - (BOOL)shouldAutorotateToInterfaceOrientation: 
 (UIInterfaceOrientation)interfaceOrientation { 
     // Return YES for supported orientations 
@@ -134,6 +52,71 @@
 
 
 
+- (void)dealloc {
+	[caller release];
+	[myMailCell release];
+	[chooseFromContactCell release];
+	[newContactCell release];
+    [super dealloc];
+}
+
+#pragma mark -
+#pragma mark DefaultRecipientMailOptionsController methods
+
+
+- (IBAction)showCreateNewContact:(id)sender{
+	ABNewPersonViewController *newPerson = [[ABNewPersonViewController alloc] init];
+	newPerson.newPersonViewDelegate = self;	
+	[[self weightTrackerAppDelegate].navSettings pushViewController:newPerson animated:YES];
+	[newPerson release];
+}
+
+- (IBAction)showPicker:(id)sender { 
+    ABPeoplePickerNavigationController *picker = 
+	[[ABPeoplePickerNavigationController alloc] init]; 
+    picker.peoplePickerDelegate = self; 
+    [self presentModalViewController:picker animated:YES]; 
+    [picker release]; 
+} 
+
+- (void) mailChosen:(NSString *) mailAddress withFinalAction:(SEL) action{	
+	self.caller.recipientMailAddress = mailAddress;	
+	//passing the message to finally hide the helper view
+	[self performSelector:action];	
+}
+
+- (void) mailSelectedFromPerson:(ABRecordRef) person withFinalAction:(SEL) action{
+	CFTypeRef multi = ABRecordCopyValue(person, kABPersonEmailProperty);
+	
+	NSString *mail=@""; 
+	if(ABMultiValueGetCount(multi) > 0){
+		//	NSString is “toll-free bridged” with its Core Foundation counterpart, CFString (see CFStringRef)
+		mail = (NSString *) ABMultiValueCopyValueAtIndex(multi, 0);
+	}
+	
+	[self mailChosen:mail withFinalAction:action];
+	
+}
+
+- (void) hideModalViewController{	
+	[self dismissModalViewControllerAnimated:NO]; 	
+	
+	[[self weightTrackerAppDelegate].navSettings popViewControllerAnimated:YES];
+}
+- (void) popNavigationViewController{	
+	[[self weightTrackerAppDelegate].navSettings popViewControllerAnimated:YES];	
+}
+
+- (void) popNavigationToCallerViewController{
+	[[self weightTrackerAppDelegate].navSettings popToViewController:self.caller animated:YES];
+	//[delegate.navSettings popViewControllerAnimated:YES];
+	
+}
+
+- (void) userMailPicked{	
+	[self mailChosen: [SystemSettingsAccess defaultMailAddress] withFinalAction:@selector(popNavigationViewController)];
+}
+
 -(UITableViewCell *) initButtonCell:(NSString *) caption{
 	UITableViewCell *cell= [[[UITableViewCell alloc] initWithFrame:CGRectZero] autorelease];
 	
@@ -154,19 +137,58 @@
 	self.newContactCell = [self initButtonCell:@"Create new contact"];
 }
 
-- (void)dealloc {
-	[caller release];
-	[myMailCell release];
-	[chooseFromContactCell release];
-	[newContactCell release];
-    [super dealloc];
+
+#pragma mark -
+#pragma mark ABPeoplePickerNavigationControllerDelegate methods
+- (void)peoplePickerNavigationControllerDidCancel: 
+(ABPeoplePickerNavigationController *)peoplePicker { 
+    [self dismissModalViewControllerAnimated:YES]; 
+} 
+- (BOOL)peoplePickerNavigationController: 
+(ABPeoplePickerNavigationController *)peoplePicker 
+      shouldContinueAfterSelectingPerson:(ABRecordRef)person { 
+	[self mailSelectedFromPerson:person withFinalAction: @selector(hideModalViewController)];
+    return NO; 
+}
+
+- (BOOL)peoplePickerNavigationController: 
+(ABPeoplePickerNavigationController *)peoplePicker 
+      shouldContinueAfterSelectingPerson:(ABRecordRef)person 
+                                property:(ABPropertyID)property 
+                              identifier:(ABMultiValueIdentifier)identifier{ 
+    return NO; 
 }
 
 
 
 #pragma mark -
+#pragma mark ABNewPersonViewControllerDelegate methods
+
+- (void)newPersonViewController:(ABNewPersonViewController *)newPersonViewController didCompleteWithNewPerson:(ABRecordRef)person{	
+	if(person == NULL){
+		//returning to the caller
+		[self popNavigationViewController];	
+		return;
+	}
+	[self mailSelectedFromPerson:person withFinalAction:@selector(popNavigationToCallerViewController)];	
+}
+
+
+#pragma mark -
 #pragma mark UITableViewDataSource methods
 
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+	return 3;	
+}
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
+{	
+	return @"Recipient email Addres";
+}
+
+- (NSString *)tableView:(UITableView *)tableView titleForFooterInSection:(NSInteger)section{
+	return @"The selected mail will be used as the recipient when you want to share your weight history.";
+}
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -200,25 +222,9 @@
 	
 }
 
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-	return 3;	
-}
-- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
-{	
-	return @"Recipient email Addres";
-}
-
-- (NSString *)tableView:(UITableView *)tableView titleForFooterInSection:(NSInteger)section{
-	return @"Footer";
-}
-
 
 #pragma mark -
 #pragma mark UITableViewDelegate methods
-
-
-
-
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
 	switch ([indexPath row]){
 		case 0:

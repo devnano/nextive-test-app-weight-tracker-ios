@@ -9,18 +9,10 @@
 @synthesize mailPicker;
 @synthesize availableMailAccounts, caller;
 
-- (IBAction) mailChosen{
-	NSInteger row = [self.mailPicker selectedRowInComponent:0];
-	NSString *mailSelected = [self.availableMailAccounts objectAtIndex:row];
-	self.caller.userMailAddress = mailSelected;
-	//[self.caller hideMailPickerView];
-	
-	[mailSelected release];
-	WeightTrackerAppDelegate *app = (WeightTrackerAppDelegate *) [[UIApplication sharedApplication] delegate];
-	UINavigationController *navSettings = [app navSettings];
-	[navSettings popViewControllerAnimated:YES];
-	
-}
+
+
+#pragma mark -
+#pragma mark Overriden parent callbacks
 
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad {
@@ -63,6 +55,25 @@
 	[super dealloc];
 }
 
+#pragma mark -
+#pragma mark UserMailPickerContoller methods
+
+- (IBAction) mailChosen{
+	NSInteger row = [self.mailPicker selectedRowInComponent:0];
+	NSString *mailSelected = [self.availableMailAccounts objectAtIndex:row];
+	self.caller.userMailAddress = mailSelected;
+	//[self.caller hideMailPickerView];
+	
+	[mailSelected release];
+	WeightTrackerAppDelegate *app = (WeightTrackerAppDelegate *) [[UIApplication sharedApplication] delegate];
+	UINavigationController *navSettings = [app navSettings];
+	[navSettings popViewControllerAnimated:YES];
+	
+}
+
+#pragma mark -
+#pragma mark UIPickerViewDataSource methods
+
 
 
 
@@ -75,6 +86,7 @@
 	return [self.availableMailAccounts count];	
 }
 
+#pragma mark UIPickerViewDelegate methods
 
 - (NSString *) pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger) row forComponent: (NSInteger) component{
 	
