@@ -1,11 +1,3 @@
-//
-//  WeightLog.m
-//  WeightTracker
-//
-//  Created by Mariano Heredia on 7/2/09.
-//  Copyright 2009 __MyCompanyName__. All rights reserved.
-//
-
 #import "WeightLogSPO.h"
 
 
@@ -18,6 +10,18 @@ DECLARE_PROPERTIES(
 				   )
 @synthesize weight, date;
 @dynamic weightLogId;
+
+#pragma mark -
+#pragma mark Overriden parent callbacks
+
+- (void)dealloc {
+	[date release];
+	[weight release];
+	[super dealloc];
+}
+
+#pragma mark -
+#pragma mark WeightLogSupport
 
 -(void) setWeightLogId:(NSInteger) theId{
 	//as spo autogenerates pks, do nothing here in this implementation	
@@ -56,11 +60,6 @@ DECLARE_PROPERTIES(
 	[WeightLogSPO deleteObject:weightLogId cascade:NO];
 }
 
-- (void)dealloc {
-	[date release];
-	[weight release];
-	[super dealloc];
-}
 
 -(NSNumber *) weightInUnits:(WeightUnitsOfMeasure) units{
 	NSNumber *result;

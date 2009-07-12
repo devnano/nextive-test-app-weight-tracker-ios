@@ -1,8 +1,3 @@
-//
-//  WeightTrackerAppDelegate.m
-//  WeightTracker
-//
-
 #import "WeightTrackerAppDelegate.h"
 #import "WeightTrackerFactory.h"
 #import "WeightTrackerSettingsController.h"
@@ -53,8 +48,9 @@
 
 - (IBAction) hideAppSettings{
 	WeightTrackerSettingsController *settingsController =(WeightTrackerSettingsController *) [navSettings topViewController];
+	//saving the state of the settings view
 	[settingsController save];
-	
+	//hiding modal shown settings controller
 	[navController dismissModalViewControllerAnimated:YES];	
 }
 
@@ -68,6 +64,7 @@
 	} else {
 		loadSystemSettingsDefaults(settingsController);
 	}
+	//present in modal way the navSettigns controller.
 	[navController presentModalViewController:navSettings animated:animated];
 }
 

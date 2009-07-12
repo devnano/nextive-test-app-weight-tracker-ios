@@ -1,5 +1,3 @@
-
-
 #import "WeightTrackerSettings.h"
 
 

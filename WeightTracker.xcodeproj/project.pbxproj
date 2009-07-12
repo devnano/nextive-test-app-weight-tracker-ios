@@ -56,6 +56,7 @@
 		3EAEB8250FFE8F93004DF352 /* LabeledPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EAEB8240FFE8F93004DF352 /* LabeledPickerView.m */; };
 		3EB2C98E1007F74100190D53 /* WeightTrackerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EB2C98D1007F74100190D53 /* WeightTrackerViewController.m */; };
 		3EB61B83100796DB008C6EF5 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EB61B82100796DB008C6EF5 /* MessageUI.framework */; };
+		3EC97FEC100A68ED005ED02B /* index.html in Resources */ = {isa = PBXBuildFile; fileRef = 3EC97FEB100A68ED005ED02B /* index.html */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -148,6 +149,7 @@
 		3EB2C98C1007F74100190D53 /* WeightTrackerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeightTrackerViewController.h; sourceTree = "<group>"; };
 		3EB2C98D1007F74100190D53 /* WeightTrackerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeightTrackerViewController.m; sourceTree = "<group>"; };
 		3EB61B82100796DB008C6EF5 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		3EC97FEB100A68ED005ED02B /* index.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; name = index.html; path = html/index.html; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* WeightTracker-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "WeightTracker-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -172,11 +174,10 @@
 		080E96DDFE201D6D7F000001 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				3EC980F0100AA548005ED02B /* Utils */,
 				3EAEB8220FFE8F93004DF352 /* 3rdParties */,
 				3EA486790FF95B9800ED5594 /* ViewController */,
-				3EADDF770FF841B3003C1795 /* UI */,
 				3EA652380FF8129B00FC45D0 /* data */,
-				3EA652070FF8128800FC45D0 /* SqlitePersistenceObjects */,
 				1D3623240D0F684500981E51 /* WeightTrackerAppDelegate.h */,
 				1D3623250D0F684500981E51 /* WeightTrackerAppDelegate.m */,
 			);
@@ -194,6 +195,7 @@
 		29B97314FDCFA39411CA2CEA /* CustomTemplate */ = {
 			isa = PBXGroup;
 			children = (
+				3EC97FEA100A68C1005ED02B /* Documentation */,
 				080E96DDFE201D6D7F000001 /* Classes */,
 				29B97315FDCFA39411CA2CEA /* Other Sources */,
 				29B97317FDCFA39411CA2CEA /* Resources */,
@@ -288,7 +290,8 @@
 				3EA652260FF8128800FC45D0 /* UIImage-SQLitePersistence.h */,
 				3EA652270FF8128800FC45D0 /* UIImage-SQLitePersistence.m */,
 			);
-			path = SqlitePersistenceObjects;
+			name = SqlitePersistenceObjects;
+			path = ../SqlitePersistenceObjects;
 			sourceTree = "<group>";
 		};
 		3EA652380FF8129B00FC45D0 /* data */ = {
@@ -333,22 +336,12 @@
 				3EA7B6650FFCDA5300D68E75 /* NewWeightController.m */,
 				3E9344630FFD75A80087CF6B /* WeightLogDatePickerController.h */,
 				3E9344640FFD75A80087CF6B /* WeightLogDatePickerController.m */,
-				3EAEB7760FFE47A3004DF352 /* WeightUtils.h */,
 				3E557B4A1003D0E200B4F7D5 /* WeightHistoryController.h */,
 				3E557B4B1003D0E200B4F7D5 /* WeightHistoryController.m */,
 				3E557B781003D22400B4F7D5 /* WeightHistory.h */,
 				3E557B791003D22400B4F7D5 /* WeightHistory.m */,
 			);
 			name = WeightTracker;
-			sourceTree = "<group>";
-		};
-		3EADDF770FF841B3003C1795 /* UI */ = {
-			isa = PBXGroup;
-			children = (
-				3EA4870C0FF9636900ED5594 /* UIUtils.m */,
-				3EA487110FF9646000ED5594 /* UIUtils.h */,
-			);
-			name = UI;
 			sourceTree = "<group>";
 		};
 		3EAEB8200FFE68EB004DF352 /* Scale */ = {
@@ -364,10 +357,29 @@
 		3EAEB8220FFE8F93004DF352 /* 3rdParties */ = {
 			isa = PBXGroup;
 			children = (
+				3EA652070FF8128800FC45D0 /* SqlitePersistenceObjects */,
 				3EAEB8230FFE8F93004DF352 /* LabeledPickerView.h */,
 				3EAEB8240FFE8F93004DF352 /* LabeledPickerView.m */,
 			);
 			path = 3rdParties;
+			sourceTree = "<group>";
+		};
+		3EC97FEA100A68C1005ED02B /* Documentation */ = {
+			isa = PBXGroup;
+			children = (
+				3EC97FEB100A68ED005ED02B /* index.html */,
+			);
+			name = Documentation;
+			sourceTree = "<group>";
+		};
+		3EC980F0100AA548005ED02B /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				3EAEB7760FFE47A3004DF352 /* WeightUtils.h */,
+				3EA4870C0FF9636900ED5594 /* UIUtils.m */,
+				3EA487110FF9646000ED5594 /* UIUtils.h */,
+			);
+			name = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -380,6 +392,7 @@
 				1D60588D0D05DD3D006BFB54 /* Resources */,
 				1D60588E0D05DD3D006BFB54 /* Sources */,
 				1D60588F0D05DD3D006BFB54 /* Frameworks */,
+				3EC97FF0100A6977005ED02B /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -419,10 +432,27 @@
 				3E9344690FFD75DD0087CF6B /* WeightLogDatePickerController.xib in Resources */,
 				3E9344C00FFD8C4B0087CF6B /* PickerScaleController.xib in Resources */,
 				3E557B4E1003D0E200B4F7D5 /* WeightHistoryController.xib in Resources */,
+				3EC97FEC100A68ED005ED02B /* index.html in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3EC97FF0100A6977005ED02B /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/Applications/Doxygen.app/Contents/Resources/doxygen Doxyfile";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		1D60588E0D05DD3D006BFB54 /* Sources */ = {

@@ -1,36 +1,31 @@
-/*
- *  WeightTrackerSettingsSupport.h
- *  WeightTracker
- *
- *  Created by Mariano Heredia on 6/27/09.
- *  Copyright 2009 __MyCompanyName__. All rights reserved.
- *
- */
-
 #import "SystemSettingsAccess.h"
 #import "ScaleSupport.h"
 
-
-
-
+/**Defines the application settings properties and related access methods.*/
 @protocol WeightTrackerSettingsSupport
 @required
-	@property (nonatomic, copy) NSString *username;
-	@property (nonatomic, copy) NSString *userMailAddress;	
-	@property (nonatomic, copy) NSString *recipientMailAddress;
-	@property (nonatomic) WeightUnitsOfMeasure weightUnitOfMeasure;
+	@property (nonatomic, copy) NSString *username;/**<User name setting.*/
+	@property (nonatomic, copy) NSString *userMailAddress;/**<User Mail Address setting.*/	
+	@property (nonatomic, copy) NSString *recipientMailAddress;/**<Recipient Mail Address setting.*/
+	@property (nonatomic) WeightUnitsOfMeasure weightUnitOfMeasure;/**<WeightUnitsOfMeasure settings. \sa WeightUnitsOfMeasure.*/
 @optional
 	//as the above properties gives complete information, the below
 	//accesory methods are tagged as optional
+	/**
+	 Tells wheather or not the application has all the requiered information to properly work.
+	 */
 	- (BOOL) isAppAlreadySetup;	
+	/**
+	 Given an id<WeightTrackerSettingsSupport> instance, fills the cuerrent one.
+	 */
 	- (void) setupAppWithUserInfo:(id<WeightTrackerSettingsSupport>) userInfo;
-	- (void) loadAppUserInfo:(id<WeightTrackerSettingsSupport>)userInfo;
-	//workaround to avoid warnings when releasing id<WeightTrackerSettingsSupport> objects
-	//- (void) release;
-
+	/**Populates the current settings into userInfo instance.*/
+	- (void) loadAppUserInfo:(id<WeightTrackerSettingsSupport>)userInfo;	
 @end
 
-
+/**
+ Loads system default settings into userInfo instance.
+ */
 static void loadSystemSettingsDefaults(id<WeightTrackerSettingsSupport> userInfo){
 	userInfo.username = [SystemSettingsAccess deviceUsername];
 	userInfo.userMailAddress = [SystemSettingsAccess defaultMailAddress];	

@@ -1,26 +1,25 @@
-//
-//  WeightTrackerSettings.h
-//  WeightTracker
-//
-//  Created by Mariano Heredia on 6/28/09.
-//  Copyright 2009 __MyCompanyName__. All rights reserved.
-//
-
 #import <UIKit/UIKit.h>
 #import "WeightTrackerSettings.h"
 #import "UserMailPickerContoller.h"
 #import "DefaultRecipientMailOptionsController.h"
 #import "WeightTrackerViewController.h"
 
+/**
+ Main view controller for the application settings.
+ */
 @interface WeightTrackerSettingsController : UITableViewController<UITableViewDelegate, UITableViewDataSource,
 														           WeightTrackerSettingsSupport, UITextFieldDelegate> {
 	@private
-	UITableViewCell *usernameCell;
-	UITableViewCell *userMailAddressCell;
-	UITableViewCell *recipientMailAddressCell;
-	UITableViewCell *weightUnitOfMeasureCell;
-	UserMailPickerContoller *userMailPickerController;
-	DefaultRecipientMailOptionsController *defaultRecipientMailOptionsController;
+	UITableViewCell *usernameCell; /**<Holds user name input field.*/
+	UITableViewCell *userMailAddressCell;/**<Holds user mail data, and triggers user mail selection screen when selected.*/
+	UITableViewCell *recipientMailAddressCell;/**<Holds default recipient mail address,
+												 and triggers recipient mail selection screen when selected.*/
+	UITableViewCell *weightUnitOfMeasureCell;/**<Holds unit of measure input field.*/
+	UserMailPickerContoller *userMailPickerController;/**<ViewController responsible to manage user mail selection.
+														 @see UserMailPickerContoller.*/
+	DefaultRecipientMailOptionsController *defaultRecipientMailOptionsController; /**<ViewController Responsible to manage recipient mail
+																				  address selection.
+																					@see DefaultRecipientMailOptionsController*/
 }
 
 

@@ -1,5 +1,3 @@
-
-
 #import "WeightTrackerFactory.h"
 #import "WeightTrackerSettingsSPO.h"
 #import "WeightLogSPO.h"
@@ -7,8 +5,10 @@
 
 @implementation WeightTrackerFactory
 
-//shared instance
-static WeightTrackerSettingsSPO * settings;
+/**
+WeightTrackerSettingsSPO shared instance.
+ */
+static WeightTrackerSettingsSPO *settings;
 
 
 + ( NSObject<WeightTrackerSettingsSupport> *) getWeightTrackerSettings

@@ -1,11 +1,8 @@
-//
-//  SystemSettingsAccess.m
-//  WeightTracker
-//
-
-
 #import "SystemSettingsAccess.h"
 
+/**
+ Array used as a cache for user mail accounts.
+ */
 static NSArray *accounts;
 
 @implementation SystemSettingsAccess

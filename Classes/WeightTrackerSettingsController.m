@@ -1,26 +1,62 @@
-//
-//  WeightTrackerSettings.m
-//  WeightTracker
-//
-//  Created by Mariano Heredia on 6/28/09.
-//  Copyright 2009 __MyCompanyName__. All rights reserved.
-//
-
 #import "WeightTrackerSettingsController.h"
 #import "WeightTrackerFactory.h"
 #import "UIUtils.h"
 
 @interface WeightTrackerSettingsController ()
+/**
+ Updates the save button status (enabled/disabled) according
+ to the valid status of all required fields.*/
 - (void) updateSaveButtonStatus;
+/** \return YES if all fields have valid states. */
 - (BOOL) buttonSaveShouldBeEnabled;
+/**
+ Creates the username cell.
+ \sa WeightTrackerSettingsController::usernameCell
+ */
 - (void) initUsernameCell;
+/**
+ Creates the User Mail Addres Cell.
+ \sa WeightTrackerSettingsController::userMailAddressCell
+ */
 - (void) initUserMailAddressCell;
+/**
+ Creates the Mail Picker Controller.
+ 
+ \sa UserMailPickerContoller
+ */
 - (void) initMailPickerView;
+/**
+ Pushes the Mail Picker Controller into the navSettings Controller. 
+
+ \sa WeightTrackerSettingsController::userMailPickerController
+ \sa UIViewController::navSettings
+ */
 - (void) showMailPickerView;
+/**
+ Creates Recipient Mail Address Cell.
+ \sa WeightTrackerSettingsController::recipientMailAddressCell
+ */
 - (void) initRecipientMailAddressCell;
+/**
+ Creates  Recipient Mail Options View.
+ 
+ \sa WeightTrackerSettingsController::defaultRecipientMailOptionsController
+ */
 - (void) initRecipientMailOptionsView;
+/**
+ Pushes the Defaul Recipient Mail Options Controller into the navSettings Controller.
+\sa WeightTrackerSettingsController::defaultRecipientMailOptionsController
+ \sa UIViewController::navSettings
+ */
 - (void) showRecipientMailOptionsView;
+/**
+ Creates Weight Unit Of Measure Cell.
+ \sa WeightTrackerSettingsController::weightUnitOfMeasureCell
+ */
 - (void) initWeightUnitOfMeasureCell;
+/**
+ Saves the settings selected in this controller.
+ */
 - (void) save;
 @end
 

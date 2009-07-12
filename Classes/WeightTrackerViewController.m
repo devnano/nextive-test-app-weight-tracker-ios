@@ -10,7 +10,7 @@
 
 
 @implementation UIViewController (WeightTrackerViewController) 
-@dynamic navSettings, navMainApp;
+@dynamic navSettings, navMainApp, settings;
 
 
 
