@@ -14,6 +14,7 @@
 
 @interface DefaultRecipientMailOptionsController : UIViewController <ABPeoplePickerNavigationControllerDelegate, ABNewPersonViewControllerDelegate,
 																	 UITableViewDelegate, UITableViewDataSource>{
+	@private																	 
 	UITableViewCell *myMailCell;
 	UITableViewCell *chooseFromContactCell;
 	UITableViewCell *newContactCell;	

@@ -11,6 +11,7 @@
 #import "WeightTrackerViewController.h"
 
 @interface WeightHistoryController : UITableViewController<UITableViewDelegate, UITableViewDataSource> {
+	@private
 	WeightHistory *weightHistory;
 
 }

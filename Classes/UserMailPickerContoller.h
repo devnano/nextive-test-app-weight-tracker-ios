@@ -4,6 +4,7 @@
 
 
 @interface UserMailPickerContoller : UIViewController <UIPickerViewDelegate, UIPickerViewDataSource> {
+	@private
 	UIPickerView *mailPicker;
 	NSArray *availableMailAccounts;
 	UIViewController<WeightTrackerSettingsSupport> *caller;
