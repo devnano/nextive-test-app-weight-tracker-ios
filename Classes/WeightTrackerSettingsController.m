@@ -30,13 +30,6 @@
 			recipientMailAddressCell, defaultRecipientMailOptionsController, weightUnitOfMeasureCell;
 
 
-- (void) save
-{	
-	//reflects the settings set in this view controller
-	//into the app settings
-	[self.settings setupAppWithUserInfo:self];
-}
-
 #pragma mark -
 #pragma mark Overriden parent callbacks
 
@@ -83,7 +76,14 @@
 }
 
 #pragma mark -
-#pragma mark Widgets related methods
+#pragma mark WeightTrackerSettingsController methods
+
+- (void) save
+{	
+	//reflects the settings set in this view controller
+	//into the app settings
+	[self.settings setupAppWithUserInfo:self];
+}
 
 
 - (void) updateSaveButtonStatus{

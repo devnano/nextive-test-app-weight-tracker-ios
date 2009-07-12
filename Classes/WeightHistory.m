@@ -35,12 +35,9 @@
 	[weightLogClass removeWeightLogWithId:weightLog.weightLogId];
 }
 
--(NSUInteger) count{
-	//refresh available logs to show updated results.
-	//elf.weightHistory refresh];
-	//if(self.weightLogs == nil){
+-(NSUInteger) count{	
 	[self refresh];
-//	}
+
 	return self.weightLogs.count;
 }
 

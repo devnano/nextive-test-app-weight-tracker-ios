@@ -10,13 +10,25 @@
 #import "UIUtils.h"
 
 
+@interface WeightTrackerController()
 
+-(void)showWeightHistoryController;
+-(void)showNewWeightController;
+- (void)initShareWeightInfoCell;
+- (void)initWeigthHistoryCell;
+- (void)initNewWeightCell;
+-(void)showComposerSheet;
+
+@end
 
 
 @implementation WeightTrackerController
 @synthesize newWeightCell, weightHistoryCell, shareWeightInfoCell, newWeightController, weightHistoryController;
 
 
+
+#pragma mark -
+#pragma mark Overriden parent callbacks
 
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad {
@@ -47,6 +59,9 @@
 	[self.weightHistoryController release];
 }
 
+#pragma mark -
+#pragma mark WeightTrackerController methods
+
 - (void)initNewWeightCell{
 	self.newWeightCell  = [UIUtils createCellStyleValue1:@"New Weight"];	
 }
@@ -54,59 +69,10 @@
 - (void)initWeigthHistoryCell{
 	self.weightHistoryCell  = [UIUtils createCellStyleValue1:@"View/Edit History"];
 }
+
 - (void)initShareWeightInfoCell{
 	self.shareWeightInfoCell  = [UIUtils createCellStyleValue1:@"Share Weight Info"];
 }
-
-#pragma mark -
-#pragma mark UITableViewDataSource methods
-
-
-
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-	UITableViewCell *cell;
-	switch ([indexPath row]) {
-		case 0:	
-			if(self.newWeightCell == nil){
-				[self initNewWeightCell];				
-				
-			}
-			cell = self.newWeightCell;; 			
-			break;
-		case 1:
-			if(self.weightHistoryCell == nil){
-				[self initWeigthHistoryCell];
-			}
-			cell = self.weightHistoryCell;			
-			break;
-		case 2:
-			cell = self.shareWeightInfoCell;
-			if(self.shareWeightInfoCell == nil){
-				[self initShareWeightInfoCell];
-			}
-			cell = self.shareWeightInfoCell;
-			break;		
-		default:
-			break;
-	}
-	return cell;
-	
-}
-
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-	return 3;	
-}
-- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
-{	
-	return @"Weight Tracking";
-}
-
-- (NSString *)tableView:(UITableView *)tableView titleForFooterInSection:(NSInteger)section{
-	return @"";
-	
-}
-
-#pragma mark UITableViewDelegate related methods
 
 -(void)showNewWeightController{
 	if(self.newWeightController == nil){
@@ -123,10 +89,6 @@
 	}
 	[self.navMainApp pushViewController:self.weightHistoryController animated:YES];
 }
-
-
-#pragma mark -
-#pragma mark Compose Mail
 
 // Displays an email composition interface inside the application. Populates all the Mail fields. 
 -(void)showComposerSheet 
@@ -190,6 +152,82 @@
     [picker release];
 }
 
+
+
+#pragma mark -
+#pragma mark UITableViewDataSource methods
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+	UITableViewCell *cell;
+	switch ([indexPath row]) {
+		case 0:	
+			if(self.newWeightCell == nil){
+				[self initNewWeightCell];				
+				
+			}
+			cell = self.newWeightCell;; 			
+			break;
+		case 1:
+			if(self.weightHistoryCell == nil){
+				[self initWeigthHistoryCell];
+			}
+			cell = self.weightHistoryCell;			
+			break;
+		case 2:
+			cell = self.shareWeightInfoCell;
+			if(self.shareWeightInfoCell == nil){
+				[self initShareWeightInfoCell];
+			}
+			cell = self.shareWeightInfoCell;
+			break;		
+		default:
+			break;
+	}
+	return cell;
+	
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+	return 3;	
+}
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
+{	
+	return @"Weight Tracking";
+}
+
+- (NSString *)tableView:(UITableView *)tableView titleForFooterInSection:(NSInteger)section{
+	return @"";
+	
+}
+
+#pragma mark -
+#pragma mark UITableViewDelegate methods
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+	switch ([indexPath row]){
+		case 0:
+			[self showNewWeightController];
+			break;
+		case 1:			
+			[self showWeightHistoryController];
+			break;
+		case 2:
+			
+			// We must always check whether the current device is configured for sending emails
+			if ([MFMailComposeViewController canSendMail])
+			{
+				[self showComposerSheet];
+			}
+			
+			break;		
+	}
+	
+}
+
+#pragma mark -
+#pragma mark Compose Mail
+
+
 // Dismisses the email composition interface when users tap Cancel or Send. Proceeds to update the message field with the result of the operation.
 - (void)mailComposeController:(MFMailComposeViewController*)controller didFinishWithResult:(MFMailComposeResult)result error:(NSError*)error 
 {	
@@ -217,32 +255,6 @@
 }
 
 
-#pragma mark -
-#pragma mark UITableViewDelegate methods
-
-
-
-
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-	switch ([indexPath row]){
-		case 0:
-			[self showNewWeightController];
-			break;
-		case 1:			
-			[self showWeightHistoryController];
-			break;
-		case 2:
-		
-				// We must always check whether the current device is configured for sending emails
-				if ([MFMailComposeViewController canSendMail])
-				{
-					[self showComposerSheet];
-				}
-					
-			break;		
-	}
-	
-}
 
 
 @end

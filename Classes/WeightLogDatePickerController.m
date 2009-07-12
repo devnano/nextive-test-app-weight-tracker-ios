@@ -8,17 +8,20 @@
 
 #import "WeightLogDatePickerController.h"
 
+@interface WeightLogDatePickerController ()
+
+- (void) save;
+
+@end
+
+
 @implementation WeightLogDatePickerController
 @synthesize datePickerView, weightLog;
 
 
-- (void) save{
-	self.weightLog.date = [self.datePickerView date];
-	[self.navMainApp popViewControllerAnimated:YES];
-}
+#pragma mark -
+#pragma mark Overriden parent callbacks
 
-
-// Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad {
     [super viewDidLoad];
 	UIBarButtonItem *saveButton = [[UIBarButtonItem alloc]
@@ -51,6 +54,16 @@
     [super dealloc];
 	
 }
+
+#pragma mark -
+#pragma mark WeightLogDatePickerController methods
+
+- (void) save{
+	self.weightLog.date = [self.datePickerView date];
+	[self.navMainApp popViewControllerAnimated:YES];
+}
+
+
 
 
 @end

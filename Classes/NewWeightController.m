@@ -9,6 +9,15 @@
 //note that this should be located in a factory, in order to let the scale be changed more easily
 #import "PickerScaleController.h"
 
+@interface NewWeightController()
+- (void)save;
+-(void) updateDateLabel;
+-(void) updateWeightLabel;
+- (void) initWeightLog;
+- (void)updateWithLastLog;
+- (void)initWeightCell;
+- (void)initDateCell;
+@end
 
 
 
@@ -17,16 +26,11 @@
 @dynamic weight, date;
 
 
-- (void)save{
-	//saving the weight log
-	[self->weightLog save];
-	//getting back to the parent view
-	[self.navMainApp popViewControllerAnimated:YES];
-}
-
+#pragma mark -
+#pragma mark Overriden parent callbacks
 
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
-- (void)viewDidLoad {
+- (void)viewDidLoad {	 
     [super viewDidLoad];
 	UIBarButtonItem *saveButton = [[UIBarButtonItem alloc]
 								   initWithTitle:@"Save" 
@@ -37,19 +41,6 @@
 	[saveButton release];
 	self.title = @"New Weight Log";
 }
-
-
-
-
-
-
-/*
-// Override to allow orientations other than the default portrait orientation.
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
-    // Return YES for supported orientations
-    return (interfaceOrientation == UIInterfaceOrientationPortrait);
-}
-*/
 
 - (void)didReceiveMemoryWarning {
 	// Releases the view if it doesn't have a superview.
@@ -71,22 +62,23 @@
     [super dealloc];
 }
 
+#pragma mark -
+#pragma mark NewWeightController methods
+- (void)save{
+	//saving the weight log
+	[self->weightLog save];
+	//getting back to the parent view
+	[self.navMainApp popViewControllerAnimated:YES];
+}
+
 -(void) updateDateLabel{
 	//pre: self.dateCell has already been initialized	
 	self.dateCell.detailTextLabel.text =  [self->weightLog dateStringWithFormat:@"yyyy-MM-dd"];
 	self.datePickerController.datePickerView.date = self->weightLog.date;		
 }
--(void) updateWeightLabel{	
-	/*NSString *weightString;
-	float weight = [[self weightInUnits:[self settings].weightUnitOfMeasure]floatValue];
-	if(weight == 0.0){
-		weightString = @"-" ;
-	}else{
-		NSString *format = [NSString stringWithFormat:@"%%.%df", kAppDecimalPlaces];
-		weightString = [NSString stringWithFormat:format, weight];
-	}*/
-	//pre: self.weightCell has already been initialized
-	
+
+-(void) updateWeightLabel{		
+	//pre: self.weightCell has already been initialized	
 	self.weightCell.detailTextLabel.text = [self weightStringInUnits: [self settings].weightUnitOfMeasure  withDecimalPlaces :kAppDecimalPlaces];	
 }
 
@@ -116,6 +108,7 @@
 	self.dateCell  = [UIUtils createCellStyleValue1:@"Date"];		
 }
 
+#pragma mark -
 #pragma mark WeightLogSupport delegate methods
 
 - (NSNumber *) weight{
@@ -218,9 +211,6 @@
 
 #pragma mark -
 #pragma mark UITableViewDelegate methods
-
-
-
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
 	NSInteger row = [indexPath row];

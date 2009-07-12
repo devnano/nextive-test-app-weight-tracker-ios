@@ -9,37 +9,16 @@
 #import "WeightHistoryController.h"
 #import "WeightLogSupport.h"
 
+@interface WeightHistoryController ()
+- (void) edit;
+
+@end
+
 
 @implementation WeightHistoryController
 @synthesize weightHistory;
-
--(id) init{	
-	self = [super initWithNibName:@"WeightHistoryController" bundle:nil];	
-		
-	self.weightHistory = [[WeightHistory alloc]init];	
-
-	return self;		
-}
-
-/*
- // The designated initializer.  Override if you create the controller programmatically and want to perform customization that is not appropriate for viewDidLoad.
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
-    if (self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil]) {
-        // Custom initialization
-    }
-    return self;
-}
-*/
-
-- (void) edit{
-	[self.tableView setEditing : !self.tableView.editing animated: YES ];
-	if(self.tableView.editing){
-		self.navigationItem.rightBarButtonItem.title=@"Done";	
-	} else{
-		self.navigationItem.rightBarButtonItem.title=@"Edit";
-	}
-}
-
+#pragma mark -
+#pragma mark Overriden parent callbacks
 
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad {
@@ -53,15 +32,6 @@
 	[editButton release];
 	self.title = @"Weight History";
 }
-
-
-/*
-// Override to allow orientations other than the default portrait orientation.
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
-    // Return YES for supported orientations
-    return (interfaceOrientation == UIInterfaceOrientationPortrait);
-}
-*/
 
 - (void) viewWillAppear:(BOOL) animated{	
 	[super viewWillAppear:animated];
@@ -89,6 +59,27 @@
 	[self.weightHistory release];
     [super dealloc];
 }
+
+#pragma mark -
+#pragma mark <#label#>
+
+-(id) init{	
+	self = [super initWithNibName:@"WeightHistoryController" bundle:nil];	
+	
+	self.weightHistory = [[WeightHistory alloc]init];	
+	
+	return self;		
+}
+
+- (void) edit{
+	[self.tableView setEditing : !self.tableView.editing animated: YES ];
+	if(self.tableView.editing){
+		self.navigationItem.rightBarButtonItem.title=@"Done";	
+	} else{
+		self.navigationItem.rightBarButtonItem.title=@"Edit";
+	}
+}
+
 
 #pragma mark -
 #pragma mark UITableViewDataSource methods
