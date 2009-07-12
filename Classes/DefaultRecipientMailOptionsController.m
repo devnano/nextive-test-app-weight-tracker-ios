@@ -67,7 +67,7 @@
 - (IBAction)showCreateNewContact:(id)sender{
 	ABNewPersonViewController *newPerson = [[ABNewPersonViewController alloc] init];
 	newPerson.newPersonViewDelegate = self;	
-	[[self weightTrackerAppDelegate].navSettings pushViewController:newPerson animated:YES];
+	[self.navSettings pushViewController:newPerson animated:YES];
 	[newPerson release];
 }
 
@@ -101,16 +101,14 @@
 - (void) hideModalViewController{	
 	[self dismissModalViewControllerAnimated:NO]; 	
 	
-	[[self weightTrackerAppDelegate].navSettings popViewControllerAnimated:YES];
+	[self.navSettings popViewControllerAnimated:YES];
 }
 - (void) popNavigationViewController{	
-	[[self weightTrackerAppDelegate].navSettings popViewControllerAnimated:YES];	
+	[self.navSettings popViewControllerAnimated:YES];	
 }
 
 - (void) popNavigationToCallerViewController{
-	[[self weightTrackerAppDelegate].navSettings popToViewController:self.caller animated:YES];
-	//[delegate.navSettings popViewControllerAnimated:YES];
-	
+	[self.navSettings popToViewController:self.caller animated:YES];	
 }
 
 - (void) userMailPicked{	

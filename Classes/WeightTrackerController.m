@@ -113,7 +113,7 @@
 		self.newWeightController=[[NewWeightController alloc] initWithNibName:@"NewWeightController" bundle:nil];
 	}
 	[self.newWeightController updateWithLastLog];
-	[[self weightTrackerAppDelegate].navController pushViewController:self.newWeightController animated:YES];
+	[self.navMainApp pushViewController:self.newWeightController animated:YES];
 	
 }
 
@@ -121,7 +121,7 @@
 	if(self.weightHistoryController == nil){
 		self.weightHistoryController = [[WeightHistoryController alloc] init];
 	}
-	[[self weightTrackerAppDelegate].navController pushViewController:self.weightHistoryController animated:YES];
+	[self.navMainApp pushViewController:self.weightHistoryController animated:YES];
 }
 
 

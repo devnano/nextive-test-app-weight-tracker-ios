@@ -155,7 +155,7 @@
 	}
 	//[self.weightTrackerController presentModalViewController:userMailPickerController animated:YES]; 
 	//[weightTrackerController genericSwitchViews:self otherView:self.userMailPickerController];
-	[[self weightTrackerAppDelegate].navSettings pushViewController:self.userMailPickerController animated:YES];	
+	[self.navSettings pushViewController:self.userMailPickerController animated:YES];	
 }
 
 //***************** recipient mail address
@@ -176,7 +176,7 @@
 	}
 	//[self.weightTrackerController presentModalViewController:userMailPickerController animated:YES]; 
 	//[weightTrackerController genericSwitchViews:self otherView:self.userMailPickerController];
-	[[self weightTrackerAppDelegate].navSettings pushViewController:self.defaultRecipientMailOptionsController animated:YES];	
+	[self.navSettings pushViewController:self.defaultRecipientMailOptionsController animated:YES];	
 }
 
 //****************unit of measure

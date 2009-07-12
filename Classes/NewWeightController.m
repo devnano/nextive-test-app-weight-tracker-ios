@@ -24,7 +24,7 @@
 	//saving the weight log
 	[self->weightLog save];
 	//getting back to the parent view
-	[[self weightTrackerAppDelegate].navController popViewControllerAnimated:YES];
+	[self.navMainApp popViewControllerAnimated:YES];
 }
 
 
@@ -197,7 +197,7 @@
 		self.datePickerController=[[WeightLogDatePickerController alloc] initWithNibName:@"WeightLogDatePickerController" bundle:nil];
 		self.datePickerController.weightLog = self;
 	}
-	[[self weightTrackerAppDelegate].navController pushViewController:self.datePickerController animated:YES];
+	[self.navMainApp pushViewController:self.datePickerController animated:YES];
 	
 }
 //TODO: MOVE THIS FACTORY METHODS TO THE APP FACTORY
@@ -208,13 +208,13 @@
 
 -(void) showScale{
 	if(self.scale == nil){
-		NSObject<WeightTrackerSettingsSupport> *settings = [self weightTrackerAppDelegate].weightTrackerSettings;
+		NSObject<WeightTrackerSettingsSupport> *settings = self.settings;
 		//HARDCODING DECIMAL PLACES, IS NOT CLEAR IF IS A REQUIREMENT BUT WILL BE EASILY PLUGGED IF NEEDED
 		self.scale = [NewWeightController createScaleWithUnitsOfMeasure:settings.weightUnitOfMeasure withDecimalPlaces:kAppDecimalPlaces withValue:[self->weightLog weightInUnits:[self settings].weightUnitOfMeasure]];
 		self.scale.owner = self;
 	}
 	//Trusting in scale UIViewController hierachy belonging....
-	[[self weightTrackerAppDelegate].navController pushViewController:self.scale animated:YES];
+	[self.navMainApp pushViewController:self.scale animated:YES];
 }
 
 

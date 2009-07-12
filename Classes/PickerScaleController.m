@@ -17,7 +17,7 @@
 - (void) save{
 	owner.weight =self.value;
 	
-	[[self weightTrackerAppDelegate].navController popViewControllerAnimated:YES];
+	[self.navMainApp popViewControllerAnimated:YES];
 }
 
 

@@ -14,7 +14,10 @@
 
 @interface UIViewController (WeightTrackerViewController) 
 
-- (WeightTrackerAppDelegate *) weightTrackerAppDelegate;
+//- (WeightTrackerAppDelegate *) weightTrackerAppDelegate;
 -(NSObject<WeightTrackerSettingsSupport> *) settings;
+@property(readonly) UINavigationController *navSettings;
+@property(readonly) UINavigationController *navMainApp;
+
 
 @end

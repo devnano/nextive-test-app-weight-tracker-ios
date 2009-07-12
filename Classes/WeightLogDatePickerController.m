@@ -14,7 +14,7 @@
 
 - (void) save{
 	self.weightLog.date = [self.datePickerView date];
-	[[self weightTrackerAppDelegate].navController popViewControllerAnimated:YES];
+	[self.navMainApp popViewControllerAnimated:YES];
 }
 
 
