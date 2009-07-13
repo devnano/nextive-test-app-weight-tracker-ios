@@ -1,18 +1,8 @@
-//
-//  WeightTrackerViewController.m
-//  WeightTracker
-//
-//  Created by Mariano Heredia on 7/10/09.
-//  Copyright 2009 __MyCompanyName__. All rights reserved.
-//
-
 #import "WeightTrackerViewController.h"
 
 
 @implementation UIViewController (WeightTrackerViewController) 
-@dynamic navSettings, navMainApp, settings;
-
-
+@dynamic navSettings, navMainApp, settings, weighningUnitsStr;
 
 
 - (WeightTrackerAppDelegate *) weightTrackerAppDelegate{
@@ -28,6 +18,9 @@
 
 -(UINavigationController *) navMainApp{
 	return [self weightTrackerAppDelegate].navController;	
+}
+-(NSString *) weighningUnitsStr{
+	return stringForDecimalPlaceAndUnits([self settings].weightUnitOfMeasure, NoDecimalPlaces);
 }
 
 

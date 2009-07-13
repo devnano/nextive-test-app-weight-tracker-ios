@@ -25,5 +25,8 @@
  */
 @property(readonly) UINavigationController *navMainApp;
 
+/**Gives the short string that refers to the weighning units. (e.g. lb. or kg.)*/
+@property(readonly) NSString *weighningUnitsStr;
+
 
 @end

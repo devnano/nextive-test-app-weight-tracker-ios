@@ -1,8 +1,3 @@
-//
-//  NewWeightController.m
-//  WeightTracker
-//
-
 #import "NewWeightController.h"
 #import "UIUtils.h"
 #import "WeightTrackerFactory.h"
@@ -81,7 +76,9 @@
 
 -(void) updateWeightLabel{		
 	//pre: self.weightCell has already been initialized	
-	self.weightCell.detailTextLabel.text = [self weightStringInUnits: [self settings].weightUnitOfMeasure  withDecimalPlaces :kAppDecimalPlaces];	
+	NSString *units = self.weighningUnitsStr;
+	NSString *weightStr =  [self weightStringInUnits: [self settings].weightUnitOfMeasure  withDecimalPlaces :kAppDecimalPlaces];	
+	self.weightCell.detailTextLabel.text = [NSString stringWithFormat:@"%@ %@", weightStr, units];	
 }
 
 - (void) initWeightLog{
@@ -139,7 +136,7 @@
 }
 
 #pragma mark -
-#pragma mark WeightLogSupport delegate methods
+#pragma mark WeightLogSupport protocol methods
 
 - (NSNumber *) weight{
 	return self->weightLog.weight;

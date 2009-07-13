@@ -1,11 +1,3 @@
-//
-//  PickerScaleController.m
-//  WeightTracker
-//
-//  Created by Mariano Heredia on 7/2/09.
-//  Copyright 2009 __MyCompanyName__. All rights reserved.
-//
-
 #import "PickerScaleController.h"
 
 
@@ -53,8 +45,7 @@
 	self.value = [owner weightInUnits:self.settings.weightUnitOfMeasure];
 }
 
--(void) setValue:(NSNumber *) value{	
-	//todo: obtain components
+-(void) setValue:(NSNumber *) value{		
 	NSString *format = [NSString stringWithFormat:@"%%.%df", kAppDecimalPlaces];
 	NSString *valueStr = [NSString stringWithFormat:format, [value floatValue]];
 	NSArray *components = [valueStr componentsSeparatedByString:@"."];
@@ -64,7 +55,8 @@
 	NSString *decimals = [components objectAtIndex:1];
 	
 	for(int i =0; i<kAppDecimalPlaces; i++ ){
-		//parssing each unichar of the remaining component
+		//parsing each unichar of the remaining component
+		//todo to use atoi instead
 		unichar *decimal = malloc(sizeof(unichar));
 		decimal[0] = [decimals characterAtIndex:i];
 		

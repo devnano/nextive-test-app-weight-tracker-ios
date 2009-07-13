@@ -1,11 +1,3 @@
-//
-//  WeightHistoryController.m
-//  WeightTracker
-//
-//  Created by Mariano Heredia on 7/7/09.
-//  Copyright 2009 __MyCompanyName__. All rights reserved.
-//
-
 #import "WeightHistoryController.h"
 #import "WeightLogSupport.h"
 
@@ -29,13 +21,13 @@
 								   target:self
 								   action:@selector(edit)];
 	self.navigationItem.rightBarButtonItem = editButton;	
-	[editButton release];
-	self.title = @"Weight History";
+	[editButton release];	
 }
 
 - (void) viewWillAppear:(BOOL) animated{	
 	[super viewWillAppear:animated];
 	[self.tableView reloadData];
+	self.title = [NSString stringWithFormat: @"History (%@)", self.weighningUnitsStr];
 	if(self.tableView.editing){
 		[self edit];
 	}

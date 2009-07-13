@@ -1,11 +1,3 @@
-//
-//  RootViewController.m
-//  WeightTracker
-//
-//  Created by Mariano Heredia on 6/28/09.
-//  Copyright 2009 __MyCompanyName__. All rights reserved.
-//
-
 #import "WeightTrackerController.h"
 #import "UIUtils.h"
 
@@ -116,7 +108,7 @@
 	[self.weightHistoryController.weightHistory refresh];
 	
 	NSArray *weightLogs = [self.weightHistoryController.weightHistory weightLogs];
-	NSMutableString *entriesCsv = [NSMutableString stringWithString:@"date, weight\n"];
+	NSMutableString *entriesCsv = [NSMutableString stringWithFormat:@"date, weight (%@)\n", self.weighningUnitsStr];
 	
 	NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask , YES);
 	NSString *documentsDirectory = [paths objectAtIndex:0];

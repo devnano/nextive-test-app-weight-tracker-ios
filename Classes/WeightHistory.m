@@ -1,11 +1,3 @@
-//
-//  WeightHistory.m
-//  WeightTracker
-//
-//  Created by Mariano Heredia on 7/7/09.
-//  Copyright 2009 __MyCompanyName__. All rights reserved.
-//
-
 #import "WeightHistory.h"
 #import "WeightTrackerFactory.h"
 
