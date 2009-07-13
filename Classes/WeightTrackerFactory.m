@@ -15,15 +15,14 @@ static WeightTrackerSettingsSPO *settings;
 {
 	//WeightTrackerSettings * settings = [WeightTrackerSettings alloc];
 	//[settings init];
-	if(settings == nil){
-		settings = (WeightTrackerSettingsSPO *) [WeightTrackerSettingsSPO findByPK:1];
 	
-		if(settings == nil){
-			//settings are not created yet...
-			//settings = [[[WeightTrackerSettingsSPO alloc] init] autorelease];
-			settings = [[WeightTrackerSettingsSPO alloc] init];
-		}
+	//refreshing the settings every time that the method gets called	
+	settings = (WeightTrackerSettingsSPO *) [WeightTrackerSettingsSPO findByPK:1];
+	
+	if(settings == nil){
+		settings = [[WeightTrackerSettingsSPO alloc] init];
 	}
+	//}
 	
 	return settings;
 }
