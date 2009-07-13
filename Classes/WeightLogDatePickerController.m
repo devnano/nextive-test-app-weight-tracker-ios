@@ -47,6 +47,11 @@
 	// e.g. self.myOutlet = nil;
 }
 
+- (void) viewDidAppear:(BOOL) animated{
+	[super viewDidAppear:animated];
+	self.datePickerView.date = self.weightLog.date;
+}
+
 
 - (void)dealloc {
 	[self.datePickerView release];

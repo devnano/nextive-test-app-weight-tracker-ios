@@ -17,6 +17,8 @@
 - (void)updateWithLastLog;
 - (void)initWeightCell;
 - (void)initDateCell;
+-(void) showScale;
+-(void)showDatePickerController;
 @end
 
 
@@ -108,6 +110,32 @@
 	self.dateCell  = [UIUtils createCellStyleValue1:@"Date"];		
 }
 
+-(void)showDatePickerController{
+	if(self.datePickerController == nil){
+		self.datePickerController=[[WeightLogDatePickerController alloc] initWithNibName:@"WeightLogDatePickerController" bundle:nil];
+		//setting the reference to the data source and destination for the picker
+		self.datePickerController.weightLog = self;
+	}
+	[self.navMainApp pushViewController:self.datePickerController animated:YES];
+	
+}
+//TODO: MOVE THIS FACTORY METHODS TO THE APP FACTORY
++(NSObject<ScaleSupport> *) createScaleWithUnitsOfMeasure:(WeightUnitsOfMeasure)units withDecimalPlaces:(DecimalPlaces)places withValue:(NSNumber *)theValue{
+	return [[PickerScaleController alloc] initWithUnitsOfMeasure:units withDecimalPlaces:places withValue:theValue];
+}
+
+
+-(void) showScale{
+	if(self.scale == nil){
+		NSObject<WeightTrackerSettingsSupport> *settings = self.settings;
+		//HARDCODING DECIMAL PLACES, IS NOT CLEAR IF IS A REQUIREMENT BUT WILL BE EASILY PLUGGED IF NEEDED
+		self.scale = [NewWeightController createScaleWithUnitsOfMeasure:settings.weightUnitOfMeasure withDecimalPlaces:kAppDecimalPlaces withValue:[self->weightLog weightInUnits:[self settings].weightUnitOfMeasure]];
+		self.scale.owner = self;
+	}
+	//Trusting in scale UIViewController hierachy belonging....
+	[self.navMainApp pushViewController:self.scale animated:YES];
+}
+
 #pragma mark -
 #pragma mark WeightLogSupport delegate methods
 
@@ -182,30 +210,7 @@
 
 #pragma mark UITableViewDelegate related methods
 
--(void)showDatePickerController{
-	if(self.datePickerController == nil){
-		self.datePickerController=[[WeightLogDatePickerController alloc] initWithNibName:@"WeightLogDatePickerController" bundle:nil];
-		self.datePickerController.weightLog = self;
-	}
-	[self.navMainApp pushViewController:self.datePickerController animated:YES];
-	
-}
-//TODO: MOVE THIS FACTORY METHODS TO THE APP FACTORY
-+(NSObject<ScaleSupport> *) createScaleWithUnitsOfMeasure:(WeightUnitsOfMeasure)units withDecimalPlaces:(DecimalPlaces)places withValue:(NSNumber *)theValue{
-	return [[PickerScaleController alloc] initWithUnitsOfMeasure:units withDecimalPlaces:places withValue:theValue];
-}
 
-
--(void) showScale{
-	if(self.scale == nil){
-		NSObject<WeightTrackerSettingsSupport> *settings = self.settings;
-		//HARDCODING DECIMAL PLACES, IS NOT CLEAR IF IS A REQUIREMENT BUT WILL BE EASILY PLUGGED IF NEEDED
-		self.scale = [NewWeightController createScaleWithUnitsOfMeasure:settings.weightUnitOfMeasure withDecimalPlaces:kAppDecimalPlaces withValue:[self->weightLog weightInUnits:[self settings].weightUnitOfMeasure]];
-		self.scale.owner = self;
-	}
-	//Trusting in scale UIViewController hierachy belonging....
-	[self.navMainApp pushViewController:self.scale animated:YES];
-}
 
 
 
