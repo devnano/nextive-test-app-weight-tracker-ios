@@ -121,7 +121,9 @@
 }
 //TODO: MOVE THIS FACTORY METHODS TO THE APP FACTORY
 +(NSObject<ScaleSupport> *) createScaleWithUnitsOfMeasure:(WeightUnitsOfMeasure)units withDecimalPlaces:(DecimalPlaces)places withValue:(NSNumber *)theValue{
-	return [[PickerScaleController alloc] initWithUnitsOfMeasure:units withDecimalPlaces:places withValue:theValue];
+	PickerScaleController *pickerScaleController = [[PickerScaleController alloc] initWithNibName:@"PickerScaleController" bundle:nil];
+	pickerScaleController.value = theValue;
+	return pickerScaleController;
 }
 
 

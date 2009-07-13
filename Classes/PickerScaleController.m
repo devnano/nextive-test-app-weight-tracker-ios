@@ -11,7 +11,7 @@
 
 
 @implementation PickerScaleController
-@synthesize valuePicker, decimalPlaces, unitsOfMeasure, owner;
+@synthesize valuePicker, owner;
 @dynamic value;
 
 - (void) save{
@@ -38,31 +38,11 @@
 
 
 
-
-
-/*
-// Override to allow orientations other than the default portrait orientation.
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
-    // Return YES for supported orientations
-    return (interfaceOrientation == UIInterfaceOrientationPortrait);
-}
-*/
-
--(id) initWithUnitsOfMeasure:(WeightUnitsOfMeasure)units withDecimalPlaces:(DecimalPlaces)places withValue:(NSNumber *)theValue{
-	self = [super initWithNibName:@"PickerScaleController" bundle:nil];	
-	
-	self.unitsOfMeasure = units;
-	self.decimalPlaces = places;
-	
-	//posposing the value setting til the viewDidAppear callback
-	//self.value = theValue;
-	return self;
-	
-}
 -(void) viewWillAppear:(BOOL)animated{
+	[super viewWillAppear:animated];
 //	for(int i=NoDecimalPlaces; i<=self.decimalPlaces; i++){
 		//sets the main units being entered by the user in the first componenet of the picker (i.e. kg, lb)
-		[self.valuePicker addLabel:stringForDecimalPlaceAndUnits(self.unitsOfMeasure, NoDecimalPlaces) forComponent:0 forLongestString:nil];
+		[self.valuePicker addLabel:stringForDecimalPlaceAndUnits(self.settings.weightUnitOfMeasure, NoDecimalPlaces) forComponent:0 forLongestString:nil];
 	//}
 
 	
@@ -70,12 +50,12 @@
 }
 -(void)viewDidAppear:(BOOL)animated{
 	[super viewDidAppear:animated];
-	self.value = [owner weightInUnits:self.unitsOfMeasure];
+	self.value = [owner weightInUnits:self.settings.weightUnitOfMeasure];
 }
 
 -(void) setValue:(NSNumber *) value{	
-	//todo: obtain componentes
-	NSString *format = [NSString stringWithFormat:@"%%.%df", [self decimalPlaces]];
+	//todo: obtain components
+	NSString *format = [NSString stringWithFormat:@"%%.%df", kAppDecimalPlaces];
 	NSString *valueStr = [NSString stringWithFormat:format, [value floatValue]];
 	NSArray *components = [valueStr componentsSeparatedByString:@"."];
 	//the first component respresentes the integer part
@@ -83,7 +63,7 @@
 	//the remainging decimal values, are inside the second component
 	NSString *decimals = [components objectAtIndex:1];
 	
-	for(int i =0; i<self.decimalPlaces; i++ ){
+	for(int i =0; i<kAppDecimalPlaces; i++ ){
 		//parssing each unichar of the remaining component
 		unichar *decimal = malloc(sizeof(unichar));
 		decimal[0] = [decimals characterAtIndex:i];
@@ -95,7 +75,7 @@
 }
 -(NSNumber *) value{
 	NSMutableString *valueStr = [[NSMutableString alloc]initWithString:@""];
-	for(int i =0; i<=self.decimalPlaces; i++ ){		
+	for(int i =0; i<=kAppDecimalPlaces; i++ ){		
 		[valueStr appendString:[NSString stringWithFormat:@"%d", [self.valuePicker selectedRowInComponent:i] ]];
 		if(i==0){
 			[valueStr appendString:@"."];
@@ -127,13 +107,13 @@
 #pragma mark -
 #pragma mark UIPickerViewDataSource methods
 - (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView{
-	return 1 + self.decimalPlaces;
+	return 1 + kAppDecimalPlaces;
 	
 }
 
 - (NSInteger) numberOfUnits{
 	NSInteger n;
-	switch (self.unitsOfMeasure) {
+	switch (self.settings.weightUnitOfMeasure) {
 		case Kilograms:
 			n = kScaleMaxInKg;
 			break;

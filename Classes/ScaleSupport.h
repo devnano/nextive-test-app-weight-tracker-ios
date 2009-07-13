@@ -11,13 +11,10 @@
 
 
 
-@protocol ScaleSupport
-	@property (nonatomic) WeightUnitsOfMeasure unitsOfMeasure;
+@protocol ScaleSupport	
 	//returns the last measurment
-	@property (nonatomic, assign) NSNumber *value;
-	@property (nonatomic) DecimalPlaces decimalPlaces;
+	@property (nonatomic, assign) NSNumber *value;	
 	@property (nonatomic, retain) NSObject<WeightLogSupport> *owner;
-	-(id) initWithUnitsOfMeasure:(WeightUnitsOfMeasure)units withDecimalPlaces:(DecimalPlaces)places withValue:(NSNumber *)theValue;
 @end
 
 

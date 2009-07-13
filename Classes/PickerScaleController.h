@@ -15,9 +15,7 @@
 
 @interface PickerScaleController : UIViewController<ScaleSupport, UIPickerViewDelegate, UIPickerViewDataSource> {
 	@private
-	LabeledPickerView *valuePicker;
-	DecimalPlaces decimalPlaces;
-	WeightUnitsOfMeasure unitsOfMeasure;
+	LabeledPickerView *valuePicker;	
 	NSObject<WeightLogSupport> *owner;
 	
 }
