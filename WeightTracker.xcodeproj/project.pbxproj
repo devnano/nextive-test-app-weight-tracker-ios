@@ -150,6 +150,8 @@
 		3EB2C98D1007F74100190D53 /* WeightTrackerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeightTrackerViewController.m; sourceTree = "<group>"; };
 		3EB61B82100796DB008C6EF5 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		3EC97FEB100A68ED005ED02B /* index.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; name = index.html; path = html/index.html; sourceTree = "<group>"; };
+		3EC98100100AAEFE005ED02B /* Settings.xcclassmodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcclassmodel; path = Settings.xcclassmodel; sourceTree = "<group>"; };
+		3EC98105100AB2D0005ED02B /* WeightTracker.xcclassmodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcclassmodel; path = WeightTracker.xcclassmodel; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* WeightTracker-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "WeightTracker-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -297,18 +299,8 @@
 		3EA652380FF8129B00FC45D0 /* data */ = {
 			isa = PBXGroup;
 			children = (
-				3EA651DC0FF8122E00FC45D0 /* SystemSettingsAccess.h */,
-				3EA651DD0FF8122E00FC45D0 /* SystemSettingsAccess.m */,
-				3EA651DE0FF8122E00FC45D0 /* WeightTrackerSettings.h */,
-				3EA651DF0FF8122E00FC45D0 /* WeightTrackerSettings.m */,
-				3EA651E00FF8122E00FC45D0 /* WeightTrackerFactory.h */,
-				3EA651E10FF8122E00FC45D0 /* WeightTrackerFactory.m */,
-				3EA651E20FF8122E00FC45D0 /* WeightTrackerSettingsSPO.h */,
-				3EA651E30FF8122E00FC45D0 /* WeightTrackerSettingsSPO.m */,
-				3EA651E40FF8122E00FC45D0 /* WeightTrackerSettingsSupport.h */,
-				3E9342620FFD50E30087CF6B /* WeightLogSPO.h */,
-				3E9342630FFD50E30087CF6B /* WeightLogSPO.m */,
-				3E9342670FFD51960087CF6B /* WeightLogSupport.h */,
+				3EC98104100AB233005ED02B /* WeightTracker */,
+				3EC980FE100AAEC7005ED02B /* Settings */,
 			);
 			name = data;
 			sourceTree = "<group>";
@@ -368,6 +360,8 @@
 			isa = PBXGroup;
 			children = (
 				3EC97FEB100A68ED005ED02B /* index.html */,
+				3EC98100100AAEFE005ED02B /* Settings.xcclassmodel */,
+				3EC98105100AB2D0005ED02B /* WeightTracker.xcclassmodel */,
 			);
 			name = Documentation;
 			sourceTree = "<group>";
@@ -380,6 +374,32 @@
 				3EA487110FF9646000ED5594 /* UIUtils.h */,
 			);
 			name = Utils;
+			sourceTree = "<group>";
+		};
+		3EC980FE100AAEC7005ED02B /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				3EA651DC0FF8122E00FC45D0 /* SystemSettingsAccess.h */,
+				3EA651DD0FF8122E00FC45D0 /* SystemSettingsAccess.m */,
+				3EA651DE0FF8122E00FC45D0 /* WeightTrackerSettings.h */,
+				3EA651DF0FF8122E00FC45D0 /* WeightTrackerSettings.m */,
+				3EA651E00FF8122E00FC45D0 /* WeightTrackerFactory.h */,
+				3EA651E10FF8122E00FC45D0 /* WeightTrackerFactory.m */,
+				3EA651E20FF8122E00FC45D0 /* WeightTrackerSettingsSPO.h */,
+				3EA651E30FF8122E00FC45D0 /* WeightTrackerSettingsSPO.m */,
+				3EA651E40FF8122E00FC45D0 /* WeightTrackerSettingsSupport.h */,
+			);
+			name = Settings;
+			sourceTree = "<group>";
+		};
+		3EC98104100AB233005ED02B /* WeightTracker */ = {
+			isa = PBXGroup;
+			children = (
+				3E9342620FFD50E30087CF6B /* WeightLogSPO.h */,
+				3E9342630FFD50E30087CF6B /* WeightLogSPO.m */,
+				3E9342670FFD51960087CF6B /* WeightLogSupport.h */,
+			);
+			name = WeightTracker;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
