@@ -49,9 +49,10 @@
 - (IBAction) hideAppSettings{
 	WeightTrackerSettingsController *settingsController =(WeightTrackerSettingsController *) [navSettings topViewController];
 	//saving the state of the settings view
+	
 	[settingsController save];
-	//refreshing saved settings
-	self.weightTrackerSettings = [WeightTrackerFactory getWeightTrackerSettings];
+	//NOTE no need the line below (refreshing saved settings)
+	//self.weightTrackerSettings = [WeightTrackerFactory getWeightTrackerSettings];
 	//hiding modal shown settings controller
 	[navController dismissModalViewControllerAnimated:YES];	
 }

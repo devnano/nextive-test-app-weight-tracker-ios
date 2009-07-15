@@ -1,5 +1,6 @@
 #import "WeightTrackerFactory.h"
 #import "WeightTrackerSettingsSPO.h"
+#import "WeightTrackerSettings.h"
 #import "WeightLogSPO.h"
 
 
@@ -8,11 +9,10 @@
 /**
 WeightTrackerSettingsSPO shared instance.
  */
-static WeightTrackerSettingsSPO *settings;
+static NSObject<WeightTrackerSettingsSupport> *settings;
 
 
-+ ( NSObject<WeightTrackerSettingsSupport> *) getWeightTrackerSettings
-{
++ ( NSObject<WeightTrackerSettingsSupport> *) getWeightTrackerSettingsSPO{
 	//WeightTrackerSettings * settings = [WeightTrackerSettings alloc];
 	//[settings init];
 	
@@ -25,7 +25,27 @@ static WeightTrackerSettingsSPO *settings;
 	//}
 	
 	return settings;
+	
+	
 }
+
++ ( NSObject<WeightTrackerSettingsSupport> *) getWeightTrackerSettingsSqlite{
+	//refreshing the settings every time that the method gets called	
+	settings = (WeightTrackerSettings *) [[WeightTrackerSettings alloc]init];
+	
+	
+	
+	return settings;
+}
+
+
++ ( NSObject<WeightTrackerSettingsSupport> *) getWeightTrackerSettings
+{
+	return [WeightTrackerFactory getWeightTrackerSettingsSqlite];
+	//return [WeightTrackerFactory getWeightTrackerSettingsSPO];
+}
+
+
 
 + (NSObject<WeightLogSupport> *) createWeightLog{
 	return [[WeightLogSPO alloc] initDefaultValues];

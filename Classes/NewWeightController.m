@@ -91,7 +91,9 @@
 	[self updateWeightLabel];
 }
 
-- (void)updateWithLastLog {    
+- (void)updateWithLastLog {  
+	//if both cells have not been init yet, don't try to update them
+	//(this can happend when an outsider calls this update method)
 	if(self.dateCell && self.weightCell){
 		[self initWeightLog];
 	}
