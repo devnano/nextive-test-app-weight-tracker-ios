@@ -56,6 +56,9 @@
 		3EAEB8250FFE8F93004DF352 /* LabeledPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EAEB8240FFE8F93004DF352 /* LabeledPickerView.m */; };
 		3EB2C98E1007F74100190D53 /* WeightTrackerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EB2C98D1007F74100190D53 /* WeightTrackerViewController.m */; };
 		3EB61B83100796DB008C6EF5 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EB61B82100796DB008C6EF5 /* MessageUI.framework */; };
+		3EB88CE7100DF02E006270BF /* WeightLog.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EB88CE6100DF02E006270BF /* WeightLog.m */; };
+		3EB88CF0100DF0FA006270BF /* SqliteBaseObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EB88CEF100DF0FA006270BF /* SqliteBaseObject.m */; };
+		3EB88E50100E0BE9006270BF /* NSObject-WeightLog.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EB88E4F100E0BE9006270BF /* NSObject-WeightLog.m */; };
 		3EB97EA2100D675A009198CF /* WeightTrackerSettingsSupportCommons.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EB97EA1100D675A009198CF /* WeightTrackerSettingsSupportCommons.m */; };
 		3EC97FEC100A68ED005ED02B /* index.html in Resources */ = {isa = PBXBuildFile; fileRef = 3EC97FEB100A68ED005ED02B /* index.html */; };
 /* End PBXBuildFile section */
@@ -150,6 +153,12 @@
 		3EB2C98C1007F74100190D53 /* WeightTrackerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeightTrackerViewController.h; sourceTree = "<group>"; };
 		3EB2C98D1007F74100190D53 /* WeightTrackerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeightTrackerViewController.m; sourceTree = "<group>"; };
 		3EB61B82100796DB008C6EF5 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		3EB88CE5100DF02E006270BF /* WeightLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeightLog.h; sourceTree = "<group>"; };
+		3EB88CE6100DF02E006270BF /* WeightLog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeightLog.m; sourceTree = "<group>"; };
+		3EB88CEE100DF0FA006270BF /* SqliteBaseObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SqliteBaseObject.h; sourceTree = "<group>"; };
+		3EB88CEF100DF0FA006270BF /* SqliteBaseObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SqliteBaseObject.m; sourceTree = "<group>"; };
+		3EB88E4E100E0BE9006270BF /* NSObject-WeightLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject-WeightLog.h"; sourceTree = "<group>"; };
+		3EB88E4F100E0BE9006270BF /* NSObject-WeightLog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject-WeightLog.m"; sourceTree = "<group>"; };
 		3EB97EA0100D675A009198CF /* WeightTrackerSettingsSupportCommons.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeightTrackerSettingsSupportCommons.h; sourceTree = "<group>"; };
 		3EB97EA1100D675A009198CF /* WeightTrackerSettingsSupportCommons.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeightTrackerSettingsSupportCommons.m; sourceTree = "<group>"; };
 		3EC97FEB100A68ED005ED02B /* index.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; name = index.html; path = html/index.html; sourceTree = "<group>"; };
@@ -304,6 +313,8 @@
 			children = (
 				3EC98104100AB233005ED02B /* WeightTracker */,
 				3EC980FE100AAEC7005ED02B /* Settings */,
+				3EB88CEE100DF0FA006270BF /* SqliteBaseObject.h */,
+				3EB88CEF100DF0FA006270BF /* SqliteBaseObject.m */,
 			);
 			name = data;
 			sourceTree = "<group>";
@@ -359,6 +370,42 @@
 			path = 3rdParties;
 			sourceTree = "<group>";
 		};
+		3EB88CE0100DEF94006270BF /* SPO */ = {
+			isa = PBXGroup;
+			children = (
+				3EA651E20FF8122E00FC45D0 /* WeightTrackerSettingsSPO.h */,
+				3EA651E30FF8122E00FC45D0 /* WeightTrackerSettingsSPO.m */,
+			);
+			name = SPO;
+			sourceTree = "<group>";
+		};
+		3EB88CE2100DEFA7006270BF /* Sqlite */ = {
+			isa = PBXGroup;
+			children = (
+				3EA651DE0FF8122E00FC45D0 /* WeightTrackerSettings.h */,
+				3EA651DF0FF8122E00FC45D0 /* WeightTrackerSettings.m */,
+			);
+			name = Sqlite;
+			sourceTree = "<group>";
+		};
+		3EB88CE3100DEFFC006270BF /* SPO */ = {
+			isa = PBXGroup;
+			children = (
+				3E9342620FFD50E30087CF6B /* WeightLogSPO.h */,
+				3E9342630FFD50E30087CF6B /* WeightLogSPO.m */,
+			);
+			name = SPO;
+			sourceTree = "<group>";
+		};
+		3EB88CE4100DF00F006270BF /* Sqlite */ = {
+			isa = PBXGroup;
+			children = (
+				3EB88CE5100DF02E006270BF /* WeightLog.h */,
+				3EB88CE6100DF02E006270BF /* WeightLog.m */,
+			);
+			name = Sqlite;
+			sourceTree = "<group>";
+		};
 		3EC97FEA100A68C1005ED02B /* Documentation */ = {
 			isa = PBXGroup;
 			children = (
@@ -382,14 +429,12 @@
 		3EC980FE100AAEC7005ED02B /* Settings */ = {
 			isa = PBXGroup;
 			children = (
+				3EB88CE2100DEFA7006270BF /* Sqlite */,
+				3EB88CE0100DEF94006270BF /* SPO */,
 				3EA651DC0FF8122E00FC45D0 /* SystemSettingsAccess.h */,
 				3EA651DD0FF8122E00FC45D0 /* SystemSettingsAccess.m */,
-				3EA651DE0FF8122E00FC45D0 /* WeightTrackerSettings.h */,
-				3EA651DF0FF8122E00FC45D0 /* WeightTrackerSettings.m */,
 				3EA651E00FF8122E00FC45D0 /* WeightTrackerFactory.h */,
 				3EA651E10FF8122E00FC45D0 /* WeightTrackerFactory.m */,
-				3EA651E20FF8122E00FC45D0 /* WeightTrackerSettingsSPO.h */,
-				3EA651E30FF8122E00FC45D0 /* WeightTrackerSettingsSPO.m */,
 				3EA651E40FF8122E00FC45D0 /* WeightTrackerSettingsSupport.h */,
 				3EB97EA0100D675A009198CF /* WeightTrackerSettingsSupportCommons.h */,
 				3EB97EA1100D675A009198CF /* WeightTrackerSettingsSupportCommons.m */,
@@ -400,9 +445,11 @@
 		3EC98104100AB233005ED02B /* WeightTracker */ = {
 			isa = PBXGroup;
 			children = (
-				3E9342620FFD50E30087CF6B /* WeightLogSPO.h */,
-				3E9342630FFD50E30087CF6B /* WeightLogSPO.m */,
+				3EB88CE4100DF00F006270BF /* Sqlite */,
+				3EB88CE3100DEFFC006270BF /* SPO */,
 				3E9342670FFD51960087CF6B /* WeightLogSupport.h */,
+				3EB88E4E100E0BE9006270BF /* NSObject-WeightLog.h */,
+				3EB88E4F100E0BE9006270BF /* NSObject-WeightLog.m */,
 			);
 			name = WeightTracker;
 			sourceTree = "<group>";
@@ -520,6 +567,9 @@
 				3E557B7A1003D22400B4F7D5 /* WeightHistory.m in Sources */,
 				3EB2C98E1007F74100190D53 /* WeightTrackerViewController.m in Sources */,
 				3EB97EA2100D675A009198CF /* WeightTrackerSettingsSupportCommons.m in Sources */,
+				3EB88CE7100DF02E006270BF /* WeightLog.m in Sources */,
+				3EB88CF0100DF0FA006270BF /* SqliteBaseObject.m in Sources */,
+				3EB88E50100E0BE9006270BF /* NSObject-WeightLog.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

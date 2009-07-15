@@ -39,8 +39,8 @@ static NSObject<WeightTrackerSettingsSupport> *settings;
 
 + ( NSObject<WeightTrackerSettingsSupport> *) getWeightTrackerSettings
 {
-	return [WeightTrackerFactory getWeightTrackerSettingsSqlite];
-	//return [WeightTrackerFactory getWeightTrackerSettingsSPO];
+	//return [WeightTrackerFactory getWeightTrackerSettingsSqlite];
+	return [WeightTrackerFactory getWeightTrackerSettingsSPO];
 }
 
 

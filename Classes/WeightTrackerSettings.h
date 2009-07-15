@@ -1,16 +1,15 @@
 #import <Foundation/Foundation.h>
-#import "/usr/include/sqlite3.h"
 #import "WeightTrackerSettingsSupport.h"
-
-#define FILE_NAME @"data.sqlite3"
-
+#import "SqliteBaseObject.h"
 
 
 
-@interface WeightTrackerSettings : NSObject <WeightTrackerSettingsSupport> {
+
+
+@interface WeightTrackerSettings : SqliteBaseObject <WeightTrackerSettingsSupport> {
 	@private
 		BOOL appAlreadySetup;
-		sqlite3 *db;
+		
 	NSString *username;/**\sa WeightTrackerSettingsSupport::username.*/
 	NSString *userMailAddress;/**\sa WeightTrackerSettingsSupport::userMailAddress.*/
 	NSString *recipientMailAddress;/**\sa WeightTrackerSettingsSupport::recipientMailAddress.*/
@@ -18,6 +17,6 @@
 		
 }
 
-- (NSString *) dataFilePath;
+
 
 @end
