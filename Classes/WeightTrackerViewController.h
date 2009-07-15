@@ -4,7 +4,7 @@
 #import "WeightTrackerSettingsSupport.h"
 
 /**
- Conveniente Category that exposes common properties and methods for all WeightTracker view controllers.
+ Convenience Category that exposes common properties and methods for all WeightTracker view controllers.
  */
 @interface UIViewController (WeightTrackerViewController) 
 

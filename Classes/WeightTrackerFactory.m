@@ -31,9 +31,7 @@ static NSObject<WeightTrackerSettingsSupport> *settings;
 
 + ( NSObject<WeightTrackerSettingsSupport> *) getWeightTrackerSettingsSqlite{
 	//refreshing the settings every time that the method gets called	
-	settings = (WeightTrackerSettings *) [[WeightTrackerSettings alloc]init];
-	
-	
+	settings = (WeightTrackerSettings *) [[WeightTrackerSettings alloc]init];	
 	
 	return settings;
 }

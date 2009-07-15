@@ -4,6 +4,7 @@
 /**
  Weight Tracker Application delegate.
  
+ \pre the instance class implements WeightTrackerSettingsSupport protocol.
  \sa UIApplicationDelegate.
  */
 @interface WeightTrackerAppDelegate : NSObject <UIApplicationDelegate> {

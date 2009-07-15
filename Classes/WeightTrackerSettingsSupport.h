@@ -21,6 +21,8 @@
 	- (void) setupAppWithUserInfo:(id<WeightTrackerSettingsSupport>) userInfo;
 	/**Populates the current settings into userInfo instance.*/
 	- (void) loadAppUserInfo:(id<WeightTrackerSettingsSupport>)userInfo;	
+	/**Makes persistent app settings.*/
+	- (void) save;
 @end
 
 /**
@@ -34,4 +36,5 @@ static void loadSystemSettingsDefaults(id<WeightTrackerSettingsSupport> userInfo
 	userInfo.recipientMailAddress=@"";
 	userInfo.weightUnitOfMeasure = NotDefined;	
 }
+
 

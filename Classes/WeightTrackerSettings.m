@@ -4,8 +4,6 @@
 @implementation WeightTrackerSettings
 @synthesize username, userMailAddress, recipientMailAddress,weightUnitOfMeasure;
 
-
-
 - (NSString *) dataFilePath
 {
 	NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask , YES);
@@ -78,12 +76,7 @@
 	return self->appAlreadySetup;
 }
 
-- (void) setupAppWithUserInfo:(id<WeightTrackerSettingsSupport>) userInfo
-{
-	self.username = [userInfo username];
-	self.userMailAddress = [userInfo userMailAddress];
-	self.recipientMailAddress = [userInfo recipientMailAddress];
-	self.weightUnitOfMeasure = [userInfo weightUnitOfMeasure];
+- (void) save{
 	char *errorMsg;
 	
 	
@@ -104,12 +97,6 @@
 	
 }
 
-- (void) loadAppUserInfo:(id<WeightTrackerSettingsSupport>) userInfo{
-	userInfo.username = self.username;
-	userInfo.userMailAddress = self.userMailAddress;
-	userInfo.recipientMailAddress = self.recipientMailAddress;
-	userInfo.weightUnitOfMeasure = self.weightUnitOfMeasure;
-}
 
 
 @end

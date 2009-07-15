@@ -56,6 +56,7 @@
 		3EAEB8250FFE8F93004DF352 /* LabeledPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EAEB8240FFE8F93004DF352 /* LabeledPickerView.m */; };
 		3EB2C98E1007F74100190D53 /* WeightTrackerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EB2C98D1007F74100190D53 /* WeightTrackerViewController.m */; };
 		3EB61B83100796DB008C6EF5 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EB61B82100796DB008C6EF5 /* MessageUI.framework */; };
+		3EB97EA2100D675A009198CF /* WeightTrackerSettingsSupportCommons.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EB97EA1100D675A009198CF /* WeightTrackerSettingsSupportCommons.m */; };
 		3EC97FEC100A68ED005ED02B /* index.html in Resources */ = {isa = PBXBuildFile; fileRef = 3EC97FEB100A68ED005ED02B /* index.html */; };
 /* End PBXBuildFile section */
 
@@ -149,6 +150,8 @@
 		3EB2C98C1007F74100190D53 /* WeightTrackerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeightTrackerViewController.h; sourceTree = "<group>"; };
 		3EB2C98D1007F74100190D53 /* WeightTrackerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeightTrackerViewController.m; sourceTree = "<group>"; };
 		3EB61B82100796DB008C6EF5 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		3EB97EA0100D675A009198CF /* WeightTrackerSettingsSupportCommons.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeightTrackerSettingsSupportCommons.h; sourceTree = "<group>"; };
+		3EB97EA1100D675A009198CF /* WeightTrackerSettingsSupportCommons.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeightTrackerSettingsSupportCommons.m; sourceTree = "<group>"; };
 		3EC97FEB100A68ED005ED02B /* index.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; name = index.html; path = html/index.html; sourceTree = "<group>"; };
 		3EC98100100AAEFE005ED02B /* Settings.xcclassmodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcclassmodel; path = Settings.xcclassmodel; sourceTree = "<group>"; };
 		3EC98105100AB2D0005ED02B /* WeightTracker.xcclassmodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcclassmodel; path = WeightTracker.xcclassmodel; sourceTree = "<group>"; };
@@ -388,6 +391,8 @@
 				3EA651E20FF8122E00FC45D0 /* WeightTrackerSettingsSPO.h */,
 				3EA651E30FF8122E00FC45D0 /* WeightTrackerSettingsSPO.m */,
 				3EA651E40FF8122E00FC45D0 /* WeightTrackerSettingsSupport.h */,
+				3EB97EA0100D675A009198CF /* WeightTrackerSettingsSupportCommons.h */,
+				3EB97EA1100D675A009198CF /* WeightTrackerSettingsSupportCommons.m */,
 			);
 			name = Settings;
 			sourceTree = "<group>";
@@ -514,6 +519,7 @@
 				3E557B4D1003D0E200B4F7D5 /* WeightHistoryController.m in Sources */,
 				3E557B7A1003D22400B4F7D5 /* WeightHistory.m in Sources */,
 				3EB2C98E1007F74100190D53 /* WeightTrackerViewController.m in Sources */,
+				3EB97EA2100D675A009198CF /* WeightTrackerSettingsSupportCommons.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
