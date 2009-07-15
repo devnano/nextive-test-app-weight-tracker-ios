@@ -278,19 +278,20 @@
 								<string>29B97323FDCFA39411CA2CEA</string>
 								<string>19C28FACFE9D520D11CA2CBB</string>
 								<string>1C37FBAC04509CD000000102</string>
+								<string>3E886E8A100D53D2004E15D3</string>
 								<string>1C37FAAC04509CD000000102</string>
 								<string>1C37FABC05509CD000000102</string>
 							</array>
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>43</integer>
-									<integer>2</integer>
-									<integer>0</integer>
+									<integer>69</integer>
+									<integer>65</integer>
+									<integer>64</integer>
 								</array>
 							</array>
 							<key>PBXSmartGroupTreeModuleOutlineStateVisibleRectKey</key>
-							<string>{{0, 190}, {333, 660}}</string>
+							<string>{{0, 0}, {333, 660}}</string>
 						</dict>
 						<key>PBXTopSmartGroupGIDs</key>
 						<array/>
@@ -337,7 +338,7 @@
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>3EB789BB100D50AE004BD92E</string>
+										<string>3E886E91100D5510004E15D3</string>
 										<key>history</key>
 										<array>
 											<string>3EC98020100A7089005ED02B</string>
@@ -384,6 +385,7 @@
 											<string>3EB789B0100D4F93004BD92E</string>
 											<string>3EB789B6100D4FAE004BD92E</string>
 											<string>3EB789B7100D4FAE004BD92E</string>
+											<string>3EB789BB100D50AE004BD92E</string>
 										</array>
 										<key>prevStack</key>
 										<array>
@@ -428,30 +430,9 @@
 											<string>3ECAEA05100ACB2D005AD73C</string>
 											<string>3ECAEA1B100ACF21005AD73C</string>
 											<string>3ECAEA8D100AD6BC005AD73C</string>
-											<string>3EB78988100D4E93004BD92E</string>
-											<string>3EB78989100D4E93004BD92E</string>
-											<string>3EB7898A100D4E93004BD92E</string>
-											<string>3EB7898B100D4E93004BD92E</string>
-											<string>3EB7898C100D4E93004BD92E</string>
-											<string>3EB7898D100D4E93004BD92E</string>
-											<string>3EB7898E100D4E93004BD92E</string>
-											<string>3EB7898F100D4E93004BD92E</string>
-											<string>3EB78990100D4E93004BD92E</string>
-											<string>3EB78991100D4E93004BD92E</string>
-											<string>3EB78992100D4E93004BD92E</string>
-											<string>3EB78993100D4E93004BD92E</string>
-											<string>3EB78994100D4E93004BD92E</string>
-											<string>3EB78995100D4E93004BD92E</string>
-											<string>3EB78996100D4E93004BD92E</string>
 											<string>3EB78997100D4E93004BD92E</string>
 											<string>3EB78998100D4E93004BD92E</string>
 											<string>3EB78999100D4E93004BD92E</string>
-											<string>3EB7899B100D4E93004BD92E</string>
-											<string>3EB7899C100D4E93004BD92E</string>
-											<string>3EB789AC100D4F7E004BD92E</string>
-											<string>3EB789B2100D4F93004BD92E</string>
-											<string>3EB789B3100D4F93004BD92E</string>
-											<string>3EB789B8100D4FAE004BD92E</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -509,9 +490,9 @@
 			</array>
 			<key>TableOfContents</key>
 			<array>
-				<string>3EB7895D100D4A07004BD92E</string>
+				<string>3E886E8C100D53D2004E15D3</string>
 				<string>1CE0B1FE06471DED0097A5F4</string>
-				<string>3EB7895E100D4A07004BD92E</string>
+				<string>3E886E8D100D53D2004E15D3</string>
 				<string>1CE0B20306471E060097A5F4</string>
 				<string>1CE0B20506471E060097A5F4</string>
 			</array>
@@ -645,12 +626,8 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
-		<string>3EB7899F100D4E93004BD92E</string>
-		<string>3EB789A0100D4E93004BD92E</string>
-		<string>1CD10A99069EF8BA00B06720</string>
 		<string>3EA650880FF7F92500FC45D0</string>
-		<string>1C78EAAD065D492600B07095</string>
-		<string>/Users/nano/dev/wd/albolocura-WeightTracker/branch/WeightTracker/WeightTracker.xcodeproj</string>
+		<string>/tmp/albolocura-WeightTracker/branch/WeightTracker/WeightTracker.xcodeproj</string>
 	</array>
 	<key>WindowString</key>
 	<string>4 59 1276 719 0 0 1280 778 </string>
@@ -674,7 +651,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CD0528F0623707200166675</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>WeightTrackerSettingsController.m</string>
+								<string></string>
 								<key>StatusBarVisibility</key>
 								<true/>
 							</dict>
@@ -732,7 +709,7 @@
 			<key>TableOfContents</key>
 			<array>
 				<string>3EA650880FF7F92500FC45D0</string>
-				<string>3EB78965100D4B7A004BD92E</string>
+				<string>3E886E85100D5356004E15D3</string>
 				<string>1CD0528F0623707200166675</string>
 				<string>XCMainBuildResultsModuleGUID</string>
 			</array>
