@@ -2,6 +2,7 @@
 #import "WeightTrackerSettingsSPO.h"
 #import "WeightTrackerSettings.h"
 #import "WeightLogSPO.h"
+#import "WeightLog.h"
 
 
 @implementation WeightTrackerFactory
@@ -39,17 +40,29 @@ static NSObject<WeightTrackerSettingsSupport> *settings;
 
 + ( NSObject<WeightTrackerSettingsSupport> *) getWeightTrackerSettings
 {
-	//return [WeightTrackerFactory getWeightTrackerSettingsSqlite];
+#ifndef SPO
+	return [WeightTrackerFactory getWeightTrackerSettingsSqlite];
+#else
 	return [WeightTrackerFactory getWeightTrackerSettingsSPO];
+#endif
 }
 
 
 
 + (NSObject<WeightLogSupport> *) createWeightLog{
+#ifndef SPO	
+	return [[WeightLog alloc] initDefaultValues];
+#else
 	return [[WeightLogSPO alloc] initDefaultValues];
+#endif
+	
 }
 + (Class<WeightLogSupport>) weightLogClass{
+#ifndef SPO
+	return [WeightLog class];	
+#else
 	return [WeightLogSPO class];
+#endif
 }
 
 @end

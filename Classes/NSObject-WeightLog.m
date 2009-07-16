@@ -5,12 +5,12 @@
 //sets default values
 -(id) initDefaultValues{
 	if(self = [self init]){
+		//setting today's date
 		self.date = [[NSDate alloc] init];
 		//the last log
-		NSObject<WeightLogSupport> *lastLog = [[self class] getLastLog];
-		self.weight = lastLog != nil ? lastLog.weight : [NSNumber numberWithFloat:0.0];
-		//[self.weight retain];	
-		//[self->date retain];		
+		NSObject<WeightLogSupport> *lastLog = [[self class] getLastLog];		
+		//initializing with the last weight log if exist, 0.0 otherwise...
+		self.weight = lastLog != nil ? lastLog.weight : [NSNumber numberWithFloat:0.0];			
 	}
 	return self;
 	

@@ -2,8 +2,14 @@
 
 
 @implementation WeightLog
-@synthesize weight, date;
+@synthesize weight, date, weightLogId;
 /***/
+-(id) init{
+	self = [super init];
+	[self createTable];
+	
+	return self;
+}
 - (NSString *) tableString{
 	return @"WEIGHTLOGS (WEIGHT REAL, LOGDATE TEXT)";
 }
@@ -43,11 +49,11 @@
 	
 }
 +(NSObject<WeightLogSupport> *) getLastLog{
-	NSString *query = @"SELECT TOP 1 rowid, weight, logdate FROM WEIGHTLOGS;";
+	NSString *query = @"SELECT rowid, weight, logdate FROM WEIGHTLOGS ORDER BY rowid DESC LIMIT 1;";
 	sqlite3_stmt *statement;
 	int status;	
 	//char *errorMsg;
-	WeightLog *log;
+	WeightLog *log = nil;
 	status = sqlite3_prepare_v2([SqliteBaseObject sharedDb], [query UTF8String] , -1, &statement, nil);
 	if(status == SQLITE_OK){		
 		if(sqlite3_step(statement) == SQLITE_ROW){			
@@ -79,17 +85,14 @@
 
 - (void) save{
 	if(self.date != nil){
-		char *errorMsg;
-		
+		char *errorMsg;		
 				
 		NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
 		[dateFormatter setDateFormat:@"yyyy-MM-dd HH:mm:ss.SSSS"];		
 		NSString *formattedDateString = [dateFormatter stringFromDate:self.date];
 		[dateFormatter release];
 		//using the implicit id created by the database engine
-		NSString *query = [NSString stringWithFormat:@"INSERT OR REPLACE INTO WEIGHTLOGS (WEIGHT, LOGDATE) VALUES(%i,'%@');", self.weight,formattedDateString];
-		
-		
+		NSString *query = [NSString stringWithFormat:@"INSERT OR REPLACE INTO WEIGHTLOGS (WEIGHT, LOGDATE) VALUES(%f,'%@');", [self.weight doubleValue],formattedDateString];		
 		
 		int status = sqlite3_exec([SqliteBaseObject sharedDb], [query UTF8String], NULL, NULL, &errorMsg);
 		
