@@ -22,12 +22,14 @@ typedef enum{
 	NoDecimalPlaces = 0,
 	OneDecimalPlace = 1,
 	TwoDecimalPlaces = 2,
+	ThreeDecimalPlaces = 3
 } DecimalPlaces;
 
-//this has to be promoted as an app settings to be set at runtime
-//otherwise, you must switch the value defined to let the app change its //behaviour
-//#define kAppDecimalPlaces TwoDecimalPlaces
+/**this has to be promoted as an app settings to be set at runtime
+otherwise, you must switch the value defined to let the app change its behavior*/
+
 #define kAppDecimalPlaces OneDecimalPlace
+//#define kAppDecimalPlaces ThreeDecimalPlaces
 
 typedef enum {
 	NotDefined = -1,

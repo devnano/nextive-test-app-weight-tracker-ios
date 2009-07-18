@@ -17,8 +17,8 @@ B.c.ii
 
 =TODOs=
 *A.a and A.b retrieve default values through SystemSetingsAccess class methods. At the moment, the returned values are HARDCODED. I decided
-to keep this task as the last one, but I didn't find the best way to gather this info throught iPhone SDK APIs. I left a TODO note where it's 
-necessary to place the code, and return system dependant data.
+to keep this task as the last one, but I didn't find the best way to gather this info through iPhone SDK APIs. I left a TODO note where it's 
+necessary to place the code, and return system dependent data.
 *Manage to run the application in a *3.0 OS device*. Since I'm not enrolled in the dev program, and I did not manage to avoid code signing easily
 to let the application run on a jailbroken device, the app IS NOT TESTED in a real device, only in the 3.0 simulator.
 *Rename WeightTrackerViewController.h to UIViewController-WeightTrackerViewController.h
@@ -56,15 +56,19 @@ In addition, it defines optional methods useful (mainly) for data access classes
 **WeightTrackerSettings: SQLite implementation
 **WeightTrackerSettingsSPO: SqlitePersitenceObject implementation (see 3rd parties libraries)
 **NSObject (WeightTrackerSettingsStorage) (defined in WeightTrackerSettingsSupportCommons.h): provides the implementation of the optional methods, the behavior it's free of the implementation choice
-(relays only in propertie access).
+(relays only in properties access).
 *PRESENTATION
 **WeightTrackerSettingsController
 
-*UserMailPickerController* and *DefaultRecipientMailOptionsController* completes the Settings classes, and are self-descritives.
+Number of decimal places, can be changed when compiling the in WeightUtils.h (see this file for details)
+#define kAppDecimalPlaces OneDecimalPlace
+If you change this line, the app will handle n number of decimal places.
 
-==WeightLog==
+*UserMailPickerController* and *DefaultRecipientMailOptionsController* completes the Settings classes, and are self-descriptives.
+
+==WeightTracker main app==
 *WeightLogSupport* seemless to the WeightTrackerSettingsSupport Approach.
-===Class currently compilant with WeightLogSupport===
+===Class currently compliant with WeightLogSupport===
 *DATA access
 **WeightLog
 **WeightLogSPO 
@@ -79,10 +83,9 @@ In addition, it defines optional methods useful (mainly) for data access classes
 *WeightHistoryController* 
 
 ==Weighing Scale==
-The scale design to instrumentate weighing keeps in mind 
 *ScaleSupport* this protocol describes the properties and methods a scale must provide, as a way of input for the weight log.
 *PickerScaleController* compilant with ScaleSupport protocol, allows the user choose a weight with a Picker view, according 
-de application number of decimal units and weight units of measure.
+the application number of decimal units and weight units of measure.
 NOTE: I was working in a fancier, analog scale using OpenGL, but I did not manage to finish at the moment. This code is not
 included in this release, to keep things clearer.
 
