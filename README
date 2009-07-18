@@ -1,0 +1,91 @@
+WeightTracker 0.1
+The application depends on SDK 3.0 features (UITableCellView detailView and MFMailComposeViewController) 
+
+
+=RELEASE NOTES=
+
+According to the PRD (Nextive Solution - Standardized App Test), the functionality included in this release:
+A.a
+A.b
+A.c.i, A.c.ii, A.c.ii
+A.d
+
+B.a.i, B.a.ii, B.a.iii
+B.b
+B.c.ii
+
+
+=TODOs=
+*A.a and A.b retrieve default values through SystemSetingsAccess class methods. At the moment, the returned values are HARDCODED. I decided
+to keep this task as the last one, but I didn't find the best way to gather this info throught iPhone SDK APIs. I left a TODO note where it's 
+necessary to place the code, and return system dependant data.
+*Manage to run the application in a 3.0 device. Since I'm not enrolled in the dev program, and I did not manage to avoid code signing easily
+to let the application run on a jailbroken device, the app IS NOT TESTED in a real device, only in the 3.0 simulator.
+
+
+
+=DOCUMENTATION=
+Doxygen was the chosen tool to generate code documentation. The generated documentation of this release is sent in this package.
+Settings and WeightTracker diagrams
+This README file.
+
+=ABOUT DATA ACCESS=
+I first focused on functionlity, chosen an ORM to let things flow quickly (SqlitePersitenceObject). After I finished the core of the app,
+Then, I implemented DataAccess related protocols with Sqlite. At the moment, the implementation to use in the app must be changed with
+the preprocessor, by defining or not a macro SPO. (see WeightTrackerFactory.m for details)
+
+=3rd party libraries=
+SqlitePersitenceObject: http://code.google.com/p/sqlitepersistentobjects/
+LabledPickerView: http://blog.nottoobadsoftware.com/2009/03/a-uipickerview-with-labels/
+
+=APP DESIGN IN A BRIEF(Please, read code documentation for details)=
+*WeightTrackerApplicationDeleate*, has two NavigationController: navSettings (for settings related view flow) and navController (the main app view flow handle).
+Also provides IBActions tagged methods, to take the actions when the navSettings must be shown or hidden.
+*UIViewController (WeightTrackerViewController)* provides an easy way of access to application shared information (NavigationControllers and settings mainly).
+
+==SETTINGS==
+*WeightTrackerSettingsSupport* Protocol defines the needed (requiered) properties a class must provide to give access to application settings.
+In addition, it defines optional methods useful (mainly) for data access classes. 
+===Class currently compilant with WeightTrackerSettingsSupport===
+*DATA access
+**WeightTrackerSettings: SQLite implementation
+**WeightTrackerSettingsSPO: SqlitePersitenceObject implementation (see 3rd parties libraries)
+**NSObject (WeightTrackerSettingsStorage): provides the implementation of the optional methods, the behavior it's free of the implementation choice
+(relays only in propertie access).
+*PRESENTATION
+**WeightTrackerSettingsController
+
+*UserMailPickerController* and *DefaultRecipientMailOptionsController* completes the Settings classes, and are self-descritives.
+
+==WeightLog==
+*WeightLogSupport* seemless to the WeightTrackerSettingsSupport Approach.
+===Class currently compilant with WeightLogSupport===
+*DATA access
+**WeightLog
+**WeightLogSPO 
+**NSObject(WeightLog)
+ 
+*PRESENTATION
+**NewWeightController
+**WeightHistory encapsulates the weight log lists, and related methods.
+
+*WeighTrackerController* The main menu for the application.
+*WeightLogDatePickerController* Input view for the weight log date.
+*WeightHistoryController* 
+
+==Weighing Scale==
+The scale design to instrumentate weighing keeps in mind 
+*ScaleSupport* this protocol describes the properties and methods a scale must provide, as a way of input for the weight log.
+*PickerScaleController* compilant with ScaleSupport protocol, allows the user choose a weight with a Picker view, according 
+de application number of decimal units and weight units of measure.
+NOTE: I was working in a fancier, analog scale using OpenGL, but I did not manage to finish at the moment. This code is not
+included in this release, to keep things clearer.
+ 
+
+
+
+
+
+
+
+ 
