@@ -3,6 +3,8 @@
 #import "WeightTrackerSettings.h"
 #import "WeightLogSPO.h"
 #import "WeightLog.h"
+//comment this line to use Sqlite "by hand" implementation
+#define SPO
 
 
 @implementation WeightTrackerFactory

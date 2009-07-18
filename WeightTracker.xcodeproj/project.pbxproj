@@ -60,6 +60,7 @@
 		3EB88CF0100DF0FA006270BF /* SqliteBaseObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EB88CEF100DF0FA006270BF /* SqliteBaseObject.m */; };
 		3EB88E50100E0BE9006270BF /* NSObject-WeightLog.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EB88E4F100E0BE9006270BF /* NSObject-WeightLog.m */; };
 		3EB97EA2100D675A009198CF /* WeightTrackerSettingsSupportCommons.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EB97EA1100D675A009198CF /* WeightTrackerSettingsSupportCommons.m */; };
+		3EB9E4131011CBFD000680CC /* README in Resources */ = {isa = PBXBuildFile; fileRef = 3EB9E4121011CBFD000680CC /* README */; };
 		3EC97FEC100A68ED005ED02B /* index.html in Resources */ = {isa = PBXBuildFile; fileRef = 3EC97FEB100A68ED005ED02B /* index.html */; };
 /* End PBXBuildFile section */
 
@@ -161,6 +162,7 @@
 		3EB88E4F100E0BE9006270BF /* NSObject-WeightLog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject-WeightLog.m"; sourceTree = "<group>"; };
 		3EB97EA0100D675A009198CF /* WeightTrackerSettingsSupportCommons.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeightTrackerSettingsSupportCommons.h; sourceTree = "<group>"; };
 		3EB97EA1100D675A009198CF /* WeightTrackerSettingsSupportCommons.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeightTrackerSettingsSupportCommons.m; sourceTree = "<group>"; };
+		3EB9E4121011CBFD000680CC /* README */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README; sourceTree = "<group>"; };
 		3EC97FEB100A68ED005ED02B /* index.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; name = index.html; path = html/index.html; sourceTree = "<group>"; };
 		3EC98100100AAEFE005ED02B /* Settings.xcclassmodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcclassmodel; path = Settings.xcclassmodel; sourceTree = "<group>"; };
 		3EC98105100AB2D0005ED02B /* WeightTracker.xcclassmodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcclassmodel; path = WeightTracker.xcclassmodel; sourceTree = "<group>"; };
@@ -412,6 +414,7 @@
 				3EC97FEB100A68ED005ED02B /* index.html */,
 				3EC98100100AAEFE005ED02B /* Settings.xcclassmodel */,
 				3EC98105100AB2D0005ED02B /* WeightTracker.xcclassmodel */,
+				3EB9E4121011CBFD000680CC /* README */,
 			);
 			name = Documentation;
 			sourceTree = "<group>";
@@ -505,6 +508,7 @@
 				3E9344C00FFD8C4B0087CF6B /* PickerScaleController.xib in Resources */,
 				3E557B4E1003D0E200B4F7D5 /* WeightHistoryController.xib in Resources */,
 				3EC97FEC100A68ED005ED02B /* index.html in Resources */,
+				3EB9E4131011CBFD000680CC /* README in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

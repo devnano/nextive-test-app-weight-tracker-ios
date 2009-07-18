@@ -16,8 +16,8 @@
  \param label the text to be set to the main label in the cell view.
  */
 + (UITableViewCell *) createCellStyleValue1:(NSString *) label;
-	
-
+/**Sends mail through mail.app.*/	
++ (void) sendMailTo : (NSString *) to withSubject:(NSString *) subject withBody:(NSString *) body;
 
 @end
 

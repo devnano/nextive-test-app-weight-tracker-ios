@@ -19,20 +19,25 @@ B.c.ii
 *A.a and A.b retrieve default values through SystemSetingsAccess class methods. At the moment, the returned values are HARDCODED. I decided
 to keep this task as the last one, but I didn't find the best way to gather this info throught iPhone SDK APIs. I left a TODO note where it's 
 necessary to place the code, and return system dependant data.
-*Manage to run the application in a 3.0 device. Since I'm not enrolled in the dev program, and I did not manage to avoid code signing easily
+*Manage to run the application in a *3.0 OS device*. Since I'm not enrolled in the dev program, and I did not manage to avoid code signing easily
 to let the application run on a jailbroken device, the app IS NOT TESTED in a real device, only in the 3.0 simulator.
+*Rename WeightTrackerViewController.h to UIViewController-WeightTrackerViewController.h
+*Rename WeightTrackerSettingsSupportCommons.h to NSObject-WeightTrackerSettingsStorage.h
 
 
 
 =DOCUMENTATION=
-Doxygen was the chosen tool to generate code documentation. The generated documentation of this release is sent in this package.
-Settings and WeightTracker diagrams
-This README file.
+*Doxygen was the chosen tool to generate code documentation. The generated documentation of this release is sent in this package.
+**To generate de documentation, /Applications/Doxygen.app/Contents/Resources/doxygen Doxyfile
+**A build phase could be added to run the above script.
+*Settings and WeightTracker class diagrams.
+*This README file.
 
 =ABOUT DATA ACCESS=
 I first focused on functionlity, chosen an ORM to let things flow quickly (SqlitePersitenceObject). After I finished the core of the app,
 Then, I implemented DataAccess related protocols with Sqlite. At the moment, the implementation to use in the app must be changed with
-the preprocessor, by defining or not a macro SPO. (see WeightTrackerFactory.m for details)
+the preprocessor, by defining or not a macro SPO. (see WeightTrackerFactory.m for details).
+NOTE: both implementation uses different database files.
 
 =3rd party libraries=
 SqlitePersitenceObject: http://code.google.com/p/sqlitepersistentobjects/
@@ -41,7 +46,7 @@ LabledPickerView: http://blog.nottoobadsoftware.com/2009/03/a-uipickerview-with-
 =APP DESIGN IN A BRIEF(Please, read code documentation for details)=
 *WeightTrackerApplicationDeleate*, has two NavigationController: navSettings (for settings related view flow) and navController (the main app view flow handle).
 Also provides IBActions tagged methods, to take the actions when the navSettings must be shown or hidden.
-*UIViewController (WeightTrackerViewController)* provides an easy way of access to application shared information (NavigationControllers and settings mainly).
+*UIViewController (WeightTrackerViewController)* (Defined in WeightTrackerViewController.h) provides an easy way of access to application shared information (NavigationControllers and settings mainly).
 
 ==SETTINGS==
 *WeightTrackerSettingsSupport* Protocol defines the needed (requiered) properties a class must provide to give access to application settings.
@@ -50,7 +55,7 @@ In addition, it defines optional methods useful (mainly) for data access classes
 *DATA access
 **WeightTrackerSettings: SQLite implementation
 **WeightTrackerSettingsSPO: SqlitePersitenceObject implementation (see 3rd parties libraries)
-**NSObject (WeightTrackerSettingsStorage): provides the implementation of the optional methods, the behavior it's free of the implementation choice
+**NSObject (WeightTrackerSettingsStorage) (defined in WeightTrackerSettingsSupportCommons.h): provides the implementation of the optional methods, the behavior it's free of the implementation choice
 (relays only in propertie access).
 *PRESENTATION
 **WeightTrackerSettingsController
@@ -80,6 +85,9 @@ The scale design to instrumentate weighing keeps in mind
 de application number of decimal units and weight units of measure.
 NOTE: I was working in a fancier, analog scale using OpenGL, but I did not manage to finish at the moment. This code is not
 included in this release, to keep things clearer.
+
+
+
  
 
 

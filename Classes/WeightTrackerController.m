@@ -82,24 +82,13 @@
 	[self.navMainApp pushViewController:self.weightHistoryController animated:YES];
 }
 
-// Displays an email composition interface inside the application. Populates all the Mail fields. 
--(void)showComposerSheet 
-{
-	MFMailComposeViewController *picker = [[MFMailComposeViewController alloc] init];
-	picker.mailComposeDelegate = self;
-	
-	[picker setSubject:@"My Weight History"];
-	
-	
-	// Set up recipients
-	//NSArray *toRecipients = [self settings].userMailAddress; 
-	NSArray *toRecipients = [NSArray arrayWithObject:[self settings].recipientMailAddress]; 
-	//NSArray *toRecipients = toRecipients;
-	
-	
-	[picker setToRecipients:toRecipients];
-	//[picker setCcRecipients:ccRecipients];	
-	//[picker setBccRecipients:bccRecipients];
+-(NSString *) subject{
+	return @"My Weight History";
+}
+
+
+
+-(NSString *) mailBody{
 	if(self.weightHistoryController == nil){
 		self.weightHistoryController = [[WeightHistoryController alloc] init];
 	}
@@ -110,15 +99,44 @@
 	NSArray *weightLogs = [self.weightHistoryController.weightHistory weightLogs];
 	NSMutableString *entriesCsv = [NSMutableString stringWithFormat:@"date, weight (%@)\n", self.weighningUnitsStr];
 	
-	NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask , YES);
-	NSString *documentsDirectory = [paths objectAtIndex:0];
-	NSString *documentName = [documentsDirectory stringByAppendingPathComponent:@"weight.csv"];
 	
 	for(int i=0; i<[weightLogs count]; i++){
 		id<WeightLogSupport> log = [weightLogs objectAtIndex:i];		
 		[entriesCsv appendFormat:@"%@, %@\n", [log  dateStringWithFormat:@"yyyy-MM-dd"], [log weightStringInUnits:[self settings].weightUnitOfMeasure withDecimalPlaces:kAppDecimalPlaces]];
 	}
-	NSError *error = [[NSError alloc] init];
+	return entriesCsv;
+	
+}
+
+-(void)sendThroughMailApp{
+	[UIUtils sendMailTo:[self settings].recipientMailAddress withSubject:[self subject] withBody:[self mailBody]];
+}
+
+
+
+// Displays an email composition interface inside the application. Populates all the Mail fields. 
+-(void)showComposerSheet {
+	MFMailComposeViewController *picker = [[MFMailComposeViewController alloc] init];
+	picker.mailComposeDelegate = self;
+	
+	[picker setSubject:[self subject]];
+	
+	
+	// Set up recipients
+	//NSArray *toRecipients = [self settings].userMailAddress; 
+	NSArray *toRecipients = [NSArray arrayWithObject:[self settings].recipientMailAddress]; 
+	//NSArray *toRecipients = toRecipients;
+	
+	
+	[picker setToRecipients:toRecipients];
+	NSString * entriesCsv = [self mailBody];
+	//[picker setCcRecipients:ccRecipients];	
+	//[picker setBccRecipients:bccRecipients];
+
+	NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask , YES);
+	NSString *documentsDirectory = [paths objectAtIndex:0];
+	NSString *documentName = [documentsDirectory stringByAppendingPathComponent:@"weight.csv"];
+			NSError *error = [[NSError alloc] init];
 	if(![entriesCsv writeToFile:documentName atomically:NO encoding:NSASCIIStringEncoding error:&error]) {
 		[error release];
 	}
@@ -136,6 +154,7 @@
     NSData *myData = [NSData dataWithContentsOfFile:documentName];
 	[picker addAttachmentData:myData mimeType:@"text/plain" fileName:@"weightHistory"];
 	
+
 	// Fill out the email body text
 	NSString *emailBody = [NSString stringWithFormat:@"I'm sending you an up to date weight history.\n%@", entriesCsv];
 	[picker setMessageBody:emailBody isHTML:NO];
@@ -209,6 +228,8 @@
 			if ([MFMailComposeViewController canSendMail])
 			{
 				[self showComposerSheet];
+			} else {
+				[self sendThroughMailApp];
 			}
 			
 			break;		
