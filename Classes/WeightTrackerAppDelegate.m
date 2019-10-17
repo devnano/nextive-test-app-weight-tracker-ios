@@ -62,6 +62,7 @@
 	//initialize ui with current data (if already setup)
 	//or system data otherwise	
 	WeightTrackerSettingsController *settingsController = (WeightTrackerSettingsController *) [navSettings topViewController];
+    window.rootViewController = settingsController;
 	if([self.weightTrackerSettings isAppAlreadySetup]){
 		[self.weightTrackerSettings loadAppUserInfo:settingsController];
 	} else {
